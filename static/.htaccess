@@ -74,12 +74,16 @@ Options +SymLinksIfOwnerMatch
     #     inline styles — the per-page `--hue` custom property on <html>
     #     and archive <h2>, the JS-injected typewriter-misprint
     #     `vertical-align` spans and washi-tape SVG, and Ghost's
-    #     `white-space:pre-wrap` figcaptions.
+    #     `white-space:pre-wrap` figcaptions. tinylytics.app is also
+    #     allowed in style-src because its embed script loads an EXTERNAL
+    #     stylesheet for its widgets — 'unsafe-inline' does not cover an
+    #     origin-loaded stylesheet, so the origin must be listed too
+    #     (the same reason it appears in script-src/img-src/connect-src).
     #   - img-src allows data: for the SVG paper/photo grain textures
     #     embedded in screen.css as data URIs.
     #   - frame-ancestors 'none' is the modern replacement for
     #     X-Frame-Options: DENY.
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://tinylytics.app; style-src 'self'; img-src 'self' data: https://tinylytics.app; font-src 'self'; connect-src 'self' https://tinylytics.app; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://tinylytics.app; style-src 'self' 'unsafe-inline' https://tinylytics.app; img-src 'self' data: https://tinylytics.app; font-src 'self'; connect-src 'self' https://tinylytics.app; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
 
     # ── Legacy clickjacking header (still useful for old browsers) ────
     Header always set X-Frame-Options "DENY"
