@@ -18,7 +18,16 @@
     <link rel="stylesheet" href="/assets/built/glightbox.min.css">
     <link rel="stylesheet" href="/public/cards.min.css">
     <link rel="alternate" type="application/rss+xml" href="{{ "/index.xml" | absURL }}" title="{{ site.Title }}">
-    {{ template "_internal/opengraph.html" . }}
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}" />
+	<link rel="manifest" href="/site.webmanifest" />
+	
+	
+	{{ partial "opengraph.html" . }}
+	{{ partial "schema.html" . }}
     <script src="https://tinylytics.app/embed/5k-5eys3-QT5sumY9sVY.js" defer></script>
 </head>
 <body class="{{ if .IsHome }}home-template{{ else if eq .Section "dispatches" }}post-template{{ else if eq .Kind "term" }}tag-template{{ else }}page-template{{ end }}">
