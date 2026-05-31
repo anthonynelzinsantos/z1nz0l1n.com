@@ -1,0 +1,65 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     version="2.0">
+	<channel>
+		<title>{{ site.Title }}</title>
+		<link>{{ site.BaseURL }}</link>
+		<description>{{ with site.Params.description }}{{ . }}{{ else }}Recent content on {{ site.Title }}{{ end }}</description>
+		<language>en</language>
+		<managingEditor>{{ site.Params.email }} ({{ site.Params.author }})</managingEditor>
+		<webMaster>{{ site.Params.email }} ({{ site.Params.author }})</webMaster>
+		<copyright>© {{ now.Year }} {{ site.Params.author }}</copyright>
+		<lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+		<generator>Hugo {{ hugo.Version }}</generator>
+		<image>
+			<url>{{ "/content/images/2026/02/logo.png" | absURL }}</url>
+			<title>{{ site.Title }}</title>
+			<link>{{ site.BaseURL }}</link>
+		</image>
+		<atom:link href="{{ "/index.xml" | absURL }}" rel="self" type="application/rss+xml" />
+
+		{{- $posts := first 24 (where site.RegularPages "Section" "dispatches").ByDate.Reverse }}
+		{{- range $posts }}
+		{{- $page := . }}
+		{{- $feature := false }}
+		{{- $feature = $page.Resources.GetMatch "feature.*" }}
+		{{- $alt := .Title }}{{ with .Params.feature_image_alt }}{{ $alt = . }}{{ end }}
+		{{- $caption := .Params.feature_image_caption }}
+		{{- $xl := false }}{{ $thumb := false }}
+		{{- with $feature }}
+			{{- $xl = . }}{{ if gt .Width 1800 }}{{ $xl = .Resize "1800x" }}{{ end }}
+			{{- $thumb = . }}{{ if gt .Width 750 }}{{ $thumb = .Resize "750x" }}{{ end }}
+		{{- end }}
+		<item>
+			<title>{{ .Title }}</title>
+			<link>{{ .Permalink }}</link>
+			<pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+			<guid isPermaLink="true">{{ .Permalink }}</guid>
+			<dc:creator>{{ site.Params.author }}</dc:creator>
+			{{- range .Params.from }}
+			{{- $from := site.GetPage (printf "/from/%s" .) }}
+			<category{{ with $from }} domain="{{ .Permalink }}"{{ end }}>{{ with $from }}{{ .Title }}{{ else }}{{ . }}{{ end }}</category>
+			{{- end }}
+			<description>{{ "<![CDATA[" | safeHTML }}{{ .Summary | plainify | truncate 280 }}{{ "]]>" | safeHTML }}</description>
+			<content:encoded>{{ "<![CDATA[" | safeHTML }}
+			{{ with $xl }}<p><img src="{{ .Permalink }}" alt="{{ $alt }}" /></p>{{ end }}
+			{{ .Content | safeHTML }}
+			<p>—<br />Thanks for keeping RSS going! I’d love to hear your thoughts. <a href="mailto:{{ site.Params.email }}">Send me an e-mail</a> to continue the conversation.</p>
+			<img src="https://tinylytics.app/pixel/5k-5eys3-QT5sumY9sVY.gif?path={{ .RelPermalink }}" alt="" style="width:1px;height:1px;border:0;" />
+			{{ "]]>" | safeHTML }}</content:encoded>
+			
+			{{- with $xl }}
+			<enclosure url="{{ .Permalink }}" type="image/jpeg" length="0" />
+			<media:content url="{{ .Permalink }}" medium="image" type="image/jpeg">
+				<media:title type="plain">{{ $alt }}</media:title>
+				{{- with $caption }}<media:description type="plain">{{ . | plainify }}</media:description>{{ end }}
+			</media:content>
+			{{- end }}
+			{{- with $thumb }}<media:thumbnail url="{{ .Permalink }}" />{{ end }}
+		</item>
+		{{- end }}
+	</channel>
+</rss>

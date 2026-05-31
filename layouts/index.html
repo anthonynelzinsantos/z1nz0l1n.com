@@ -1,0 +1,8 @@
+{{ define "main" }}
+{{- $all := (where site.RegularPages "Section" "dispatches").ByDate -}}
+{{- $p := index ($all.Reverse) 0 -}}
+{{- $prev := false }}{{ $next := false -}}
+{{- $n := len $all -}}
+{{- if gt $n 1 }}{{ $prev = index $all (sub $n 2) }}{{ end -}}
+{{ partial "article.html" (dict "page" $p "memo" true "footer" true "prev" $prev "next" $next) }}
+{{ end }}

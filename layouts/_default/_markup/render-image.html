@@ -1,0 +1,19 @@
+{{- /* Content images share the hero's "photographic print" treatment:
+       white border, shadow, corner .marks, a slight JS wobble and the JS sheen.
+       Markup mirrors the hero (.photo > .marks + .photo-print > picture) so a
+       single set of CSS rules and one JS pass cover every image on the site.
+       A captioned image — `![alt](name "caption")` — keeps its <figcaption>. */ -}}
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- $alt := .PlainText -}}
+{{- if $img -}}
+  {{- $w := $img.Width -}}{{- $h := $img.Height -}}
+<figure class="photo kg-card kg-image-card kg-width-wide{{ if .Title }} kg-card-hascaption{{ end }}">
+	<div class="marks"><span></span><span></span></div>
+	<div class="photo-print">
+		<picture><img class="kg-image" src="{{ $img.RelPermalink }}"{{ with $w }} width="{{ . }}"{{ end }}{{ with $h }} height="{{ . }}"{{ end }} loading="lazy" alt="{{ $alt }}"></picture>
+		{{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+	</div>
+</figure>
+{{- else -}}
+<img src="{{ .Destination }}" alt="{{ $alt }}">
+{{- end -}}

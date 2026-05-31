@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{- $posts := (where site.RegularPages "Section" "dispatches").ByDate.Reverse -}}
+<article class="article post no-image">
+    <section class="content">
+    	<header class="header">
+			<h1 class="title">{{ .Title }}</h1>
+			<div class="deck">{{ if eq (len $posts) 0 }}No dispatches{{ else if eq (len $posts) 1 }}1 dispatch{{ else }}{{ len $posts }} dispatches{{ end }}</div>
+		</header>
+
+    {{- range $posts }}
+        {{ partial "row.html" . }}
+    {{- end }}
+    </section>
+</article>
+{{ end }}

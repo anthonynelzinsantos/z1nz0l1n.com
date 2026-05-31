@@ -1,0 +1,227 @@
+# ═════════════════════════════════════════════════════════════════════
+#  1. Hardening
+# ═════════════════════════════════════════════════════════════════════
+
+# Don't reveal Apache version or OS in error pages and headers.
+ServerSignature Off
+
+# No directory listing if an index file is missing — show 403 instead.
+Options -Indexes
+
+# Disallow following symlinks to anything the request didn't already
+# match (defence against symlink-race attacks on shared hosting).
+Options +SymLinksIfOwnerMatch
+
+# Deny TRACE/TRACK (cross-site tracing). Most modern Apaches reject
+# these by default but it costs nothing to be explicit.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)$
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Block access to dotfiles (.git, .env, .htaccess itself, .DS_Store…).
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Block access to common build/config/backup files, including the Ghost
+# export JSON that lives in the project root.
+<FilesMatch "(?i)\.(bak|backup|swp|swo|tmp|orig|save|old|log|sql|sql\.gz|tar|tar\.gz|zip|rar|7z|toml|yaml|yml|ini|conf|config|json|lock)$">
+    Require all denied
+</FilesMatch>
+
+# Block hostile probes for WordPress/PHP admin paths so they 403 fast
+# rather than burning bandwidth on 404 pages.
+<IfModule mod_rewrite.c>
+    RewriteRule ^(wp-admin|wp-login|wp-content|wp-includes|xmlrpc\.php|administrator|phpmyadmin|phpinfo\.php) - [F,L,NC]
+</IfModule>
+
+# ═════════════════════════════════════════════════════════════════════
+#  2. Security headers
+# ═════════════════════════════════════════════════════════════════════
+
+<IfModule mod_headers.c>
+
+    # ── HSTS ──────────────────────────────────────────────────────────
+    # Tells browsers "only ever talk to me over HTTPS". 1 year is the
+    # de-facto standard.
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # ── MIME-type sniffing ────────────────────────────────────────────
+    # Stops browsers from second-guessing Content-Type and treating a
+    # served-as-text file as an executable script.
+    Header always set X-Content-Type-Options "nosniff"
+
+    # ── Referrer ──────────────────────────────────────────────────────
+    # Send the full URL to same-origin requests, only the origin to
+    # cross-origin HTTPS requests, nothing to cross-origin HTTP.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # ── Permissions-Policy ────────────────────────────────────────────
+    # Lock off browser features the site doesn't use. Empty parens = no
+    # origin (not even self) may use the feature.
+    Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()"
+
+    # ── Content-Security-Policy ───────────────────────────────────────
+    # Tuned for the Lexicon theme. Everything is first-party:
+    #   - All CSS, JS, images, and fonts are same-origin ('self').
+    #   - 'unsafe-inline' IS given for script-src: the theme emits one
+    #     small inline <script> (the GLightbox init). The site is fully
+    #     static with no user-generated content path, so there's no way
+    #     to inject a hostile <script>.
+    #   - 'unsafe-inline' IS given for style-src: the theme leans on
+    #     inline styles — the per-page `--hue` custom property on <html>
+    #     and archive <h2>, the JS-injected typewriter-misprint
+    #     `vertical-align` spans and washi-tape SVG, and Ghost's
+    #     `white-space:pre-wrap` figcaptions.
+    #   - img-src allows data: for the SVG paper/photo grain textures
+    #     embedded in screen.css as data URIs.
+    #   - frame-ancestors 'none' is the modern replacement for
+    #     X-Frame-Options: DENY.
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+
+    # ── Legacy clickjacking header (still useful for old browsers) ────
+    Header always set X-Frame-Options "DENY"
+
+    # ── Cross-Origin isolation ────────────────────────────────────────
+    # Modest hardening with no functional cost for a static blog.
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+
+    # Remove headers that leak server info (some hosts add these
+    # automatically; the unset is a no-op when they're not present).
+    Header always unset X-Powered-By
+    Header always unset Server
+
+</IfModule>
+
+# ═════════════════════════════════════════════════════════════════════
+#  3. Compression — Brotli where available, gzip otherwise
+# ═════════════════════════════════════════════════════════════════════
+
+# Brotli: better ratio than gzip, supported by all current browsers.
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml
+    AddOutputFilterByType BROTLI_COMPRESS text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/json application/ld+json
+    AddOutputFilterByType BROTLI_COMPRESS application/xml application/rss+xml application/atom+xml
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml image/x-icon
+    AddOutputFilterByType BROTLI_COMPRESS font/ttf font/otf
+</IfModule>
+
+# Gzip: the fallback for clients that don't advertise Brotli support.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/json application/ld+json
+    AddOutputFilterByType DEFLATE application/xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
+    AddOutputFilterByType DEFLATE font/ttf font/otf
+</IfModule>
+
+# Crucial when serving compressed variants behind caches/CDNs: the
+# response varies by the request's Accept-Encoding.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html|css|js|svg|xml|json|woff2)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+# ═════════════════════════════════════════════════════════════════════
+#  4. Caching — long for fingerprinted/variant assets, short for HTML/feeds
+# ═════════════════════════════════════════════════════════════════════
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Default: 1 hour. Better than no header for anything we forget.
+    ExpiresDefault                          "access plus 1 hour"
+
+    # HTML pages: short cache + revalidate. You want post edits to
+    # surface quickly.
+    ExpiresByType text/html                 "access plus 5 minutes"
+
+    # Feeds: very short. Subscribers should see new posts promptly.
+    ExpiresByType application/rss+xml       "access plus 30 minutes"
+    ExpiresByType application/atom+xml      "access plus 30 minutes"
+    ExpiresByType application/xml           "access plus 30 minutes"
+
+    # Sitemap: 1 day is plenty.
+    ExpiresByType text/xml                  "access plus 1 day"
+
+    # Images: long. Filenames typically don't change.
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/webp                "access plus 1 year"
+    ExpiresByType image/avif                "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 month"
+    ExpiresByType image/x-icon              "access plus 1 year"
+
+    # Fonts: long. Forma / Forma Mono / Rocksalt won't change between deploys.
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType font/woff                 "access plus 1 year"
+    ExpiresByType font/ttf                  "access plus 1 year"
+    ExpiresByType font/otf                  "access plus 1 year"
+
+    # Default lifetimes for CSS/JS.
+    ExpiresByType text/css                  "access plus 1 week"
+    ExpiresByType application/javascript    "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Hugo's resized image variants follow name_hu_HASH.jpg. These are
+    # content-addressed and safe to cache forever.
+    <FilesMatch "_hu_[a-f0-9]+(_[0-9a-z]+)?\.(jpg|jpeg|png|webp|avif)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # HTML and feeds get a "must-revalidate" cache hint so clients
+    # check freshness with conditional requests.
+    <FilesMatch "\.(html|xml)$">
+        Header set Cache-Control "public, max-age=300, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# ═════════════════════════════════════════════════════════════════════
+#  5. ETag — let mod_expires/Cache-Control drive freshness
+# ═════════════════════════════════════════════════════════════════════
+
+# When you set explicit Cache-Control + Last-Modified, ETag adds noise
+# and behaves badly across multi-server farms. Drop it.
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# ═════════════════════════════════════════════════════════════════════
+#  6. MIME types Apache sometimes mis-serves
+# ═════════════════════════════════════════════════════════════════════
+
+<IfModule mod_mime.c>
+    AddType application/font-woff2  .woff2
+    AddType font/woff2              .woff2
+    AddType image/svg+xml           .svg .svgz
+    AddType image/webp              .webp
+    AddType image/avif              .avif
+    # UTF-8 everywhere for text content.
+    AddDefaultCharset utf-8
+    AddCharset utf-8 .html .css .js .json .xml .svg .txt
+</IfModule>
+
+# ═════════════════════════════════════════════════════════════════════
+#  7. Redirects
+# ═════════════════════════════════════════════════════════════════════
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^rss/?$  /index.xml [R=301,L]
+    RewriteRule ^feed/?$ /index.xml [R=301,L]
+</IfModule>
+
+# ═════════════════════════════════════════════════════════════════════
+#  8. Pretty 404
+# ═════════════════════════════════════════════════════════════════════
+
+ErrorDocument 404 /404.html

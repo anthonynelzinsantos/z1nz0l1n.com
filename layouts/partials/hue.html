@@ -1,0 +1,30 @@
+{{- /* Lexicon hue: a seasonal cosine wave around the base colour (Purple = 298).
+
+       The old formula was a sawtooth — base + ISO week number — which ramped
+       299 → ~351 over the year and then snapped back ~52° on 1 January. That
+       discontinuity is the "violent shift", and it only ever drifted toward
+       magenta, never toward blue.
+
+       This is a cosine of the day-of-year instead:
+
+           hue = base + amplitude · cos( 2π · (yearDay − peak) / daysInYear )
+
+       • Continuous everywhere, including across the New Year boundary (a cosine
+         has no seam), so the colour eases through midwinter instead of jumping.
+       • Peaks toward the RED side at the summer solstice (peak ≈ day 172,
+         21 June) and bottoms out on the BLUE side at the winter solstice,
+         then climbs back up. Spring and autumn equinoxes sit on the base hue.
+
+       Amplitude defaults to 40 (swing 258 → 338, i.e. blue-violet → magenta)
+       and is tunable via the `hueAmplitude` param. Set `dynamicColour=false`
+       to pin everything to the base hue. */ -}}
+{{- $date := . -}}
+{{- $base := site.Params.baseHue | default 298 -}}
+{{- $hue := $base -}}
+{{- if site.Params.dynamicColour -}}
+  {{- $amp := site.Params.hueAmplitude | default 40 -}}
+  {{- $peak := site.Params.huePeakDay | default 172 -}}
+  {{- $angle := mul (mul 2 math.Pi) (div (sub $date.YearDay $peak | float) 365.25) -}}
+  {{- $hue = add $base (mul $amp (math.Cos $angle)) -}}
+{{- end -}}
+{{- return (int (math.Round $hue)) -}}
