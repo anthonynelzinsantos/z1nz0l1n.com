@@ -79,7 +79,7 @@ Options +SymLinksIfOwnerMatch
     #     embedded in screen.css as data URIs.
     #   - frame-ancestors 'none' is the modern replacement for
     #     X-Frame-Options: DENY.
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://tinylytics.app; style-src 'self'; img-src 'self' data: https://tinylytics.app; font-src 'self'; connect-src 'self' https://tinylytics.app; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
 
     # ── Legacy clickjacking header (still useful for old browsers) ────
     Header always set X-Frame-Options "DENY"
