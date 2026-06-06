@@ -1,5 +1,5 @@
 ---
-title: "26W12. The Kobo Remote is the worst gadget i’ve ever loved"
+title: "The Kobo Remote is the worst gadget i’ve ever loved"
 date: "2026-03-22T11:00:37.000Z"
 slug: "26w12"
 feature_image_alt: "Colourful bookshelves in an outdoor library. Image Anthony Nelzin-Santos."

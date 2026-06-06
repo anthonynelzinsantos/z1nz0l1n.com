@@ -1,5 +1,5 @@
 ---
-title: "25W48"
+title: "Weeknotes upon weeknotes"
 date: "2025-11-30T11:00:00.000Z"
 slug: "25w48"
 feature_image_alt: "An exit sign juxtaposed with pieces of art in a museum."

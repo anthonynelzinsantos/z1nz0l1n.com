@@ -1,5 +1,5 @@
 ---
-title: "26W07. Intersecting interests"
+title: "Intersecting interests"
 date: "2026-02-15T11:00:06.000Z"
 slug: "26w07"
 feature_image_alt: "A mural of an office worker juggling a compter, a briefcase, and a stack of papers. Image Anthony Nelzin-Santos."

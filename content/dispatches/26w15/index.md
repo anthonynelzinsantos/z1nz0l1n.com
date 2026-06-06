@@ -1,5 +1,5 @@
 ---
-title: "26W15. À la dérive"
+title: "À la dérive"
 date: "2026-04-12T11:00:00.000Z"
 slug: "26w15"
 feature_image_alt: "A person walking down a side street. Image Anthony Nelzin-Santos."

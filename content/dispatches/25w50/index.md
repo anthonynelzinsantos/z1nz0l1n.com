@@ -1,5 +1,5 @@
 ---
-title: "25W50"
+title: "Wish me good luck for next week"
 date: "2025-12-14T12:00:00.000Z"
 slug: "25w50"
 feature_image_alt: "A stained glass window depicting Saint François of Sales."

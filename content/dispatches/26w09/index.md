@@ -1,5 +1,5 @@
 ---
-title: "26W09. Pair programming"
+title: "Pair programming"
 date: "2026-03-01T11:30:00.000Z"
 slug: "26w09"
 feature_image_alt: "An electrical shutoff switch and two fire extinguisher handles on the side of an old truck. Image Anthony Nelzin-Santos."

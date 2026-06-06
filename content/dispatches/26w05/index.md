@@ -1,5 +1,5 @@
 ---
-title: "26W05. The shape of RSS"
+title: "The shape of RSS"
 date: "2026-02-01T11:00:00.000Z"
 slug: "26w05"
 feature_image_alt: "A pile of old books discarded on the pavement. Image Anthony Nelzin-Santos."

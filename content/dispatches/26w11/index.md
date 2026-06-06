@@ -1,5 +1,5 @@
 ---
-title: "26W11. The little book in the velvet-lined case"
+title: "The little book in the velvet-lined case"
 date: "2026-03-15T11:00:14.000Z"
 slug: "26w11"
 feature_image_alt: "An exhibition about typography at Lyon’s museum of printing and graphic communication.  Image Anthony Nelzin-Santos."

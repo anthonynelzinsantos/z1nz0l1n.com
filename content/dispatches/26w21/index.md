@@ -1,5 +1,5 @@
 ---
-title: "26W21. The unbearable lightness of Calder’s mobiles"
+title: "The unbearable lightness of Calder’s mobiles"
 date: "2026-05-24T15:00:00.000Z"
 slug: "26w21"
 feature_image_alt: "One of Calder’s mobiles. Image Anthony Nelzin-Santos."

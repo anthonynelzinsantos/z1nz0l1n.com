@@ -477,16 +477,6 @@ figure img {
     padding-bottom:      4px;
 }
 
-#main .article .header .memo {
-	grid-column: 1 / -1;
-	margin: var(--space-2xs) 0 0 0;
-	text-transform: uppercase;
-	
-	& .sans {
-		color: var(--color-muted);
-	}
-}
-
 /* Article content */
 
 #main .article .content {
@@ -897,20 +887,23 @@ body.wire-template::after  { right: 0; border-left:  2px dashed var(--wire-tear)
     }
 }
 
-/* telex chrome: ZCZC / routing / NNNN */
-.wire .zczc,
-.wire .nnnn {
+/* Telex chrome — shared by wires (ZCZC / NNNN) and dispatches (✠ / BK): a start
+   mark, a routing block (date-time + origin lines), and an end mark. */
+.article .zczc,
+.article .nnnn {
     color:  var(--color-markup);
     margin: 0;
 }
-.wire .nnnn { margin: var(--space-l) 0 0 0; }
+.article .nnnn { margin: var(--space-l) 0 0 0; }
 
-/* NAVTEX-style routing block: date-time line + origin line, no borders */
-.wire .routing {
+.article .routing {
     color:          lch(42% 18 var(--hue));
     font-size:      0.8rem;
     text-transform: uppercase;
 }
+
+/* space the title from the routing block above it (both worlds) */
+.article .routing + .title { margin-top: var(--space-l); }
 
 /* clean telex headline (drop the dispatch's typewriter ruled underline) */
 #main .article.wire .header .title {

@@ -1,5 +1,5 @@
 ---
-title: "25W46"
+title: "Hi, i’d like to add you to my professional network on LinkedIn"
 date: "2025-11-16T11:00:00.000Z"
 slug: "25w46"
 feature_image_alt: "A bunch of old bikes on the street."

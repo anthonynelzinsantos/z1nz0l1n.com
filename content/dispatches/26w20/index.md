@@ -1,5 +1,5 @@
 ---
-title: "26W20. My slightly deranged Moccamaster technique"
+title: "My slightly deranged Moccamaster technique"
 date: "2026-05-17T14:00:46.000Z"
 slug: "26w20"
 feature_image_alt: "A coffee bean dispenser at a small-scale roaster. Image Anthony Nelzin-Santos"

@@ -1,5 +1,5 @@
 ---
-title: "25W41"
+title: "Restless job syndrome"
 date: "2025-10-12T15:00:00.000Z"
 slug: "25w41"
 feature_image_alt: "The sun reflected through glass cubes."

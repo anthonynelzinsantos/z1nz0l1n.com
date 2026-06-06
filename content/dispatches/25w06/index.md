@@ -1,5 +1,5 @@
 ---
-title: "25W06. Learning a language with the machine"
+title: "Learning a language with the machine"
 date: "2026-02-08T11:00:38.000Z"
 slug: "25w06"
 feature_image_alt: "A row of flags at the European Parliament in Strasbourg. Image Anthony Nelzin-Santos."

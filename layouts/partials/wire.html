@@ -28,7 +28,7 @@
 			<p class="zczc">ZCZC {{ $afid }}</p>
 			<div class="routing">
 				<div class="dtg">{{ $dtg }}</div>
-				{{ with $fromSlug }}<div class="org">FROM {{ with $fromPage }}<a href="{{ .RelPermalink }}">{{ upper (replaceRE "-" " " $fromSlug) }}</a>{{ else }}{{ upper (replaceRE "-" " " $fromSlug) }}{{ end }}</div>{{ end }}
+				{{ with $fromSlug }}<div class="org">FROM {{ with $fromPage }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>{{ end }}
 			</div>
 			<h1 class="title">{{ $p.Title }}</h1>
 			{{ with $credit }}<p class="credit">{{ . | safeHTML }}</p>{{ end }}

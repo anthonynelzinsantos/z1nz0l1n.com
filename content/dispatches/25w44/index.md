@@ -1,5 +1,5 @@
 ---
-title: "25W44"
+title: "Missing the train"
 date: "2025-11-02T12:00:22.000Z"
 slug: "25w44"
 feature_image_alt: "An old-timey stereoscope."

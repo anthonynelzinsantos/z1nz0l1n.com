@@ -1,5 +1,5 @@
 ---
-title: "25W49"
+title: "Well that was fun"
 date: "2025-12-07T11:00:00.000Z"
 slug: "25w49"
 feature_image_alt: "A weird graffiti of two yellow lamas (?)."

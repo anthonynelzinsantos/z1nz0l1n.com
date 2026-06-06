@@ -1,5 +1,5 @@
 ---
-title: "26W14. Milestones"
+title: "Milestones"
 date: "2026-04-05T10:45:00.000Z"
 slug: "26w14"
 feature_image_alt: "A drawing of an Apple-hearted person. Image Anthony Nelzin-Santos."

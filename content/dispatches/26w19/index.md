@@ -1,5 +1,5 @@
 ---
-title: "26W19. Best of all possible worlds"
+title: "Best of all possible worlds"
 date: "2026-05-10T13:00:00.000Z"
 slug: "26w19"
 feature_image_alt: "A mural of a smiling child. Image Anthony Nelzin-Santos"

@@ -1,5 +1,5 @@
 ---
-title: "26W02. A very young adult"
+title: "A very young adult"
 date: "2026-01-11T13:00:00.000Z"
 slug: "26w02"
 feature_image_alt: "Steps in the fresh snow. Image Anthony Nelzin-Santos."

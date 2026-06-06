@@ -1,5 +1,5 @@
 ---
-title: "26W16. Never trust a typewriter you can’t throw out a window"
+title: "Never trust a typewriter you can’t throw out a window"
 date: "2026-04-19T10:30:00.000Z"
 slug: "26w16"
 feature_image_alt: "A detail of the Olivetti Lettera 36. Image Anthony Nelzin-Santos."

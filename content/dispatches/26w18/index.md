@@ -1,5 +1,5 @@
 ---
-title: "26W18. The surprising Shokz OpenDots One"
+title: "The surprising Shokz OpenDots One"
 date: "2026-05-03T11:30:00.000Z"
 slug: "26w18"
 feature_image_alt: "A mural of a violin playing itself. Image Anthony Nelzin-Santos."

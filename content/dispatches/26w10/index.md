@@ -1,5 +1,5 @@
 ---
-title: "26W10. Muscle memory"
+title: "Muscle memory"
 date: "2026-03-08T11:00:00.000Z"
 slug: "26w10"
 feature_image_alt: "A muscular statue in a museum. Image Anthony Nelzin-Santos."

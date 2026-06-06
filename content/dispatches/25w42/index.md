@@ -1,5 +1,5 @@
 ---
-title: "25W42"
+title: "In a typewriter kind of mood"
 date: "2025-10-19T14:00:00.000Z"
 slug: "25w42"
 feature_image_alt: "A hand holding the film version of the Coronet typeface from a Compugraphic EditWriter 7500 phototypesetter."

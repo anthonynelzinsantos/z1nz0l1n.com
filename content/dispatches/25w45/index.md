@@ -1,5 +1,5 @@
 ---
-title: "25W45"
+title: "Library bankruptcy"
 date: "2025-11-09T12:00:00.000Z"
 slug: "25w45"
 feature_image_alt: "Eugène Ysaye’s studio at the Grand Curtius museum in Liège."

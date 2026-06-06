@@ -1,5 +1,5 @@
 ---
-title: "26W13. Letting go"
+title: "Letting go"
 date: "2026-03-29T11:00:39.000Z"
 slug: "26w13"
 feature_image_alt: "A metal chest of drawers. Image Anthony Nelzin-Santos."

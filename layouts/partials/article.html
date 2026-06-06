@@ -24,23 +24,23 @@
 
     <section class="content">
     	<header class="header">
-			<h1 class="title">{{ $p.Title }}</h1>
 		{{ if .memo }}
-			<div class="memo">
-				<div class="by"><span class="sans">Dispatched by:&nbsp;</span><span>{{ site.Params.authorShort }}</span></div>
-
-			{{ with $p.Params.from }}
-				{{ with site.GetPage (printf "/from/%s" (index . 0)) }}
-				<div class="from"><span class="sans">From:&nbsp;</span><a class="none" href="{{ .RelPermalink }}" title="Read all dispatches from {{ .Title }}">{{ .Title }}</a></div>
+			<p class="zczc">{{ $p.Params.Slug | upper }} ✠</p>
+			<div class="routing">
+				<div class="dtg">{{ printf "%sZ%s" ($p.Date.Format "02-01-06") ($p.Date.Format "15:04") }}</div>
+				{{ with $p.Params.from }}
+					{{ $slug := index . 0 }}
+					<div class="org">FROM {{ with site.GetPage (printf "/from/%s" $slug) }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>
 				{{ end }}
-			{{ end }}
-
-				<div class="on"><span class="sans">On:&nbsp;</span><time class="date" datetime="{{ $p.Date.Format "2006-01-02" }}"><a class="none" href="{{ $p.RelPermalink }}" title="{{ $p.Title }}">{{ $p.Date.Format "2006-01-02" }}</a></time></div>
 			</div>
 		{{ end }}
+			<h1 class="title">{{ $p.Title }}</h1>
 		</header>
 
         {{ $p.Content }}
+    {{ if .memo }}
+        <p class="nnnn">BK</p>
+    {{ end }}
     {{ if .footer }}
         <footer class="footer">
 			<nav class="navigation">

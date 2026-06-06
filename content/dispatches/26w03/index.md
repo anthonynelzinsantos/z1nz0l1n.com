@@ -1,5 +1,5 @@
 ---
-title: "26W03. Could should might don’t show your work"
+title: "Could should might don’t show your work"
 date: "2026-01-18T11:00:00.000Z"
 slug: "26w03"
 feature_image_alt: "A “don’t walk” sign peaking out of the shadows. Image Anthony Nelzin-Santos."

@@ -1,5 +1,5 @@
 ---
-title: "25W52"
+title: "That was 2025"
 date: "2025-12-28T16:00:00.000Z"
 slug: "25w52"
 feature_image_alt: "A small coffee cup stamped with a red heart. Image Anthony Nelzin-Santos."

@@ -1,5 +1,5 @@
 ---
-title: "25W43"
+title: "Anti-antilibrary"
 date: "2025-10-26T15:00:00.000Z"
 slug: "25w43"
 feature_image_alt: "A view of the basilica of the Sacred Heart of Paray-le-Monial."

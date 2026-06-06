@@ -1,5 +1,5 @@
 ---
-title: "25W47"
+title: "Freezing"
 date: "2025-11-23T11:00:00.000Z"
 slug: "25w47"
 feature_image_alt: "An old man plugging his ears with his fingers at a concert, seen from the back."

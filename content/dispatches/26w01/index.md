@@ -1,5 +1,5 @@
 ---
-title: "26W01. Everything is a remix"
+title: "Everything is a remix"
 date: "2026-01-04T12:00:00.000Z"
 slug: "26w01"
 feature_image_alt: "The Géode dome reflecting the winter sky. Image Anthony Nelzin-Santos."

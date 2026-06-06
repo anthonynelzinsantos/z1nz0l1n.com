@@ -1,5 +1,5 @@
 ---
-title: "26W22. Swapping the engines mid-flight"
+title: "Swapping the engines mid-flight"
 date: "2026-05-31T14:00:00.000Z"
 slug: "26w22"
 feature_image_alt: "Stairs leading to nowhere. Image Anthony Nelzin-Santos."

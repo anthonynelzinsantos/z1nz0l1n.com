@@ -1,5 +1,5 @@
 ---
-title: "26W08. Safe travels"
+title: "Safe travels"
 date: "2026-02-22T11:00:00.000Z"
 slug: "26w08"
 feature_image_alt: "A view of the cathedral of Marseille. Image Anthony Nelzin-Santos."

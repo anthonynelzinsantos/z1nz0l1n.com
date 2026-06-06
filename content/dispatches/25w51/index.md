@@ -1,5 +1,5 @@
 ---
-title: "25W51"
+title: "A digital typewriter isn’t a smart typewriter"
 date: "2025-12-21T10:00:00.000Z"
 slug: "25w51"
 feature_image_alt: "The famed typewriter from the Shakespeare and Company bookshop in Paris."

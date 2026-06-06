@@ -1,5 +1,5 @@
 ---
-title: "26W17. Knackered by 3 PM"
+title: "Knackered by 3 PM"
 date: "2026-04-26T13:00:00.000Z"
 slug: "26w17"
 feature_image_alt: "A statue of a man sitting on top of a sphere holding a clock. Image Anthony Nelzin-Santos."
