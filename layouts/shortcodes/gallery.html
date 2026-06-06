@@ -1,39 +1,26 @@
-{{- /* Ghost-style image gallery. Inner content: one image filename per line,
-       a blank line starts a new row. Optional `caption` param.
+{{/* Ghost-style image gallery. Inner content: one image filename per line,
+     a blank line starts a new row. Optional `caption` param.
 
-       Each row is laid out as a CSS grid whose column lanes are sized in `fr`
-       to the pictures' aspect ratios (width ÷ height). Aspect-weighted tracks
-       make every image in a row share the same height while the row fills the
-       width, so portraits and landscapes fit together with no crop or gaps.
-       Images are page-bundle resources, resolved + published correctly. */ -}}
-{{- $caption := .Get "caption" -}}
-{{- $page := .Page -}}
+     Each row is laid out as a CSS grid whose column lanes are sized in `fr`
+     to the pictures' aspect ratios (width ÷ height). Aspect-weighted tracks
+     make every image in a row share the same height while the row fills the
+     width, so portraits and landscapes fit together with no crop or gaps.
+     Images are page-bundle resources, resolved + published correctly. */}}
+{{ $caption := .Get "caption" }}
+{{ $page := .Page }}
 <figure class="kg-card kg-gallery-card kg-width-wide{{ if $caption }} kg-card-hascaption{{ end }}">
 	<div class="kg-gallery-container">
-	{{- range $row := split (trim .Inner "\n ") "\n\n" }}
-		{{- $imgs := slice -}}
-		{{- range (split $row "\n") -}}
-			{{- $name := trim . " \t" -}}
-			{{- with and $name ($page.Resources.GetMatch $name) -}}
-				{{- $imgs = $imgs | append . -}}
-			{{- end -}}
-		{{- end -}}
-		{{- with $imgs }}
-		{{- $cols := slice -}}
-		{{- range . -}}
-			{{- $ar := 1.0 -}}
-			{{- if and .Width .Height (gt .Height 0) -}}{{- $ar = div (float .Width) (float .Height) -}}{{- end -}}
-			{{- $cols = $cols | append (printf "%.4ffr" $ar) -}}
-		{{- end -}}
+	{{ range $row := split (trim .Inner "\n ") "\n\n" }}
+		{{ $imgs := slice }}{{ range (split $row "\n") }}{{ $name := trim . " \t" }}{{ with and $name ($page.Resources.GetMatch $name) }}{{ $imgs = $imgs | append . }}{{ end }}{{ end }}
+		{{ with $imgs }}
+		{{ $cols := slice }}{{ range . }}{{ $ar := 1.0 }}{{ if and .Width .Height (gt .Height 0) }}{{ $ar = div (float .Width) (float .Height) }}{{ end }}{{ $cols = $cols | append (printf "%.4ffr" $ar) }}{{ end }}
 		<div class="kg-gallery-row{{ if eq (len .) 1 }} kg-gallery-row--single{{ end }}" style="grid-template-columns: {{ delimit $cols " " }}">
-		{{- range . }}
-			<div class="kg-gallery-image photo"><div class="marks"><span></span><span></span></div><div class="photo-print"><picture><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt=""></picture></div></div>
-		{{- end }}
+		{{ range . }}<div class="kg-gallery-image photo">{{ partial "marks.html" }}<div class="photo-print"><picture><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt=""></picture></div></div>{{ end }}
 		</div>
-		{{- end }}
-	{{- end }}
+		{{ end }}
+	{{ end }}
 	</div>
-	{{- with $caption }}
+	{{ with $caption }}
 	<figcaption><span class="label">{{ . }}</span></figcaption>
-	{{- end }}
+	{{ end }}
 </figure>

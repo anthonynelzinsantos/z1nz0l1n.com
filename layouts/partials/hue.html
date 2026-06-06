@@ -1,4 +1,4 @@
-{{- /* Lexicon hue: a seasonal cosine wave around the base colour (Purple = 298).
+{{/* Lexicon hue: a seasonal cosine wave around the base colour (Purple = 298).
 
        The old formula was a sawtooth — base + ISO week number — which ramped
        299 → ~351 over the year and then snapped back ~52° on 1 January. That
@@ -17,14 +17,14 @@
 
        Amplitude defaults to 40 (swing 258 → 338, i.e. blue-violet → magenta)
        and is tunable via the `hueAmplitude` param. Set `dynamicColour=false`
-       to pin everything to the base hue. */ -}}
-{{- $date := . -}}
-{{- $base := site.Params.baseHue | default 298 -}}
-{{- $hue := $base -}}
-{{- if site.Params.dynamicColour -}}
-  {{- $amp := site.Params.hueAmplitude | default 40 -}}
-  {{- $peak := site.Params.huePeakDay | default 172 -}}
-  {{- $angle := mul (mul 2 math.Pi) (div (sub $date.YearDay $peak | float) 365.25) -}}
-  {{- $hue = add $base (mul $amp (math.Cos $angle)) -}}
-{{- end -}}
-{{- return (int (math.Round $hue)) -}}
+       to pin everything to the base hue. */}}
+{{ $date := . }}
+{{ $base := site.Params.baseHue | default 298 }}
+{{ $hue := $base }}
+{{ if site.Params.dynamicColour }}
+  {{ $amp := site.Params.hueAmplitude | default 40 }}
+  {{ $peak := site.Params.huePeakDay | default 172 }}
+  {{ $angle := mul (mul 2 math.Pi) (div (sub $date.YearDay $peak | float) 365.25) }}
+  {{ $hue = add $base (mul $amp (math.Cos $angle)) }}
+{{ end }}
+{{ return (int (math.Round $hue)) }}

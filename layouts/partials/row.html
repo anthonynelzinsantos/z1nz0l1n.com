@@ -1,4 +1,4 @@
-{{- $hue := partial "hue.html" .Date -}}
+{{ $hue := partial "hue.html" .Date }}
 <article class="archive post">
     <h2 style="--hue: {{ $hue }}"><a class="boxed" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
     <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>

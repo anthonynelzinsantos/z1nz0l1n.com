@@ -1,0 +1,14 @@
+{{/* Shared list body for the archive and location (term) pages.
+       ctx: dict "title" (string) "posts" (Pages, pre-sorted) */}}
+{{ $posts := .posts }}
+<article class="article post no-image">
+    <section class="content">
+    	<header class="header">
+			<h1 class="title">{{ .title }}</h1>
+			<div class="deck">{{ if eq (len $posts) 0 }}No dispatches{{ else if eq (len $posts) 1 }}1 dispatch{{ else }}{{ len $posts }} dispatches{{ end }}</div>
+		</header>
+    {{ range $posts }}
+        {{ partial "row.html" . }}
+    {{ end }}
+    </section>
+</article>

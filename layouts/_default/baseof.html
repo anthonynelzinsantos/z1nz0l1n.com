@@ -1,10 +1,10 @@
-{{- $d := now -}}
-{{- if .IsHome -}}
-  {{- with index (where site.RegularPages "Section" "dispatches").ByDate.Reverse 0 }}{{ $d = .Date }}{{ end -}}
-{{- else if not .Date.IsZero -}}
-  {{- $d = .Date -}}
-{{- end -}}
-{{- $hue := partial "hue.html" $d -}}
+{{ $d := now }}
+{{ if .IsHome }}
+  {{ with index (where site.RegularPages "Section" "dispatches").ByDate.Reverse 0 }}{{ $d = .Date }}{{ end }}
+{{ else if not .Date.IsZero }}
+  {{ $d = .Date }}
+{{ end }}
+{{ $hue := partial "hue.html" $d }}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">
 <head>
@@ -50,9 +50,9 @@
     <footer id="footer">
         <nav class="navigation">
             <ul class="nav sans">
-            {{- range site.Menus.main }}
+            {{ range site.Menus.main }}
                 <li class="nav-{{ .Name | urlize }}{{ if $.IsMenuCurrent "main" . }} nav-current{{ end }}"><a class="none" href="{{ .URL }}">{{ .Name }}</a></li>
-            {{- end }}
+            {{ end }}
             </ul>
         </nav>
 
