@@ -1,8 +1,12 @@
 {{ define "main" }}
-{{ $all := (where site.RegularPages "Section" "dispatches").ByDate }}
-{{ $p := index ($all.Reverse) 0 }}
-{{ $prev := false }}{{ $next := false }}
-{{ $n := len $all }}
-{{ if gt $n 1 }}{{ $prev = index $all (sub $n 2) }}{{ end }}
-{{ partial "article.html" (dict "page" $p "memo" true "footer" true "prev" $prev "next" $next) }}
+{{/* The home page shows the latest item across the combined timeline — a
+     dispatch in the warm world, or a wire in the cold telex world (the body
+     class is switched to match in baseof). */}}
+{{ $latest := partial "latest.html" . }}
+{{ $sib := partial "siblings.html" $latest }}
+{{ if eq $latest.Section "wires" }}
+{{ partial "wire.html" (dict "page" $latest "prev" $sib.prev "next" $sib.next) }}
+{{ else }}
+{{ partial "article.html" (dict "page" $latest "memo" true "footer" true "prev" $sib.prev "next" $sib.next) }}
+{{ end }}
 {{ end }}

@@ -1,3 +1,3 @@
 ---
-title: "Aachen 🇩🇪"
+title: "Aachen (DE)"
 ---

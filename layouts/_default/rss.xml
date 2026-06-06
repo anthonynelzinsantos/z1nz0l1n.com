@@ -21,7 +21,7 @@
 		</image>
 		<atom:link href="{{ "/index.xml" | absURL }}" rel="self" type="application/rss+xml" />
 
-		{{ $posts := first 24 (where site.RegularPages "Section" "dispatches").ByDate.Reverse }}
+		{{ $posts := first 24 (where site.RegularPages "Section" "in" (slice "dispatches" "wires")).ByDate.Reverse }}
 		{{ range $posts }}
 		{{ $feature := .Resources.GetMatch "feature.*" }}
 		{{ $alt := .Title }}{{ with .Params.feature_image_alt }}{{ $alt = . }}{{ end }}

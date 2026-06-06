@@ -1,3 +1,3 @@
 ---
-title: "Lyon 🇫🇷"
+title: "Lyon (FR)"
 ---

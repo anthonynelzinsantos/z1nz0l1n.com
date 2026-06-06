@@ -8,7 +8,7 @@ from:
   - "lyon-fr"
 ---
 
-Speaking of [small seasons](/tis-the-small-season/), winter descended on Europe in a flash, and it’s been freezing for the last ten days straight. It’s my favourite part of the winter: the air is crisp, the days are as bright as the nights are dark, there’s not a cloud on the horizon, and the colours are magnificent. I do miss the snow, though.
+Speaking of [small seasons](/d/tis-the-small-season/), winter descended on Europe in a flash, and it’s been freezing for the last ten days straight. It’s my favourite part of the winter: the air is crisp, the days are as bright as the nights are dark, there’s not a cloud on the horizon, and the colours are magnificent. I do miss the snow, though.
 
 ## Apps
 

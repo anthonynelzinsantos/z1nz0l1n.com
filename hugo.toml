@@ -7,13 +7,21 @@ disableKinds = ["taxonomy"]
 summaryLength = 40
 timeZone = "Europe/Paris"
 
-# Lexicon: posts ("dispatches") live at the site root, e.g. /26w21/
+# Dispatches at /d/<slug>/, wires at /w/<slug>/ (section lists at /d/ and /w/,
+# set via url: in each _index.md). Old root URLs /<slug>/ are 301-redirected
+# server-side in static/.htaccess.
 [permalinks]
-  dispatches = "/:slug/"
+  dispatches = "/d/:slug/"
+  wires      = "/w/:slug/"
 
-# Tags are "locations", served under /from/<slug>/
+# Taxonomies. "from" = locations (/from/<slug>/). Wires also classify by what
+# they critique: "about" = medium (/about/<term>/) and "by" = creator (/by/<term>/).
+# disableKinds=["taxonomy"] keeps the term-LIST pages off, so /about/<term>/
+# doesn't collide with the /about/ content page (only term pages are built).
 [taxonomies]
   location = "from"
+  medium   = "about"
+  creator  = "by"
 
 [params]
   description = "Reading, writing, walking. Not (always) at the same time."
@@ -32,8 +40,8 @@ timeZone = "Europe/Paris"
 
 # Footer navigation (Ghost settings → navigation)
 [[menu.main]]
-  name = "About"
-  url = "/about/"
+  name = "Colophon"
+  url = "/colophon/"
   weight = 1
 [[menu.main]]
   name = "Blogroll"

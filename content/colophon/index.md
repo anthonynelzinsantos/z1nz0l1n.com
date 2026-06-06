@@ -1,7 +1,7 @@
 ---
-title: "About"
+title: "Colophon"
 date: "2025-01-01T06:00:00.000Z"
-slug: "about"
+slug: "colophon"
 feature_image_alt: "A detail of a purple and white stained glass window. Image Anthony Nelzin-Santos."
 feature_image_caption: "Karlsruhe (Germany), 2022-11."
 type: "page"

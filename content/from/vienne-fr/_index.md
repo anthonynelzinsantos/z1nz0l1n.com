@@ -1,3 +1,3 @@
 ---
-title: "Vienne 🇫🇷"
+title: "Vienne (FR)"
 ---

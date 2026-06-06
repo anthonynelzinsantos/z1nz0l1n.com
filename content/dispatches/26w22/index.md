@@ -24,9 +24,9 @@ That being said, i can’t help but be amazed by the result. It's telling that C
 
 ## Links
 
-**[“Craft is not culture”](https://nazhamid.com/journal/craft-is-not-culture/) by Naz Hamid.** *“Culture is the moat. It’s not craft and it’s not aesthetic. […] LLMs can pattern-match around culture, but they cannot be inside it. They cannot live it.”* Trouble is, [there’s no culture without craft](https://z1nz0l1n.com/26w04/). Our current deskilling is our future deculturation.
+**[“Craft is not culture”](https://nazhamid.com/journal/craft-is-not-culture/) by Naz Hamid.** *“Culture is the moat. It’s not craft and it’s not aesthetic. […] LLMs can pattern-match around culture, but they cannot be inside it. They cannot live it.”* Trouble is, [there’s no culture without craft](https://z1nz0l1n.com/d/26w04/). Our current deskilling is our future deculturation.
 
-**[“Last.fm is now independent”](https://support.last.fm/t/last-fm-is-now-independent/118591).** [More](https://z1nz0l1n.com/26w21/#:~:text=%E2%80%9CRakuten%20Kobo%20and%20StoryGraph%20announce%20integration%E2%80%9D.%20Great%20news) wonderful news.
+**[“Last.fm is now independent”](https://support.last.fm/t/last-fm-is-now-independent/118591).** [More](https://z1nz0l1n.com/d/26w21/#:~:text=%E2%80%9CRakuten%20Kobo%20and%20StoryGraph%20announce%20integration%E2%80%9D.%20Great%20news) wonderful news.
 
 ## Music
 

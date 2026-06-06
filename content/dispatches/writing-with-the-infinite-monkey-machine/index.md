@@ -8,7 +8,7 @@ from:
   - "lyon-fr"
 ---
 
-I have a confession to make. I didn’t write [my previous post](/making-the-imperfect-notebooks/). ChatGPT did.
+I have a confession to make. I didn’t write [my previous post](/d/making-the-imperfect-notebooks/). ChatGPT did.
 
 See, i couldn’t help but be intrigued [by Jony Ive and Sam Altman’s announcement](https://openai.com/sam-and-jony/). Ive has been fairly critical of his own creations lately, going so far as calling them *“legacy products”*. We live in a world he designed, but as [he told *The Financial Times*](https://archive.is/vWAx8#selection-2033.410-2033.491), *“many of us would say we have an uneasy relationship with technology at the moment*”. His disillusionment has been apparent for years:
 
@@ -20,7 +20,7 @@ That was enough to make me want to play with ChatGPT again. It so happens that i
 
 It was a surreal experience, and not only because it pulled the anecdote about *“eight-year-old me”* discovering his abilities out of thin air. (I did, however, borrow my Year 1 teacher’s Year 5 history lessons to read them at home. She was as pissed as she was impressed, and recommended i’d be transferred to a private school for *“intellectually precocious”* children and that my *“autistic tendencies”* were carefully monitored. The conflict between my parents on the *“issue”* precipitated their divorce. So, you know, close.)
 
-Trouble is, as i try to reread my post (its post? our post?), my eyes gloss over the page. It just fails to grab my attention. It vaguely sounds like me, if i was extremely tired, drunk, and writing about a topic i don’t know much about. Which is funny, considering that [i haven’t had a drink in years](/a-thousand-and-twenty-four-days/) and that it’s supposed to be an article about myself. As Picasso never said[^1], *“good artists copy; great artists steal”*, but i’m not even sure ChatGPT is a mediocre artist.
+Trouble is, as i try to reread my post (its post? our post?), my eyes gloss over the page. It just fails to grab my attention. It vaguely sounds like me, if i was extremely tired, drunk, and writing about a topic i don’t know much about. Which is funny, considering that [i haven’t had a drink in years](/d/a-thousand-and-twenty-four-days/) and that it’s supposed to be an article about myself. As Picasso never said[^1], *“good artists copy; great artists steal”*, but i’m not even sure ChatGPT is a mediocre artist.
 
 Writing using a machine is not the same as letting the machine write in your place, just like playing the piano is not the same as letting a player piano play for you. I’m not impressed by people telling me that the more creative you are in your prompts, the more creative ChatGPT will be in its answers. It reminds me of people telling you, with the vacant stare of the terminally stupid, that it’s not guns that kill people. Tools matter. Intentions matter.
 

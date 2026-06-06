@@ -1,3 +1,3 @@
 ---
-title: "Liège 🇧🇪"
+title: "Liège (BE)"
 ---

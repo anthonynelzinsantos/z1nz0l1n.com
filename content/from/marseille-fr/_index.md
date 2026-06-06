@@ -1,3 +1,3 @@
 ---
-title: "Marseille 🇫🇷"
+title: "Marseille (FR)"
 ---

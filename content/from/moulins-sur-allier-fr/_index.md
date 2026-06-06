@@ -1,3 +1,3 @@
 ---
-title: "Moulins-sur-Allier 🇫🇷"
+title: "Moulins-sur-Allier (FR)"
 ---

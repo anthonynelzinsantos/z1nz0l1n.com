@@ -1,0 +1,4 @@
+---
+title: Wires
+url: /w/
+---

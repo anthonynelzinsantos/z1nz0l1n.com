@@ -1,3 +1,3 @@
 ---
-title: "Besançon 🇫🇷"
+title: "Besançon (FR)"
 ---

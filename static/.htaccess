@@ -222,6 +222,16 @@ FileETag None
 
     RewriteRule ^rss/?$  /index.xml [R=301,L]
     RewriteRule ^feed/?$ /index.xml [R=301,L]
+
+    # The About page was renamed to Colophon. ($-anchored so it never catches the
+    # "about" taxonomy term pages at /about/<term>/.)
+    RewriteRule ^about/?$ /colophon/ [R=301,L]
+
+    # Dispatches moved from the old root URLs /<slug>/ to /d/<slug>/. 301 them so
+    # external links keep working. This is the explicit historical slug set —
+    # pages created after the move are only ever at the new path, so it never
+    # needs to grow.
+    RewriteRule ^(25w06|25w39|25w40|25w41|25w42|25w43|25w44|25w45|25w46|25w47|25w48|25w49|25w50|25w51|25w52|26w01|26w02|26w03|26w04|26w05|26w07|26w08|26w09|26w10|26w11|26w12|26w13|26w14|26w15|26w16|26w17|26w18|26w19|26w20|26w21|26w22|a-dumber-apple-watch|a-thousand-and-twenty-four-days|anti-crapification|bits-and-bobs-spring-2025|bits-and-bobs-summer-2025|but-what-is-purple-really|cerise-my-single-pickup-fender-stratocaster|firing-the-kindle|how-i-restored-a-sewing-machine-by-accident|jony-ive-wants-my-money|liquid-glass-isnt-a-design-failure|making-the-imperfect-notebooks|my-digital-amerixit|my-mothers-son|one-ring-to-measure-it-all|rook-n-roll|seriously-unserious|sewing-a-friday-patterns-company-ilford-jacket|tech-journalism-is-dead|the-curious-case-of-macos|the-deliciously-sleepy-aurora-ipsilon|the-dma-works|the-onyx-boox-palma-is-dead-long-live-the-onyx-boox-p6-pro|the-trap-of-the-tbr-pile|they-said-the-web-was-dead|tis-the-small-season|why-cant-i-throw-away-my-old-notebooks|why-do-people-look-at-their-smartphones-while-walking|wibble-wobble|writing-is-all-about-ups-and-downs|writing-with-the-infinite-monkey-machine|you-shouldnt-buy-a-colour-e-reader-yet|zen-in-the-art-of-computer-setup)/?$ /d/$1/ [R=301,L]
 </IfModule>
 
 # ═════════════════════════════════════════════════════════════════════

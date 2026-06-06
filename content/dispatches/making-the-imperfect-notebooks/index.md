@@ -32,4 +32,4 @@ Making something with my hands isn’t a test. It’s a conversation with my mat
 
 ------------------------------------------------------------------------
 
-**Follow-up:** [‘Writing with the infinite monkey machine’](/writing-with-the-infinite-monkey-machine/)
+**Follow-up:** [‘Writing with the infinite monkey machine’](/d/writing-with-the-infinite-monkey-machine/)

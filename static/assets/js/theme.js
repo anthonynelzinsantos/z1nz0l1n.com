@@ -391,7 +391,8 @@
 (function () {
   'use strict';
 
-  const CONTENT_SELECTOR = '#main .article .content';
+  // Dispatches only — telex wires are rigidly aligned, no typewriter misprints.
+  const CONTENT_SELECTOR = '#main .article:not(.wire) .content';
 
   // Tuning
   const SHIFT_COUNT = 2;  // how many characters are misaligned

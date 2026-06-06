@@ -8,7 +8,7 @@ from:
   - "vienne-fr"
 ---
 
-I bought another Apple Watch. Mind you, [i still believe](/one-ring-to-measure-it-all/) wearing a constantly vibrating fear-mongering data-collecting computer on your wrist is a fantastically bad idea. But turning off (almost) all notifications goes a long way towards turning it into… a digital watch. And a good one at that.
+I bought another Apple Watch. Mind you, [i still believe](/d/one-ring-to-measure-it-all/) wearing a constantly vibrating fear-mongering data-collecting computer on your wrist is a fantastically bad idea. But turning off (almost) all notifications goes a long way towards turning it into… a digital watch. And a good one at that.
 
 For once, i bought [the base model](https://amzn.to/40ubd0M) with [a simple Sport band](https://amzn.to/3InObCw). The aluminium case is far lighter than the steel one of my original Apple Watch, despite the far bigger screen, and the ‘jet black’ colour way reminds me of my dark titanium Series 5. The synthetic rubber band is as comfortable as ever, but with the sweltering heat that descended on Europe these last few weeks, i haven’t worn anything else than [the lightweight and breathable Sport loop](https://amzn.to/4nvi4Rt).
 

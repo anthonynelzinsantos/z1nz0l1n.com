@@ -20,7 +20,7 @@ No wonder Michel Pastoureau wrote the history of every colour, including [black]
 
 Like brown, and unlike purple, violet doesn’t appear in the rainbow. It’s a non-spectral colour, which means that it can’t be produced by a single monochromatic light source. The purple boundary, the straight line that goes from red to purple on [chromaticity diagrams](https://en.wikipedia.org/wiki/CIE_1931_color_space), represents a firm limit in human perception. Heliotrope, lavender, lilac, mauve, periwinkle, petunia, phlox, thistle, veronica, violet, wisteria[^2], grape, mulberry and plum[^3] appear somewhere in the triangle between this line and the white point. Where exactly is a matter of debate.
 
-Take [the namesake colour of this blog](/about/), “zinzolin”, which i’ve been tracking in dozens of old reference books. It went from a warm orange in the 1650s to a grayish yellow in the 1800s, and then abruptly shifted to a deep purple in the 19th century. The few modern colour charts that mention zinzolin put it next to mauve. Since its name might come from the jujube fruit, which is almost maroon, i chose a reddish hue for myself.
+Take [the namesake colour of this blog](/colophon/), “zinzolin”, which i’ve been tracking in dozens of old reference books. It went from a warm orange in the 1650s to a grayish yellow in the 1800s, and then abruptly shifted to a deep purple in the 19th century. The few modern colour charts that mention zinzolin put it next to mauve. Since its name might come from the jujube fruit, which is almost maroon, i chose a reddish hue for myself.
 
 So, what’s my favourite colour? Well, purple, of course. In all its various hues.
 

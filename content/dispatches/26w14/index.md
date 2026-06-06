@@ -28,7 +28,7 @@ I’ve been thoroughly unimpressed by the media coverage of Apple’s fiftieth b
 
 ## Links
 
-I don’t regret [switching careers](/tech-journalism-is-dead/) one bit, but i’m sure i’d have enjoyed working on Apple’s fiftieth. Here are a few good articles on the topic:
+I don’t regret [switching careers](/d/tech-journalism-is-dead/) one bit, but i’m sure i’d have enjoyed working on Apple’s fiftieth. Here are a few good articles on the topic:
 
 - [“How Apple became Apple: The definitive oral history of the company’s earliest days”](https://www.fastcompany.com/91514404/apple-founding-50th-anniversary-apple-1-apple-ii-jobs-wozniak) by Harry McCracken;
 - [“Between Jobs”](https://www.theverge.com/tech/897520/apple-without-steve-jobs-90s) by Jason Snell;

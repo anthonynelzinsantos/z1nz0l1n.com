@@ -1,3 +1,3 @@
 ---
-title: "Paray-le-Monial 🇫🇷"
+title: "Paray-le-Monial (FR)"
 ---

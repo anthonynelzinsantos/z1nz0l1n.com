@@ -8,7 +8,7 @@ from:
   - "lyon-fr"
 ---
 
-I just [reorganized my library](/the-trap-of-the-tbr-pile/), so what did people gift me for my birthday? More books, of course. I guess nature really hates a vacuum.
+I just [reorganized my library](/d/the-trap-of-the-tbr-pile/), so what did people gift me for my birthday? More books, of course. I guess nature really hates a vacuum.
 
 ## Apps
 

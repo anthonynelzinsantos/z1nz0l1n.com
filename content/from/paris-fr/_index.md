@@ -1,3 +1,3 @@
 ---
-title: "Paris 🇫🇷"
+title: "Paris (FR)"
 ---

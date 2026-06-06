@@ -1,0 +1,57 @@
+{{/* A wire, rendered as telex / continuous-form printout. The cold "paper" is
+     the <body> (body.wire-template in screen.css); this lays the message +
+     footer onto it. ctx: page (Page), prev (older item), next (newer item). */}}
+{{ $p := .page }}
+
+{{/* NAVTEX-style header. ZCZC <B1 B2 B3 B4>: here AF + last two digits of the
+     slug as the message serial. Date-time group as DDHHmm UTC MMM YY. */}}
+{{ $afid := printf "AF%s" (substr $p.Slug -2) }}
+{{ $dtg := printf "%s UTC %s" ($p.Date.Format "021504") (upper ($p.Date.Format "Jan 06")) }}
+
+{{/* FROM (location term): display the upper-cased slug, link to its listing */}}
+{{ $fromSlug := "" }}{{ with $p.Params.from }}{{ $fromSlug = index . 0 }}{{ end }}
+{{ $fromPage := false }}{{ with $fromSlug }}{{ $fromPage = site.GetPage (printf "/from/%s" .) }}{{ end }}
+
+{{/* subject credit: what the wire critiques + who made it, each term linked.
+     Iterate the raw front-matter values (preserving their order), resolving each
+     to its term page via a urlize-keyed map built from GetTerms (robust links). */}}
+{{ $aboutMap := dict }}{{ range $p.GetTerms "about" }}{{ $aboutMap = merge $aboutMap (dict (urlize .LinkTitle) .) }}{{ end }}
+{{ $byMap := dict }}{{ range $p.GetTerms "by" }}{{ $byMap = merge $byMap (dict (urlize .LinkTitle) .) }}{{ end }}
+{{ $a := slice }}{{ range $p.Params.about }}{{ $t := index $aboutMap (urlize .) }}{{ if $t }}{{ $a = $a | append (printf `<a href="%s">%s</a>` $t.RelPermalink (upper .)) }}{{ else }}{{ $a = $a | append (upper .) }}{{ end }}{{ end }}
+{{ $b := slice }}{{ range $p.Params.by }}{{ $t := index $byMap (urlize .) }}{{ if $t }}{{ $b = $b | append (printf `<a href="%s">%s</a>` $t.RelPermalink (upper .)) }}{{ else }}{{ $b = $b | append (upper .) }}{{ end }}{{ end }}
+{{ $credit := delimit $a ", " }}
+{{ with delimit $b ", " }}{{ if $credit }}{{ $credit = printf "%s BY %s" $credit . }}{{ else }}{{ $credit = printf "BY %s" . }}{{ end }}{{ end }}
+
+<article class="article wire post no-image">
+	<section class="content">
+		<header class="header">
+			<p class="zczc">ZCZC {{ $afid }}</p>
+			<div class="routing">
+				<div class="dtg">{{ $dtg }}</div>
+				{{ with $fromSlug }}<div class="org">FROM {{ with $fromPage }}<a href="{{ .RelPermalink }}">{{ upper (replaceRE "-" " " $fromSlug) }}</a>{{ else }}{{ upper (replaceRE "-" " " $fromSlug) }}{{ end }}</div>{{ end }}
+			</div>
+			<h1 class="title">{{ $p.Title }}</h1>
+			{{ with $credit }}<p class="credit">{{ . | safeHTML }}</p>{{ end }}
+		</header>
+
+		{{ $p.Content }}
+
+		<p class="nnnn">NNNN</p>
+
+		<footer class="footer">
+			<nav class="navigation">
+				<div class="previous">
+					{{ with .prev }}<a class="icon previous" href="{{ .RelPermalink }}" data-tooltip="Read the previous item" rel="prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM168,136H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168a8,8,0,0,1,0,16Z"></path></svg></a>{{ end }}
+				</div>
+
+				<div class="all">
+					<a class="icon" href="{{ "/archive/" | relURL }}" data-tooltip="View the archive"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM192,184H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-48H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"></path></svg></a>
+				</div>
+
+				<div class="next">
+					{{ with .next }}<a class="icon" href="{{ .RelPermalink }}" data-tooltip="Read the next item" rel="next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM173.66,133.66l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88a8,8,0,0,1,0-16h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32A8,8,0,0,1,173.66,133.66Z"></path></svg></a>{{ end }}
+				</div>
+			</nav>
+		</footer>
+	</section>
+</article>

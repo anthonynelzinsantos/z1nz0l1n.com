@@ -1,0 +1,4 @@
+{{/* The newest item across the combined dispatch + wire timeline. Returns a Page.
+     Used by the home page (which shows the latest item, dispatch or wire) and by
+     baseof (to pick the home body class + hue). */}}
+{{ return (index ((where site.RegularPages "Section" "in" (slice "dispatches" "wires")).ByDate.Reverse) 0) }}

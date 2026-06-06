@@ -1,11 +1,22 @@
 {{/* Shared list body for the archive and location (term) pages.
-       ctx: dict "title" (string) "posts" (Pages, pre-sorted) */}}
+     ctx: dict "title" (string) "posts" (Pages, pre-sorted).
+     The deck counts dispatches and wires separately. */}}
 {{ $posts := .posts }}
+{{ $nd := len (where $posts "Section" "dispatches") }}
+{{ $nw := len (where $posts "Section" "wires") }}
+{{/* link each count to its filtered list, but only when both types are present
+     (on a filtered list there's nothing to link to but itself) */}}
+{{ $both := and (gt $nd 0) (gt $nw 0) }}
+{{ $dURL := (site.GetPage "/dispatches").RelPermalink }}
+{{ $wURL := (site.GetPage "/wires").RelPermalink }}
+{{ $parts := slice }}
+{{ if gt $nd 0 }}{{ $t := printf "%d dispatch%s" $nd (cond (eq $nd 1) "" "es") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` $dURL $t) $t) }}{{ end }}
+{{ if gt $nw 0 }}{{ $t := printf "%d wire%s" $nw (cond (eq $nw 1) "" "s") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` $wURL $t) $t) }}{{ end }}
 <article class="article post no-image">
     <section class="content">
     	<header class="header">
 			<h1 class="title">{{ .title }}</h1>
-			<div class="deck">{{ if eq (len $posts) 0 }}No dispatches{{ else if eq (len $posts) 1 }}1 dispatch{{ else }}{{ len $posts }} dispatches{{ end }}</div>
+			<div class="deck">{{ if $parts }}{{ delimit $parts " · " | safeHTML }}{{ else }}Nothing yet{{ end }}</div>
 		</header>
     {{ range $posts }}
         {{ partial "row.html" . }}

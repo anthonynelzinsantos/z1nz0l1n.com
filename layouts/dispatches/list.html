@@ -1,0 +1,3 @@
+{{ define "main" }}
+{{ partial "dispatch-list.html" (dict "title" .Title "posts" (where site.RegularPages "Section" "dispatches").ByDate.Reverse) }}
+{{ end }}
