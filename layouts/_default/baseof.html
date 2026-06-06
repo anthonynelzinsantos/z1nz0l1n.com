@@ -1,11 +1,22 @@
 {{ $d := now }}
 {{ $homeWire := false }}
+{{ $sec := .Section }}
 {{ if .IsHome }}
-  {{ with partial "latest.html" . }}{{ $d = .Date }}{{ if eq .Section "wires" }}{{ $homeWire = true }}{{ end }}{{ end }}
+  {{ with partial "latest.html" . }}{{ $d = .Date }}{{ $sec = .Section }}{{ if eq .Section "wires" }}{{ $homeWire = true }}{{ end }}{{ end }}
 {{ else if not .Date.IsZero }}
   {{ $d = .Date }}
 {{ end }}
 {{ $hue := partial "hue.html" $d }}
+{{/* Banner: each section's own header (from its _index), else a default. The
+     home borrows the header of the latest item it shows. */}}
+{{ $banner := "" }}
+{{ if or (eq $sec "dispatches") (eq $sec "wires") }}
+  {{ with site.GetPage (printf "/%s" $sec) }}
+  	{{ with .Params.banner }}{{ $banner = . }}{{ end }}
+  {{ end }}
+{{ else }}
+	{{ $banner = .Site.Params.banner }}
+{{ end }}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">
 <head>
@@ -31,6 +42,10 @@
     <script src="https://tinylytics.app/embed/5k-5eys3-QT5sumY9sVY.js" defer></script>
 </head>
 <body class="{{ if .IsHome }}{{ if $homeWire }}wire-template{{ else }}home-template{{ end }}{{ else if eq .Section "dispatches" }}post-template{{ else if eq .Section "wires" }}wire-template{{ else if eq .Kind "term" }}tag-template{{ else }}page-template{{ end }}">
+    <header id="header">
+        <a class="none" href="{{ "/" | relURL }}">{{ $banner }}</a>
+    </header>
+
     <main id="main">
         {{ block "main" . }}{{ end }}
     </main>

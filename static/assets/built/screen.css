@@ -2,7 +2,7 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Mono";
+    font-family: "Sans";
     font-style: normal;
     font-weight: 100 900;
     src: url("../fonts/Forma.woff2") format("woff2");
@@ -39,7 +39,7 @@
     --color-bg:           lch(96% 5 90);
     --color-txt:          lch(10% 100 90);
     --font-typewriter:    "Typewriter", monospace;
-    --font-mono:          "Mono", monospace;
+    --font-sans:          "Sans", monospace;
     --font-handwritten:   "Handwritten", serif;
     --font-telex:         "Telex", monospace;  /* wires */
     --wire-paper:         lch(99% 1.5 var(--hue));               /* cold sheet for wires */
@@ -96,7 +96,7 @@ body {
     font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
     font-size:             var(--size-font);
     font-synthesis:        none;
-    gap: var(--space-3xl) 0;
+    gap: var(--space-xl) 0;
     grid-template-columns: 0 minmax(0, 1fr) 0;
     hyphenate-limit-chars: 7 3 4;
     hyphens:               auto;
@@ -124,7 +124,7 @@ body {
 
 [data-tooltip] {
 	display: inline-block;
-	font-family: var(--font-mono);
+	font-family: var(--font-sans);
 	position: relative;
 }
 
@@ -258,12 +258,21 @@ figure img {
 }
 
 .sans {
-	font-family: var(--font-mono);
+	font-family: var(--font-sans);
 	font-weight: bold;
 }
 
 .tp {
     line-height: inherit;
+}
+
+/* Header */
+
+#header {
+    font-size:      0.8em;
+    grid-column:    1 / -1;
+    text-align:     center;
+    text-transform: uppercase;
 }
 
 /* Logo — now in the footer, between the nav menu and the social icons */
@@ -293,7 +302,7 @@ figure img {
 
 #main .article {
     display:               grid;
-    gap:                   var(--space-3xl) 0;
+    gap:                   var(--space-xl) 0;
     grid-template-columns: 0 minmax(0, 1fr) 0;
 }
 
@@ -772,12 +781,13 @@ figure img {
 #footer {
 	background-image: repeating-linear-gradient(
 	    to right,
-	    var(--color-markup) 0 0.5ch,
-	    transparent         0.5ch 1ch
+	    var(--color-markup) 0 0.6ch,
+	    transparent         0.6ch 1.2ch
 	);
 	background-position: 0 0;
 	background-repeat:   no-repeat;
 	background-size:     100% 2px;
+	font-size: 0.8em;
 	grid-column: 1 / -1;
     padding: var(--space-m) 0 0 0;
     text-align:  center;
@@ -787,7 +797,7 @@ body.wire-template #footer {
     background-image: repeating-linear-gradient(
 	    to right,
 	    var(--wire-tear) 0 0.6ch,
-	    transparent         0.6ch 1ch
+	    transparent         0.6ch 1.2ch
 	);
 }
 
@@ -837,8 +847,8 @@ body.wire-template {
     background-color: var(--wire-paper);
     background-image: repeating-linear-gradient(
         to bottom,
-        var(--wire-bar) 0 1.4rem,
-        transparent     1.4rem 3rem
+        var(--wire-bar) 0 1rem,
+        transparent     1rem 2rem
     );
     color:       lch(26% 9 var(--hue));   /* cold ribbon ink */
     font-family: var(--font-telex);

@@ -7,17 +7,10 @@ disableKinds = ["taxonomy"]
 summaryLength = 40
 timeZone = "Europe/Paris"
 
-# Dispatches at /d/<slug>/, wires at /w/<slug>/ (section lists at /d/ and /w/,
-# set via url: in each _index.md). Old root URLs /<slug>/ are 301-redirected
-# server-side in static/.htaccess.
 [permalinks]
   dispatches = "/d/:slug/"
   wires      = "/w/:slug/"
 
-# Taxonomies. "from" = locations (/from/<slug>/). Wires also classify by what
-# they critique: "about" = medium (/about/<term>/) and "by" = creator (/by/<term>/).
-# disableKinds=["taxonomy"] keeps the term-LIST pages off, so /about/<term>/
-# doesn't collide with the /about/ content page (only term pages are built).
 [taxonomies]
   location = "from"
   medium   = "about"
@@ -30,15 +23,12 @@ timeZone = "Europe/Paris"
   author = "Anthony Nelzin-Santos"
   authorShort = "Anthony"
   email = "anthony@nelzin.fr"
-  # Lexicon accent colour (LCH hue). Base = Purple; a seasonal cosine wave
-  # swings it toward magenta/red at the summer solstice and blue-violet at
-  # midwinter, easing continuously through the New Year (see partials/hue.html).
-  baseHue = 298        # equinox / average hue (Purple)
-  dynamicColour = true # set false to pin everything to baseHue
-  hueAmplitude = 40    # peak swing each side of base (258 ↔ 338 by default)
-  huePeakDay = 172     # day-of-year of the reddest hue (≈ 21 June solstice)
+  banner = "Z1NZ0L1N information system documentation"
+  baseHue = 298 
+  dynamicColour = true
+  hueAmplitude = 40
+  huePeakDay = 172
 
-# Footer navigation (Ghost settings → navigation)
 [[menu.main]]
   name = "Colophon"
   url = "/colophon/"
