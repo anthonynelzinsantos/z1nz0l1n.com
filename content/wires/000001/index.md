@@ -10,4 +10,4 @@ by:
   - "Wes Anderson"
 ---
 
-[Another excellent Montblanc ad](https://www.youtube.com/watch?v=nn59j75Q1Mc) from Wes Anderson. (I’m kidding, of course. The Phoenician Scheme is less refined, less substantial, less amusing, and generally less memorable than the Montblanc ad.)
+[Another excellent Montblanc ad](https://www.youtube.com/watch?v=nn59j75Q1Mc) from Wes Anderson. (I’m kidding, of course. *The Phoenician Scheme* is less refined, less substantial, less amusing, and generally less memorable than the Montblanc ad.)
