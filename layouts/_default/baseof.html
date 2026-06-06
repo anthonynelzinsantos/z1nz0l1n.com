@@ -15,7 +15,7 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="icon" href="/content/images/2026/02/logo.png" type="image/png">
-    <link rel="stylesheet" href="/assets/built/screen.css">
+    <link rel="stylesheet" href="/assets/built/screen.css?{{ now.Unix }}">
     <link rel="stylesheet" href="/assets/built/glightbox.min.css">
     <link rel="stylesheet" href="/public/cards.min.css">
     <link rel="alternate" type="application/rss+xml" href="{{ "/index.xml" | absURL }}" title="{{ site.Title }}">
@@ -25,7 +25,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 	<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}" />
 	<link rel="manifest" href="/site.webmanifest" />
-	
 	
 	{{ partial "opengraph.html" . }}
 	{{ partial "schema.html" . }}
@@ -74,7 +73,7 @@
         </div>
     </footer>
 
-	<script src="/assets/js/theme.js"></script>
+	<script src="/assets/js/theme.js?{{ now.Unix }}"></script>
     <script src="/assets/js/glightbox.min.js"></script>
     <script>
         const hero = GLightbox({ selector: '.hero picture img' });
