@@ -2,7 +2,7 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Forma";
+    font-family: "Mono";
     font-style: normal;
     font-weight: 100 900;
     src: url("../fonts/Forma.woff2") format("woff2");
@@ -10,15 +10,7 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Forma Mono";
-    font-style: normal;
-    font-weight: 100 900;
-    src: url("../fonts/FormaMono.woff2") format("woff2");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Rocksalt";
+    font-family: "Handwritten";
     font-style: normal;
     font-weight: 100 900;
     src: url("../fonts/Rocksalt.woff2") format("woff2");
@@ -26,10 +18,18 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Departure Mono";
+    font-family: "Telex";
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/DepartureMono.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Typewriter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Plex.woff2") format("woff2");
 }
 
 /* Custom properties */
@@ -38,10 +38,10 @@
     --border-photo:       lch(80% 5 90 / 50%);
     --color-bg:           lch(96% 5 90);
     --color-txt:          lch(10% 100 90);
-    --font-mono:          "Forma Mono", monospace;
-    --font-sans:          "Forma", sans-serif;
-    --font-handwritten:   "Rocksalt", serif;
-    --font-telex:         "Departure Mono", "Forma Mono", monospace;  /* wires */
+    --font-typewriter:    "Typewriter", monospace;
+    --font-mono:          "Mono", monospace;
+    --font-handwritten:   "Handwritten", serif;
+    --font-telex:         "Telex", monospace;  /* wires */
     --wire-paper:         lch(99% 1.5 var(--hue));               /* cold sheet for wires */
     --wire-bar:           lch(97.5% 4 calc(var(--hue) + 180));   /* listing-paper stripe — complementary hue, very pale */
     --wire-tear:          lch(83% 8 var(--hue));                 /* subtle dashed tear-off perforation */
@@ -92,9 +92,11 @@ body {
     box-shadow:            0 var(--space-2xs) var(--space-m) calc(var(--space-2xs) * -1) var(--color-shadow);
     color:                 var(--color-txt);
     display:               grid;
-    font-family:           var(--font-mono);
+    font-family:           var(--font-typewriter);
+    font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
     font-size:             var(--size-font);
     font-synthesis:        none;
+    gap: var(--space-3xl) 0;
     grid-template-columns: 0 minmax(0, 1fr) 0;
     hyphenate-limit-chars: 7 3 4;
     hyphens:               auto;
@@ -107,7 +109,7 @@ body {
 
 @media screen and (min-width: 768px) {
     body {
-        grid-template-columns: minmax(0, 1fr) minmax(240px, 6.25fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
         margin:  var(--space-s);
         padding: var(--space-m) var(--space-m) var(--space-m) var(--space-m);
     }
@@ -122,7 +124,7 @@ body {
 
 [data-tooltip] {
 	display: inline-block;
-	font-family: var(--font-sans);
+	font-family: var(--font-mono);
 	position: relative;
 }
 
@@ -256,7 +258,7 @@ figure img {
 }
 
 .sans {
-	font-family: var(--font-sans);
+	font-family: var(--font-mono);
 	font-weight: bold;
 }
 
@@ -291,13 +293,13 @@ figure img {
 
 #main .article {
     display:               grid;
-    gap:                   var(--space-xl) var(--space-2xs);
+    gap:                   var(--space-3xl) 0;
     grid-template-columns: 0 minmax(0, 1fr) 0;
 }
 
 @media screen and (min-width: 768px) {
     #main .article {
-        grid-template-columns: minmax(0, 1fr) minmax(360px, 6.25fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
     }
 }
 
@@ -489,7 +491,6 @@ figure img {
 }
 
 #main .article .content blockquote {
-    line-height: 1.75em;
     margin:      var(--space-s) min(4vw, 4ch);
     overflow:    hidden;
     padding:     0 0 0 2ch;
@@ -778,7 +779,6 @@ figure img {
 	background-repeat:   no-repeat;
 	background-size:     100% 2px;
 	grid-column: 1 / -1;
-    margin:      var(--space-xl) 0 0 0;
     padding: var(--space-m) 0 0 0;
     text-align:  center;
 }
@@ -899,7 +899,6 @@ body.wire-template::after  { right: 0; border-left:  2px dashed var(--wire-tear)
 .wire .routing {
     color:          lch(42% 18 var(--hue));
     font-size:      0.8rem;
-    line-height:    1.6;
     text-transform: uppercase;
 }
 
@@ -908,7 +907,6 @@ body.wire-template::after  { right: 0; border-left:  2px dashed var(--wire-tear)
     background:     none;
     color:          var(--color-markup);
     display:        block;
-    line-height:    1.35;
     margin:         var(--space-l) 0 0 0;
     padding:        0;
 }
