@@ -7,6 +7,6 @@
 {{ if eq $latest.Section "wires" }}
 {{ partial "wire.html" (dict "page" $latest "prev" $sib.prev "next" $sib.next) }}
 {{ else }}
-{{ partial "article.html" (dict "page" $latest "memo" true "footer" true "prev" $sib.prev "next" $sib.next) }}
+{{ partial "article.html" (dict "page" $latest "telex" true "footer" true "prev" $sib.prev "next" $sib.next) }}
 {{ end }}
 {{ end }}

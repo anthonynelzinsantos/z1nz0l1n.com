@@ -1,4 +1,4 @@
 {{ define "main" }}
 {{ $sib := partial "siblings.html" . }}
-{{ partial "article.html" (dict "page" . "memo" true "footer" true "prev" $sib.prev "next" $sib.next) }}
+{{ partial "article.html" (dict "page" . "telex" true "footer" true "prev" $sib.prev "next" $sib.next) }}
 {{ end }}

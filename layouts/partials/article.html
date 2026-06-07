@@ -1,4 +1,4 @@
-{{/* ctx: page (Page), memo (bool), footer (bool), register (bool), prev (older Page), next (newer Page) */}}
+{{/* ctx: page (Page), telex (bool — ✠/DTG/FROM/BK chrome), footer (bool), register (bool), prev (older Page), next (newer Page) */}}
 {{ $p := .page }}
 {{ $register := .register }}
 {{ $res := $p.Resources.GetMatch "feature.*" }}
@@ -41,7 +41,7 @@
     <section class="content">
     	<header class="header">
 			{{ if .register }}{{ partial "register-head.html" $p }}{{ end }}
-		{{ if .memo }}
+		{{ if .telex }}
 			<p class="zczc">{{ $p.Params.Slug | upper }} ✠</p>
 			<div class="routing">
 				<div class="dtg">{{ printf "%sZ%s" ($p.Date.Format "02-01-06") ($p.Date.Format "15:04") }}</div>
@@ -55,7 +55,7 @@
 		</header>
 
         {{ $p.Content }}
-    {{ if .memo }}
+    {{ if .telex }}
         <p class="nnnn">BK</p>
     {{ end }}
     {{ if .footer }}
