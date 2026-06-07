@@ -1,7 +1,7 @@
 ---
 title: "The Phoenician Scheme"
 date: "2026-05-24T14:30:00.000Z"
-slug: "000001"
+slug: "0001"
 from:
   - "lyon-fr"
 about:

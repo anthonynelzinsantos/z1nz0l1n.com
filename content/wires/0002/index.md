@@ -1,7 +1,7 @@
 ---
 title: "Squillions"
 date: "2026-05-28T20:30:00.000Z"
-slug: "000002"
+slug: "0002"
 from:
   - "lyon-fr"
 about:
