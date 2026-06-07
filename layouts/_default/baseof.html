@@ -41,7 +41,7 @@
 	{{ partial "schema.html" . }}
     <script src="https://tinylytics.app/embed/5k-5eys3-QT5sumY9sVY.js" defer></script>
 </head>
-<body class="{{ if .IsHome }}{{ if $homeWire }}wire-template{{ else }}home-template{{ end }}{{ else if eq .Section "dispatches" }}post-template{{ else if eq .Section "wires" }}wire-template{{ else if eq .Kind "term" }}tag-template{{ else }}page-template{{ end }}">
+<body class="{{ if .IsHome }}{{ if $homeWire }}wire-template{{ else }}home-template{{ end }}{{ else if and (eq .Kind "page") (eq .Section "dispatches") }}post-template{{ else if and (eq .Kind "page") (eq .Section "wires") }}wire-template{{ else }}register-template{{ end }}">
     <header id="header">
         <a class="none" href="{{ "/" | relURL }}">{{ $banner }}</a>
     </header>

@@ -1,29 +1,46 @@
-{{/* ctx: page (Page), memo (bool), footer (bool), prev (older Page), next (newer Page) */}}
+{{/* ctx: page (Page), memo (bool), footer (bool), register (bool), prev (older Page), next (newer Page) */}}
 {{ $p := .page }}
+{{ $register := .register }}
 {{ $res := $p.Resources.GetMatch "feature.*" }}
 <article class="article {{ if $res }}post{{ else }}post no-image{{ end }}">
 {{ with $res }}
     {{ $alt := $p.Title }}{{ with $p.Params.feature_image_alt }}{{ $alt = . }}{{ end }}
-    <figure class="photo hero">
-    	{{ partial "marks.html" }}
-		<div class="photo-print">
-			<picture>
-				{{ $srcset := slice }}
-				{{ range (slice 600 900 1200 1800) }}{{ if le . $res.Width }}{{ $v := $res.Resize (printf "%dx" .) }}{{ $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink .) }}{{ end }}{{ end }}
-				{{ $default := $res }}{{ if ge $res.Width 900 }}{{ $default = $res.Resize "900x" }}{{ end }}
-				<img src="{{ $default.RelPermalink }}"
-					 {{ with $srcset }}srcset="{{ delimit . ", " }}"
-					 {{ end }}sizes="(max-width: 900px) 100vw, 900px"
-					 width="{{ $default.Width }}" height="{{ $default.Height }}"
-					 alt="{{ $alt }}">
-			</picture>
-			{{ with $p.Params.feature_image_caption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
-		</div>
-	</figure>
+    {{ $srcset := slice }}
+    {{ range (slice 600 900 1200 1800) }}{{ if le . $res.Width }}{{ $v := $res.Resize (printf "%dx" .) }}{{ $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink .) }}{{ end }}{{ end }}
+    {{ $default := $res }}{{ if ge $res.Width 900 }}{{ $default = $res.Resize "900x" }}{{ end }}
+    {{ if $register }}
+        {{/* documentation hero: a plain image with a right-aligned caption — no
+             polaroid frame, corner marks, grain, sheen or washi tape */}}
+        <figure class="hero plain">
+            <picture>
+                <img src="{{ $default.RelPermalink }}"
+                     {{ with $srcset }}srcset="{{ delimit . ", " }}"
+                     {{ end }}sizes="(max-width: 900px) 100vw, 900px"
+                     width="{{ $default.Width }}" height="{{ $default.Height }}"
+                     alt="{{ $alt }}">
+            </picture>
+            {{ with $p.Params.feature_image_caption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
+        </figure>
+    {{ else }}
+        <figure class="photo hero">
+        	{{ partial "marks.html" }}
+			<div class="photo-print">
+				<picture>
+					<img src="{{ $default.RelPermalink }}"
+						 {{ with $srcset }}srcset="{{ delimit . ", " }}"
+						 {{ end }}sizes="(max-width: 900px) 100vw, 900px"
+						 width="{{ $default.Width }}" height="{{ $default.Height }}"
+						 alt="{{ $alt }}">
+				</picture>
+				{{ with $p.Params.feature_image_caption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
+			</div>
+		</figure>
+    {{ end }}
 {{ end }}
 
     <section class="content">
     	<header class="header">
+			{{ if .register }}{{ partial "register-head.html" $p }}{{ end }}
 		{{ if .memo }}
 			<p class="zczc">{{ $p.Params.Slug | upper }} ✠</p>
 			<div class="routing">

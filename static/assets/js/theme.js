@@ -1,6 +1,13 @@
 (function () {
   'use strict';
 
+  // Photographic effects (twist, grain/glare sheen, washi tape) belong to the
+  // warm dispatch world only — never the cold wires or the documentation
+  // register. Bail out unless this page is a dispatch (a single dispatch or the
+  // home page showing one).
+  const bodyClasses = document.body.classList;
+  if (!(bodyClasses.contains('post-template') || bodyClasses.contains('home-template'))) return;
+
   /* ─── Tuning ─────────────────────────────────────────────────────────── */
 
   const WRAPPER_SELECTOR = '.hero';
@@ -391,8 +398,13 @@
 (function () {
   'use strict';
 
-  // Dispatches only — telex wires are rigidly aligned, no typewriter misprints.
-  const CONTENT_SELECTOR = '#main .article:not(.wire) .content';
+  // Dispatches only — telex wires are rigidly aligned and the documentation
+  // register is set clean, so neither gets typewriter misprints. Bail out unless
+  // this page is a dispatch (a single dispatch or the home page showing one).
+  const bodyClasses = document.body.classList;
+  if (!(bodyClasses.contains('post-template') || bodyClasses.contains('home-template'))) return;
+
+  const CONTENT_SELECTOR = '#main .article .content';
 
   // Tuning
   const SHIFT_COUNT = 2;  // how many characters are misaligned

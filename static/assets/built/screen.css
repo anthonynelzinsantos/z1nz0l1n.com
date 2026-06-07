@@ -45,6 +45,7 @@
     --wire-paper:         lch(99% 1.5 var(--hue));               /* cold sheet for wires */
     --wire-bar:           lch(97.5% 4 calc(var(--hue) + 180));   /* listing-paper stripe — complementary hue, very pale */
     --wire-tear:          lch(83% 8 var(--hue));                 /* subtle dashed tear-off perforation */
+    --register-paper:     lch(98% 1.5 var(--hue));              /* cool documentation stock */
     --photo-border-color: lch(99% 5 90);
     --color-tape-paper:   lch(93% 10 92);  /* fixed cream for the gallery caption tape */
     --shadow-photo:       0 2px 8px lch(0% 0 0 / 10%), 0 1px 2px lch(0% 0 0 / 8%);
@@ -930,8 +931,158 @@ body.wire-template::after  { right: 0; border-left:  2px dashed var(--wire-tear)
     content: "*";
 }
 
-/* Wire rows in the shared archive stand out in the telex face */
-.archive.wire h2 a {
-    font-family:    var(--font-telex);
+
+/* ─────────────────────────── Register (documentation) ───────────────────────
+   The reference layer — archive, the /d/ and /w/ indexes, the from/about/by term
+   pages and the static pages (colophon, blogroll, legal, styleguide). Where the
+   dispatch is a warm transmission and the wire a cold one, the register is the
+   binder that files them: plain cool bond paper, the Forma sans face, ring-binder
+   holes punched down the left margin, numbered sections, and a form-style
+   document-control block in place of the telex letterhead. */
+
+body.register-template {
+    background-color: var(--register-paper);   /* plain bond — keeps the base paper grain, no grid */
+    color:       lch(22% 6 var(--hue));        /* graphite on bond */
+    font-family: var(--font-sans);
+    position:    relative;
+    text-shadow: none;
+}
+
+/* Ring-binder punch: large, generously-spaced holes down the left margin — no
+   tear-off edge, because documentation paper isn't continuous-form. Each hole
+   punches through to the dark surface (var(--color-theme)) behind the floating
+   sheet. Hidden below 768px (the margin is too narrow to carry them). */
+body.register-template::before {
+    background-image: radial-gradient(circle 9px at 50% 50%,
+        var(--color-theme) 0 7px,     /* the hole */
+        transparent        7.7px);    /* clean edge */
+    background-repeat: repeat-y;
+    background-size:   100% 33.333%;   /* one hole per third of the sheet → three holes */
+    bottom:   0;
+    content:  "";
+    display:  none;
+    left:     0;
+    pointer-events: none;
+    position: absolute;
+    top:      0;
+    width:    var(--space-m);
+    z-index:  0;
+}
+
+@media screen and (min-width: 768px)  { body.register-template::before { display: block; } }
+@media screen and (min-width: 1024px) { body.register-template::before { width: var(--space-l); } }
+
+/* Documentation hero: a plain image with a right-aligned caption — none of the
+   dispatch's polaroid frame, corner marks, grain, sheen or washi tape. Still
+   click-to-zoom (GLightbox), so keep the zoom-in affordance. */
+#main .article .hero.plain picture img:hover {
+    cursor: zoom-in;
+}
+
+#main .article .hero.plain figcaption {
+    color:      var(--color-muted);
+    font-size:  small;
+    margin:     var(--space-2xs) 0 0 0;
+    text-align: right;
+}
+
+/* Clean filing rule above the footer (no typewriter dashes, no tear-off). */
+body.register-template #footer {
+    background-image: none;
+    border-top:       1px solid var(--color-muted);
+}
+
+/* Document-control block: DOC ref left, REV centre, SHEET pushed to the right —
+   a title-block strip ruled off from the heading below. */
+.docctrl {
+    border-bottom:  1px solid var(--color-muted);
+    color:          var(--color-muted);
+    display:        flex;
+    flex-flow:      row wrap;
+    font-size:      0.8rem;
+    gap:            0 var(--space-m);
+    letter-spacing: 0.05em;
+    margin:         0 0 var(--space-s) 0;
+    padding:        0 0 var(--space-2xs) 0;
     text-transform: uppercase;
+}
+.docctrl .sheet { margin-left: auto; }
+
+/* Heading: a plain bold sans title (drop the dispatch's typewriter underline). */
+body.register-template #main .article .header .title {
+    background:   none;
+    color:        var(--color-markup);
+    display:      block;
+    font-weight:  700;
+    padding:      0;
+}
+
+/* The deck reads as a contents summary under the index title. */
+body.register-template .deck {
+    color:          var(--color-muted);
+    font-size:      0.8rem;
+    letter-spacing: 0.05em;
+    margin:         var(--space-2xs) 0 0 0;
+    text-transform: uppercase;
+}
+body.register-template .deck::before { content: "Contents — "; }
+
+/* Numbered sections — the manual's body headings. The CSS counters number the
+   content's own headings (direct children of .content, so the archive-row <h2>s
+   are excluded): h1/h2 are major sections (1., 2., …), h3 the subsections
+   (1.1, 1.2, …). Drops the dispatch's typewriter ruled underline for a plain
+   bold sans heading; the section number inherits the heading colour. */
+body.register-template #main .article .content { counter-reset: sec sub; }
+
+body.register-template #main .article .content > h1,
+body.register-template #main .article .content > h2,
+body.register-template #main .article .content > h3 {
+    background:  none;
+    color:       var(--color-markup);
+    display:     block;
+    font-weight: 700;
+    margin:      var(--space-xl) 0 0 0;
+}
+
+body.register-template #main .article .content > h1,
+body.register-template #main .article .content > h2 {
+    counter-increment: sec;
+    counter-reset:     sub;
+}
+body.register-template #main .article .content > h1::before,
+body.register-template #main .article .content > h2::before {
+    content: counter(sec) ". ";
+}
+
+body.register-template #main .article .content > h3 { counter-increment: sub; }
+body.register-template #main .article .content > h3::before {
+    content: counter(sec) "." counter(sub) " ";
+}
+
+/* Index rows become a table of contents: title · dotted leader · date. The
+   leader is the separator, so drop the base per-row dashed rules. */
+#main .archive,
+#main .archive:last-of-type { border: none; }
+#main .archive              { align-items: baseline; }
+#main .archive h2           { flex: 0 1 auto; }
+#main .archive .date        { flex: 0 0 auto; }
+#main .archive .leader {
+    border-bottom: 1px dotted var(--color-muted);
+    flex:          1 1 auto;
+    transform:     translateY(-0.3em);
+}
+
+/* The index is grouped by year (a ruled divider). All rows share the register
+   font; the D/ or W/ marker before the date is what tells dispatches from wires. */
+body.register-template #main .article .content .year {
+    background:     none;          /* kill the dispatch typewriter underline */
+    border-bottom:  1px solid var(--color-muted);
+    color:          var(--color-markup);
+    display:        block;
+    font-weight:    700;
+    margin:         var(--space-xl) 0 var(--space-2xs) 0;
+    padding:        0 0 var(--space-3xs) 0;
+}
+body.register-template #main .article .content .group:first-of-type .year {
+    margin-top: var(--space-l);
 }

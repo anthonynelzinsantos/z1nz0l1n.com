@@ -1,5 +1,6 @@
 {{ $hue := partial "hue.html" .Date }}
 <article class="archive post{{ if eq .Section "wires" }} wire{{ end }}">
     <h2 style="--hue: {{ $hue }}"><a class="boxed" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
-    <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
+    <span class="leader" aria-hidden="true"></span>
+    <time class="date" datetime="{{ .Date.Format "2006-01-02" }}"><span class="kind">{{ if eq .Section "wires" }}W{{ else }}D{{ end }}/</span>{{ .Date.Format "01-02" }}</time>
 </article>

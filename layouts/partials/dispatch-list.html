@@ -15,11 +15,16 @@
 <article class="article post no-image">
     <section class="content">
     	<header class="header">
+			{{ partial "register-head.html" .page }}
 			<h1 class="title">{{ .title }}</h1>
 			<div class="deck">{{ if $parts }}{{ delimit $parts " · " | safeHTML }}{{ else }}Nothing yet{{ end }}</div>
 		</header>
-    {{ range $posts }}
-        {{ partial "row.html" . }}
+    {{/* group the index by year */}}
+    {{ range $posts.GroupByDate "2006" }}
+        <section class="group">
+            <h2 class="year">{{ .Key }}</h2>
+            {{ range .Pages }}{{ partial "row.html" . }}{{ end }}
+        </section>
     {{ end }}
     </section>
 </article>
