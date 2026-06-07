@@ -10,6 +10,14 @@
 
 @font-face {
 	font-display: swap;
+	font-family: "Sans";
+	font-style: italic;
+	font-weight: 100 900;
+	src: url("../fonts/FormaItalic.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
 	font-family: "Handwritten";
 	font-style: normal;
 	font-weight: 100 900;
@@ -30,6 +38,14 @@
 	font-style: normal;
 	font-weight: 400;
 	src: url("../fonts/Plex.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Typewriter";
+	font-style: italic;
+	font-weight: 400;
+	src: url("../fonts/PlexItalic.woff2") format("woff2");
 }
 
 /* ======================================================== Variables */
@@ -138,8 +154,7 @@ a {
 
 em,
 i {
-	font-style:              italic;
-	font-variation-settings: "slnt" -8;
+	font-style: italic;
 }
 
 .h1, .h2, .h3,
@@ -376,7 +391,6 @@ body {
 	color:                 var(--color-txt);
 	display:               grid;
 	font-family:           var(--font-typewriter);
-	font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
 	font-size:             var(--size-font);
 	font-synthesis:        none;
 	gap:                   var(--space-xl) 0;
@@ -399,6 +413,13 @@ body {
 		margin:  var(--space-3xl) auto;
 		padding: var(--space-l);
 	}
+}
+
+/* Dispatch world — IBM Plex stylistic sets (only the typewriter face has them) */
+
+body.post-template,
+body.home-template {
+	font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
 }
 
 /* Wire world — the whole sheet becomes cold telex listing paper */
@@ -442,11 +463,13 @@ body.wire-template {
 
 	.credit {
 		color:     lch(42% 18 var(--hue));
-		font-size: 0.8rem;
+		font-size: 0.8em;
 		margin:    0;
 	}
 
 	#main .article .content :is(em, i) {
+		font-synthesis: none;
+
 		&::before,
 		&::after { content: "*"; }
 	}
@@ -493,9 +516,8 @@ body.register-template {
 		color:          var(--color-muted);
 		display:        flex;
 		flex-flow:      row wrap;
-		font-size:      0.8rem;
+		font-size:      0.8em;
 		gap:            0 var(--space-m);
-		letter-spacing: 0.05em;
 		margin:         0 0 var(--space-s) 0;
 		padding:        0 0 var(--space-2xs) 0;
 		text-transform: uppercase;
@@ -505,8 +527,7 @@ body.register-template {
 
 	.deck {
 		color:          var(--color-muted);
-		font-size:      0.8rem;
-		letter-spacing: 0.05em;
+		font-size:      0.8em;
 		margin:         var(--space-2xs) 0 0 0;
 		text-transform: uppercase;
 
@@ -526,8 +547,7 @@ body.register-template {
 
 		figcaption {
 			color:      var(--color-muted);
-			font-size:  small;
-			margin:     var(--space-2xs) 0 0 0;
+			font-size:  0.8em;
 			text-align: right;
 		}
 	}
@@ -641,7 +661,7 @@ body.register-template {
 
 		.routing {
 			color:          lch(42% 18 var(--hue));
-			font-size:      0.8rem;
+			font-size:      0.8em;
 			text-transform: uppercase;
 		}
 
