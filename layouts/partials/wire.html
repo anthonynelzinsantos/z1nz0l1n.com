@@ -1,34 +1,17 @@
-{{/* A wire, rendered as telex / continuous-form printout. The cold "paper" is
-     the <body> (body.wire-template in screen.css); this lays the message +
-     footer onto it. ctx: page (Page), prev (older item), next (newer item). */}}
 {{ $p := .page }}
-
-{{/* NAVTEX-style header. ZCZC <B1 B2 B3 B4>: here AF + last two digits of the
-     slug as the message serial. Date-time group as DDHHmm UTC MMM YY. */}}
-{{ $afid := printf "AF%s" (substr $p.Slug -2) }}
-{{ $dtg := printf "%s UTC %s" ($p.Date.Format "021504") (upper ($p.Date.Format "Jan 06")) }}
-
-{{/* FROM (location term): display the upper-cased slug, link to its listing */}}
-{{ $fromSlug := "" }}{{ with $p.Params.from }}{{ $fromSlug = index . 0 }}{{ end }}
-{{ $fromPage := false }}{{ with $fromSlug }}{{ $fromPage = site.GetPage (printf "/from/%s" .) }}{{ end }}
-
-{{/* subject credit: what the wire critiques + who made it, each term linked.
-     Iterate the raw front-matter values (preserving their order), resolving each
-     to its term page via a urlize-keyed map built from GetTerms (robust links). */}}
 {{ $aboutMap := dict }}{{ range $p.GetTerms "about" }}{{ $aboutMap = merge $aboutMap (dict (urlize .LinkTitle) .) }}{{ end }}
 {{ $byMap := dict }}{{ range $p.GetTerms "by" }}{{ $byMap = merge $byMap (dict (urlize .LinkTitle) .) }}{{ end }}
 {{ $a := slice }}{{ range $p.Params.about }}{{ $t := index $aboutMap (urlize .) }}{{ if $t }}{{ $a = $a | append (printf `<a href="%s">%s</a>` $t.RelPermalink (upper .)) }}{{ else }}{{ $a = $a | append (upper .) }}{{ end }}{{ end }}
 {{ $b := slice }}{{ range $p.Params.by }}{{ $t := index $byMap (urlize .) }}{{ if $t }}{{ $b = $b | append (printf `<a href="%s">%s</a>` $t.RelPermalink (upper .)) }}{{ else }}{{ $b = $b | append (upper .) }}{{ end }}{{ end }}
 {{ $credit := delimit $a ", " }}
 {{ with delimit $b ", " }}{{ if $credit }}{{ $credit = printf "%s BY %s" $credit . }}{{ else }}{{ $credit = printf "BY %s" . }}{{ end }}{{ end }}
-
 <article class="article wire post no-image">
 	<section class="content">
 		<header class="header">
-			<p class="zczc">ZCZC {{ $afid }}</p>
+			<p class="zczc">ZCZC AF{{ substr $p.Slug -2 }}</p>
 			<div class="routing">
-				<div class="dtg">{{ $dtg }}</div>
-				{{ with $fromSlug }}<div class="org">FROM {{ with $fromPage }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>{{ end }}
+				<div class="dtg">{{ printf "%s UTC %s" ($p.Date.Format "021504") (upper ($p.Date.Format "Jan 06")) }}</div>
+				{{ with $p.Params.from }}<div class="org">FROM {{ with site.GetPage (printf "/from/%s" (index . 0)) }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>{{ end }}
 			</div>
 			<h1 class="title">{{ $p.Title }}</h1>
 			{{ with $credit }}<p class="credit">{{ . | safeHTML }}</p>{{ end }}

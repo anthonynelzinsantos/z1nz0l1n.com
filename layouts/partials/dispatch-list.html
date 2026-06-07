@@ -1,30 +1,22 @@
-{{/* Shared list body for the archive and location (term) pages.
-     ctx: dict "title" (string) "posts" (Pages, pre-sorted).
-     The deck counts dispatches and wires separately. */}}
 {{ $posts := .posts }}
 {{ $nd := len (where $posts "Section" "dispatches") }}
 {{ $nw := len (where $posts "Section" "wires") }}
-{{/* link each count to its filtered list, but only when both types are present
-     (on a filtered list there's nothing to link to but itself) */}}
 {{ $both := and (gt $nd 0) (gt $nw 0) }}
-{{ $dURL := (site.GetPage "/dispatches").RelPermalink }}
-{{ $wURL := (site.GetPage "/wires").RelPermalink }}
 {{ $parts := slice }}
-{{ if gt $nd 0 }}{{ $t := printf "%d dispatch%s" $nd (cond (eq $nd 1) "" "es") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` $dURL $t) $t) }}{{ end }}
-{{ if gt $nw 0 }}{{ $t := printf "%d wire%s" $nw (cond (eq $nw 1) "" "s") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` $wURL $t) $t) }}{{ end }}
+{{ if gt $nd 0 }}{{ $t := printf "%d dispatch%s" $nd (cond (eq $nd 1) "" "es") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` (site.GetPage "/dispatches").RelPermalink $t) $t) }}{{ end }}
+{{ if gt $nw 0 }}{{ $t := printf "%d wire%s" $nw (cond (eq $nw 1) "" "s") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` (site.GetPage "/wires").RelPermalink $t) $t) }}{{ end }}
 <article class="article post no-image">
-    <section class="content">
-    	<header class="header">
+	<section class="content">
+		<header class="header">
 			{{ partial "register-head.html" .page }}
 			<h1 class="title">{{ .title }}</h1>
 			<div class="deck">{{ if $parts }}{{ delimit $parts " · " | safeHTML }}{{ else }}Nothing yet{{ end }}</div>
 		</header>
-    {{/* group the index by year */}}
-    {{ range $posts.GroupByDate "2006" }}
-        <section class="group">
-            <h2 class="year">{{ .Key }}</h2>
-            {{ range .Pages }}{{ partial "row.html" . }}{{ end }}
-        </section>
-    {{ end }}
-    </section>
+		{{ range $posts.GroupByDate "2006" }}
+		<section class="group">
+			<h2 class="year">{{ .Key }}</h2>
+			{{ range .Pages }}{{ partial "row.html" . }}{{ end }}
+		</section>
+		{{ end }}
+	</section>
 </article>

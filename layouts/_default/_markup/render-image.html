@@ -1,8 +1,3 @@
-{{/* Content images share the hero's "photographic print" treatment:
-     white border, shadow, corner .marks, a slight JS wobble and the JS sheen.
-     Markup mirrors the hero (.photo > .marks + .photo-print > picture) so a
-     single set of CSS rules and one JS pass cover every image on the site.
-     A captioned image — `![alt](name "caption")` — keeps its <figcaption>. */}}
 {{ $img := .Page.Resources.GetMatch .Destination }}
 {{ $alt := .PlainText }}
 {{ if $img }}

@@ -2,20 +2,14 @@
 {{ $homeWire := false }}
 {{ $sec := .Section }}
 {{ if .IsHome }}
-  {{ with partial "latest.html" . }}{{ $d = .Date }}{{ $sec = .Section }}{{ if eq .Section "wires" }}{{ $homeWire = true }}{{ end }}{{ end }}
+	{{ with partial "latest.html" . }}{{ $d = .Date }}{{ $sec = .Section }}{{ if eq .Section "wires" }}{{ $homeWire = true }}{{ end }}{{ end }}
 {{ else if not .Date.IsZero }}
-  {{ $d = .Date }}
+	{{ $d = .Date }}
 {{ end }}
 {{ $hue := partial "hue.html" $d }}
-{{/* Banner: each section's own header (from its _index), else a default. The
-     home borrows the header of the latest item it shows. */}}
-{{ $banner := "" }}
+{{ $banner := site.Params.banner }}
 {{ if or (eq $sec "dispatches") (eq $sec "wires") }}
-  {{ with site.GetPage (printf "/%s" $sec) }}
-  	{{ with .Params.banner }}{{ $banner = . }}{{ end }}
-  {{ end }}
-{{ else }}
-	{{ $banner = .Site.Params.banner }}
+	{{ with site.GetPage (printf "/%s" $sec) }}{{ $banner = .Params.banner }}{{ end }}
 {{ end }}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">

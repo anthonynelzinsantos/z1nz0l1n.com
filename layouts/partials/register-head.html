@@ -1,11 +1,7 @@
-{{/* Register document-control block — the documentation world's letterhead,
-     parallel to the dispatch ✠ header and the wire ZCZC routing. ctx: the Page.
-     DOC ref is derived from the URL; REV from the page's last-modified date. */}}
 {{ $ref := upper (strings.Trim .RelPermalink "/") }}
 {{ if not $ref }}{{ $ref = "INDEX" }}{{ end }}
-{{ $rev := cond .Lastmod.IsZero now .Lastmod }}
 <div class="docctrl">
 	<span class="ref">DOC. Z1S/{{ $ref }}</span>
-	<span class="rev">REV. {{ $rev.Format "2006.01" }}</span>
+	<span class="rev">REV. {{ (cond .Lastmod.IsZero now .Lastmod).Format "2006.01" }}</span>
 	<span class="sheet">SHEET 1 OF 1</span>
 </div>

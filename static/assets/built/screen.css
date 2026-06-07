@@ -1,261 +1,172 @@
-/* Fonts */
+/* ============================================================ Fonts */
 
 @font-face {
-    font-display: swap;
-    font-family: "Sans";
-    font-style: normal;
-    font-weight: 100 900;
-    src: url("../fonts/Forma.woff2") format("woff2");
+	font-display: swap;
+	font-family: "Sans";
+	font-style: normal;
+	font-weight: 100 900;
+	src: url("../fonts/Forma.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: "Handwritten";
-    font-style: normal;
-    font-weight: 100 900;
-    src: url("../fonts/Rocksalt.woff2") format("woff2");
+	font-display: swap;
+	font-family: "Handwritten";
+	font-style: normal;
+	font-weight: 100 900;
+	src: url("../fonts/Rocksalt.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: "Telex";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/DepartureMono.woff2") format("woff2");
+	font-display: swap;
+	font-family: "Telex";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/DepartureMono.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: "Typewriter";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/Plex.woff2") format("woff2");
+	font-display: swap;
+	font-family: "Typewriter";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/Plex.woff2") format("woff2");
 }
 
-/* Custom properties */
+/* ======================================================== Variables */
 
 :root {
-    --border-photo:       lch(80% 5 90 / 50%);
-    --color-bg:           lch(96% 5 90);
-    --color-txt:          lch(10% 100 90);
-    --font-typewriter:    "Typewriter", monospace;
-    --font-sans:          "Sans", monospace;
-    --font-handwritten:   "Handwritten", serif;
-    --font-telex:         "Telex", monospace;  /* wires */
-    --wire-paper:         lch(99% 1.5 var(--hue));               /* cold sheet for wires */
-    --wire-bar:           lch(97.5% 4 calc(var(--hue) + 180));   /* listing-paper stripe — complementary hue, very pale */
-    --wire-tear:          lch(83% 8 var(--hue));                 /* subtle dashed tear-off perforation */
-    --register-paper:     lch(98% 1.5 var(--hue));              /* cool documentation stock */
-    --photo-border-color: lch(99% 5 90);
-    --color-tape-paper:   lch(93% 10 92);  /* fixed cream for the gallery caption tape */
-    --shadow-photo:       0 2px 8px lch(0% 0 0 / 10%), 0 1px 2px lch(0% 0 0 / 8%);
-    --shadow-tape:        0px 1px 1.5px rgba(60, 40, 20, 0.18);  /* under washi + paper tape */
-    --size-font:          clamp(1rem, 0.9375rem + 0.3125vw, 1.125rem);
-    --mark-size:          var(--space-s);  /* arm length of the L-shaped corner marks */
-    --space-3xs:          clamp(0.25rem, 0.2188rem + 0.1563vw, 0.3125rem);
-    --space-2xs:          clamp(0.5rem, 0.4688rem + 0.1563vw, 0.5625rem);
-    --space-xs:           clamp(0.75rem, 0.6875rem + 0.3125vw, 0.875rem);
-    --space-s:            clamp(1rem, 0.9375rem + 0.3125vw, 1.125rem);
-    --space-m:            clamp(1.5rem, 1.4063rem + 0.4688vw, 1.6875rem);
-    --space-l:            clamp(2rem, 1.875rem + 0.625vw, 2.25rem);
-    --space-xl:           clamp(3rem, 2.8125rem + 0.9375vw, 3.375rem);
-    --space-2xl:          clamp(4rem, 3.75rem + 1.25vw, 4.5rem);
-    --space-3xl:          clamp(6rem, 5.625rem + 1.875vw, 6.75rem);
+	--border-photo:       lch(80% 5 90 / 50%);
+	--color-bg:           lch(96% 5 90);
+	--color-txt:          lch(10% 100 90);
+	--font-typewriter:    "Typewriter", monospace;
+	--font-sans:          "Sans", monospace;
+	--font-handwritten:   "Handwritten", serif;
+	--font-telex:         "Telex", monospace;
+	--wire-paper:         lch(99% 1.5 var(--hue));
+	--wire-bar:           lch(97.5% 4 calc(var(--hue) + 180));
+	--wire-tear:          lch(83% 8 var(--hue));
+	--register-paper:     lch(98% 1.5 var(--hue));
+	--photo-border-color: lch(99% 5 90);
+	--color-tape-paper:   lch(93% 10 92);
+	--shadow-photo:       0 2px 8px lch(0% 0 0 / 10%), 0 1px 2px lch(0% 0 0 / 8%);
+	--shadow-tape:        0px 1px 1.5px rgba(60, 40, 20, 0.18);
+	--size-font:          clamp(1rem, 0.9375rem + 0.3125vw, 1.125rem);
+	--mark-size:          var(--space-s);
+	--space-3xs:          clamp(0.25rem, 0.2188rem + 0.1563vw, 0.3125rem);
+	--space-2xs:          clamp(0.5rem, 0.4688rem + 0.1563vw, 0.5625rem);
+	--space-xs:           clamp(0.75rem, 0.6875rem + 0.3125vw, 0.875rem);
+	--space-s:            clamp(1rem, 0.9375rem + 0.3125vw, 1.125rem);
+	--space-m:            clamp(1.5rem, 1.4063rem + 0.4688vw, 1.6875rem);
+	--space-l:            clamp(2rem, 1.875rem + 0.625vw, 2.25rem);
+	--space-xl:           clamp(3rem, 2.8125rem + 0.9375vw, 3.375rem);
+	--space-2xl:          clamp(4rem, 3.75rem + 1.25vw, 4.5rem);
+	--space-3xl:          clamp(6rem, 5.625rem + 1.875vw, 6.75rem);
+	--typewriter-rule:    repeating-linear-gradient(to right, transparent 0 0.05ch, currentColor 0.05ch 0.95ch, transparent 0.95ch 1ch);
 }
 
-/* Colours */
-
-:root, .archive h2 {
-    --color-hover:  lch(25% 85 var(--hue));
-    --color-markup: lch(20% 85 var(--hue));
-    --color-muted:  lch(45% 10 var(--hue));
-    --color-shadow: lch(5% 50 var(--hue) / 50%);
-    --color-tape:   lch(90% 20 calc(var(--hue) + 180));
-    --color-theme:  lch(30% 85 var(--hue));
-    --shadow-text:  0 -1px 1px lch(10% 100 var(--hue) / 8%);
+:root,
+.archive h2 {
+	--color-hover:  lch(25% 85 var(--hue));
+	--color-markup: lch(20% 85 var(--hue));
+	--color-muted:  lch(45% 10 var(--hue));
+	--color-shadow: lch(5% 50 var(--hue) / 50%);
+	--color-tape:   lch(90% 20 calc(var(--hue) + 180));
+	--color-theme:  lch(30% 85 var(--hue));
+	--shadow-text:  0 -1px 1px lch(10% 100 var(--hue) / 8%);
 }
 
-/* Base */
+/* ======================================================= Components */
 
 ::selection {
-    background: var(--color-markup);
-    color:      var(--color-bg);
-}
-
-html {
-    background: var(--color-theme);
-}
-
-body {
-    background:            var(--color-bg);
-    background-image:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
-    border-radius:         1px;
-    box-shadow:            0 var(--space-2xs) var(--space-m) calc(var(--space-2xs) * -1) var(--color-shadow);
-    color:                 var(--color-txt);
-    display:               grid;
-    font-family:           var(--font-typewriter);
-    font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
-    font-size:             var(--size-font);
-    font-synthesis:        none;
-    gap: var(--space-xl) 0;
-    grid-template-columns: 0 minmax(0, 1fr) 0;
-    hyphenate-limit-chars: 7 3 4;
-    hyphens:               auto;
-    line-height:           1.75;
-    max-width:             900px;
-    padding:               var(--space-s) var(--space-s) var(--space-s) var(--space-s);
-    text-align:            left;
-    text-shadow:           var(--shadow-text);
-}
-
-@media screen and (min-width: 768px) {
-    body {
-        grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
-        margin:  var(--space-s);
-        padding: var(--space-m) var(--space-m) var(--space-m) var(--space-m);
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    body {
-        margin:  var(--space-3xl) auto;
-        padding: var(--space-l) var(--space-l) var(--space-l) var(--space-l);
-    }
-}
-
-[data-tooltip] {
-	display: inline-block;
-	font-family: var(--font-sans);
-	position: relative;
-}
-
-[data-tooltip]::before {
-	border-color: lch(from var(--color-txt) l 10 h / 75%) transparent transparent transparent;
-	border-width: 5px 5px 0 5px;
-    border-style: solid;
-    content: "";
-    opacity:0;
-    position: absolute;
-    	top: -5px;
-    	left: 50%;
-    transform: translateX(-50%);
-}
-
-[data-tooltip]:hover::after,
-[data-tooltip]:hover::before {
-	opacity: 1;
-	transition: opacity 0.5s ease;
-}
-
-[data-tooltip]::after {
-	background: lch(from var(--color-txt) l 10 h / 75%);
-	border-radius: 1px;
-	color: var(--color-bg);
-    content: attr(data-tooltip);
-    font-size: small;
-    opacity: 0;
-    padding: var(--space-3xs) var(--space-2xs);
-    pointer-events: none;
-    position: absolute;
-    	top: -5px;
-    	left: 50%;
-    transform: translateX(-50%)   translateY(-100%);
-    width: max-content;
-    z-index: 99;
+	background: var(--color-markup);
+	color:      var(--color-bg);
 }
 
 a {
-    color:                 inherit;
-    text-decoration-color: var(--color-markup);
-    text-underline-offset: 2px;
+	color:                 inherit;
+	text-decoration-color: var(--color-markup);
+	text-underline-offset: 2px;
+
+	&:focus,
+	&:hover {
+		background:            var(--color-hover);
+		color:                 var(--color-bg);
+		text-decoration:       none;
+		text-underline-offset: 2px;
+	}
+
+	&:focus > *,
+	&:hover > * {
+		color: var(--color-bg) !important;
+	}
+
+	&:has(sup) {
+		text-underline-offset: -10px;
+	}
+
+	&.none {
+		text-decoration: none;
+	}
+
+	&.title {
+		color: var(--color-markup);
+	}
+
+	&.icon {
+		svg {
+			color:       var(--color-markup);
+			fill:        var(--color-markup);
+			transition:  all 0.25s ease;
+			will-change: transform;
+		}
+
+		&:focus,
+		&:hover {
+			background: unset;
+			color:      inherit;
+			cursor:     pointer;
+		}
+
+		&:focus svg,
+		&:hover svg {
+			color:     var(--color-hover) !important;
+			fill:      var(--color-hover) !important;
+			transform: scale(1.25);
+		}
+	}
 }
 
-a:focus,
-a:hover {
-    background:            var(--color-hover);
-    color:                 var(--color-bg);
-    text-decoration:       none;
-    text-underline-offset: 2px;
-}
-
-a:focus > *,
-a:hover > * {
-    color: var(--color-bg) !important;
-}
-
-a:has(sup) {
-    text-underline-offset: -10px;
-}
-
-a.none {
-	text-decoration: none;
-}
-
-a.title {
-    color: var(--color-markup);
-}
-
-a.icon svg {
-    color:      var(--color-markup);
-    fill:       var(--color-markup);
-    transition: all 0.25s ease;
-    will-change: transform;
-}
-
-a.icon:focus,
-a.icon:hover {
-    background: unset;
-    color:      inherit;
-    cursor:     pointer;
-}
-
-a.icon:focus svg,
-a.icon:hover svg {
-    color:     var(--color-hover) !important;
-    fill:      var(--color-hover) !important;
-    transform: scale(1.25);
-}
-
-em, i {
-    font-style:              italic;
-    font-variation-settings: "slnt" -8;
+em,
+i {
+	font-style:              italic;
+	font-variation-settings: "slnt" -8;
 }
 
 .h1, .h2, .h3,
 h1, h2, h3 {
-    font-size:   var(--size-font);
-    font-weight: 400;
-    margin:      0;
-    text-wrap:   stable;
+	font-size:   var(--size-font);
+	font-weight: 400;
+	margin:      0;
+	text-wrap:   stable;
 }
 
-.h1, h1,
-.h2, h2 {
-    text-transform: uppercase;
+.h1, .h2,
+h1, h2 {
+	text-transform: uppercase;
 }
 
 figure {
-    border-radius: 1px;
-    margin:        0;
-    padding:       0;
+	border-radius: 1px;
+	margin:        0;
+	padding:       0;
 }
 
 figure .kg-width-full,
 figure .kg-width-wide,
 figure img {
-    border-radius: 1px;
-    height:        auto;
-    width:         100%;
-}
-
-.optional {
-    display: none;
-}
-
-@media screen and (min-width: 768px) {
-    .optional {
-        display: initial;
-    }
+	border-radius: 1px;
+	height:        auto;
+	width:         100%;
 }
 
 .sans {
@@ -264,825 +175,759 @@ figure img {
 }
 
 .tp {
-    line-height: inherit;
+	line-height: inherit;
 }
 
-/* Header */
+.optional {
+	display: none;
 
-#header {
-    font-size:      0.8em;
-    grid-column:    1 / -1;
-    text-align:     center;
-    text-transform: uppercase;
+	@media screen and (min-width: 768px) {
+		display: initial;
+	}
 }
 
-/* Logo — now in the footer, between the nav menu and the social icons */
+[data-tooltip] {
+	display:     inline-block;
+	font-family: var(--font-sans);
+	position:    relative;
 
-#footer .logo {
-    align-items:     center;
-    color:           var(--color-markup);
-    display:         flex;
-    gap:             var(--space-l);
-    justify-content: center;
-    margin:          var(--space-m) 0 0 0;
-    text-transform:  uppercase;
+	&::before {
+		border-color: lch(from var(--color-txt) l 10 h / 75%) transparent transparent transparent;
+		border-style: solid;
+		border-width: 5px 5px 0 5px;
+		content:      "";
+		left:         50%;
+		opacity:      0;
+		position:     absolute;
+		top:          -5px;
+		transform:    translateX(-50%);
+	}
+
+	&::after {
+		background:     lch(from var(--color-txt) l 10 h / 75%);
+		border-radius:  1px;
+		color:          var(--color-bg);
+		content:        attr(data-tooltip);
+		font-size:      small;
+		left:           50%;
+		opacity:        0;
+		padding:        var(--space-3xs) var(--space-2xs);
+		pointer-events: none;
+		position:       absolute;
+		top:            -5px;
+		transform:      translateX(-50%) translateY(-100%);
+		width:          max-content;
+		z-index:        99;
+	}
+
+	&:hover::before,
+	&:hover::after {
+		opacity:    1;
+		transition: opacity 0.5s ease;
+	}
 }
 
-#footer .logo svg {
-    color:  var(--color-markup);
-    fill:   var(--color-markup);
-    height: var(--space-2xl);
-    width:  var(--space-2xl);
-}
+/* Photographic print — hero, content images and gallery cells */
 
-/* Main */
-
-#main {
-    grid-column: 1 / -1;
-}
-
-#main .article {
-    display:               grid;
-    gap:                   var(--space-xl) 0;
-    grid-template-columns: 0 minmax(0, 1fr) 0;
-}
-
-@media screen and (min-width: 768px) {
-    #main .article {
-        grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
-    }
-}
-
-/* Shared "photographic print" wrapper — used by the hero, by standalone /
-   captioned content images, and by gallery cells. Provides the positioning
-   context for the corner .marks and centres the print. The hero adds only its
-   own layout (full grid width + top margin). */
 .photo {
-    overflow:   visible;
-    position:   relative;
-    text-align: center;
-}
+	overflow:   visible;
+	position:   relative;
+	text-align: center;
 
-#main .article .hero {
-    grid-column: 1 / -1;
-    margin:      var(--space-m) 0 0 0;
-}
-
-.photo img:hover {
-    cursor: zoom-in;
+	img:hover {
+		cursor: zoom-in;
+	}
 }
 
 .marks {
-    inset:          0;
-    pointer-events: none;
-    position:       absolute;
-}
+	inset:          0;
+	pointer-events: none;
+	position:       absolute;
 
-.marks::before,
-.marks::after {
-    color:    var(--color-muted);
-    content:  "";
-    height:   var(--mark-size);
-    position: absolute;
-    width:    var(--mark-size);
-}
+	&::before,
+	&::after {
+		color:    var(--color-muted);
+		content:  "";
+		height:   var(--mark-size);
+		position: absolute;
+		width:    var(--mark-size);
+	}
 
-.marks::before {
-    border-left: 1px solid currentColor;
-    border-top:  1px solid currentColor;
-    left:        0;
-    top:         0;
-}
+	&::before {
+		border-left: 1px solid currentColor;
+		border-top:  1px solid currentColor;
+		left:        0;
+		top:         0;
+	}
 
-.marks::after {
-    border-right: 1px solid currentColor;
-    border-top:   1px solid currentColor;
-    right:        0;
-    top:          0;
-}
+	&::after {
+		border-right: 1px solid currentColor;
+		border-top:   1px solid currentColor;
+		right:        0;
+		top:          0;
+	}
 
-.marks > span {
-    height:   var(--mark-size);
-    position: absolute;
-    width:    var(--mark-size);
-}
+	> span {
+		height:   var(--mark-size);
+		position: absolute;
+		width:    var(--mark-size);
+	}
 
-.marks > span:first-child {
-    border-bottom: 1px solid var(--color-muted);
-    border-left:   1px solid var(--color-muted);
-    bottom:        0;
-    left:          0;
-}
+	> span:first-child {
+		border-bottom: 1px solid var(--color-muted);
+		border-left:   1px solid var(--color-muted);
+		bottom:        0;
+		left:          0;
+	}
 
-.marks > span:last-child {
-    border-bottom: 1px solid var(--color-muted);
-    border-right:  1px solid var(--color-muted);
-    bottom:        0;
-    right:         0;
+	> span:last-child {
+		border-bottom: 1px solid var(--color-muted);
+		border-right:  1px solid var(--color-muted);
+		bottom:        0;
+		right:         0;
+	}
 }
 
 .photo-print {
-    background-color: var(--photo-border-color);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    border:           1px solid var(--border-photo);
-    border-radius:    1px;
-    box-shadow:       var(--shadow-photo);
-    display:          inline-block;
-    max-width:        100%;
-    padding:          var(--photo-pad, var(--space-xs));
-    position:         relative;
-    transform:        rotate(var(--photo-twist, 0deg));
-    transform-origin: center center;
-}
+	background-color: var(--photo-border-color);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+	border:           1px solid var(--border-photo);
+	border-radius:    1px;
+	box-shadow:       var(--shadow-photo);
+	display:          inline-block;
+	max-width:        100%;
+	padding:          var(--photo-pad, var(--space-xs));
+	position:         relative;
+	transform:        rotate(var(--photo-twist, 0deg));
+	transform-origin: center center;
 
-.photo-print picture {
-    display:     block;
-    line-height: 0;
-    position: relative;
-}
+	picture {
+		display:     block;
+		line-height: 0;
+		position:    relative;
+	}
 
-.photo-print img {
-    border-radius: 1px;
-    display:       block;
-    height:        auto;
-    width:         100%;
-}
+	img {
+		border-radius: 1px;
+		display:       block;
+		height:        auto;
+		width:         100%;
+	}
 
-.photo-print figcaption {
-	background: var(--photo-border-color);
-	font-family: var(--font-handwritten);
-	font-size: small;
-	margin: var(--space-xs) 0 var(--space-m) 0;
-    text-align: right;
+	figcaption {
+		background:  var(--photo-border-color);
+		font-family: var(--font-handwritten);
+		font-size:   small;
+		margin:      var(--space-xs) 0 var(--space-m) 0;
+		text-align:  right;
+	}
 }
 
 .photo-sheen {
-    bottom:         0;
-    left:           0;
-    overflow:       hidden;
-    pointer-events: none;
-    position:       absolute;
-    right:          0;
-    top:            0;
+	bottom:         0;
+	left:           0;
+	overflow:       hidden;
+	pointer-events: none;
+	position:       absolute;
+	right:          0;
+	top:            0;
+
+	svg {
+		height:   100%;
+		left:     0;
+		position: absolute;
+		top:      0;
+		width:    100%;
+	}
 }
 
-.photo-sheen svg {
-    height:   100%;
-    left:     0;
-    position: absolute;
-    top:      0;
-    width:    100%;
+.wt-overlay,
+.paper-tape {
+	filter:         drop-shadow(var(--shadow-tape));
+	overflow:       visible;
+	pointer-events: none;
+	position:       absolute;
 }
 
 .wt-overlay {
-    filter:         drop-shadow(var(--shadow-tape));
-    left:           0;
-    overflow:       visible;
-    pointer-events: none;
-    position:       absolute;
-    top:            0;
-    will-change:    transform, width, height;
-}
-
-/* Article header */
-
-#main .article .header {
-    grid-column: 2 / -2;
-    margin:      0 0 var(--space-s) 0;
-}
-
-#main .article .header .title {
-    background: repeating-linear-gradient(
-        to right,
-        transparent 0,
-        transparent 0.05ch,
-        currentColor 0.05ch,
-        currentColor 0.95ch,
-        transparent 0.95ch,
-        transparent 1ch
-    ),
-    repeating-linear-gradient(
-        to right,
-        transparent 0,
-        transparent 0.05ch,
-        currentColor 0.05ch,
-        currentColor 0.95ch,
-        transparent 0.95ch,
-        transparent 1ch
-    );
-    background-position: 0 100%, 0 calc(100% - 4px);
-    background-repeat:   no-repeat;
-    background-size:     100% 2px, 100% 2px;
-    color:               var(--color-markup);
-    display:             table;
-    padding-bottom:      4px;
-}
-
-/* Article content */
-
-#main .article .content {
-    grid-column: 2 / -2;
-}
-
-#main .article .content b,
-#main .article .content strong {
-    color:       var(--color-markup);
-    font-weight: 400;
-}
-
-#main .article .content blockquote {
-    margin:      var(--space-s) min(4vw, 4ch);
-    overflow:    hidden;
-    padding:     0 0 0 2ch;
-    position:    relative;
-}
-
-#main .article .content blockquote::before {
-    color:       var(--color-markup);
-    content:     ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A'";
-    left:        0;
-    position:    absolute;
-    top:         0;
-    white-space: pre;
-    width:       1ch;
-}
-
-/* The blockquote uses overflow:hidden (a BFC), so the default <p> margins don't
-   collapse — they'd push the text off the ">" column. Zero the leading/trailing
-   ones so the quote text lines up with the marker column. */
-#main .article .content blockquote p:first-child { margin-top:    0; }
-#main .article .content blockquote p:last-child  { margin-bottom: 0; }
-
-#main .article .content code {
-    font-family: var(--font);
-}
-
-#main .article .content figure {
-    margin: var(--space-s) 0;
-}
-
-#main .article .content .footnotes {
-    font-size: small;
-    margin:    var(--space-xl) 0 0 35%;
-
-    & ol {
-        margin:  0;
-        padding: 0;
-
-        & li {
-            list-style-position: inside;
-
-            &::marker {
-                color: var(--color-markup);
-            }
-
-            & p {
-                display: inline;
-            }
-        }
-    }
-}
-
-#main .article .content .footnotes::before {
-    color:   var(--color-markup);
-    content: "–––––";
-}
-
-#main .article .content .footnotes hr {
-    display: none;
-}
-
-#main .article .content h2 {
-    background: repeating-linear-gradient(
-        to right,
-        transparent 0,
-        transparent 0.05ch,
-        currentColor 0.05ch,
-        currentColor 0.95ch,
-        transparent 0.95ch,
-        transparent 1ch
-    );
-    background-position: 0 100%, 0 calc(100% - 2px);
-    background-repeat:   no-repeat;
-    background-size:     100% 2px, 100% 2px;
-    color:               var(--color-markup);
-    display:             table;
-    margin:              var(--space-xl) 0 0 0;
-}
-
-#main .article .content hr {
-    border:     none;
-    padding:    var(--space-l) 0 0 0;
-    text-align: center;
-}
-
-#main .article .content hr::after {
-    color:   var(--color-markup);
-    content: "✲ ✲ ✲";
-}
-
-#main .article .content mark {
-    background: var(--color-markup);
-}
-
-#main .article .content s,
-#main .article .content del {
-    text-decoration-color: var(--color-markup);
-}
-
-#main .article .content sub,
-#main .article .content sup {
-    line-height: 1;
-}
-
-#main .article .content sub {
-    font-feature-settings: "sinf";
-}
-
-#main .article .content sup {
-    font-feature-settings: "sups";
-}
-
-#main .article .content ul {
-    margin:  var(--space-s) 0;
-    padding: 0 0 0 min(4vw, 4ch);
-}
-
-#main .article .content ul ul {
-    margin: 0;
-}
-
-#main .article .content ul li {
-    list-style-type: none;
-}
-
-#main .article .content ul li::before {
-    color:   var(--color-markup);
-    content: "✲";
-    margin:  0 1ch 0 0;
-}
-
-#main .article .content ol {
-    margin:  var(--space-s) 0;
-    padding: 0 0 0 8ch;
-}
-
-#main .article .content ol ol {
-    margin: 0;
-}
-
-#main .article .content pre {
-    margin: var(--space-s) 0 var(--space-s) min(4vw, 4ch);
-}
-
-#main .article .content table {
-    margin: var(--space-s) 0;
-}
-
-#main .article .content .kg-gallery-image img:hover {
-    cursor: zoom-in;
-}
-
-/* Gallery cells share the .photo / .photo-print treatment but with a thinner
-   white border, smaller corner marks and a wider gap so the framed, slightly
-   wobbled prints don't crowd each other. */
-#main .article .content .kg-gallery-card {
-    --gap: var(--space-s);
-    text-align: center;
-}
-
-/* Justified rows via grid lanes. The shortcode emits, per row, a
-   `grid-template-columns` of one `<aspect-ratio>fr` track per picture. Equal
-   aspect-weighted tracks give every image in the row the same height while the
-   row fills the full width — so portraits and landscapes sit side by side with
-   no cropping and no leftover gaps. */
-#main .article .content .kg-gallery-row {
-    align-items:     start;
-    display:         grid;
-    gap:             var(--gap);
-    justify-content: center;
-    margin:          0;
-}
-
-#main .article .content .kg-gallery-row + .kg-gallery-row {
-    margin-top: var(--gap);
-}
-
-/* Safety net for a future lone-image row: don't blow a single picture up to
-   full width (a tall portrait would dominate). Centre it at half width. */
-#main .article .content .kg-gallery-row--single {
-    grid-template-columns: minmax(0, 0.5fr) !important;
-}
-
-#main .article .content .kg-gallery-image {
-    --photo-pad: var(--space-3xs);
-    --mark-size: var(--space-2xs);
-    margin:      0;
-}
-
-#main .article .content .kg-gallery-image .photo-print {
-    width: 100%;
-}
-
-/* Gallery caption sits on a torn piece of cream paper tape — same SVG texture,
-   serrated ends, hairline edge, grain, shadow and wobble as the polaroid washi
-   tape (drawn by theme.js), only a fixed cream colour and with the handwritten
-   caption layered on top. */
-#main .article .content .kg-gallery-card > figcaption {
-    display:     inline-block;
-    font-family: var(--font-handwritten);
-    font-size:   small;
-    margin:      var(--space-m) 0 var(--space-xs);
-    max-width:   80%;
-    padding:     var(--space-2xs) var(--space-s);
-    position:    relative;
-    transform:   rotate(var(--tape-twist, 0deg));
-}
-
-#main .article .content .kg-gallery-card > figcaption .label {
-    position: relative;
-    z-index:  1;
+	left:        0;
+	top:         0;
+	will-change: transform, width, height;
 }
 
 .paper-tape {
-    filter:         drop-shadow(var(--shadow-tape));
-    inset:          0;
-    overflow:       visible;
-    pointer-events: none;
-    position:       absolute;
-    z-index:        0;
+	inset:   0;
+	z-index: 0;
 }
 
-/* Article footer */
+/* ============================================================== html */
 
-#main .article .footer {
-    grid-column: 1 / -1;
+html {
+	background: var(--color-theme);
 }
 
-#main .article .footer .navigation {
-    display:               grid;
-    gap:                   var(--space-s);
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content:       space-between;
-    margin:                var(--space-xl) 0 0 0;
+/* ============================================================== body */
+
+body {
+	background:            var(--color-bg);
+	background-image:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
+	border-radius:         1px;
+	box-shadow:            0 var(--space-2xs) var(--space-m) calc(var(--space-2xs) * -1) var(--color-shadow);
+	color:                 var(--color-txt);
+	display:               grid;
+	font-family:           var(--font-typewriter);
+	font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
+	font-size:             var(--size-font);
+	font-synthesis:        none;
+	gap:                   var(--space-xl) 0;
+	grid-template-columns: 0 minmax(0, 1fr) 0;
+	hyphenate-limit-chars: 7 3 4;
+	hyphens:               auto;
+	line-height:           1.75;
+	max-width:             900px;
+	padding:               var(--space-s);
+	text-align:            left;
+	text-shadow:           var(--shadow-text);
+
+	@media screen and (min-width: 768px) {
+		grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
+		margin:                var(--space-s);
+		padding:               var(--space-m);
+	}
+
+	@media screen and (min-width: 1024px) {
+		margin:  var(--space-3xl) auto;
+		padding: var(--space-l);
+	}
 }
 
-#main .article .footer .navigation .all {
-    text-align: center;
+/* Wire world — the whole sheet becomes cold telex listing paper */
+
+body.wire-template {
+	background-color: var(--wire-paper);
+	background-image: repeating-linear-gradient(to bottom, var(--wire-bar) 0 1rem, transparent 1rem 2rem);
+	color:            lch(26% 9 var(--hue));
+	font-family:      var(--font-telex);
+	position:         relative;
+	text-shadow:      none;
+
+	&::before,
+	&::after {
+		background-image:  radial-gradient(circle 5px at 50% 13px, var(--color-theme) 0 4.3px, transparent 4.9px);
+		background-repeat: repeat-y;
+		background-size:   100% 26px;
+		bottom:            0;
+		content:           "";
+		display:           none;
+		pointer-events:    none;
+		position:          absolute;
+		top:               0;
+		width:             var(--space-m);
+		z-index:           0;
+
+		@media screen and (min-width: 768px)  { display: block; }
+		@media screen and (min-width: 1024px) { width: var(--space-l); }
+	}
+
+	&::before { left:  0; border-right: 2px dashed var(--wire-tear); }
+	&::after  { right: 0; border-left:  2px dashed var(--wire-tear); }
+
+	#main .article .header .title {
+		background: none;
+		color:      var(--color-markup);
+		display:    block;
+		margin:     var(--space-l) 0 0 0;
+		padding:    0;
+	}
+
+	.credit {
+		color:     lch(42% 18 var(--hue));
+		font-size: 0.8rem;
+		margin:    0;
+	}
+
+	#main .article .content :is(em, i) {
+		&::before,
+		&::after { content: "*"; }
+	}
+
+	#footer {
+		--footer-rule: var(--wire-tear);
+	}
 }
 
-#main .article .footer .navigation .next {
-    text-align: right;
+/* Register world — the documentation binder: plain bond + three-hole punch */
+
+body.register-template {
+	background-color: var(--register-paper);
+	color:            lch(22% 6 var(--hue));
+	font-family:      var(--font-sans);
+	position:         relative;
+	text-shadow:      none;
+
+	&::before {
+		background-image:  radial-gradient(circle 9px at 50% 50%, var(--color-theme) 0 7px, transparent 7.7px);
+		background-repeat: repeat-y;
+		background-size:   100% 33.333%;
+		bottom:            0;
+		content:           "";
+		display:           none;
+		left:              0;
+		pointer-events:    none;
+		position:          absolute;
+		top:               0;
+		width:             var(--space-m);
+		z-index:           0;
+
+		@media screen and (min-width: 768px)  { display: block; }
+		@media screen and (min-width: 1024px) { width: var(--space-l); }
+	}
+
+	#footer {
+		background-image: none;
+		border-top:       1px solid var(--color-muted);
+	}
+
+	.docctrl {
+		border-bottom:  1px solid var(--color-muted);
+		color:          var(--color-muted);
+		display:        flex;
+		flex-flow:      row wrap;
+		font-size:      0.8rem;
+		gap:            0 var(--space-m);
+		letter-spacing: 0.05em;
+		margin:         0 0 var(--space-s) 0;
+		padding:        0 0 var(--space-2xs) 0;
+		text-transform: uppercase;
+
+		.sheet { margin-left: auto; }
+	}
+
+	.deck {
+		color:          var(--color-muted);
+		font-size:      0.8rem;
+		letter-spacing: 0.05em;
+		margin:         var(--space-2xs) 0 0 0;
+		text-transform: uppercase;
+
+		&::before { content: "Contents — "; }
+	}
+
+	#main .article .header .title {
+		background:  none;
+		color:       var(--color-markup);
+		display:     block;
+		font-weight: 700;
+		padding:     0;
+	}
+
+	#main .article .hero.plain {
+		picture img:hover { cursor: zoom-in; }
+
+		figcaption {
+			color:      var(--color-muted);
+			font-size:  small;
+			margin:     var(--space-2xs) 0 0 0;
+			text-align: right;
+		}
+	}
+
+	#main .article .content {
+		counter-reset: sec sub;
+
+		> :is(h1, h2, h3) {
+			background:  none;
+			color:       var(--color-markup);
+			display:     block;
+			font-weight: 700;
+			margin:      var(--space-xl) 0 0 0;
+		}
+
+		> :is(h1, h2) {
+			counter-increment: sec;
+			counter-reset:     sub;
+
+			&::before { content: counter(sec) ". "; }
+		}
+
+		> h3 {
+			counter-increment: sub;
+
+			&::before { content: counter(sec) "." counter(sub) " "; }
+		}
+
+		.year {
+			background:    none;
+			border-bottom: 1px solid var(--color-muted);
+			color:         var(--color-markup);
+			display:       block;
+			font-weight:   700;
+			margin:        var(--space-xl) 0 var(--space-2xs) 0;
+			padding:       0 0 var(--space-3xs) 0;
+		}
+
+		.group:first-of-type .year {
+			margin-top: var(--space-l);
+		}
+	}
+
+	#main .archive {
+		align-items:     baseline;
+		display:         flex;
+		gap:             var(--space-s);
+		justify-content: space-between;
+		padding:         var(--space-2xs) 0;
+
+		h2 {
+			background:    none;
+			display:       block;
+			flex:          0 1 auto;
+			margin:        0;
+			overflow:      hidden;
+			text-overflow: ellipsis;
+			white-space:   nowrap;
+		}
+
+		.leader {
+			border-bottom: 1px dotted var(--color-muted);
+			flex:          1 1 auto;
+			transform:     translateY(-0.3em);
+		}
+
+		.date {
+			color: var(--color-muted);
+			flex:  0 0 auto;
+		}
+	}
 }
 
-/* Archives */
+/* ============================================================ Header */
 
-#main .archive {
-    border-top:      1px dashed var(--color-muted);
-    display:         flex;
-    gap:             var(--space-s);
-    justify-content: space-between;
-    padding:         var(--space-2xs) 0;
+#header {
+	font-size:      0.8em;
+	grid-column:    1 / -1;
+	text-align:     center;
+	text-transform: uppercase;
 }
 
-#main .archive:last-of-type {
-    border-bottom: 1px dashed var(--color-muted);
+/* ============================================================== Main */
+
+#main {
+	grid-column: 1 / -1;
+
+	.article {
+		display:               grid;
+		gap:                   var(--space-xl) 0;
+		grid-template-columns: 0 minmax(0, 1fr) 0;
+
+		@media screen and (min-width: 768px) {
+			grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
+		}
+
+		.hero {
+			grid-column: 1 / -1;
+			margin:      var(--space-m) 0 0 0;
+		}
+
+		.zczc,
+		.nnnn {
+			color:  var(--color-markup);
+			margin: 0;
+		}
+
+		.nnnn {
+			margin: var(--space-l) 0 0 0;
+		}
+
+		.routing {
+			color:          lch(42% 18 var(--hue));
+			font-size:      0.8rem;
+			text-transform: uppercase;
+		}
+
+		.routing + .title {
+			margin-top: var(--space-l);
+		}
+
+		.header {
+			grid-column: 2 / -2;
+			margin:      0 0 var(--space-s) 0;
+
+			.title {
+				background:          var(--typewriter-rule), var(--typewriter-rule);
+				background-position: 0 100%, 0 calc(100% - 4px);
+				background-repeat:   no-repeat;
+				background-size:     100% 2px;
+				color:               var(--color-markup);
+				display:             table;
+				padding-bottom:      4px;
+			}
+		}
+
+		.content {
+			grid-column: 2 / -2;
+
+			b,
+			strong {
+				color:       var(--color-markup);
+				font-weight: 400;
+			}
+
+			blockquote {
+				margin:   var(--space-s) min(4vw, 4ch);
+				overflow: hidden;
+				padding:  0 0 0 2ch;
+				position: relative;
+
+				&::before {
+					color:       var(--color-markup);
+					content:     ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A'";
+					left:        0;
+					position:    absolute;
+					top:         0;
+					white-space: pre;
+					width:       1ch;
+				}
+
+				p:first-child { margin-top:    0; }
+				p:last-child  { margin-bottom: 0; }
+			}
+
+			code {
+				font-family: inherit;
+			}
+
+			figure {
+				margin: var(--space-s) 0;
+			}
+
+			.footnotes {
+				font-size: small;
+				margin:    var(--space-xl) 0 0 35%;
+
+				&::before {
+					color:   var(--color-markup);
+					content: "–––––";
+				}
+
+				hr {
+					display: none;
+				}
+
+				ol {
+					margin:  0;
+					padding: 0;
+
+					li {
+						list-style-position: inside;
+
+						&::marker {
+							color: var(--color-markup);
+						}
+
+						p {
+							display: inline;
+						}
+					}
+				}
+			}
+
+			h2 {
+				background:          var(--typewriter-rule);
+				background-position: 0 100%;
+				background-repeat:   no-repeat;
+				background-size:     100% 2px;
+				color:               var(--color-markup);
+				display:             table;
+				margin:              var(--space-xl) 0 0 0;
+			}
+
+			hr {
+				border:     none;
+				padding:    var(--space-l) 0 0 0;
+				text-align: center;
+
+				&::after {
+					color:   var(--color-markup);
+					content: "✲ ✲ ✲";
+				}
+			}
+
+			mark {
+				background: var(--color-markup);
+			}
+
+			s,
+			del {
+				text-decoration-color: var(--color-markup);
+			}
+
+			sub,
+			sup {
+				line-height: 1;
+			}
+
+			sub { font-feature-settings: "sinf"; }
+			sup { font-feature-settings: "sups"; }
+
+			ul,
+			ol {
+				margin: var(--space-s) 0;
+			}
+
+			ul { padding: 0 0 0 min(4vw, 4ch); }
+			ol { padding: 0 0 0 8ch; }
+
+			ul ul,
+			ol ol {
+				margin: 0;
+			}
+
+			ul li {
+				list-style-type: none;
+
+				&::before {
+					color:   var(--color-markup);
+					content: "✲";
+					margin:  0 1ch 0 0;
+				}
+			}
+
+			pre {
+				margin: var(--space-s) 0 var(--space-s) min(4vw, 4ch);
+			}
+
+			table {
+				margin: var(--space-s) 0;
+			}
+
+			.kg-gallery-image img:hover {
+				cursor: zoom-in;
+			}
+
+			.kg-gallery-card {
+				--gap:      var(--space-s);
+				text-align: center;
+			}
+
+			.kg-gallery-row {
+				align-items:     start;
+				display:         grid;
+				gap:             var(--gap);
+				justify-content: center;
+				margin:          0;
+			}
+
+			.kg-gallery-row + .kg-gallery-row {
+				margin-top: var(--gap);
+			}
+
+			.kg-gallery-row--single {
+				grid-template-columns: minmax(0, 0.5fr) !important;
+			}
+
+			.kg-gallery-image {
+				--photo-pad: var(--space-3xs);
+				--mark-size: var(--space-2xs);
+				margin:      0;
+
+				.photo-print { width: 100%; }
+			}
+
+			.kg-gallery-card > figcaption {
+				display:     inline-block;
+				font-family: var(--font-handwritten);
+				font-size:   small;
+				margin:      var(--space-m) 0 var(--space-xs);
+				max-width:   80%;
+				padding:     var(--space-2xs) var(--space-s);
+				position:    relative;
+				transform:   rotate(var(--tape-twist, 0deg));
+
+				.label {
+					position: relative;
+					z-index:  1;
+				}
+			}
+		}
+
+		.footer {
+			grid-column: 1 / -1;
+
+			.navigation {
+				display:               grid;
+				gap:                   var(--space-s);
+				grid-template-columns: 1fr 1fr 1fr;
+				justify-content:       space-between;
+				margin:                var(--space-xl) 0 0 0;
+
+				.all  { text-align: center; }
+				.next { text-align: right; }
+			}
+		}
+	}
 }
 
-#main .archive h2 {
-    background:    none !important;
-    display:       block !important;
-    margin:        0 !important;
-    overflow:      hidden;
-    padding:       0 !important;
-    text-overflow: ellipsis;
-    white-space:   nowrap;
-}
+/* ============================================================ Footer */
 
-#main .archive .date {
-    color:       var(--color-muted);
-    flex-shrink: 0;
-}
-
-/* Footer */
-
-/* Typewriter-rule top border: a row of monospace-cell dashes (sized in ch so it
-   tracks Forma Mono), echoing the dispatch title's ruled underline. The wire
-   footer overrides this with its own perforation. */
 #footer {
-	background-image: repeating-linear-gradient(
-	    to right,
-	    var(--color-markup) 0 0.6ch,
-	    transparent         0.6ch 1.2ch
-	);
+	--footer-rule:       var(--color-markup);
+	background-image:    repeating-linear-gradient(to right, var(--footer-rule) 0 0.6ch, transparent 0.6ch 1.2ch);
 	background-position: 0 0;
 	background-repeat:   no-repeat;
 	background-size:     100% 2px;
-	font-size: 0.8em;
-	grid-column: 1 / -1;
-    padding: var(--space-m) 0 0 0;
-    text-align:  center;
-}
+	font-size:           0.8em;
+	grid-column:         1 / -1;
+	padding:             var(--space-m) 0 0 0;
+	text-align:          center;
 
-body.wire-template #footer {
-    background-image: repeating-linear-gradient(
-	    to right,
-	    var(--wire-tear) 0 0.6ch,
-	    transparent         0.6ch 1.2ch
-	);
-}
-
-#footer .navigation {
-    margin:         var(--space-xs) 0 0 0;
-    text-transform: uppercase;
-    width: 100%;
-}
-
-#footer .navigation ul {
-	display: flex;
-		align-items: center;
-		flex-flow: row wrap;
-		gap: var(--space-s);
+	.logo {
+		align-items:     center;
+		color:           var(--color-markup);
+		display:         flex;
+		gap:             var(--space-l);
 		justify-content: center;
-    list-style-type: none;
-    margin:          0;
-    padding:         0;
-}
+		margin:          var(--space-m) 0 0 0;
+		text-transform:  uppercase;
 
-#footer .navigation ul li {
-    display: inline;
-}
+		svg {
+			color:  var(--color-markup);
+			fill:   var(--color-markup);
+			height: var(--space-2xl);
+			width:  var(--space-2xl);
+		}
+	}
 
-#footer .channels {
-	display: flex;
-		align-items: center;
-		flex-flow: row wrap;
-		gap: var(--space-s);
+	.navigation {
+		margin:         var(--space-xs) 0 0 0;
+		text-transform: uppercase;
+		width:          100%;
+
+		ul {
+			list-style-type: none;
+			margin:          0;
+			padding:         0;
+
+			li { display: inline; }
+		}
+	}
+
+	.navigation ul,
+	.channels {
+		align-items:     center;
+		display:         flex;
+		flex-flow:       row wrap;
+		gap:             var(--space-s);
 		justify-content: center;
-	margin: var(--space-m) 0 0 0;
+	}
+
+	.channels {
+		margin: var(--space-m) 0 0 0;
+	}
 }
 
-/* GLightbox Overrides */
+/* ========================================================= GLightbox */
 
 .gslide-description {
-    font-family: var(--font);
-}
-/* ───────────────────────────── Wires (telex) ─────────────────────────────
-   A "wire" is a short cultural critique. On a wire page the whole sheet (the
-   <body>) BECOMES continuous-form telex paper — a cold, hue-tinted listing-
-   paper with green-bar stripes and tractor-feed sprocket holes down both edges
-   — so reading a wire drops you into the cold paper world the way a dispatch
-   keeps you in the warm one. Dispatches are untouched. */
-
-body.wire-template {
-    background-color: var(--wire-paper);
-    background-image: repeating-linear-gradient(
-        to bottom,
-        var(--wire-bar) 0 1rem,
-        transparent     1rem 2rem
-    );
-    color:       lch(26% 9 var(--hue));   /* cold ribbon ink */
-    font-family: var(--font-telex);
-    position:    relative;
-    text-shadow: none;
-}
-
-/* tractor-feed sprocket holes + tear-off perforation. Hidden on small screens;
-   shown from the main 768px breakpoint up, where the sheet is wide enough to
-   carry the feed margins (see the media query below). */
-body.wire-template::before,
-body.wire-template::after {
-    background-image: radial-gradient(circle 5px at 50% 13px,
-        var(--color-theme) 0 4.3px,         /* the hole, filled with the surface behind the sheet */
-        transparent        4.9px);          /* clean edge (tiny feather for anti-aliasing) */
-    background-repeat: repeat-y;
-    background-size:   100% 26px;
-    bottom:            0;
-    content:           "";
-    display:           none;
-    pointer-events:    none;
-    position:          absolute;
-    top:               0;
-    /* Width tracks the body padding (the side margin) so the tractor edge fills
-       the margin exactly and the content/footer always sit BETWEEN the two
-       strips — never crossing the fixed-width edge as the grid flows. */
-    width:             var(--space-m);
-    z-index:           0;
-}
-body.wire-template::before { left:  0; border-right: 2px dashed var(--wire-tear); }
-body.wire-template::after  { right: 0; border-left:  2px dashed var(--wire-tear); }
-
-@media screen and (min-width: 768px) {
-    /* Show the tractor edge (body padding is --space-m here, matched above). */
-    body.wire-template::before,
-    body.wire-template::after {
-        display: block;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    /* Body padding grows to --space-l here; keep the tractor edge in step. */
-    body.wire-template::before,
-    body.wire-template::after {
-        width: var(--space-l);
-    }
-}
-
-/* Telex chrome — shared by wires (ZCZC / NNNN) and dispatches (✠ / BK): a start
-   mark, a routing block (date-time + origin lines), and an end mark. */
-.article .zczc,
-.article .nnnn {
-    color:  var(--color-markup);
-    margin: 0;
-}
-.article .nnnn { margin: var(--space-l) 0 0 0; }
-
-.article .routing {
-    color:          lch(42% 18 var(--hue));
-    font-size:      0.8rem;
-    text-transform: uppercase;
-}
-
-/* space the title from the routing block above it (both worlds) */
-.article .routing + .title { margin-top: var(--space-l); }
-
-/* clean telex headline (drop the dispatch's typewriter ruled underline) */
-#main .article.wire .header .title {
-    background:     none;
-    color:          var(--color-markup);
-    display:        block;
-    margin:         var(--space-l) 0 0 0;
-    padding:        0;
-}
-
-/* subject credit under the title: what the wire critiques + who made it */
-.wire .credit {
-    color:          lch(42% 18 var(--hue));
-    font-size:      0.8rem;
-    margin:         0 0 0 0;
-}
-
-/* telex has no italics — mark emphasis with *asterisks* instead (the slant
-   doesn't render anyway: Departure Mono has no italic + font-synthesis:none) */
-.wire .content em::before,
-.wire .content em::after,
-.wire .content i::before,
-.wire .content i::after {
-    content: "*";
-}
-
-
-/* ─────────────────────────── Register (documentation) ───────────────────────
-   The reference layer — archive, the /d/ and /w/ indexes, the from/about/by term
-   pages and the static pages (colophon, blogroll, legal, styleguide). Where the
-   dispatch is a warm transmission and the wire a cold one, the register is the
-   binder that files them: plain cool bond paper, the Forma sans face, ring-binder
-   holes punched down the left margin, numbered sections, and a form-style
-   document-control block in place of the telex letterhead. */
-
-body.register-template {
-    background-color: var(--register-paper);   /* plain bond — keeps the base paper grain, no grid */
-    color:       lch(22% 6 var(--hue));        /* graphite on bond */
-    font-family: var(--font-sans);
-    position:    relative;
-    text-shadow: none;
-}
-
-/* Ring-binder punch: large, generously-spaced holes down the left margin — no
-   tear-off edge, because documentation paper isn't continuous-form. Each hole
-   punches through to the dark surface (var(--color-theme)) behind the floating
-   sheet. Hidden below 768px (the margin is too narrow to carry them). */
-body.register-template::before {
-    background-image: radial-gradient(circle 9px at 50% 50%,
-        var(--color-theme) 0 7px,     /* the hole */
-        transparent        7.7px);    /* clean edge */
-    background-repeat: repeat-y;
-    background-size:   100% 33.333%;   /* one hole per third of the sheet → three holes */
-    bottom:   0;
-    content:  "";
-    display:  none;
-    left:     0;
-    pointer-events: none;
-    position: absolute;
-    top:      0;
-    width:    var(--space-m);
-    z-index:  0;
-}
-
-@media screen and (min-width: 768px)  { body.register-template::before { display: block; } }
-@media screen and (min-width: 1024px) { body.register-template::before { width: var(--space-l); } }
-
-/* Documentation hero: a plain image with a right-aligned caption — none of the
-   dispatch's polaroid frame, corner marks, grain, sheen or washi tape. Still
-   click-to-zoom (GLightbox), so keep the zoom-in affordance. */
-#main .article .hero.plain picture img:hover {
-    cursor: zoom-in;
-}
-
-#main .article .hero.plain figcaption {
-    color:      var(--color-muted);
-    font-size:  small;
-    margin:     var(--space-2xs) 0 0 0;
-    text-align: right;
-}
-
-/* Clean filing rule above the footer (no typewriter dashes, no tear-off). */
-body.register-template #footer {
-    background-image: none;
-    border-top:       1px solid var(--color-muted);
-}
-
-/* Document-control block: DOC ref left, REV centre, SHEET pushed to the right —
-   a title-block strip ruled off from the heading below. */
-.docctrl {
-    border-bottom:  1px solid var(--color-muted);
-    color:          var(--color-muted);
-    display:        flex;
-    flex-flow:      row wrap;
-    font-size:      0.8rem;
-    gap:            0 var(--space-m);
-    letter-spacing: 0.05em;
-    margin:         0 0 var(--space-s) 0;
-    padding:        0 0 var(--space-2xs) 0;
-    text-transform: uppercase;
-}
-.docctrl .sheet { margin-left: auto; }
-
-/* Heading: a plain bold sans title (drop the dispatch's typewriter underline). */
-body.register-template #main .article .header .title {
-    background:   none;
-    color:        var(--color-markup);
-    display:      block;
-    font-weight:  700;
-    padding:      0;
-}
-
-/* The deck reads as a contents summary under the index title. */
-body.register-template .deck {
-    color:          var(--color-muted);
-    font-size:      0.8rem;
-    letter-spacing: 0.05em;
-    margin:         var(--space-2xs) 0 0 0;
-    text-transform: uppercase;
-}
-body.register-template .deck::before { content: "Contents — "; }
-
-/* Numbered sections — the manual's body headings. The CSS counters number the
-   content's own headings (direct children of .content, so the archive-row <h2>s
-   are excluded): h1/h2 are major sections (1., 2., …), h3 the subsections
-   (1.1, 1.2, …). Drops the dispatch's typewriter ruled underline for a plain
-   bold sans heading; the section number inherits the heading colour. */
-body.register-template #main .article .content { counter-reset: sec sub; }
-
-body.register-template #main .article .content > h1,
-body.register-template #main .article .content > h2,
-body.register-template #main .article .content > h3 {
-    background:  none;
-    color:       var(--color-markup);
-    display:     block;
-    font-weight: 700;
-    margin:      var(--space-xl) 0 0 0;
-}
-
-body.register-template #main .article .content > h1,
-body.register-template #main .article .content > h2 {
-    counter-increment: sec;
-    counter-reset:     sub;
-}
-body.register-template #main .article .content > h1::before,
-body.register-template #main .article .content > h2::before {
-    content: counter(sec) ". ";
-}
-
-body.register-template #main .article .content > h3 { counter-increment: sub; }
-body.register-template #main .article .content > h3::before {
-    content: counter(sec) "." counter(sub) " ";
-}
-
-/* Index rows become a table of contents: title · dotted leader · date. The
-   leader is the separator, so drop the base per-row dashed rules. */
-#main .archive,
-#main .archive:last-of-type { border: none; }
-#main .archive              { align-items: baseline; }
-#main .archive h2           { flex: 0 1 auto; }
-#main .archive .date        { flex: 0 0 auto; }
-#main .archive .leader {
-    border-bottom: 1px dotted var(--color-muted);
-    flex:          1 1 auto;
-    transform:     translateY(-0.3em);
-}
-
-/* The index is grouped by year (a ruled divider). All rows share the register
-   font; the D/ or W/ marker before the date is what tells dispatches from wires. */
-body.register-template #main .article .content .year {
-    background:     none;          /* kill the dispatch typewriter underline */
-    border-bottom:  1px solid var(--color-muted);
-    color:          var(--color-markup);
-    display:        block;
-    font-weight:    700;
-    margin:         var(--space-xl) 0 var(--space-2xs) 0;
-    padding:        0 0 var(--space-3xs) 0;
-}
-body.register-template #main .article .content .group:first-of-type .year {
-    margin-top: var(--space-l);
+	font-family: inherit;
 }

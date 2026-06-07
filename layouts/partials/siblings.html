@@ -1,13 +1,11 @@
-{{/* Linear prev/next over the combined dispatch + wire timeline.
-     ctx: the current Page. Returns dict "prev" (older item) "next" (newer item).
-     "previous" = chronologically older, to match rel="prev" / the j key. */}}
-{{ $p := . }}
+{{ $page := . }}
 {{ $all := (where site.RegularPages "Section" "in" (slice "dispatches" "wires")).ByDate }}
-{{ $prev := false }}{{ $next := false }}
+{{ $prev := false }}
+{{ $next := false }}
 {{ range $i, $e := $all }}
-  {{ if eq $e.RelPermalink $p.RelPermalink }}
-    {{ if gt $i 0 }}{{ $prev = index $all (sub $i 1) }}{{ end }}
-    {{ if lt $i (sub (len $all) 1) }}{{ $next = index $all (add $i 1) }}{{ end }}
-  {{ end }}
+	{{ if eq $e.RelPermalink $page.RelPermalink }}
+		{{ if gt $i 0 }}{{ $prev = index $all (sub $i 1) }}{{ end }}
+		{{ if lt $i (sub (len $all) 1) }}{{ $next = index $all (add $i 1) }}{{ end }}
+	{{ end }}
 {{ end }}
 {{ return (dict "prev" $prev "next" $next) }}
