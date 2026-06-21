@@ -715,6 +715,7 @@ body.register-template {
 
 			code {
 				font-family: inherit;
+				background-color:  color-mix(in lch, var(--color-markup) 10%, var(--color-bg) 90%);
 			}
 
 			figure {
