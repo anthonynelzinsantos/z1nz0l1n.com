@@ -14,7 +14,7 @@ QWERTY already loads up the left hand, but AZERTY makes things worse by parking 
 
 Most QWERTY users i know have chosen the US International layout. It works quite well… provided you only ever type in Spanish, Portuguese, Italian, German, and Dutch. Speak French or a Scandinavian language, and you’ll be diving into the `Opt/AltGr` layer constantly. Speak any other language that uses the Latin alphabet, and you’re simply out of luck. And even if you only need the odd accented letter here and there, it’s missing plenty of useful characters whilst still finding room for utterly useless ones like the `ﬁ` and `ﬂ` ligatures. So, back when we were all stuck indoors during the worst of the Covid pandemic, i set out to design a more useful international QWERTY layout.
 
-The result is [QWeuRTY](https://github.com/anthonynelzinsantos/QWeuRTY), the layout i’ve been using for the past five years. From the French `ç` to the Portuguese `ã`, the Asturian `ḥ` to the Icelandic `ð`, the Spanish `ñ` to the Irish `í`, the Swedish `å` to the Dutch `ĳ`, the German `ß` to the Czech `ř`, the Polish `ł` to the Lithuanian `ą`, the Hungarian `ő` to the Turkish `ı`, QWeuRTY lets you type every character in every Latin-script European language straight from a QWERTY keyboard.
+The result is [QWeuRTY](https://qweurty.eu/), the layout i’ve been using for the past five years. From the French `ç` to the Portuguese `ã`, the Asturian `ḥ` to the Icelandic `ð`, the Spanish `ñ` to the Irish `í`, the Swedish `å` to the Dutch `ĳ`, the German `ß` to the Czech `ř`, the Polish `ł` to the Lithuanian `ą`, the Hungarian `ő` to the Turkish `ı`, QWeuRTY lets you type every character in every Latin-script European language straight from a QWERTY keyboard.
 
 Like every other international layout, QWeuRTY leans heavily on dead keys for the most common diacritics:
 
@@ -32,4 +32,4 @@ That’s nine dead keys in all – a lot, and still not enough, because a handfu
 
 I’ve not felt the need to tweak QWeuRTY for a year now, so it’s time to set it loose on the linguists, diplomats, and curious polyglots of the world. I also have provisional Colemak and Workman versions working, though i’d like to be sure they’re logical and ergonomic before i hand them over. Either way, i’d love to hear what you think!
 
-- [Download QWeuRTY for macOS, Linux and Windows](https://github.com/anthonynelzinsantos/QWeuRTY)
+- [Download QWeuRTY for macOS, Linux and Windows](https://qweurty.eu/)
