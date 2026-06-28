@@ -1,0 +1,45 @@
+---
+title: "There is nothing new under the sun, even for encyclicals"
+date: "2026-06-28T15:30:00.000Z"
+slug: "26w26"
+feature_image_alt: "A statue at St. James’s Church in Liège. Image Anthony Nelzin-Santos."
+feature_image_caption: "Liège (Belgium), 2025-10."
+from:
+  - "lyon-fr"
+---
+
+In a previous life, i was a history major researching the French-Catholic migration to the Canadian Prairies between 1870 and 1915. Published in 1891, [*Rerum novarum*](https://en.wikipedia.org/wiki/Rerum_novarum) is the foundational text of the Catholic church’s social doctrine. Without overstating its immediate impact, it played a part in the gradual split of the linguistic and religious identities of migrant communities, particularly because the encyclical was poorly received in French Canada, at least at first. The Catholic migrants from France found out they had more in common with other Catholics than with their French-speaking cousins.
+
+I never thought i’d live to see an update to *Rerum novarum*, but that’s precisely what *Magnifica Humanitas* is. This isn’t a surprise: Robert Prevost chose the papal name Leo XIV as a direct reference to Leo XIII’s social teaching. *“While many of the historical conditions described by Leo XIII have changed”*, he writes, *“at least two insights remain highly relevant today: the primacy of human labor over any mindset focused solely on finance or productivity – with the consequent attention to the people and families most susceptible to exploitation – and the inseparable link between proclaiming the Gospel and pursuing a more just social order.”*
+
+As a mostly lapsed Catholic myself, i’m less and less convinced by biblical arguments, but this encyclical is incredibly light on scriptural proof-texting. (Unless you regard *The Lord of the Rings* as scripture.) It’s grounded in a far more recent tradition, that of the social doctrine, and makes great use of Pius XI’s principle of subsidiarity, which states that *“whatever can be carried out by individuals, families, intermediary organizations and local communities should not be carried out by higher-level authorities.”*
+
+This is a surprisingly potent device. Let’s say that:
+
+> Today, among the goods that are universally intended for everyone, we must also include new forms of property, such as patents, algorithms, digital platforms, technological infrastructure and data. In a context where the wealth of nations depends increasingly on knowledge and technology, when these goods remain concentrated in the hands of a few, without adequate forms of sharing and access, a new imbalance is created that contradicts the universal destination of goods.
+
+*Rerum novarum* tried to strike a “just balance” between the right to private property and workers’ rights. *‌Quadragesimo anno* stated that private property loses its moral value when it isn’t subordinated to the common good. *‌Centesimus annus* added that *“the foundation of the right to private initiative and ownership”* was found in our use of *“intelligence and freedom”* not only for our own sake, *“but also for others and with others”*. Leo XIV argues that these sentences are still valid when you replace “private property” with “artificial intelligence”, because AI and other digital assets are nothing but an immaterial form of private property.
+
+In other words: the good old principle of subsidiarity still holds, and *“higher-level institutions must recognize, protect and promote the freedom and creativity of lower-level entities, coordinating their contributions so that they can cooperate effectively for the common good”*, lest they lose their moral value. That’s crucial, because *“to speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than confining their role to mere oversight after the standards have been set elsewhere.”*
+
+This is a subtle – too subtle for most mainstream commentators it seems – but powerful argument. *Magnifica Humanitas* isn’t a knee-jerk reaction against AI, but a profound rebuttal of its governance. *Rerum novarum* was clearer in its support for trade unions, but this is a big step toward a more open promotion of open-source software and federated services.
+
+In another previous life, i was a tech journalist who wrote endlessly about the meaninglessness of legislation reacting to particular technologies and the need for proactive laws rooted in fundamental beliefs. Leo XIV’s argumentation might appear wishy-washy at times, but it focuses on overarching principles rather than specific implementation details. This is the head of a 2000-year-old institution speaking, after all.
+
+The Pope calls for the *“disarming”* of artificial intelligence, which *“means freeing it from the mentality of ‘armed’ competition, which today is not limited simply to the military context, but is also an economic and cognitive phenomenon.”* That being said, the military context can’t be ignored in these particularly troubled times when an unprovoked aggression can be deemed a “just war”:
+
+> AI does not remove the intrinsic inhumanity of conflict; indeed it can only bring about conflict more quickly and render it more impersonal, lowering the threshold for resorting to violence, transforming defense into threat prediction and thus reducing victims to data. In this way, it will accustom us to the idea that violence is inevitable and needs only to be optimized.
+
+This line of argumentation could lead to the usual slippery slope about what tools want, but Leo XIV catches himself just in time. *“Over the centuries”*, he writes, *“technological development has significantly improved the living conditions of humanity. At the same time, each phase of progress has also revealed the ambiguity of tools that can cause harm when not oriented toward the good.”* In other words: *“technology is never neutral, because it takes on the characteristics of those who devise, finance, regulate and use it.”*
+
+This might appear self-evident, but far too many people think that [guns don’t kill](https://en.wikipedia.org/wiki/Guns_don%27t_kill_people,_people_kill_people). The Pope repeats it over and over again before adding a twist: *“our first task is neither to demonize nor idolize technological tools, but to utilize them on the basis of a fundamental principle, namely that truth is a common good and not the property of those with power or influence. We must therefore promote an ecology of communication.”*
+
+In the beginning was the word, and Leo XIV knows full well the power of words: *“when languages and tools change, so do everyday actions and social relationships”*. The Pope’s take on algorithms — *“when AI systems present themselves as neutral and objective, they end up reflecting and reinforcing the stereotypes or ideological bias of their designers and developers”* — isn’t particularly novel. But then, i’m not sure most Catholics from the richest countries on Earth had to think about the consequences of these systems:
+
+> Furthermore, control is exercised not only through explicit prohibitions, but also through the architecture of visibility: what is amplified or rendered invisible, what is rewarded or penalized, ultimately shapes opinions and choices, fostering conformity and self-censorship. For this reason, freedom in the digital age is not merely a matter of interiority but also a public concern.
+
+Unfortunately, Leo XIV doesn’t dwell too long on the nature of work in the age of AI:
+
+> A society that guarantees employment to only a small fraction of the population, despite having a high level of technical development, risks exposing many to forced inactivity, a lack of responsibility and the absence of daily tasks and stimuli, resulting in human and cultural impoverishment. This creates a paradox of material progress and anthropological regression that undermines the foundations of a just and stable social peace. 
+
+This isn’t uninteresting, but it rings a bit hollow. *Rerum novarum* was a seminal contribution in the midst of a wide-ranging social movement. The Catholic church’s social doctrine ended up having a huge impact on the establishment of social democracies before, between, and after the two World Wars. At the time, Leo XIII was talking to heads of state and captains of industry on whom he had at least a semblance of authority. But today? The debate has been captured by the same people who are effecting the changes at hand. This is a fully private matter on which not only the Pope, but also the state, has little to no say. To some, it’s even [a war of religion](https://en.wikipedia.org/wiki/Transhumanism) — and why would they listen to the enemy?
