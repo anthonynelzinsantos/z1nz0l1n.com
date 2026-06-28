@@ -219,9 +219,18 @@
 
       if (svg) svg.remove();
 
+      // Tape pieces straddle the top and bottom edges of the print, so each
+      // overhangs the photo box by up to half a strip height. Safari — unlike
+      // Chrome and Firefox — clips content that overflows an outer <svg> once
+      // the element carries a CSS transform (which reposition() applies), so we
+      // grow the SVG box by a strip-height of headroom on each side and draw the
+      // strips inside it rather than relying on `overflow: visible`.
+      const pad = Math.max(H_MIN, pw * H_RATIO);
+      const vh  = ph + pad * 2;
+
       svg = svgEl('svg', {
         class:               'wt-overlay',
-        viewBox:             `0 0 ${pw} ${ph}`,
+        viewBox:             `0 0 ${pw} ${vh}`,
         preserveAspectRatio: 'none',
       });
 
@@ -231,21 +240,17 @@
       svg.appendChild(defs);
 
       [
-        { cx: pw / 2, cy: 0,  angle: rand(-WOBBLE, WOBBLE) },
-        { cx: pw / 2, cy: ph, angle: rand(-WOBBLE, WOBBLE) },
+        { cx: pw / 2, cy: pad,      angle: rand(-WOBBLE, WOBBLE) },
+        { cx: pw / 2, cy: pad + ph, angle: rand(-WOBBLE, WOBBLE) },
       ].forEach(({ cx, cy, angle }) =>
         svg.appendChild(makeTape(defs, cx, cy, pw, angle, tapeColor, grainId))
       );
 
-      svg.style.width           = `${pw}px`;
-      svg.style.height          = `${ph}px`;
-      svg.style.transform       = 'none';
-      svg.style.transformOrigin = '0 0';
-
       print.appendChild(svg);
 
-      svg._buildPW = pw;
-      svg._buildPH = ph;
+      svg._buildPW  = pw;
+      svg._buildPH  = ph;
+      svg._buildPad = pad;
 
       reposition();
     }
@@ -256,11 +261,16 @@
       const ph = print.offsetHeight;
       if (!pw || !ph) return;
 
+      const pad    = svg._buildPad;
       const scaleX = pw / svg._buildPW;
       const scaleY = ph / svg._buildPH;
 
+      // The SVG box extends `pad` above the print's top edge; pull it back up so
+      // the strip that straddles the top edge lands in the right place.
       svg.style.width           = `${svg._buildPW}px`;
-      svg.style.height          = `${svg._buildPH}px`;
+      svg.style.height          = `${svg._buildPH + pad * 2}px`;
+      svg.style.left            = '0';
+      svg.style.top             = `-${pad * scaleY}px`;
       svg.style.transform       = `scale(${scaleX},${scaleY})`;
       svg.style.transformOrigin = '0 0';
     }
