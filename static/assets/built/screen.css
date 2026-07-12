@@ -36,16 +36,16 @@
 	font-display: swap;
 	font-family: "Typewriter";
 	font-style: normal;
-	font-weight: 400;
-	src: url("../fonts/Plex.woff2") format("woff2");
+	font-weight: 100 900;
+	src: url("../fonts/Lilex.woff2") format("woff2");
 }
 
 @font-face {
 	font-display: swap;
 	font-family: "Typewriter";
 	font-style: italic;
-	font-weight: 400;
-	src: url("../fonts/PlexItalic.woff2") format("woff2");
+	font-weight: 100 900;
+	src: url("../fonts/LilexItalic.woff2") format("woff2");
 }
 
 /* ======================================================== Variables */
@@ -415,14 +415,18 @@ body {
 	}
 }
 
-/* Dispatch world — IBM Plex stylistic sets (only the typewriter face has them) */
+/* Dispatch world */
 
 body.post-template,
 body.home-template {
-	font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
+	font-feature-settings: "cv01" 1, "cv02" 1, "cv12" 1, "zero" 1;
+	
+	em, i {
+		font-feature-settings: "cv01" 0;
+	}
 }
 
-/* Wire world — the whole sheet becomes cold telex listing paper */
+/* Wire world */
 
 body.wire-template {
 	background-color: var(--wire-paper);
@@ -479,7 +483,7 @@ body.wire-template {
 	}
 }
 
-/* Register world — the documentation binder: plain bond + three-hole punch */
+/* Register world */
 
 body.register-template {
 	background-color: var(--register-paper);
