@@ -987,7 +987,7 @@ body.register-template {
 	align-items:     center;
 	box-shadow:      0 2px 12px -8px var(--color-shadow);
 	box-sizing:      border-box;
-	display:         flex;
+	display:         none;
 	gap:             var(--space-2xs);
 	justify-content: center;
 	max-width:       900px;
@@ -999,16 +999,17 @@ body.register-template {
 	text-transform:  uppercase;
 	white-space:     nowrap;
 	width:           100%;
+
+	/* The stack illusion needs the tabs to bleed to the viewport edges. iOS no
+	 * longer honours viewport-fit and forces content inside the safe area, so
+	 * the illusion can't hold on phones — gate the feature to tablet and up. */
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
 }
 
-/* The tabs bleed to the true viewport edges — behind the notch and Safari's
- * toolbar — for the stack-of-paper illusion; each one's own safe-area padding
- * keeps its text clear of those overlays. On desktop the insets resolve to 0. */
-.peek-prev { padding-top:    calc(var(--space-s) + env(safe-area-inset-top)); }
-.peek-next {
-	margin-top:     auto;
-	padding-bottom: calc(var(--space-s) + env(safe-area-inset-bottom));
-}
+/* Next sheet hugs the bottom of the viewport on short pages. */
+.peek-next { margin-top: auto; }
 
 .peek-arrow {
 	font-size: 0.7em;
