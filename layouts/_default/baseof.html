@@ -37,7 +37,7 @@
 </head>
 <body class="{{ if .IsHome }}{{ if $homeWire }}wire-template{{ else }}home-template{{ end }}{{ else if and (eq .Kind "page") (eq .Section "dispatches") }}post-template{{ else if and (eq .Kind "page") (eq .Section "wires") }}wire-template{{ else }}register-template{{ end }}">
     <header id="header">
-        <a class="none" href="{{ "/" | relURL }}">{{ $banner }}</a>
+        <a class="none" href="{{ "/archive/" | relURL }}" title="Open {{ site.Title }}’s archive">{{ $banner }}</a>
     </header>
 
     <main id="main">

@@ -364,45 +364,6 @@
   }
 })();
 
-/* ─── Keyboard navigation ────────────────────────────────────────────────── */
-
-(function () {
-  'use strict';
-
-  // j / ← → previous post
-  // k / → → next post
-  // Fires only when focus is not inside a text field or contenteditable.
-  // Ignores modifier combos to avoid clashing with browser shortcuts.
-
-  document.addEventListener('keydown', function (e) {
-    const tag = document.activeElement.tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement.isContentEditable) return;
-    if (e.metaKey || e.ctrlKey || e.altKey) return;
-
-    const nav  = document.querySelector('.footer .navigation');
-    if (!nav) return;
-
-    const prev = nav.querySelector('.previous a');
-    const next = nav.querySelector('.next a');
-
-    switch (e.key) {
-      case 'ArrowLeft':
-      case 'j':
-        if (prev) { e.preventDefault(); window.location.href = prev.href; }
-        break;
-      case 'ArrowRight':
-      case 'k':
-        if (next) { e.preventDefault(); window.location.href = next.href; }
-        break;
-      case 'a':
-      case 'A': {
-        const all = nav.querySelector('.all a');
-        if (all) { e.preventDefault(); window.location.href = all.href; }
-        break;
-      }
-    }
-  });
-})();
 /* ─── Typewriter misprints ───────────────────────────────────────────────── */
 
 (function () {

@@ -1,9 +1,8 @@
 {{ define "main" }}
 {{ $latest := partial "latest.html" . }}
-{{ $sib := partial "siblings.html" $latest }}
 {{ if eq $latest.Section "wires" }}
-	{{ partial "wire.html" (dict "page" $latest "prev" $sib.prev "next" $sib.next) }}
+	{{ partial "wire.html" (dict "page" $latest) }}
 {{ else }}
-	{{ partial "article.html" (dict "page" $latest "telex" true "footer" true "prev" $sib.prev "next" $sib.next) }}
+	{{ partial "article.html" (dict "page" $latest "telex" true) }}
 {{ end }}
 {{ end }}
