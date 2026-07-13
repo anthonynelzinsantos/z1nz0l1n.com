@@ -380,7 +380,6 @@ html {
 body {
 	align-items:           center;
 	background:            var(--color-theme);
-	box-sizing:            border-box;
 	color:                 var(--color-txt);
 	display:               flex;
 	flex-direction:        column;
@@ -391,11 +390,7 @@ body {
 	hyphens:               auto;
 	line-height:           1.75;
 	margin:                0;
-	/* Keep the peek tabs clear of the notch, home indicator and — via dvh — the
-	 * dynamic Safari toolbar, so they kiss the visible viewport edges. */
 	min-height:            100vh;
-	min-height:            100dvh;
-	padding:               env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 	text-align:            left;
 	text-shadow:           var(--shadow-text);
 }
@@ -1006,8 +1001,14 @@ body.register-template {
 	width:           100%;
 }
 
-/* Next sheet hugs the bottom of the viewport on short pages. */
-.peek-next { margin-top: auto; }
+/* The tabs bleed to the true viewport edges — behind the notch and Safari's
+ * toolbar — for the stack-of-paper illusion; each one's own safe-area padding
+ * keeps its text clear of those overlays. On desktop the insets resolve to 0. */
+.peek-prev { padding-top:    calc(var(--space-s) + env(safe-area-inset-top)); }
+.peek-next {
+	margin-top:     auto;
+	padding-bottom: calc(var(--space-s) + env(safe-area-inset-bottom));
+}
 
 .peek-arrow {
 	font-size: 0.7em;
