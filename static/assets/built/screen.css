@@ -380,6 +380,7 @@ html {
 body {
 	align-items:           center;
 	background:            var(--color-theme);
+	box-sizing:            border-box;
 	color:                 var(--color-txt);
 	display:               flex;
 	flex-direction:        column;
@@ -390,7 +391,11 @@ body {
 	hyphens:               auto;
 	line-height:           1.75;
 	margin:                0;
+	/* Keep the peek tabs clear of the notch, home indicator and — via dvh — the
+	 * dynamic Safari toolbar, so they kiss the visible viewport edges. */
 	min-height:            100vh;
+	min-height:            100dvh;
+	padding:               env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 	text-align:            left;
 	text-shadow:           var(--shadow-text);
 }
