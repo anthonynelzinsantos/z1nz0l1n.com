@@ -21,6 +21,11 @@
 {{ end }}
 {{ $sib := false }}
 {{ with $peekTarget }}{{ $sib = partial "siblings.html" . }}{{ end }}
+{{/* The header and footer logo open the archive, except on the archive page
+     itself, where they open the homepage. */}}
+{{ $onArchive := eq .RelPermalink ("/archive/" | relURL) }}
+{{ $navHref := cond $onArchive ("/" | relURL) ("/archive/" | relURL) }}
+{{ $navTitle := printf "Open %s’s %s" site.Title (cond $onArchive "homepage" "archive") }}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">
 <head>
@@ -49,7 +54,7 @@
 
     <div class="folio">
     <header id="header">
-        <a class="none" href="{{ "/archive/" | relURL }}" title="Open {{ site.Title }}’s archive">{{ $banner }}</a>
+        <a class="none" href="{{ $navHref }}" title="{{ $navTitle }}">{{ $banner }}</a>
     </header>
 
     <main id="main">
@@ -65,7 +70,7 @@
             </ul>
         </nav>
 
-        {{ partial "logo.html" . }}
+        {{ partial "logo.html" (dict "navHref" $navHref "navTitle" $navTitle) }}
 
         <div class="channels">
             <a class="icon" href="https://bsky.app/profile/z1nz0l1n.com" data-tooltip="Follow {{ site.Title }} on Bluesky">
