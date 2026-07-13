@@ -3,9 +3,11 @@
      item — the adjacent page (or false); side — "prev" or "next". */}}
 {{ $item := .item }}
 {{ $side := .side }}
+{{ $arrow := cond (eq $side "prev") "▲" "▼" }}
 {{ with $item }}
 <a class="peek peek-{{ $side }} none {{ .Section }}" href="{{ .RelPermalink }}" style="--hue: {{ partial "hue.html" .Date }}" rel="{{ $side }}" aria-label="{{ if eq $side "prev" }}Previous{{ else }}Next{{ end }}: {{ .Title }}">
-	<span class="peek-arrow" aria-hidden="true">{{ if eq $side "prev" }}▲{{ else }}▼{{ end }}</span>
+	<span class="peek-arrow" aria-hidden="true">{{ $arrow }}</span>
 	<span class="peek-title">{{ .Title }}</span>
+	<span class="peek-arrow" aria-hidden="true">{{ $arrow }}</span>
 </a>
 {{ end }}

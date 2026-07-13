@@ -364,3 +364,31 @@
     init();
   }
 })();
+
+/* ─── Keyboard navigation ────────────────────────────────────────────────── */
+
+(function () {
+  'use strict';
+
+  // ← → follow the peek tabs (previous / next), but only where the tabs are
+  // shown (tablet and up — see the .peek media query). Ignored while typing in
+  // a field and when a modifier is held, so browser shortcuts still work.
+  const wide = window.matchMedia('(min-width: 768px)');
+
+  document.addEventListener('keydown', function (e) {
+    if (!wide.matches) return;
+
+    const tag = document.activeElement.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement.isContentEditable) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+    let target = null;
+    if (e.key === 'ArrowLeft') target = document.querySelector('.peek-prev');
+    else if (e.key === 'ArrowRight') target = document.querySelector('.peek-next');
+
+    if (target) {
+      e.preventDefault();
+      window.location.href = target.href;
+    }
+  });
+})();
