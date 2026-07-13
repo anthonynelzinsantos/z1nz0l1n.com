@@ -1099,3 +1099,35 @@ body.register-template {
 .peek:focus .peek-arrow {
 	opacity: 1;
 }
+
+/* ==================================================== View transitions */
+/*
+ * Cross-document view transitions carry the stack illusion across navigation.
+ * Moving to the next (older) sheet — the one that peeked from the bottom — the
+ * whole stack rises; moving back to the previous (newer) sheet it descends.
+ * theme.js tags the navigation direction as a view-transition type; any other
+ * navigation keeps the default cross-fade. Progressive enhancement: unsupported
+ * browsers just navigate.
+ */
+
+@view-transition {
+	navigation: auto;
+}
+
+:root:active-view-transition-type(forward)::view-transition-old(root)  { animation: sheet-exit-up    0.4s ease both; }
+:root:active-view-transition-type(forward)::view-transition-new(root)  { animation: sheet-enter-up   0.4s ease both; }
+:root:active-view-transition-type(backward)::view-transition-old(root) { animation: sheet-exit-down  0.4s ease both; }
+:root:active-view-transition-type(backward)::view-transition-new(root) { animation: sheet-enter-down 0.4s ease both; }
+
+@keyframes sheet-exit-up    { to   { transform: translateY(-100%); } }
+@keyframes sheet-enter-up   { from { transform: translateY(100%);  } }
+@keyframes sheet-exit-down  { to   { transform: translateY(100%);  } }
+@keyframes sheet-enter-down { from { transform: translateY(-100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
+}

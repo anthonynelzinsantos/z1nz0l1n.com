@@ -392,3 +392,42 @@
     }
   });
 })();
+
+/* ─── Directional view transitions ───────────────────────────────────────── */
+
+(function () {
+  'use strict';
+
+  // Tag same-origin navigations between neighbouring sheets with a direction so
+  // the CSS can push the stack the right way: "forward" to the next (older)
+  // sheet, "backward" to the previous (newer) one. Any other navigation keeps
+  // the default cross-fade. Progressive enhancement — bails cleanly where the
+  // cross-document View Transitions API isn't available.
+
+  function sameUrl(a, b) {
+    if (!a || !b) return false;
+    try { return new URL(a, location.href).href === new URL(b, location.href).href; }
+    catch (err) { return false; }
+  }
+
+  // Leaving a page: compare the destination to this page's peek tabs.
+  window.addEventListener('pageswap', function (e) {
+    if (!e.viewTransition || !e.activation || !e.activation.entry) return;
+    const dest = e.activation.entry.url;
+    const next = document.querySelector('.peek-next');
+    const prev = document.querySelector('.peek-prev');
+    if (next && sameUrl(dest, next.href)) e.viewTransition.types.add('forward');
+    else if (prev && sameUrl(dest, prev.href)) e.viewTransition.types.add('backward');
+  });
+
+  // Arriving on a page: the sheet we land on lists the page we came from as its
+  // previous (if we moved forward) or its next (if we moved backward).
+  window.addEventListener('pagereveal', function (e) {
+    if (!e.viewTransition || !window.navigation || !navigation.activation || !navigation.activation.from) return;
+    const from = navigation.activation.from.url;
+    const next = document.querySelector('.peek-next');
+    const prev = document.querySelector('.peek-prev');
+    if (prev && sameUrl(from, prev.href)) e.viewTransition.types.add('forward');
+    else if (next && sameUrl(from, next.href)) e.viewTransition.types.add('backward');
+  });
+})();
