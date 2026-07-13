@@ -2,11 +2,12 @@
   'use strict';
 
   // Photographic effects (twist, grain/glare sheen, washi tape) belong to the
-  // warm dispatch world only — never the cold wires or the documentation
-  // register. Bail out unless this page is a dispatch (a single dispatch or the
-  // home page showing one).
+  // dispatch and wire worlds — never the documentation register, which is set
+  // clean. On a wire the only .photo-print is a gallery image (there is no
+  // hero), so this treats gallery photos and nothing else. Bail out on the
+  // register (and any other template).
   const bodyClasses = document.body.classList;
-  if (!(bodyClasses.contains('post-template') || bodyClasses.contains('home-template'))) return;
+  if (!(bodyClasses.contains('post-template') || bodyClasses.contains('home-template') || bodyClasses.contains('wire-template'))) return;
 
   /* ─── Tuning ─────────────────────────────────────────────────────────── */
 
