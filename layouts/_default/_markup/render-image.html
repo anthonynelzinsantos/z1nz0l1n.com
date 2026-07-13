@@ -1,10 +1,10 @@
 {{ $img := .Page.Resources.GetMatch .Destination }}
 {{ $alt := .PlainText }}
 {{ if $img }}
-<figure class="photo kg-card kg-image-card kg-width-wide{{ if .Title }} kg-card-hascaption{{ end }}">
+<figure class="photo{{ if .Title }} has-caption{{ end }}">
 	{{ partial "marks.html" }}
 	<div class="photo-print">
-		<picture><img class="kg-image" src="{{ $img.RelPermalink }}"{{ with $img.Width }} width="{{ . }}"{{ end }}{{ with $img.Height }} height="{{ . }}"{{ end }} loading="lazy" alt="{{ $alt }}"></picture>
+		<picture><img src="{{ $img.RelPermalink }}"{{ with $img.Width }} width="{{ . }}"{{ end }}{{ with $img.Height }} height="{{ . }}"{{ end }} loading="lazy" alt="{{ $alt }}"></picture>
 		{{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
 	</div>
 </figure>

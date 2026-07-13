@@ -22,7 +22,6 @@
     <link rel="icon" href="/content/images/2026/02/logo.png" type="image/png">
     <link rel="stylesheet" href="/assets/built/screen.css?{{ now.Unix }}">
     <link rel="stylesheet" href="/assets/built/glightbox.min.css">
-    <link rel="stylesheet" href="/public/cards.min.css">
     <link rel="alternate" type="application/rss+xml" href="{{ "/index.xml" | absURL }}" title="{{ site.Title }}">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -86,7 +85,7 @@
     <script src="/assets/js/glightbox.min.js"></script>
     <script>
         const hero = GLightbox({ selector: '.hero picture img' });
-        const gallery = GLightbox({ loop: true, selector: '.kg-gallery-image img' });
+        const gallery = GLightbox({ loop: true, selector: '.gallery-image img' });
     </script>
 </body>
 </html>

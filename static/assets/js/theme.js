@@ -354,7 +354,7 @@
     // Gallery captions ride on cream paper tape.
     const paperColor = getComputedStyle(document.documentElement)
       .getPropertyValue('--color-tape-paper').trim() || 'lch(93% 10 92)';
-    document.querySelectorAll('.kg-gallery-card.kg-card-hascaption > figcaption')
+    document.querySelectorAll('.gallery.has-caption > figcaption')
       .forEach(fig => attachCaptionTape(fig, paperColor));
   }
 

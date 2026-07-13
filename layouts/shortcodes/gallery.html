@@ -1,12 +1,12 @@
 {{ $caption := .Get "caption" }}
-<figure class="kg-card kg-gallery-card kg-width-wide{{ if $caption }} kg-card-hascaption{{ end }}">
-	<div class="kg-gallery-container">
+<figure class="gallery{{ if $caption }} has-caption{{ end }}">
+	<div class="gallery-container">
 	{{ range $row := split (trim .Inner "\n ") "\n\n" }}
 		{{ $imgs := slice }}{{ range (split $row "\n") }}{{ $name := trim . " \t" }}{{ with and $name ($.Page.Resources.GetMatch $name) }}{{ $imgs = $imgs | append . }}{{ end }}{{ end }}
 		{{ with $imgs }}
 		{{ $cols := slice }}{{ range . }}{{ $ar := 1.0 }}{{ if and .Width .Height (gt .Height 0) }}{{ $ar = div (float .Width) (float .Height) }}{{ end }}{{ $cols = $cols | append (printf "%.4ffr" $ar) }}{{ end }}
-		<div class="kg-gallery-row{{ if eq (len .) 1 }} kg-gallery-row--single{{ end }}" style="grid-template-columns: {{ delimit $cols " " }}">
-		{{ range . }}<div class="kg-gallery-image photo">{{ partial "marks.html" }}<div class="photo-print"><picture><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt=""></picture></div></div>{{ end }}
+		<div class="gallery-row{{ if eq (len .) 1 }} gallery-row--single{{ end }}" style="grid-template-columns: {{ delimit $cols " " }}">
+		{{ range . }}<div class="gallery-image photo">{{ partial "marks.html" }}<div class="photo-print"><picture><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt=""></picture></div></div>{{ end }}
 		</div>
 		{{ end }}
 	{{ end }}
