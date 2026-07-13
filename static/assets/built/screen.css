@@ -997,6 +997,7 @@ body.register-template {
 	text-decoration: none;
 	text-shadow:     none;
 	text-transform:  uppercase;
+	transition:      transform 0.2s ease, box-shadow 0.28s ease;
 	white-space:     nowrap;
 	width:           100%;
 
@@ -1008,8 +1009,21 @@ body.register-template {
 	}
 }
 
-/* Next sheet hugs the bottom of the viewport on short pages. */
-.peek-next { margin-top: auto; }
+/* At rest each tab is nudged a few pixels toward its own edge, so its paper
+ * always overshoots the viewport boundary (the overflow is simply off-screen).
+ * Hover releases it back to flush — drawing the sheet in — without ever exposing
+ * the background behind it. The extra padding on the edge side keeps the resting
+ * tab balanced. */
+.peek-prev {
+	padding-top: calc(var(--space-s) + var(--space-3xs));
+	transform:   translateY(calc(var(--space-3xs) * -1));
+}
+
+.peek-next {
+	margin-top:     auto;
+	padding-bottom: calc(var(--space-s) + var(--space-3xs));
+	transform:      translateY(var(--space-3xs));
+}
 
 .peek-arrow {
 	font-size: 0.7em;
@@ -1061,13 +1075,20 @@ body.register-template {
 .peek.wires::before { left:  0; border-right: 2px dashed var(--wire-tear); }
 .peek.wires::after  { right: 0; border-left:  2px dashed var(--wire-tear); }
 
-/* Honest hover: a touch more lift and a brighter arrow, no motion. Keep the
- * paper look by overriding the global anchor hover fill and its child recolour. */
+/* Hover: release the tab back to flush, drawing the sheet a few pixels further
+ * in, with a touch more lift and a brighter arrow. The paper stays anchored to
+ * the viewport edge throughout. Keep the paper look by overriding the global
+ * anchor hover fill and its child recolour. */
 
 .peek:hover,
 .peek:focus {
 	box-shadow: 0 4px 18px -8px var(--color-shadow);
 }
+
+.peek-prev:hover,
+.peek-prev:focus,
+.peek-next:hover,
+.peek-next:focus { transform: translateY(0); }
 
 .peek:hover > *,
 .peek:focus > * {
