@@ -1,0 +1,13 @@
+{{/* Chronological neighbours across the dispatches/wires timeline (the register
+     is left out). Returns the newer and older adjacent pages, or false. */}}
+{{ $page := . }}
+{{ $all := (where site.RegularPages "Section" "in" (slice "dispatches" "wires")).ByDate }}
+{{ $newer := false }}
+{{ $older := false }}
+{{ range $i, $e := $all }}
+	{{ if eq $e.RelPermalink $page.RelPermalink }}
+		{{ if gt $i 0 }}{{ $older = index $all (sub $i 1) }}{{ end }}
+		{{ if lt $i (sub (len $all) 1) }}{{ $newer = index $all (add $i 1) }}{{ end }}
+	{{ end }}
+{{ end }}
+{{ return (dict "newer" $newer "older" $older) }}

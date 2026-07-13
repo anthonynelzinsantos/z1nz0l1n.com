@@ -378,33 +378,47 @@ html {
 /* ============================================================== body */
 
 body {
+	align-items:           center;
+	background:            var(--color-theme);
+	color:                 var(--color-txt);
+	display:               flex;
+	flex-direction:        column;
+	font-family:           var(--font-typewriter);
+	font-size:             var(--size-font);
+	font-synthesis:        none;
+	hyphenate-limit-chars: 7 3 4;
+	hyphens:               auto;
+	line-height:           1.75;
+	margin:                0;
+	min-height:            100vh;
+	text-align:            left;
+	text-shadow:           var(--shadow-text);
+}
+
+/* The article sheet: one leaf of paper, with the neighbouring sheets (the peek
+ * tabs) stacked above and below it in the body. */
+
+.folio {
 	background:            var(--color-bg);
 	background-image:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
 	border-radius:         1px;
 	box-shadow:            0 var(--space-2xs) var(--space-m) calc(var(--space-2xs) * -1) var(--color-shadow);
-	color:                 var(--color-txt);
+	box-sizing:            border-box;
 	display:               grid;
-	font-family:           var(--font-typewriter);
-	font-size:             var(--size-font);
-	font-synthesis:        none;
 	gap:                   var(--space-xl) 0;
 	grid-template-columns: 0 minmax(0, 1fr) 0;
-	hyphenate-limit-chars: 7 3 4;
-	hyphens:               auto;
-	line-height:           1.75;
+	margin:                var(--space-xl) 0;
 	max-width:             900px;
 	padding:               var(--space-s);
-	text-align:            left;
-	text-shadow:           var(--shadow-text);
+	width:                 100%;
 
 	@media screen and (min-width: 768px) {
 		grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
-		margin:                var(--space-s);
 		padding:               var(--space-m);
 	}
 
 	@media screen and (min-width: 1024px) {
-		margin:  var(--space-3xl) auto;
+		margin:  var(--space-xl) 0;
 		padding: var(--space-l);
 	}
 }
@@ -422,13 +436,10 @@ body.home-template {
 
 /* Wire world */
 
-body.wire-template {
+.wire-template .folio {
 	background-color: var(--wire-paper);
 	background-image: repeating-linear-gradient(to bottom, var(--wire-bar) 0 1rem, transparent 1rem 2rem);
-	color:            lch(26% 9 var(--hue));
-	font-family:      var(--font-telex);
 	position:         relative;
-	text-shadow:      none;
 
 	&::before,
 	&::after {
@@ -450,6 +461,12 @@ body.wire-template {
 
 	&::before { left:  0; border-right: 2px dashed var(--wire-tear); }
 	&::after  { right: 0; border-left:  2px dashed var(--wire-tear); }
+}
+
+body.wire-template {
+	color:       lch(26% 9 var(--hue));
+	font-family: var(--font-telex);
+	text-shadow: none;
 
 	#main .article .header .title {
 		background: none;
@@ -479,12 +496,9 @@ body.wire-template {
 
 /* Register world */
 
-body.register-template {
+.register-template .folio {
 	background-color: var(--register-paper);
-	color:            lch(22% 6 var(--hue));
-	font-family:      var(--font-sans);
 	position:         relative;
-	text-shadow:      none;
 
 	&::before {
 		background-image:  radial-gradient(circle 9px at 50% 50%, var(--color-theme) 0 7px, transparent 7.7px);
@@ -503,6 +517,12 @@ body.register-template {
 		@media screen and (min-width: 768px)  { display: block; }
 		@media screen and (min-width: 1024px) { width: var(--space-l); }
 	}
+}
+
+body.register-template {
+	color:       lch(22% 6 var(--hue));
+	font-family: var(--font-sans);
+	text-shadow: none;
 
 	#footer {
 		background-image: none;
@@ -952,4 +972,102 @@ body.register-template {
 
 .gslide-description {
 	font-family: inherit;
+}
+
+/* ============================================================== Peek */
+/*
+ * The neighbouring sheets in the dispatches/wires timeline, stacked outside the
+ * article: the previous sheet kisses the top of the viewport, the next the
+ * bottom, with the folio's own margin as the gap. Same width as the article,
+ * each rendered in its own paper and hue. Glorified prev/next links with the
+ * real presentation.
+ */
+
+.peek {
+	align-items:     center;
+	box-shadow:      0 2px 12px -8px var(--color-shadow);
+	box-sizing:      border-box;
+	display:         flex;
+	gap:             var(--space-2xs);
+	justify-content: center;
+	max-width:       900px;
+	overflow:        hidden;
+	padding:         var(--space-s);
+	position:        relative;
+	text-decoration: none;
+	text-shadow:     none;
+	text-transform:  uppercase;
+	white-space:     nowrap;
+	width:           100%;
+}
+
+/* Next sheet hugs the bottom of the viewport on short pages. */
+.peek-next { margin-top: auto; }
+
+.peek-arrow {
+	font-size: 0.7em;
+	opacity:   0.65;
+}
+
+.peek-title {
+	max-width:     min(80vw, 60ch);
+	overflow:      hidden;
+	text-overflow: ellipsis;
+}
+
+/* Paper: each tab wears the neighbour's own surface, driven by its inline --hue */
+
+.peek.dispatches {
+	background:  lch(96% 5 90);
+	color:       lch(20% 85 var(--hue));
+	font-family: var(--font-typewriter);
+	font-size:   0.85em;
+}
+
+.peek.wires {
+	background:      lch(99% 1.5 var(--hue));
+	color:          lch(26% 9 var(--hue));
+	font-family:    var(--font-telex);
+	font-size:      0.8em;
+	padding-inline: var(--space-xl);
+}
+
+/* Wire tabs carry the same sprocket-perforated feed edges as the wire sheet. */
+
+.peek.wires::before,
+.peek.wires::after {
+	background-image:  radial-gradient(circle 5px at 50% 13px, var(--color-theme) 0 4.3px, transparent 4.9px);
+	background-repeat: repeat-y;
+	background-size:   100% 26px;
+	bottom:            0;
+	content:           "";
+	display:           none;
+	pointer-events:    none;
+	position:          absolute;
+	top:               0;
+	width:             var(--space-m);
+
+	@media screen and (min-width: 768px)  { display: block; }
+	@media screen and (min-width: 1024px) { width: var(--space-l); }
+}
+
+.peek.wires::before { left:  0; border-right: 2px dashed var(--wire-tear); }
+.peek.wires::after  { right: 0; border-left:  2px dashed var(--wire-tear); }
+
+/* Honest hover: a touch more lift and a brighter arrow, no motion. Keep the
+ * paper look by overriding the global anchor hover fill and its child recolour. */
+
+.peek:hover,
+.peek:focus {
+	box-shadow: 0 4px 18px -8px var(--color-shadow);
+}
+
+.peek:hover > *,
+.peek:focus > * {
+	color: inherit !important;
+}
+
+.peek:hover .peek-arrow,
+.peek:focus .peek-arrow {
+	opacity: 1;
 }

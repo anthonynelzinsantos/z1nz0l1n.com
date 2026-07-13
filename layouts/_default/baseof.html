@@ -11,6 +11,16 @@
 {{ if or (eq $sec "dispatches") (eq $sec "wires") }}
 	{{ with site.GetPage (printf "/%s" $sec) }}{{ $banner = .Params.banner }}{{ end }}
 {{ end }}
+{{/* Neighbouring sheets for the skeuomorphic peek tabs: single dispatches and
+     wires, plus the home page (which shows the latest). */}}
+{{ $peekTarget := false }}
+{{ if .IsHome }}
+	{{ $peekTarget = partial "latest.html" . }}
+{{ else if and (eq .Kind "page") (in (slice "dispatches" "wires") .Section) }}
+	{{ $peekTarget = . }}
+{{ end }}
+{{ $sib := false }}
+{{ with $peekTarget }}{{ $sib = partial "siblings.html" . }}{{ end }}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">
 <head>
@@ -35,6 +45,9 @@
     <script src="https://tinylytics.app/embed/5k-5eys3-QT5sumY9sVY.js" defer></script>
 </head>
 <body class="{{ if .IsHome }}{{ if $homeWire }}wire-template{{ else }}home-template{{ end }}{{ else if and (eq .Kind "page") (eq .Section "dispatches") }}post-template{{ else if and (eq .Kind "page") (eq .Section "wires") }}wire-template{{ else }}register-template{{ end }}">
+    {{ with $sib }}{{ partial "peek.html" (dict "item" .newer "side" "prev") }}{{ end }}
+
+    <div class="folio">
     <header id="header">
         <a class="none" href="{{ "/archive/" | relURL }}" title="Open {{ site.Title }}’s archive">{{ $banner }}</a>
     </header>
@@ -80,6 +93,9 @@
             </a>
         </div>
     </footer>
+    </div>
+
+    {{ with $sib }}{{ partial "peek.html" (dict "item" .older "side" "next") }}{{ end }}
 
 	<script src="/assets/js/theme.js?{{ now.Unix }}"></script>
     <script src="/assets/js/glightbox.min.js"></script>
