@@ -1,1 +1,1 @@
-{{ return (index (where site.RegularPages "Section" "in" (slice "dispatches" "wires")).ByDate.Reverse 0) }}
+{{ return (index (partialCached "posts.html" .) 0) }}

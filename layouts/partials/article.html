@@ -34,7 +34,7 @@
 			<p class="zczc">{{ $p.Params.Slug | upper }} ✠</p>
 			<div class="routing">
 				<div class="dtg">{{ printf "%sZ%s" ($p.Date.Format "02-01-06") ($p.Date.Format "15:04") }}</div>
-				{{ with $p.Params.from }}<div class="org">FROM {{ with site.GetPage (printf "/from/%s" (index . 0)) }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>{{ end }}
+				{{ with index ($p.GetTerms "from") 0 }}<div class="org">FROM <a href="{{ .RelPermalink }}">{{ .Title }}</a></div>{{ end }}
 			</div>
 			{{ end }}
 			<h1 class="title">{{ $p.Title }}</h1>

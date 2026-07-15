@@ -1,0 +1,4 @@
+{{/* The register: every dispatch and wire, newest first. The one content list,
+     shared by the home page, the archive, the feeds and the peek tabs. Global
+     and context-free, so callers reach it through partialCached. */}}
+{{ return (where site.RegularPages "Section" "in" site.Params.mainSections).ByDate.Reverse }}

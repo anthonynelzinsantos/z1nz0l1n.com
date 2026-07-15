@@ -1,31 +1,35 @@
-{{ $d := now }}
-{{ $homeWire := false }}
-{{ $sec := .Section }}
-{{ if .IsHome }}
-	{{ with partial "latest.html" . }}{{ $d = .Date }}{{ $sec = .Section }}{{ if eq .Section "wires" }}{{ $homeWire = true }}{{ end }}{{ end }}
-{{ else if not .Date.IsZero }}
-	{{ $d = .Date }}
-{{ end }}
-{{ $hue := partial "hue.html" $d }}
-{{ $banner := site.Params.banner }}
-{{ if or (eq $sec "dispatches") (eq $sec "wires") }}
-	{{ with site.GetPage (printf "/%s" $sec) }}{{ $banner = .Params.banner }}{{ end }}
-{{ end }}
-{{/* Neighbouring sheets for the skeuomorphic peek tabs: single dispatches and
-     wires, plus the home page (which shows the latest). */}}
-{{ $peekTarget := false }}
-{{ if .IsHome }}
-	{{ $peekTarget = partial "latest.html" . }}
-{{ else if and (eq .Kind "page") (in (slice "dispatches" "wires") .Section) }}
-	{{ $peekTarget = . }}
-{{ end }}
-{{ $sib := false }}
-{{ with $peekTarget }}{{ $sib = partial "siblings.html" . }}{{ end }}
-{{/* The header and footer logo open the archive, except on the archive page
-     itself, where they open the homepage. */}}
-{{ $onArchive := eq .RelPermalink ("/archive/" | relURL) }}
-{{ $navHref := cond $onArchive ("/" | relURL) ("/archive/" | relURL) }}
-{{ $navTitle := printf "Open %s’s %s" site.Title (cond $onArchive "homepage" "archive") }}
+{{- /* $latest — the newest dispatch or wire. Only the home page needs it: it
+     stands on that post for its date, section, banner and peek tabs. */ -}}
+{{ $latest := false -}}
+{{ if .IsHome }}{{ $latest = partial "latest.html" . }}{{ end -}}
+
+{{- /* Date driving the seasonal hue: the latest post on the home page, this
+     page's own date elsewhere, or today as a fallback. */ -}}
+{{ $d := now -}}
+{{ if .IsHome }}{{ with $latest }}{{ $d = .Date }}{{ end }}{{ else if not .Date.IsZero }}{{ $d = .Date }}{{ end -}}
+{{ $hue := partial "hue.html" $d -}}
+
+{{- /* The home page borrows its latest post's section, which selects the wire
+     body class. */ -}}
+{{ $sec := .Section -}}
+{{ if .IsHome }}{{ with $latest }}{{ $sec = .Section }}{{ end }}{{ end -}}
+{{ $homeWire := and .IsHome (eq $sec "wires") -}}
+
+{{- /* The sheet this page stands on: a single dispatch or wire, or the latest
+     on the home page; nothing on lists and register pages. It supplies both the
+     skeuomorphic peek tabs and the header banner. */ -}}
+{{ $peekTarget := $latest -}}
+{{ if and (eq .Kind "page") (in site.Params.mainSections .Section) }}{{ $peekTarget = . }}{{ end -}}
+{{ $sib := false -}}
+{{ with $peekTarget }}{{ $sib = partial "siblings.html" . }}{{ end -}}
+{{ $banner := site.Params.banner -}}
+{{ with $peekTarget }}{{ with site.GetPage (printf "/%s" .Section) }}{{ $banner = .Params.banner }}{{ end }}{{ end -}}
+
+{{- /* The header and footer logo open the archive, except on the archive page
+     itself, where they open the homepage. */ -}}
+{{ $onArchive := eq .RelPermalink ("/archive/" | relURL) -}}
+{{ $navHref := cond $onArchive ("/" | relURL) ("/archive/" | relURL) -}}
+{{ $navTitle := printf "Open %s’s %s" site.Title (cond $onArchive "homepage" "archive") -}}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">
 <head>
@@ -70,7 +74,13 @@
             </ul>
         </nav>
 
-        {{ partial "logo.html" (dict "navHref" $navHref "navTitle" $navTitle) }}
+        <div class="logo">
+            <span class="title">{{ site.Title }}</span>
+            <a class="icon" href="{{ $navHref }}" title="{{ $navTitle }}">
+                <svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M500 0C223.858 0 0 223.858 0 500C0 776.142 223.858 1000 500 1000C776.142 1000 1000 776.142 1000 500C1000 223.858 776.142 0 500 0ZM545.608 475.276L601.375 374.669L561.995 349.508L565.97 319.008L603.518 343.207L647.398 334.836L613.76 464.196L545.389 476.962L545.608 475.276ZM444.807 492.259L443.637 493.495L386.454 520.16L339.722 541.794L339.774 541.927L339.385 542.108L356.455 585.611L335.312 607.95L319.159 566.302L278.739 547.283L381.99 462.4L444.807 492.259ZM395.644 685.489L380.308 646.403L313.998 716.467L272.597 609.722L169 560.976L323.01 434.364L235.885 392.95L324.612 320.59L338.959 207L506.965 314.347L519.429 218.688L615.666 280.712L728.13 259.255L677.954 452.209L772.782 434.503L743.533 545.197L798.692 645.526L599.675 657.432L645.818 742.148L645.324 742.176L645.598 742.684L531.301 748.753L453.131 832L452.993 831.649L452.662 832L395.644 685.489ZM450.702 663.974L425.345 598.818L473.007 548.458L473.821 549.953L487.839 664.123L534.373 661.339L548.991 688.355L504.598 690.836L494.131 701.983L473.986 723.317L450.702 663.974ZM409.554 363.216L373.455 392.893L345.677 379.688L380.296 351.456L385.893 307.136L498.528 379.103L489.541 448.073L488.003 447.342L409.554 363.216ZM649.758 560.64L536.84 538.691L535.369 538.966L568.439 600.083L701.863 592.101L680.342 552.955L691.754 509.766L661.519 515.412L649.758 560.64Z"/></svg>
+            </a>
+            <span class="est">{{ site.Params.est }}</span>
+        </div>
 
         <div class="channels">
             <a class="icon" href="https://bsky.app/profile/z1nz0l1n.com" data-tooltip="Follow {{ site.Title }} on Bluesky">

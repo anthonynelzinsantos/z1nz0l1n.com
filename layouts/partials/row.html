@@ -1,5 +1,0 @@
-<article class="archive post{{ if eq .Section "wires" }} wire{{ end }}">
-	<h2 style="--hue: {{ partial "hue.html" .Date }}"><a class="boxed" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
-	<span class="leader" aria-hidden="true"></span>
-	<time class="date" datetime="{{ .Date.Format "2006-01-02" }}"><span class="kind">{{ if eq .Section "wires" }}W{{ else }}D{{ end }}/</span>{{ .Date.Format "01-02" }}</time>
-</article>

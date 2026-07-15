@@ -17,6 +17,7 @@ timeZone = "Europe/Paris"
   creator  = "by"
 
 [params]
+  mainSections = ["dispatches", "wires"]
   description = "Reading, writing, walking. Not (always) at the same time."
   subtitle = "by Anthony Nelzin-Santos"
   est = "est. 2025"

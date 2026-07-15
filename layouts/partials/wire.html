@@ -1,8 +1,8 @@
 {{ $p := .page }}
-{{ $aboutMap := dict }}{{ range $p.GetTerms "about" }}{{ $aboutMap = merge $aboutMap (dict (urlize .LinkTitle) .) }}{{ end }}
-{{ $byMap := dict }}{{ range $p.GetTerms "by" }}{{ $byMap = merge $byMap (dict (urlize .LinkTitle) .) }}{{ end }}
-{{ $a := slice }}{{ range $p.Params.about }}{{ $t := index $aboutMap (urlize .) }}{{ if $t }}{{ $a = $a | append (printf `<a href="%s">%s</a>` $t.RelPermalink (upper .)) }}{{ else }}{{ $a = $a | append (upper .) }}{{ end }}{{ end }}
-{{ $b := slice }}{{ range $p.Params.by }}{{ $t := index $byMap (urlize .) }}{{ if $t }}{{ $b = $b | append (printf `<a href="%s">%s</a>` $t.RelPermalink (upper .)) }}{{ else }}{{ $b = $b | append (upper .) }}{{ end }}{{ end }}
+{{/* Credit line: linked media terms, then "BY" the linked creator terms.
+     GetTerms keeps front-matter order and resolves each term's page for us. */}}
+{{ $a := slice }}{{ range $p.GetTerms "about" }}{{ $a = $a | append (printf `<a href="%s">%s</a>` .RelPermalink (upper .LinkTitle)) }}{{ end }}
+{{ $b := slice }}{{ range $p.GetTerms "by" }}{{ $b = $b | append (printf `<a href="%s">%s</a>` .RelPermalink (upper .LinkTitle)) }}{{ end }}
 {{ $credit := delimit $a ", " }}
 {{ with delimit $b ", " }}{{ if $credit }}{{ $credit = printf "%s BY %s" $credit . }}{{ else }}{{ $credit = printf "BY %s" . }}{{ end }}{{ end }}
 <article class="article wire post no-image">
@@ -11,7 +11,7 @@
 			<p class="zczc">ZCZC AF{{ substr $p.Slug -2 }}</p>
 			<div class="routing">
 				<div class="dtg">{{ printf "%s UTC %s" ($p.Date.Format "021504") (upper ($p.Date.Format "Jan 06")) }}</div>
-				{{ with $p.Params.from }}<div class="org">FROM {{ with site.GetPage (printf "/from/%s" (index . 0)) }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>{{ end }}
+				{{ with index ($p.GetTerms "from") 0 }}<div class="org">FROM <a href="{{ .RelPermalink }}">{{ .Title }}</a></div>{{ end }}
 			</div>
 			<h1 class="title">{{ $p.Title }}</h1>
 			{{ with $credit }}<p class="credit">{{ . | safeHTML }}</p>{{ end }}
