@@ -68,7 +68,20 @@
 
 :root {
 	--border-photo:       lch(80% 5 90 / 50%);
-	--color-bg:           lch(96% 5 90);
+	--color-paper:        lch(96% 5 90);
+
+	/* The paper takes a little of the season. --wash is the whole dial: at 8% the
+	 * year moves the page by ~4/255 and it stays unmistakably cream throughout;
+	 * past ~25% the cream dies in winter, because the seasonal hues (258–338) sit
+	 * almost opposite cream's own (90) and cancel its warmth rather than tint it.
+	 *
+	 * The space must be rectangular. Mixing `in oklch` silently fails here: the
+	 * cream converts to OKLCH with a *missing* hue, and CSS Color 4 fills a
+	 * missing component from the other colour — so the paper would hand its hue
+	 * to the season wholesale at any --wash, 0% included. oklab has no hue
+	 * channel to lose. */
+	--wash:               8%;
+	--color-bg:           color-mix(in oklab, var(--color-paper) calc(100% - var(--wash)), lch(96% 14 var(--hue)) var(--wash));
 	--color-txt:          lch(10% 100 90);
 	--font-typewriter:    "Typewriter", monospace;
 	--font-sans:          "Sans", monospace;
