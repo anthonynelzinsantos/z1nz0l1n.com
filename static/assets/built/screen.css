@@ -18,6 +18,14 @@
 
 @font-face {
 	font-display: swap;
+	font-family: "Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/Vulf_Sans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
 	font-family: "Handwritten";
 	font-style: normal;
 	font-weight: 400;
@@ -45,7 +53,7 @@
 	font-family: "Typewriter";
 	font-style: normal;
 	font-weight: 800;
-	src: url("../fonts/VulfMono-Black.woff2") format("woff2");
+	src: url("../fonts/VulfMono-Bold.woff2") format("woff2");
 }
 
 @font-face {
@@ -53,7 +61,7 @@
 	font-family: "Typewriter";
 	font-style: italic;
 	font-weight: 800;
-	src: url("../fonts/VulfMono-BlackItalic.woff2") format("woff2");
+	src: url("../fonts/VulfMono-BoldItalic.woff2") format("woff2");
 }
 
 /* ======================================================== Variables */
@@ -85,6 +93,7 @@
 
 :root,
 .archive h2 {
+	--color-fineliner: lch(45% 90 var(--hue) / 14%);
 	--color-hover:  lch(25% 85 var(--hue));
 	--color-markup: lch(20% 85 var(--hue));
 	--color-muted:  lch(45% 10 var(--hue));
@@ -100,16 +109,23 @@
 }
 
 a {
-	color:                 inherit;
-	text-decoration-color: var(--color-markup);
-	text-underline-offset: 2px;
+	/* A fineliner stroke rather than an underline: a band of the seasonal hue
+	 * laid under the words, faint enough to read as ink soaking into the page.
+	 * It has to be a gradient and not a background-color, because only an image
+	 * can be sized to a fraction of the line box. Hovering still floods the
+	 * whole word with --color-hover, which is why the shorthand is used there:
+	 * it drops this image on its way past. */
+	background-image:    linear-gradient(var(--color-fineliner) 0 0);
+	background-position: 0 100%;
+	background-repeat:   no-repeat;
+	background-size:     100% 0.45em;
+	color:               inherit;
+	text-decoration:     none;
 
 	&:focus,
 	&:hover {
-		background:            var(--color-hover);
-		color:                 var(--color-bg);
-		text-decoration:       none;
-		text-underline-offset: 2px;
+		background: var(--color-hover);
+		color:      var(--color-bg);
 	}
 
 	&:focus > *,
@@ -117,12 +133,8 @@ a {
 		color: var(--color-bg) !important;
 	}
 
-	&:has(sup) {
-		text-underline-offset: -10px;
-	}
-
 	&.none {
-		text-decoration: none;
+		background-image: none;
 	}
 
 	&.title {
@@ -130,6 +142,10 @@ a {
 	}
 
 	&.icon {
+		/* An icon is a picture, not a word: the fineliner would stroke the box
+		 * under the glyph. */
+		background-image: none;
+
 		svg {
 			color:       var(--color-markup);
 			fill:        var(--color-markup);
@@ -171,6 +187,19 @@ h1, h2 {
 	text-transform: uppercase;
 }
 
+h1 {
+	background:          var(--typewriter-rule), var(--typewriter-rule);
+	background-position: 0 100%, 0 calc(100% - 0.25ch);
+	background-repeat:   no-repeat;
+	background-size:     100% 0.15ch;
+	color:               var(--color-markup);
+	display:             table;
+	justify-self:        start;
+	padding-bottom:      0.25ch;
+	margin: 0 0 var(--space-s) 0;
+	font-weight: 800;
+}
+
 figure {
 	border-radius: 1px;
 	margin:        0;
@@ -198,7 +227,6 @@ figure img {
 
 [data-tooltip] {
 	display:     inline-block;
-	font-family: var(--font-sans);
 	position:    relative;
 
 	&::before {
@@ -413,6 +441,9 @@ body {
 
 #header,
 #main,
+#about,
+#contents,
+#colophon,
 #footer {
 	box-sizing: border-box;
 	max-width:  100ch;
@@ -421,9 +452,25 @@ body {
 
 /* ============================================================ Header */
 
+/* The face and the size live on .banner, never on #header itself. `ch` is
+ * font-relative, so a font-family or a font-size here would re-resolve the
+ * max-width: 100ch above against the sans face at 0.8em, and the header would
+ * stop hanging with the article. #header stays the body's typewriter at 1em
+ * and does nothing but measure; .banner does the talking. Same in #footer. */
 #header {
 	text-align:     center;
 	text-transform: uppercase;
+
+	.banner {
+		font-family: var(--font-sans);
+		font-size:   0.8em;
+		margin:      0;
+	}
+
+	/* The dateline and the origin are the two things typed onto the form. */
+	.typed {
+		font-family: var(--font-typewriter);
+	}
 }
 
 /* ============================================================== Main */
@@ -433,57 +480,39 @@ body {
 		display:               grid;
 		grid-template-columns: 1fr;
 
+		/* The second column carries the footnotes, and nothing else — it stays
+		 * empty on an article that has none, which is what keeps the running
+		 * text off the full 100ch measure that the hero and title still span. */
 		@media screen and (min-width: 768px) {
 			column-gap:            var(--space-l);
 			grid-template-areas:   "hero    hero"
 			                       "title   title"
-			                       "content header";
+			                       "content notes";
 			grid-template-columns: 7fr 3fr;
 
 			&.no-image {
 				grid-template-areas: "title   title"
-				                     "content header";
+				                     "content notes";
 			}
 
 			.hero    { grid-area: hero; }
 			.title   { grid-area: title; }
-			.header  { grid-area: header; align-content: end; }
 			.content { grid-area: content; }
+			.notes   { grid-area: notes; }
 		}
 
 		.hero {
 			margin: var(--space-m) 0 var(--space-xl) 0;
-		}
 
-		.zczc {
-			color:  var(--color-markup);
-			margin: 0;
-		}
-
-		.routing {
-			color:          lch(42% 18 var(--hue));
-			text-transform: uppercase;
+			figcaption {
+				font-size: 0.8em;
+			}
 		}
 
 		.deck {
 			color:          var(--color-muted);
 			margin:         var(--space-2xs) 0 0 0;
 			text-transform: uppercase;
-		}
-
-		/* justify-self keeps the rule hugging the words: as a grid item the title
-		 * would otherwise stretch and run the rule across the whole measure. */
-		.title {
-			background:          var(--typewriter-rule), var(--typewriter-rule);
-			background-position: 0 100%, 0 calc(100% - 0.25ch);
-			background-repeat:   no-repeat;
-			background-size:     100% 0.2ch;
-			color:               var(--color-markup);
-			display:             table;
-			justify-self:        start;
-			padding-bottom:      0.25ch;
-			margin: 0 0 var(--space-s) 0;
-			font-weight: 800;
 		}
 
 		.content {
@@ -520,36 +549,6 @@ body {
 
 			figure {
 				margin: var(--space-s) 0;
-			}
-
-			.footnotes {
-				margin: var(--space-xl) 0 0 35%;
-
-				&::before {
-					color:   var(--color-markup);
-					content: "–––––";
-				}
-
-				hr {
-					display: none;
-				}
-
-				ol {
-					margin:  0;
-					padding: 0;
-
-					li {
-						list-style-position: inside;
-
-						&::marker {
-							color: var(--color-markup);
-						}
-
-						p {
-							display: inline;
-						}
-					}
-				}
 			}
 
 			h2 {
@@ -682,6 +681,58 @@ body {
 			}
 		}
 
+		/* The notes. article.html splits Hugo's footnote block out of .content so
+		 * it can be a grid item: below 768px it just falls to the foot of the
+		 * article, and above it takes the second column. theme.js then lifts each
+		 * note up level with the reference that calls it — until it does, they
+		 * simply stack at the top of the column, which is why nothing here
+		 * depends on the script having run. */
+		.notes {
+			/* Safe here, unlike on #header or #footer: .notes carries no
+			 * max-width: 100ch for the smaller ch to re-resolve against. */
+			font-size: 0.8em;
+			margin:    var(--space-xl) 0 0 35%;
+			position:  relative;
+
+			@media screen and (min-width: 768px) {
+				margin: 0;
+			}
+
+			/* The rule standing in for the <hr> only makes sense where the notes
+			 * follow the text; in the margin, the column already separates them. */
+			.footnotes::before {
+				color:   var(--color-markup);
+				content: "–––––";
+
+				@media screen and (min-width: 768px) {
+					content: none;
+				}
+			}
+
+			hr { display: none; }
+
+			ol {
+				margin:  0;
+				padding: 0;
+			}
+
+			li {
+				list-style-position: inside;
+
+				&::marker { color: var(--color-markup); }
+
+				p { display: inline; }
+			}
+
+			/* Set only once theme.js has measured the anchors, so a note is never
+			 * torn out of the flow unless something is about to place it. */
+			&.aligned li {
+				left:     0;
+				position: absolute;
+				right:    0;
+			}
+		}
+
 	}
 
 	/* The index — the archive and the term listings. One full-width column, and
@@ -706,48 +757,68 @@ body {
 		.content .group:first-of-type .year {
 			margin-top: var(--space-l);
 		}
+	}
+}
 
-		.archive {
-			align-items:     baseline;
-			display:         flex;
-			gap:             var(--space-s);
-			justify-content: space-between;
-			padding:         var(--space-2xs) 0;
+.archive {
+	align-items:     baseline;
+	display:         flex;
+	gap:             var(--space-s);
+	justify-content: space-between;
+	padding:         var(--space-2xs) 0;
 
-			h2 {
-				background:    none;
-				display:       block;
-				flex:          0 1 auto;
-				margin:        0;
-				overflow:      hidden;
-				text-overflow: ellipsis;
-				white-space:   nowrap;
-			}
+	h2 {
+		background:    none;
+		color: var(--color-markup);
+		display:       block;
+		flex:          0 1 auto;
+		margin:        0;
+		overflow:      hidden;
+		text-overflow: ellipsis;
+		white-space:   nowrap;
 
-			.leader {
-				border-bottom: 1px dotted var(--color-muted);
-				flex:          1 1 auto;
-				transform:     translateY(-0.3em);
-			}
-
-			.date {
-				color: var(--color-muted);
-				flex:  0 0 auto;
-			}
+		/* No fineliner in the list: a band under every title in the register
+		 * would read as a solid block of colour. */
+		a {
+			background-image: none;
 		}
 	}
+
+	.leader {
+		border-bottom: 2px dashed var(--color-muted);
+		flex:          1 1 auto;
+		transform:     translateY(calc(-0.5ch + 1px));
+	}
+
+	.date {
+		color: var(--color-muted);
+		flex:  0 0 auto;
+	}
+}
+
+#about,
+#contents,
+#colophon,
+#footer {
+	color:           var(--color-markup);
+	background-image:    repeating-linear-gradient(to right, transparent 0 0.05ch, currentColor 0.05ch 0.95ch, transparent 0.95ch 1ch);
+	background-position: 0 0;
+	background-repeat:   no-repeat;
+	background-size:     100% 0.15ch;
+	padding:             var(--space-m) 0 0 0;
 }
 
 /* ============================================================ Footer */
 
 #footer {
-	--footer-rule:       var(--color-markup);
-	background-image:    repeating-linear-gradient(to right, var(--footer-rule) 0 0.6ch, transparent 0.6ch 1.2ch);
-	background-position: 0 0;
-	background-repeat:   no-repeat;
-	background-size:     100% 2px;
-	padding:             var(--space-m) 0 0 0;
 	text-align:          center;
+
+	/* The sans face goes on the children, not on #footer — see #header. */
+	.navigation,
+	.logo,
+	.channels {
+		font-family: var(--font-sans);
+	}
 
 	.logo {
 		align-items:     center;

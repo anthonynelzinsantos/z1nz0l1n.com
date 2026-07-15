@@ -1,4 +1,4 @@
 {{/* The register: every dispatch, newest first. The one content list, shared by
-     the home page, the archive and the feeds. Global and context-free, so
-     callers reach it through partialCached. */}}
+     the home page and the feeds. Global and context-free, so callers reach it
+     through partialCached. */}}
 {{ return (where site.RegularPages "Section" "dispatches").ByDate.Reverse }}

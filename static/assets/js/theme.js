@@ -360,3 +360,78 @@
     init();
   }
 })();
+
+// Sidenotes: hang each footnote in the margin level with the reference that
+// calls it. article.html has already put the notes in their own column and CSS
+// stacks them at its top; all this adds is the vertical alignment, so if it
+// never runs the notes are still perfectly readable.
+(function () {
+  const WIDE = window.matchMedia('(min-width: 768px)');
+  const notes = document.querySelector('#main .article .notes');
+  if (!notes) return;
+
+  const items = Array.from(notes.querySelectorAll('li'));
+  if (!items.length) return;
+
+  // The ids Hugo mints ("fn:1") contain a colon, which querySelector would read
+  // as a pseudo-class — getElementById is the only way in.
+  const refFor = li => {
+    const back = li.querySelector('.footnote-backref');
+    const href = back && back.getAttribute('href');
+    return href ? document.getElementById(href.slice(1)) : null;
+  };
+
+  function align() {
+    if (!WIDE.matches) {
+      notes.classList.remove('aligned');
+      items.forEach(li => { li.style.top = ''; });
+      return;
+    }
+
+    notes.classList.add('aligned');
+
+    // Measure with the notes already absolute, so a tall one reports the height
+    // it will actually occupy in the column rather than in the text.
+    const box = notes.getBoundingClientRect();
+    const gap = parseFloat(getComputedStyle(notes).lineHeight) || 24;
+    const placed = items.map(li => {
+      const ref = refFor(li);
+      return {
+        li,
+        h: li.offsetHeight,
+        want: ref ? ref.getBoundingClientRect().top - box.top : 0
+      };
+    });
+
+    // Down the column: a note may never ride up into the one above it.
+    let floor = 0;
+    placed.forEach(p => {
+      p.top = Math.max(p.want, floor);
+      floor = p.top + p.h + gap;
+    });
+
+    // Back up it: if that pushed the last note past the foot of the column,
+    // pull the whole stack up so nothing spills into the footer.
+    let ceiling = box.height;
+    for (let i = placed.length - 1; i >= 0; i--) {
+      placed[i].top = Math.min(placed[i].top, ceiling - placed[i].h);
+      ceiling = placed[i].top - gap;
+    }
+
+    placed.forEach(p => { p.li.style.top = Math.max(0, Math.round(p.top)) + 'px'; });
+  }
+
+  // The column has to be re-measured whenever the text reflows under it: an
+  // image landing, the webfonts swapping in, the window resizing, the breakpoint
+  // being crossed. These overlap on purpose — align() is idempotent and costs a
+  // handful of rect reads, so it is cheaper to run it twice than to lose a case.
+  // Observing .content can't feed back on itself: the notes sit in the other
+  // column and never contribute to its height.
+  const content = document.querySelector('#main .article .content');
+  if (content && window.ResizeObserver) new ResizeObserver(align).observe(content);
+  WIDE.addEventListener('change', align);
+  window.addEventListener('resize', align);
+  window.addEventListener('load', align);
+  if (document.fonts) document.fonts.ready.then(align);
+  align();
+})();

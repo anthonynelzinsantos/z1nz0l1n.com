@@ -22,4 +22,4 @@ That’s the thing: i’m *feeling* it. The days might blur together, but i noti
 
 Even in the city, it’s easy to pay attention to these fluctuations. You might not know when bears start hibernating in their caves (*kuma ana ni komoru*), but you know when your neighbours start closing their windows and lighting candles. *Sekki* might just be the antidote we need to the dreary monotony of the passing days and the growing inadequacy of our four seasons.
 
-[^1]: At least [my weeknotes](/archive/) make me aware of Sundays.
+[^1]: At least [my weeknotes](/) make me aware of Sundays.

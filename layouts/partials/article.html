@@ -1,5 +1,20 @@
-{{ $p := .page }}
+{{ $p := . }}
 {{ $res := $p.Resources.GetMatch "feature.*" }}
+
+{{- /* Hugo hangs the footnotes off the end of .Content. Splitting them out here
+     rather than moving them with JS makes them a real sibling of .content: the
+     grid hands them the empty column on wide screens, and below 768px they fall
+     to the foot of the article by source order alone, with no script involved.
+     If goldmark ever changes this markup the split simply won't fire, and the
+     notes stay where they are — which is the old behaviour, not a break. */ -}}
+{{ $marker := `<div class="footnotes" role="doc-endnotes">` }}
+{{ $body := $p.Content }}
+{{ $notes := "" }}
+{{ if strings.Contains $body $marker }}
+	{{ $parts := strings.Split $body $marker }}
+	{{ $body = index $parts 0 }}
+	{{ $notes = printf "%s%s" $marker (delimit (after 1 $parts) $marker) }}
+{{ end }}
 <article class="article {{ if $res }}post{{ else }}post no-image{{ end }}">
 {{ with $res }}
 	{{ $alt := $p.Title }}{{ with $p.Params.feature_image_alt }}{{ $alt = . }}{{ end }}
@@ -16,19 +31,12 @@
 		</div>
 	</figure>
 {{ end }}
-{{ if .telex }}
-	<header class="header">
-		<p class="zczc">{{ $p.Params.Slug | upper }} ✠</p>
-		<div class="routing">
-			<div class="dtg">{{ printf "%sZ%s" ($p.Date.Format "02-01-06") ($p.Date.Format "15:04") }}</div>
-			{{ with index ($p.GetTerms "from") 0 }}<div class="org">FROM <a href="{{ .RelPermalink }}">{{ .Title }}</a></div>{{ end }}
-		</div>
-	</header>
-{{ end }}
-
 	<h1 class="title">{{ $p.Title }}</h1>
 
 	<section class="content">
-		{{ $p.Content }}
+		{{ $body | safeHTML }}
 	</section>
+{{ with $notes }}
+	<aside class="notes">{{ . | safeHTML }}</aside>
+{{ end }}
 </article>

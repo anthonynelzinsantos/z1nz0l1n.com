@@ -225,6 +225,10 @@ FileETag None
 
     # The About page was renamed to Colophon.
     RewriteRule ^about/?$ /colophon/ [R=301,L]
+
+    # The Archive page is gone: every page now carries the full list of
+    # dispatches, so the home page is the register.
+    RewriteRule ^archive/?$ / [R=301,L]
 </IfModule>
 
 # ═════════════════════════════════════════════════════════════════════
