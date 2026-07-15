@@ -17,8 +17,6 @@ Hi! My name is Anthony Nelzin-Santos. I’m a tech journalist turned instruction
 
 “Zinzolin” is a shade of purple that’s not quite as blue as lavender fields but not quite as red as crushed blackberries. If you believe the medieval Italians, it comes from jujube fruits (*giuggiolino*), but if they still existed, the Mozarabs would tell you that it comes from sesame seeds (*djoudjolân*). Whatever the case, it’s my favourite colour, in part because it sounds like my name.
 
-I let my love of printing and telecommunication technologies run wild while i was designing *Z1NZ0L1N*. With their pasted-on pictures, [telex](https://en.wikipedia.org/wiki/Telex)-inspired formatting, and typewritten texture set in [IBM Plex Mono](https://www.ibm.com/plex/), [dispatches](/archive/) are meant to evoke mid-century press reports sent via teleprinter. All the other pages are set in [Forma](https://djr.com/forma) and emulate the ring-bound documentation binders of yore.
-
 ## When?
 
 I was born before the *world wide web* was invented, but i grew up surrounded by computers. I launched my first website in 2000, started my first blog in 2004, recorded my first podcast in 2005, uploaded my first video in 2006, and became a professional writer in 2008. In 2025, i rebooted this blog in English after years of writing in French.
