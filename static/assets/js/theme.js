@@ -1,13 +1,9 @@
 (function () {
   'use strict';
 
-  // Photographic effects (twist, grain/glare sheen, washi tape) belong to the
-  // dispatch and wire worlds — never the documentation register, which is set
-  // clean. On a wire the only .photo-print is a gallery image (there is no
-  // hero), so this treats gallery photos and nothing else. Bail out on the
-  // register (and any other template).
-  const bodyClasses = document.body.classList;
-  if (!(bodyClasses.contains('post-template') || bodyClasses.contains('home-template') || bodyClasses.contains('wire-template'))) return;
+  // Photographic effects: a random twist and the grain/glare sheen on every
+  // print, washi tape on the hero. Every page is set the same way, so this runs
+  // wherever it finds a .photo-print and does nothing where there is none.
 
   /* ─── Tuning ─────────────────────────────────────────────────────────── */
 
@@ -363,71 +359,4 @@
   } else {
     init();
   }
-})();
-
-/* ─── Keyboard navigation ────────────────────────────────────────────────── */
-
-(function () {
-  'use strict';
-
-  // ← → follow the peek tabs (previous / next), but only where the tabs are
-  // shown (tablet and up — see the .peek media query). Ignored while typing in
-  // a field and when a modifier is held, so browser shortcuts still work.
-  const wide = window.matchMedia('(min-width: 768px)');
-
-  document.addEventListener('keydown', function (e) {
-    if (!wide.matches) return;
-
-    const tag = document.activeElement.tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement.isContentEditable) return;
-    if (e.metaKey || e.ctrlKey || e.altKey) return;
-
-    let target = null;
-    if (e.key === 'ArrowLeft') target = document.querySelector('.peek-prev');
-    else if (e.key === 'ArrowRight') target = document.querySelector('.peek-next');
-
-    if (target) {
-      e.preventDefault();
-      window.location.href = target.href;
-    }
-  });
-})();
-
-/* ─── Directional view transitions ───────────────────────────────────────── */
-
-(function () {
-  'use strict';
-
-  // Tag same-origin navigations between neighbouring sheets with a direction so
-  // the CSS can push the stack the right way: "forward" to the next (older)
-  // sheet, "backward" to the previous (newer) one. Any other navigation keeps
-  // the default cross-fade. Progressive enhancement — bails cleanly where the
-  // cross-document View Transitions API isn't available.
-
-  function sameUrl(a, b) {
-    if (!a || !b) return false;
-    try { return new URL(a, location.href).href === new URL(b, location.href).href; }
-    catch (err) { return false; }
-  }
-
-  // Leaving a page: compare the destination to this page's peek tabs.
-  window.addEventListener('pageswap', function (e) {
-    if (!e.viewTransition || !e.activation || !e.activation.entry) return;
-    const dest = e.activation.entry.url;
-    const next = document.querySelector('.peek-next');
-    const prev = document.querySelector('.peek-prev');
-    if (next && sameUrl(dest, next.href)) e.viewTransition.types.add('forward');
-    else if (prev && sameUrl(dest, prev.href)) e.viewTransition.types.add('backward');
-  });
-
-  // Arriving on a page: the sheet we land on lists the page we came from as its
-  // previous (if we moved forward) or its next (if we moved backward).
-  window.addEventListener('pagereveal', function (e) {
-    if (!e.viewTransition || !window.navigation || !navigation.activation || !navigation.activation.from) return;
-    const from = navigation.activation.from.url;
-    const next = document.querySelector('.peek-next');
-    const prev = document.querySelector('.peek-prev');
-    if (prev && sameUrl(from, prev.href)) e.viewTransition.types.add('forward');
-    else if (next && sameUrl(from, next.href)) e.viewTransition.types.add('backward');
-  });
 })();

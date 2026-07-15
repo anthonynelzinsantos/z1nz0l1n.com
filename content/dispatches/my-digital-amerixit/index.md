@@ -2,6 +2,8 @@
 title: "My digital Amerixit"
 date: "2025-04-10T17:00:00.000Z"
 slug: "my-digital-amerixit"
+aliases:
+  - "/d/my-digital-amerixit/"
 feature_image_alt: "An exit sign on a plane."
 feature_image_caption: "Colombier-Saugnieu (France), 2024/10. Image Anthony Nelzin-Santos."
 from:

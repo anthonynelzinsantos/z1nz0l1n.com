@@ -2,6 +2,8 @@
 title: "Intersecting interests"
 date: "2026-02-15T11:00:06.000Z"
 slug: "26w07"
+aliases:
+  - "/d/26w07/"
 feature_image_alt: "A mural of an office worker juggling a compter, a briefcase, and a stack of papers. Image Anthony Nelzin-Santos."
 feature_image_caption: "Reims (France), 2025-08."
 from:
@@ -32,7 +34,7 @@ Jordan Golson gets it. He might be a car guy, but cars are computers now, and hi
 
 ## Music
 
-[***Oranj***](https://robohands.bandcamp.com/album/oranj) **by Robohands.** I completely forgot about [Robohands](https://robohands.bandcamp.com/), even though i loved [*Violet*](https://robohands.bandcamp.com/album/violet) (and not only for [*that* reason](/d/but-what-is-purple-really/)). *Oranj* is the logical extension of *Palms*, which was suffused with Brazilian grooves from the 1970s, and *Giallo*, which paid homage to Italian film soundtracks from the 1980s. More than anything else, Andy Baxter has an impeccable sense of texture. I love travelling to this kind of ambient jazz (or is it jazzy ambient?) because it makes everything infinitely more cinematic.
+[***Oranj***](https://robohands.bandcamp.com/album/oranj) **by Robohands.** I completely forgot about [Robohands](https://robohands.bandcamp.com/), even though i loved [*Violet*](https://robohands.bandcamp.com/album/violet) (and not only for [*that* reason](/but-what-is-purple-really/)). *Oranj* is the logical extension of *Palms*, which was suffused with Brazilian grooves from the 1970s, and *Giallo*, which paid homage to Italian film soundtracks from the 1980s. More than anything else, Andy Baxter has an impeccable sense of texture. I love travelling to this kind of ambient jazz (or is it jazzy ambient?) because it makes everything infinitely more cinematic.
 
 ***BelleJazzClub (Vol. 2)* by Adrien Soleiman.** Even if he became the official saxophonist of the French singer-songwriter scene, Adrien Soleiman came up as a *bona fide* jazz musician. *BelleJazzClub* bridges the gap between the two worlds. It doesn’t always work: the first volume was a bit too talkative for my taste, and this second volume is pretty to the point of being over-produced, but that may be because it’s been recorded at the beautiful [La Frette studios](https://lafrettestudios.com/). Still, i like how airy it all sounds, particularly on the mesmerizing cover of John Coltrane’s *Naima*. The sense of attack and decay brings you in and makes you want to listen that much closer.
 

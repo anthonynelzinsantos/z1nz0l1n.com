@@ -2,6 +2,8 @@
 title: "Seriously unserious"
 date: "2025-02-25T05:00:00.000Z"
 slug: "seriously-unserious"
+aliases:
+  - "/d/seriously-unserious/"
 feature_image_alt: "The bottom part of a statue."
 feature_image_caption: "Barcelona (Spain), 2013/02. Image Anthony Nelzin-Santos."
 from:

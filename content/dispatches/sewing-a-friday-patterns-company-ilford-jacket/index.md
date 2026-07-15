@@ -2,13 +2,15 @@
 title: "Sewing a Friday Patterns Company Ilford jacket"
 date: "2025-08-03T08:00:00.000Z"
 slug: "sewing-a-friday-patterns-company-ilford-jacket"
+aliases:
+  - "/d/sewing-a-friday-patterns-company-ilford-jacket/"
 feature_image_alt: "My (almost) finished jacket."
 feature_image_caption: "Lyon (France), 2025/07. Image Anthony Nelzin-Santos."
 from:
   - "lyon-fr"
 ---
 
-By a wonderful coincidence, a near-mint example of the [Singer 15](https://www.singersewinginfo.co.uk/15/) popped up on Leboncoin[^1] just as i was finishing [restoring my Singer 99K](/d/how-i-restored-a-sewing-machine-by-accident/). A perk of buying it from (the daughter of) the original owner is that i know that it was purchased in the 1950s to replace a treadle machine, before being itself supplanted by a Pfaff Varimatic 949 at the end of the 1980s and spending the last forty years in the back of a closet.
+By a wonderful coincidence, a near-mint example of the [Singer 15](https://www.singersewinginfo.co.uk/15/) popped up on Leboncoin[^1] just as i was finishing [restoring my Singer 99K](/how-i-restored-a-sewing-machine-by-accident/). A perk of buying it from (the daughter of) the original owner is that i know that it was purchased in the 1950s to replace a treadle machine, before being itself supplanted by a Pfaff Varimatic 949 at the end of the 1980s and spending the last forty years in the back of a closet.
 
 There are a few gaps in the machine’s history, however, because it wasn’t made in one of Singer’s main factories. The machines produced in the smaller plants of St. Johns (Québec), Bridgeport (Connecticut) and Anderson (South Carolina) can’t be dated as accurately as the ones manufactured in the global hubs of Elizabeth (New Jersey) and Clydebank (Scotland), but at least, you can narrow it down to a few years. The same can’t be said of the machines made in other factories, which didn’t keep precise records or destroyed them when they closed their doors.
 

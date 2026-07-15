@@ -2,6 +2,8 @@
 title: "How i restored a sewing machine “by accident”"
 date: "2025-07-20T12:29:40.000Z"
 slug: "how-i-restored-a-sewing-machine-by-accident"
+aliases:
+  - "/d/how-i-restored-a-sewing-machine-by-accident/"
 feature_image_alt: "My hand covered with metal dust."
 feature_image_caption: "Polishing is messy work. Lyon (France), 2025/07. Image Anthony Nelzin-Santos."
 from:

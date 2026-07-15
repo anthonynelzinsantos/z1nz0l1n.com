@@ -2,13 +2,15 @@
 title: "Restless job syndrome"
 date: "2025-10-12T15:00:00.000Z"
 slug: "25w41"
+aliases:
+  - "/d/25w41/"
 feature_image_alt: "The sun reflected through glass cubes."
 feature_image_caption: "Nancy (France), 2025/08. Image Anthony Nelzin-Santos."
 from:
   - "lyon-fr"
 ---
 
-Much to my surprise, it took only [a week and a bit](/d/25w40/) for the fog of desperation to clear. I haven’t been so well rested in years, but i’m feeling a twitchiness coming. I’m not built to stay still for long. I want to do a bit of soul-searching before diving into job-searching, so i’ll have to find other ways to release that energy. A good long hike should do the trick.
+Much to my surprise, it took only [a week and a bit](/25w40/) for the fog of desperation to clear. I haven’t been so well rested in years, but i’m feeling a twitchiness coming. I’m not built to stay still for long. I want to do a bit of soul-searching before diving into job-searching, so i’ll have to find other ways to release that energy. A good long hike should do the trick.
 
 ## Apps
 

@@ -2,6 +2,8 @@
 title: "Taming the Vulfpeck"
 date: "2026-07-12T14:00:00.000Z"
 slug: "26w28"
+aliases:
+  - "/d/26w28/"
 feature_image_alt: "Image Anthony Nelzin-Santos."
 feature_image_caption: "Lyon (France), 2026-07."
 from:

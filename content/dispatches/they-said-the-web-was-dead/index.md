@@ -2,6 +2,8 @@
 title: "They said the web was dead"
 date: "2025-12-04T14:30:07.000Z"
 slug: "they-said-the-web-was-dead"
+aliases:
+  - "/d/they-said-the-web-was-dead/"
 feature_image_alt: "People working at the library, seen through a gap in a door."
 feature_image_caption: "Reims (France), 2025/08. Image Anthony Nelzin-Santos."
 from:

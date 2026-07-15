@@ -2,6 +2,8 @@
 title: "The Uniball Zento Signature is as good as they say"
 date: "2026-06-07T10:30:00.000Z"
 slug: "26w23"
+aliases:
+  - "/d/26w23/"
 feature_image_alt: "The Uniball Zento Signature on a stack of notebooks. Image Anthony Nelzin-Santos."
 feature_image_caption: "Lyon (France), 2026-06."
 from:

@@ -2,6 +2,8 @@
 title: "One ring to measure it all"
 date: "2025-02-13T04:00:00.000Z"
 slug: "one-ring-to-measure-it-all"
+aliases:
+  - "/d/one-ring-to-measure-it-all/"
 feature_image_alt: "A “do not park” sign painted on the road."
 feature_image_caption: "Lyon (France), 2024/09. Image Anthony Nelzin-Santos."
 from:

@@ -1,5 +1,5 @@
-{{- /* $latest — the newest dispatch or wire. Only the home page needs it: it
-     stands on that post for its date, section, banner and peek tabs. */ -}}
+{{- /* $latest — the newest dispatch. Only the home page needs it: it stands on
+     that post for its date and banner. */ -}}
 {{ $latest := false -}}
 {{ if .IsHome }}{{ $latest = partial "latest.html" . }}{{ end -}}
 
@@ -9,21 +9,12 @@
 {{ if .IsHome }}{{ with $latest }}{{ $d = .Date }}{{ end }}{{ else if not .Date.IsZero }}{{ $d = .Date }}{{ end -}}
 {{ $hue := partial "hue.html" $d -}}
 
-{{- /* The home page borrows its latest post's section, which selects the wire
-     body class. */ -}}
-{{ $sec := .Section -}}
-{{ if .IsHome }}{{ with $latest }}{{ $sec = .Section }}{{ end }}{{ end -}}
-{{ $homeWire := and .IsHome (eq $sec "wires") -}}
-
-{{- /* The sheet this page stands on: a single dispatch or wire, or the latest
-     on the home page; nothing on lists and register pages. It supplies both the
-     skeuomorphic peek tabs and the header banner. */ -}}
-{{ $peekTarget := $latest -}}
-{{ if and (eq .Kind "page") (in site.Params.mainSections .Section) }}{{ $peekTarget = . }}{{ end -}}
-{{ $sib := false -}}
-{{ with $peekTarget }}{{ $sib = partial "siblings.html" . }}{{ end -}}
+{{- /* The dispatch this page shows: itself on a single dispatch, the latest one
+     on the home page, nothing elsewhere. It selects the header banner. */ -}}
+{{ $dispatch := $latest -}}
+{{ if and (eq .Kind "page") (eq .Section "dispatches") }}{{ $dispatch = . }}{{ end -}}
 {{ $banner := site.Params.banner -}}
-{{ with $peekTarget }}{{ with site.GetPage (printf "/%s" .Section) }}{{ $banner = .Params.banner }}{{ end }}{{ end -}}
+{{ with $dispatch }}{{ $banner = site.Params.dispatchBanner }}{{ end -}}
 
 {{- /* The header and footer logo open the archive, except on the archive page
      itself, where they open the homepage. */ -}}
@@ -53,10 +44,7 @@
 	{{ partial "schema.html" . }}
     <script src="https://tinylytics.app/embed/5k-5eys3-QT5sumY9sVY.js" defer></script>
 </head>
-<body class="{{ if .IsHome }}{{ if $homeWire }}wire-template{{ else }}home-template{{ end }}{{ else if and (eq .Kind "page") (eq .Section "dispatches") }}post-template{{ else if and (eq .Kind "page") (eq .Section "wires") }}wire-template{{ else }}register-template{{ end }}">
-    {{ with $sib }}{{ partial "peek.html" (dict "item" .newer "side" "prev") }}{{ end }}
-
-    <div class="folio">
+<body>
     <header id="header">
         <a class="none" href="{{ $navHref }}" title="{{ $navTitle }}">{{ $banner }}</a>
     </header>
@@ -108,9 +96,6 @@
             </a>
         </div>
     </footer>
-    </div>
-
-    {{ with $sib }}{{ partial "peek.html" (dict "item" .older "side" "next") }}{{ end }}
 
 	<script src="/assets/js/theme.js?{{ now.Unix }}"></script>
     <script src="/assets/js/glightbox.min.js"></script>

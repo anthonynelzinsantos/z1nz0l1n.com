@@ -2,6 +2,8 @@
 title: "There is nothing new under the sun, even for encyclicals"
 date: "2026-06-28T15:30:00.000Z"
 slug: "26w26"
+aliases:
+  - "/d/26w26/"
 feature_image_alt: "A statue at St. James’s Church in Liège. Image Anthony Nelzin-Santos."
 feature_image_caption: "Liège (Belgium), 2025-10."
 from:

@@ -2,6 +2,8 @@
 title: "The DMA works"
 date: "2025-09-26T12:40:51.000Z"
 slug: "the-dma-works"
+aliases:
+  - "/d/the-dma-works/"
 from:
   - "lyon-fr"
 ---

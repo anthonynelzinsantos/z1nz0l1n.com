@@ -2,6 +2,8 @@
 title: "The surprising Shokz OpenDots One"
 date: "2026-05-03T11:30:00.000Z"
 slug: "26w18"
+aliases:
+  - "/d/26w18/"
 feature_image_alt: "A mural of a violin playing itself. Image Anthony Nelzin-Santos."
 feature_image_caption: "Marseille (France), 2026-02."
 from:

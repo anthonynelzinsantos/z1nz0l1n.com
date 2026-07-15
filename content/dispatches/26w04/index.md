@@ -2,6 +2,8 @@
 title: "Work is made with the hands"
 date: "2026-01-25T12:00:00.000Z"
 slug: "26w04"
+aliases:
+  - "/d/26w04/"
 feature_image_alt: "A craftsman from Hermès, surrounded by people, working on a leather bag. Image Anthony Nelzin-Santos."
 feature_image_caption: "Lyon (France), 2018-06."
 from:

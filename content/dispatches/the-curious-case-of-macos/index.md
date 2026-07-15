@@ -2,6 +2,8 @@
 title: "The curious case of macOS"
 date: "2025-10-05T08:49:33.000Z"
 slug: "the-curious-case-of-macos"
+aliases:
+  - "/d/the-curious-case-of-macos/"
 from:
   - "lyon-fr"
 ---

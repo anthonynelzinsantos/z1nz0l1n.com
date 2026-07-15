@@ -5,7 +5,7 @@
 	font-family: "Sans";
 	font-style: normal;
 	font-weight: 100 900;
-	src: url("../fonts/Forma.woff2") format("woff2");
+	src: url("../fonts/Vulf_Sans-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
 	font-family: "Sans";
 	font-style: italic;
 	font-weight: 100 900;
-	src: url("../fonts/FormaItalic.woff2") format("woff2");
+	src: url("../fonts/Vulf_Sans-Italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -26,18 +26,10 @@
 
 @font-face {
 	font-display: swap;
-	font-family: "Telex";
-	font-style: normal;
-	font-weight: 400;
-	src: url("../fonts/DepartureMono.woff2") format("woff2");
-}
-
-@font-face {
-	font-display: swap;
 	font-family: "Typewriter";
 	font-style: normal;
 	font-weight: 100 900;
-	src: url("../fonts/Lilex.woff2") format("woff2");
+	src: url("../fonts/VulfMono-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -45,7 +37,7 @@
 	font-family: "Typewriter";
 	font-style: italic;
 	font-weight: 100 900;
-	src: url("../fonts/LilexItalic.woff2") format("woff2");
+	src: url("../fonts/VulfMono-Italic.woff2") format("woff2");
 }
 
 /* ======================================================== Variables */
@@ -57,11 +49,6 @@
 	--font-typewriter:    "Typewriter", monospace;
 	--font-sans:          "Sans", monospace;
 	--font-handwritten:   "Handwritten", serif;
-	--font-telex:         "Telex", monospace;
-	--wire-paper:         lch(99% 1.5 var(--hue));
-	--wire-bar:           lch(97.5% 4 calc(var(--hue) + 180));
-	--wire-tear:          lch(83% 8 var(--hue));
-	--register-paper:     lch(98% 1.5 var(--hue));
 	--photo-border-color: lch(99% 5 90);
 	--color-tape-paper:   lch(93% 10 92);
 	--shadow-photo:       0 2px 8px lch(0% 0 0 / 10%), 0 1px 2px lch(0% 0 0 / 8%);
@@ -85,9 +72,7 @@
 	--color-hover:  lch(25% 85 var(--hue));
 	--color-markup: lch(20% 85 var(--hue));
 	--color-muted:  lch(45% 10 var(--hue));
-	--color-shadow: lch(5% 50 var(--hue) / 50%);
 	--color-tape:   lch(90% 20 calc(var(--hue) + 180));
-	--color-theme:  lch(30% 85 var(--hue));
 	--shadow-text:  0 -1px 1px lch(10% 100 var(--hue) / 8%);
 }
 
@@ -217,7 +202,6 @@ figure img {
 		border-radius:  1px;
 		color:          var(--color-bg);
 		content:        attr(data-tooltip);
-		font-size:      small;
 		left:           50%;
 		opacity:        0;
 		padding:        var(--space-3xs) var(--space-2xs);
@@ -326,7 +310,6 @@ figure img {
 	figcaption {
 		background:  var(--photo-border-color);
 		font-family: var(--font-handwritten);
-		font-size:   small;
 		margin:      var(--space-xs) 0 var(--space-m) 0;
 		text-align:  right;
 	}
@@ -371,279 +354,58 @@ figure img {
 
 /* ============================================================== html */
 
+/* The cream surface, grain and all, runs edge to edge across the viewport. */
+
 html {
-	background: var(--color-theme);
+	background-color: var(--color-bg);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
 }
 
 /* ============================================================== body */
 
+/* The banner, the main column and the footer stack down the middle of the page,
+ * each 100ch wide, with the gutters as padding. Every bit of text on the site is
+ * set at 1em, so a ch is the same width everywhere and the three line up. */
+
 body {
 	align-items:           center;
-	background:            var(--color-theme);
+	box-sizing:            border-box;
 	color:                 var(--color-txt);
 	display:               flex;
 	flex-direction:        column;
 	font-family:           var(--font-typewriter);
+	font-feature-settings: "cv01" 1, "cv02" 1, "cv12" 1, "zero" 1;
 	font-size:             var(--size-font);
 	font-synthesis:        none;
+	gap:                   var(--space-xl);
 	hyphenate-limit-chars: 7 3 4;
 	hyphens:               auto;
 	line-height:           1.75;
 	margin:                0;
 	min-height:            100vh;
+	padding:               var(--space-xl) var(--space-s);
 	text-align:            left;
 	text-shadow:           var(--shadow-text);
-}
 
-/* The article sheet: one leaf of paper, with the neighbouring sheets (the peek
- * tabs) stacked above and below it in the body. */
+	@media screen and (min-width: 768px)  { padding: var(--space-xl) var(--space-m); }
+	@media screen and (min-width: 1024px) { padding: var(--space-xl) var(--space-l); }
 
-.folio {
-	background:            var(--color-bg);
-	background-image:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
-	border-radius:         1px;
-	box-shadow:            0 var(--space-2xs) var(--space-m) calc(var(--space-2xs) * -1) var(--color-shadow);
-	box-sizing:            border-box;
-	display:               grid;
-	gap:                   var(--space-xl) 0;
-	grid-template-columns: 0 minmax(0, 1fr) 0;
-	margin:                var(--space-xl) 0;
-	max-width:             900px;
-	padding:               var(--space-s);
-	width:                 100%;
-
-	@media screen and (min-width: 768px) {
-		grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
-		padding:               var(--space-m);
-	}
-
-	@media screen and (min-width: 1024px) {
-		margin:  var(--space-xl) 0;
-		padding: var(--space-l);
-	}
-}
-
-/* Dispatch world */
-
-body.post-template,
-body.home-template {
-	font-feature-settings: "cv01" 1, "cv02" 1, "cv12" 1, "zero" 1;
-	
 	em, i {
 		font-feature-settings: "cv01" 0;
 	}
 }
 
-/* Wire world */
-
-.wire-template .folio {
-	background-color: var(--wire-paper);
-	background-image: repeating-linear-gradient(to bottom, var(--wire-bar) 0 1rem, transparent 1rem 2rem);
-	position:         relative;
-
-	&::before,
-	&::after {
-		background-image:  radial-gradient(circle 5px at 50% 13px, var(--color-theme) 0 4.3px, transparent 4.9px);
-		background-repeat: repeat-y;
-		background-size:   100% 26px;
-		bottom:            0;
-		content:           "";
-		display:           none;
-		pointer-events:    none;
-		position:          absolute;
-		top:               0;
-		width:             var(--space-m);
-		z-index:           0;
-
-		@media screen and (min-width: 768px)  { display: block; }
-		@media screen and (min-width: 1024px) { width: var(--space-l); }
-	}
-
-	&::before { left:  0; border-right: 2px dashed var(--wire-tear); }
-	&::after  { right: 0; border-left:  2px dashed var(--wire-tear); }
-}
-
-body.wire-template {
-	color:       lch(26% 9 var(--hue));
-	font-family: var(--font-telex);
-	text-shadow: none;
-
-	#main .article .header .title {
-		background: none;
-		color:      var(--color-markup);
-		display:    block;
-		margin:     var(--space-l) 0 0 0;
-		padding:    0;
-	}
-
-	.credit {
-		color:     lch(42% 18 var(--hue));
-		font-size: 0.8em;
-		margin:    0;
-	}
-
-	#main .article .content :is(em, i) {
-		font-synthesis: none;
-
-		&::before,
-		&::after { content: "*"; }
-	}
-
-	#footer {
-		--footer-rule: var(--wire-tear);
-	}
-}
-
-/* Register world */
-
-.register-template .folio {
-	background-color: var(--register-paper);
-	position:         relative;
-
-	&::before {
-		background-image:  radial-gradient(circle 9px at 50% 50%, var(--color-theme) 0 7px, transparent 7.7px);
-		background-repeat: repeat-y;
-		background-size:   100% 33.333%;
-		bottom:            0;
-		content:           "";
-		display:           none;
-		left:              0;
-		pointer-events:    none;
-		position:          absolute;
-		top:               0;
-		width:             var(--space-m);
-		z-index:           0;
-
-		@media screen and (min-width: 768px)  { display: block; }
-		@media screen and (min-width: 1024px) { width: var(--space-l); }
-	}
-}
-
-body.register-template {
-	color:       lch(22% 6 var(--hue));
-	font-family: var(--font-sans);
-	text-shadow: none;
-
-	#footer {
-		background-image: none;
-		border-top:       1px solid var(--color-muted);
-	}
-
-	.docctrl {
-		border-bottom:  1px solid var(--color-muted);
-		color:          var(--color-muted);
-		display:        flex;
-		flex-flow:      row wrap;
-		font-size:      0.8em;
-		gap:            0 var(--space-m);
-		margin:         0 0 var(--space-s) 0;
-		padding:        0 0 var(--space-2xs) 0;
-		text-transform: uppercase;
-
-		.sheet { margin-left: auto; }
-	}
-
-	.deck {
-		color:          var(--color-muted);
-		font-size:      0.8em;
-		margin:         var(--space-2xs) 0 0 0;
-		text-transform: uppercase;
-
-		&::before { content: "Contents — "; }
-	}
-
-	#main .article .header .title {
-		background:  none;
-		color:       var(--color-markup);
-		display:     block;
-		font-weight: 700;
-		padding:     0;
-	}
-
-	#main .article .hero.plain {
-		picture img:hover { cursor: zoom-in; }
-
-		figcaption {
-			color:      var(--color-muted);
-			font-size:  0.8em;
-			text-align: right;
-		}
-	}
-
-	#main .article .content {
-		counter-reset: sec sub;
-
-		> :is(h1, h2, h3) {
-			background:  none;
-			color:       var(--color-markup);
-			display:     block;
-			font-weight: 700;
-			margin:      var(--space-xl) 0 0 0;
-		}
-
-		> :is(h1, h2) {
-			counter-increment: sec;
-			counter-reset:     sub;
-
-			&::before { content: counter(sec) ". "; }
-		}
-
-		> h3 {
-			counter-increment: sub;
-
-			&::before { content: counter(sec) "." counter(sub) " "; }
-		}
-
-		.year {
-			background:    none;
-			border-bottom: 1px solid var(--color-muted);
-			color:         var(--color-markup);
-			display:       block;
-			font-weight:   700;
-			margin:        var(--space-xl) 0 var(--space-2xs) 0;
-			padding:       0 0 var(--space-3xs) 0;
-		}
-
-		.group:first-of-type .year {
-			margin-top: var(--space-l);
-		}
-	}
-
-	#main .archive {
-		align-items:     baseline;
-		display:         flex;
-		gap:             var(--space-s);
-		justify-content: space-between;
-		padding:         var(--space-2xs) 0;
-
-		h2 {
-			background:    none;
-			display:       block;
-			flex:          0 1 auto;
-			margin:        0;
-			overflow:      hidden;
-			text-overflow: ellipsis;
-			white-space:   nowrap;
-		}
-
-		.leader {
-			border-bottom: 1px dotted var(--color-muted);
-			flex:          1 1 auto;
-			transform:     translateY(-0.3em);
-		}
-
-		.date {
-			color: var(--color-muted);
-			flex:  0 0 auto;
-		}
-	}
+#header,
+#main,
+#footer {
+	box-sizing: border-box;
+	max-width:  100ch;
+	width:      100%;
 }
 
 /* ============================================================ Header */
 
 #header {
-	font-size:      0.8em;
-	grid-column:    1 / -1;
 	text-align:     center;
 	text-transform: uppercase;
 }
@@ -651,60 +413,63 @@ body.register-template {
 /* ============================================================== Main */
 
 #main {
-	grid-column: 1 / -1;
-
 	.article {
 		display:               grid;
-		gap:                   var(--space-xl) 0;
-		grid-template-columns: 0 minmax(0, 1fr) 0;
+		grid-template-columns: 1fr;
 
 		@media screen and (min-width: 768px) {
-			grid-template-columns: minmax(0, 1fr) minmax(240px, 60ch) minmax(0, 1fr);
+			column-gap:            var(--space-l);
+			grid-template-areas:   "hero    hero"
+			                       "title   title"
+			                       "content header";
+			grid-template-columns: 7fr 3fr;
+
+			&.no-image {
+				grid-template-areas: "title   title"
+				                     "content header";
+			}
+
+			.hero    { grid-area: hero; }
+			.title   { grid-area: title; }
+			.header  { grid-area: header; align-content: end; }
+			.content { grid-area: content; }
 		}
 
 		.hero {
-			grid-column: 1 / -1;
-			margin:      var(--space-m) 0 0 0;
+			margin: var(--space-m) 0 var(--space-xl) 0;
 		}
 
-		.zczc,
-		.nnnn {
+		.zczc {
 			color:  var(--color-markup);
 			margin: 0;
 		}
 
-		.nnnn {
-			margin: var(--space-l) 0 0 0;
-		}
-
 		.routing {
 			color:          lch(42% 18 var(--hue));
-			font-size:      0.8em;
 			text-transform: uppercase;
 		}
 
-		.routing + .title {
-			margin-top: var(--space-l);
+		.deck {
+			color:          var(--color-muted);
+			margin:         var(--space-2xs) 0 0 0;
+			text-transform: uppercase;
 		}
 
-		.header {
-			grid-column: 2 / -2;
-			margin:      0 0 var(--space-s) 0;
-
-			.title {
-				background:          var(--typewriter-rule), var(--typewriter-rule);
-				background-position: 0 100%, 0 calc(100% - 4px);
-				background-repeat:   no-repeat;
-				background-size:     100% 2px;
-				color:               var(--color-markup);
-				display:             table;
-				padding-bottom:      4px;
-			}
+		/* justify-self keeps the rule hugging the words: as a grid item the title
+		 * would otherwise stretch and run the rule across the whole measure. */
+		.title {
+			background:          var(--typewriter-rule), var(--typewriter-rule);
+			background-position: 0 100%, 0 calc(100% - 4px);
+			background-repeat:   no-repeat;
+			background-size:     100% 2px;
+			color:               var(--color-markup);
+			display:             table;
+			justify-self:        start;
+			padding-bottom:      4px;
+			margin: 0 0 var(--space-s) 0;
 		}
 
 		.content {
-			grid-column: 2 / -2;
-
 			b,
 			strong {
 				color:       var(--color-markup);
@@ -741,8 +506,7 @@ body.register-template {
 			}
 
 			.footnotes {
-				font-size: small;
-				margin:    var(--space-xl) 0 0 35%;
+				margin: var(--space-xl) 0 0 35%;
 
 				&::before {
 					color:   var(--color-markup);
@@ -832,6 +596,14 @@ body.register-template {
 				}
 			}
 
+			p {
+				margin: 0 0 var(--space-m) 0;
+				
+				&:last-of-type {
+					margin: 0 0 0 0;
+				}
+			}
+
 			pre {
 				margin: var(--space-s) 0 var(--space-s) min(4vw, 4ch);
 			}
@@ -879,7 +651,6 @@ body.register-template {
 			.gallery > figcaption {
 				display:     inline-block;
 				font-family: var(--font-handwritten);
-				font-size:   small;
 				margin:      var(--space-m) 0 var(--space-xs);
 				max-width:   80%;
 				padding:     var(--space-2xs) var(--space-s);
@@ -893,18 +664,57 @@ body.register-template {
 			}
 		}
 
-		.footer {
-			grid-column: 1 / -1;
+	}
 
-			.navigation {
-				display:               grid;
-				gap:                   var(--space-s);
-				grid-template-columns: 1fr 1fr 1fr;
-				justify-content:       space-between;
-				margin:                var(--space-xl) 0 0 0;
+	/* The index — the archive and the term listings. One full-width column, and
+	 * a table of contents in place of running text. */
 
-				.all  { text-align: center; }
-				.next { text-align: right; }
+	.article.index {
+		grid-template-areas:   "content";
+		grid-template-columns: 1fr;
+
+		.deck::before { content: "Contents — "; }
+
+		.content .year {
+			background:    none;
+			border-bottom: 1px solid var(--color-muted);
+			color:         var(--color-markup);
+			display:       block;
+			font-weight:   700;
+			margin:        var(--space-xl) 0 var(--space-2xs) 0;
+			padding:       0 0 var(--space-3xs) 0;
+		}
+
+		.content .group:first-of-type .year {
+			margin-top: var(--space-l);
+		}
+
+		.archive {
+			align-items:     baseline;
+			display:         flex;
+			gap:             var(--space-s);
+			justify-content: space-between;
+			padding:         var(--space-2xs) 0;
+
+			h2 {
+				background:    none;
+				display:       block;
+				flex:          0 1 auto;
+				margin:        0;
+				overflow:      hidden;
+				text-overflow: ellipsis;
+				white-space:   nowrap;
+			}
+
+			.leader {
+				border-bottom: 1px dotted var(--color-muted);
+				flex:          1 1 auto;
+				transform:     translateY(-0.3em);
+			}
+
+			.date {
+				color: var(--color-muted);
+				flex:  0 0 auto;
 			}
 		}
 	}
@@ -918,8 +728,6 @@ body.register-template {
 	background-position: 0 0;
 	background-repeat:   no-repeat;
 	background-size:     100% 2px;
-	font-size:           0.8em;
-	grid-column:         1 / -1;
 	padding:             var(--space-m) 0 0 0;
 	text-align:          center;
 
@@ -972,162 +780,4 @@ body.register-template {
 
 .gslide-description {
 	font-family: inherit;
-}
-
-/* ============================================================== Peek */
-/*
- * The neighbouring sheets in the dispatches/wires timeline, stacked outside the
- * article: the previous sheet kisses the top of the viewport, the next the
- * bottom, with the folio's own margin as the gap. Same width as the article,
- * each rendered in its own paper and hue. Glorified prev/next links with the
- * real presentation.
- */
-
-.peek {
-	align-items:     center;
-	box-shadow:      0 2px 12px -8px var(--color-shadow);
-	box-sizing:      border-box;
-	display:         none;
-	gap:             var(--space-2xs);
-	justify-content: center;
-	max-width:       900px;
-	overflow:        hidden;
-	padding:         var(--space-s);
-	position:        relative;
-	text-decoration: none;
-	text-shadow:     none;
-	text-transform:  uppercase;
-	transition:      transform 0.2s ease, box-shadow 0.28s ease;
-	white-space:     nowrap;
-	width:           100%;
-
-	/* The stack illusion needs the tabs to bleed to the viewport edges. iOS no
-	 * longer honours viewport-fit and forces content inside the safe area, so
-	 * the illusion can't hold on phones — gate the feature to tablet and up. */
-	@media screen and (min-width: 768px) {
-		display: flex;
-	}
-}
-
-/* At rest each tab is nudged a few pixels toward its own edge, so its paper
- * always overshoots the viewport boundary (the overflow is simply off-screen).
- * Hover releases it back to flush — drawing the sheet in — without ever exposing
- * the background behind it. The extra padding on the edge side keeps the resting
- * tab balanced. */
-.peek-prev {
-	padding-top: calc(var(--space-s) + var(--space-3xs));
-	transform:   translateY(calc(var(--space-3xs) * -1));
-}
-
-.peek-next {
-	margin-top:     auto;
-	padding-bottom: calc(var(--space-s) + var(--space-3xs));
-	transform:      translateY(var(--space-3xs));
-}
-
-.peek-arrow {
-	font-size: 0.7em;
-	opacity:   0.65;
-}
-
-.peek-title {
-	max-width:     min(80vw, 60ch);
-	overflow:      hidden;
-	text-overflow: ellipsis;
-}
-
-/* Paper: each tab wears the neighbour's own surface, driven by its inline --hue */
-
-.peek.dispatches {
-	background:  lch(96% 5 90);
-	color:       lch(20% 85 var(--hue));
-	font-family: var(--font-typewriter);
-	font-size:   0.85em;
-}
-
-.peek.wires {
-	background:      lch(99% 1.5 var(--hue));
-	color:          lch(26% 9 var(--hue));
-	font-family:    var(--font-telex);
-	font-size:      0.8em;
-	padding-inline: var(--space-xl);
-}
-
-/* Wire tabs carry the same sprocket-perforated feed edges as the wire sheet. */
-
-.peek.wires::before,
-.peek.wires::after {
-	background-image:  radial-gradient(circle 5px at 50% 13px, var(--color-theme) 0 4.3px, transparent 4.9px);
-	background-repeat: repeat-y;
-	background-size:   100% 26px;
-	bottom:            0;
-	content:           "";
-	display:           none;
-	pointer-events:    none;
-	position:          absolute;
-	top:               0;
-	width:             var(--space-m);
-
-	@media screen and (min-width: 768px)  { display: block; }
-	@media screen and (min-width: 1024px) { width: var(--space-l); }
-}
-
-.peek.wires::before { left:  0; border-right: 2px dashed var(--wire-tear); }
-.peek.wires::after  { right: 0; border-left:  2px dashed var(--wire-tear); }
-
-/* Hover: release the tab back to flush, drawing the sheet a few pixels further
- * in, with a touch more lift and a brighter arrow. The paper stays anchored to
- * the viewport edge throughout. Keep the paper look by overriding the global
- * anchor hover fill and its child recolour. */
-
-.peek:hover,
-.peek:focus {
-	box-shadow: 0 4px 18px -8px var(--color-shadow);
-}
-
-.peek-prev:hover,
-.peek-prev:focus,
-.peek-next:hover,
-.peek-next:focus { transform: translateY(0); }
-
-.peek:hover > *,
-.peek:focus > * {
-	color: inherit !important;
-}
-
-.peek:hover .peek-arrow,
-.peek:focus .peek-arrow {
-	opacity: 1;
-}
-
-/* ==================================================== View transitions */
-/*
- * Cross-document view transitions carry the stack illusion across navigation.
- * Moving to the next (older) sheet — the one that peeked from the bottom — the
- * whole stack rises; moving back to the previous (newer) sheet it descends.
- * theme.js tags the navigation direction as a view-transition type; any other
- * navigation keeps the default cross-fade. Progressive enhancement: unsupported
- * browsers just navigate.
- */
-
-@view-transition {
-	navigation: auto;
-}
-
-:root:active-view-transition-type(forward)::view-transition-old(root)  { animation: sheet-exit-up    0.4s ease both; }
-:root:active-view-transition-type(forward)::view-transition-new(root)  { animation: sheet-enter-up   0.4s ease both; }
-:root:active-view-transition-type(backward)::view-transition-old(root) { animation: sheet-exit-down  0.4s ease both; }
-:root:active-view-transition-type(backward)::view-transition-new(root) { animation: sheet-enter-down 0.4s ease both; }
-
-@keyframes sheet-exit-up    { to   { transform: translateY(-100%); } }
-@keyframes sheet-enter-up   { from { transform: translateY(100%);  } }
-@keyframes sheet-exit-down  { to   { transform: translateY(100%);  } }
-@keyframes sheet-enter-down { from { transform: translateY(-100%); } }
-
-@media (prefers-reduced-motion: reduce) {
-	::view-transition-group(*),
-	::view-transition-old(*),
-	::view-transition-new(*) {
-		animation: none !important;
-	}
 }

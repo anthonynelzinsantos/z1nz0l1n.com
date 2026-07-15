@@ -2,6 +2,8 @@
 title: "Learning a language with the machine"
 date: "2026-02-08T11:00:38.000Z"
 slug: "25w06"
+aliases:
+  - "/d/25w06/"
 feature_image_alt: "A row of flags at the European Parliament in Strasbourg. Image Anthony Nelzin-Santos."
 feature_image_caption: "Strasbourg (France), 2022-11."
 from:
@@ -30,4 +32,4 @@ For the most part, each chapter reads like a *Map Men* video, complete with weir
 
 ## Links
 
-[***‌How AI assistance impacts the formation of coding skills***](https://www.anthropic.com/research/AI-assistance-coding-skills) **by Anthropic.** Good on Anthropic for not burying the lede: *“using AI assistance led to a statistically significant decrease in mastery”*. In their latest study, they found that junior Python developers using *“AI coding assistance”* didn’t work faster, understood far less, and tested far worse. This isn’t deskilling: this is *unskilling*, the birth of a generation that won’t develop advanced skills because it over-relied on LLMs, that’ll be able to produce code but not [*craft*](/d/26w04/) it. Anthropic might conclude that *“the way we interact with AI while trying to be efficient affects how much we learn”*, but it hasn’t changed the produce-now understand-never attitude of their products.
+[***‌How AI assistance impacts the formation of coding skills***](https://www.anthropic.com/research/AI-assistance-coding-skills) **by Anthropic.** Good on Anthropic for not burying the lede: *“using AI assistance led to a statistically significant decrease in mastery”*. In their latest study, they found that junior Python developers using *“AI coding assistance”* didn’t work faster, understood far less, and tested far worse. This isn’t deskilling: this is *unskilling*, the birth of a generation that won’t develop advanced skills because it over-relied on LLMs, that’ll be able to produce code but not [*craft*](/26w04/) it. Anthropic might conclude that *“the way we interact with AI while trying to be efficient affects how much we learn”*, but it hasn’t changed the produce-now understand-never attitude of their products.

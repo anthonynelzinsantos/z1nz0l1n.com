@@ -2,6 +2,8 @@
 title: "The trap of the “TBR pile”"
 date: "2025-10-22T14:00:00.000Z"
 slug: "the-trap-of-the-tbr-pile"
+aliases:
+  - "/d/the-trap-of-the-tbr-pile/"
 feature_image_alt: "A library ladder in a bookshop."
 feature_image_caption: "Paris (France), 2010/04. Image Anthony Nelzin-Santos."
 from:

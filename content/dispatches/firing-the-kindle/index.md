@@ -2,6 +2,8 @@
 title: "Firing the Kindle"
 date: "2025-02-18T17:00:00.000Z"
 slug: "firing-the-kindle"
+aliases:
+  - "/d/firing-the-kindle/"
 feature_image_alt: "A view of the famous Livraria Lello in Porto."
 feature_image_caption: "Porto (Portugal), 2024/10. Image Anthony Nelzin-Santos."
 from:

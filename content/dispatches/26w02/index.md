@@ -2,6 +2,8 @@
 title: "A very young adult"
 date: "2026-01-11T13:00:00.000Z"
 slug: "26w02"
+aliases:
+  - "/d/26w02/"
 feature_image_alt: "Steps in the fresh snow. Image Anthony Nelzin-Santos."
 feature_image_caption: "Lyon (France), 2017-12."
 from:

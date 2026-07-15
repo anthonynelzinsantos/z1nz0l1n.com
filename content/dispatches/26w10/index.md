@@ -2,6 +2,8 @@
 title: "Muscle memory"
 date: "2026-03-08T11:00:00.000Z"
 slug: "26w10"
+aliases:
+  - "/d/26w10/"
 feature_image_alt: "A muscular statue in a museum. Image Anthony Nelzin-Santos."
 feature_image_caption: "Strasbourg (France), 2022-11."
 from:

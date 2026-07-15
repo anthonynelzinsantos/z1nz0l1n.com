@@ -2,6 +2,8 @@
 title: "’tis the (small) season"
 date: "2025-11-07T11:00:00.000Z"
 slug: "tis-the-small-season"
+aliases:
+  - "/d/tis-the-small-season/"
 feature_image_alt: "A lone seat, in the middle of an alley covered with dead leaves, in a public park."
 feature_image_caption: "Paris (France), 2011/11. Images Anthony Nelzin-Santos."
 from:
@@ -10,7 +12,7 @@ from:
 
 *This is my entry for this month’s* [*IndieWeb Carnival*](https://indieweb.org/IndieWeb_Carnival)*, hosted by* [*Alex Sirac*](https://alexsirac.com/)*, on* [*the topic of “Cycles and fluctuations*](https://alexsirac.com/indieweb-carnival-%e2%88%92-cycles-and-fluctuations/)*”.*
 
-The life of a journalist is governed by schedules, but [i’m not a journalist anymore](/d/tech-journalism-is-dead/). I’ve always prided myself on knowing the exact time instinctively, but now that i don’t have a work routine anymore, i barely know the day of the week[^1]. And yet, i’ve become keenly aware of the subtle changes around me as autumn shifts into winter.
+The life of a journalist is governed by schedules, but [i’m not a journalist anymore](/tech-journalism-is-dead/). I’ve always prided myself on knowing the exact time instinctively, but now that i don’t have a work routine anymore, i barely know the day of the week[^1]. And yet, i’ve become keenly aware of the subtle changes around me as autumn shifts into winter.
 
 It made me think of the *taiyō reki*, the traditional Japanese calendar that divides the year into 24 *nijūshi sekki*, [“small seasons”](https://smallseasons.guide) that last around two weeks. Each *sekki* is further divided into three *kō,* “micro seasons” of around five days that are each associated with a *haiku* written in 1685 by the court astronomer Shibukawa Shunkai. I’ve seen them described as *“a poetic journey through the Japanese year”*, but i love how prosaic they are.
 

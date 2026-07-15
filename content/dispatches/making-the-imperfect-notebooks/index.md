@@ -2,6 +2,8 @@
 title: "Making the (im)perfect notebooks"
 date: "2025-05-25T09:00:00.000Z"
 slug: "making-the-imperfect-notebooks"
+aliases:
+  - "/d/making-the-imperfect-notebooks/"
 feature_image_alt: "Various collages on a wall."
 feature_image_caption: "Le Mans (France), 2020/07. Image Anthony Nelzin-Santos."
 from:
@@ -32,4 +34,4 @@ Making something with my hands isn’t a test. It’s a conversation with my mat
 
 ------------------------------------------------------------------------
 
-**Follow-up:** [‘Writing with the infinite monkey machine’](/d/writing-with-the-infinite-monkey-machine/)
+**Follow-up:** [‘Writing with the infinite monkey machine’](/writing-with-the-infinite-monkey-machine/)

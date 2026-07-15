@@ -2,13 +2,15 @@
 title: "Library bankruptcy"
 date: "2025-11-09T12:00:00.000Z"
 slug: "25w45"
+aliases:
+  - "/d/25w45/"
 feature_image_alt: "Eugène Ysaye’s studio at the Grand Curtius museum in Liège."
 feature_image_caption: "Liège (Belgium), 2025/10. Image Anthony Nelzin-Santos."
 from:
   - "lyon-fr"
 ---
 
-I just [reorganized my library](/d/the-trap-of-the-tbr-pile/), so what did people gift me for my birthday? More books, of course. I guess nature really hates a vacuum.
+I just [reorganized my library](/the-trap-of-the-tbr-pile/), so what did people gift me for my birthday? More books, of course. I guess nature really hates a vacuum.
 
 ## Apps
 

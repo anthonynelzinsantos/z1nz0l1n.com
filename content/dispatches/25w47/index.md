@@ -2,13 +2,15 @@
 title: "Freezing"
 date: "2025-11-23T11:00:00.000Z"
 slug: "25w47"
+aliases:
+  - "/d/25w47/"
 feature_image_alt: "An old man plugging his ears with his fingers at a concert, seen from the back."
 feature_image_caption: "Vienne (France), 2025/07. Image Anthony Nelzin-Santos."
 from:
   - "lyon-fr"
 ---
 
-Speaking of [small seasons](/d/tis-the-small-season/), winter descended on Europe in a flash, and it’s been freezing for the last ten days straight. It’s my favourite part of the winter: the air is crisp, the days are as bright as the nights are dark, there’s not a cloud on the horizon, and the colours are magnificent. I do miss the snow, though.
+Speaking of [small seasons](/tis-the-small-season/), winter descended on Europe in a flash, and it’s been freezing for the last ten days straight. It’s my favourite part of the winter: the air is crisp, the days are as bright as the nights are dark, there’s not a cloud on the horizon, and the colours are magnificent. I do miss the snow, though.
 
 ## Apps
 

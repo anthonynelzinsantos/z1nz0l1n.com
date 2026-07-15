@@ -2,6 +2,8 @@
 title: "The Onyx Boox Palma is dead, long live the Onyx Boox P6 Pro"
 date: "2025-10-07T15:30:00.000Z"
 slug: "the-onyx-boox-palma-is-dead-long-live-the-onyx-boox-p6-pro"
+aliases:
+  - "/d/the-onyx-boox-palma-is-dead-long-live-the-onyx-boox-p6-pro/"
 from:
   - "lyon-fr"
 ---

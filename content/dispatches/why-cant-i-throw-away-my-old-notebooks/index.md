@@ -2,6 +2,8 @@
 title: "Why can’t i throw away my old notebooks?"
 date: "2025-10-15T11:00:00.000Z"
 slug: "why-cant-i-throw-away-my-old-notebooks"
+aliases:
+  - "/d/why-cant-i-throw-away-my-old-notebooks/"
 feature_image_alt: "A batch of notebooks on a table."
 feature_image_caption: "Making a batch of notebooks. Lyon (France), 2025/04. Image Anthony Nelzin-Santos."
 from:
@@ -10,7 +12,7 @@ from:
 
 *This is my entry for this month’s* [*IndieWeb Carnival*](https://indieweb.org/IndieWeb_Carnival)*, hosted by* [*Bix*](https://bix.blog)*, on* [*the topic of “Ego”*](https://bix.blog/posts/2025-10-01-indieweb-carnival-on-ego/)*.*
 
-Now that i have [*a bit* more free time](/d/tech-journalism-is-dead/), i’ve decided to scan the notebooks that have somehow fallen through the cracks in my reviewing system. It’s a repetitive process – flipping to a new page, positioning the Doxie Flip over it[^1], pushing the scanning button, waiting a few seconds, flipping to a new page – but it’s almost meditative. Which might be why i’ve wondered why i can’t bring myself to throw away my boxes and boxes of old notebooks.
+Now that i have [*a bit* more free time](/tech-journalism-is-dead/), i’ve decided to scan the notebooks that have somehow fallen through the cracks in my reviewing system. It’s a repetitive process – flipping to a new page, positioning the Doxie Flip over it[^1], pushing the scanning button, waiting a few seconds, flipping to a new page – but it’s almost meditative. Which might be why i’ve wondered why i can’t bring myself to throw away my boxes and boxes of old notebooks.
 
 I’m not always comfortable in my own body and i can’t always trust my own feelings, so i’ve always relied on my rational mind — to the point of exhaustion. Note-taking is the only activity that reconciles the three dimensions of my self: it’s a tactile, visual, auditory, and even olfactory experience; it’s often motivated by an impulse i can only explain by writing; and it’s the closest approximation of an “outer brain” that i have.
 

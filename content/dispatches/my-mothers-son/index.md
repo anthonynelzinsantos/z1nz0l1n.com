@@ -2,6 +2,8 @@
 title: "My mother’s son"
 date: "2025-01-22T15:00:34.000Z"
 slug: "my-mothers-son"
+aliases:
+  - "/d/my-mothers-son/"
 feature_image_alt: "A mural of a green cat appearing to jump in an electrical junction box."
 feature_image_caption: "Chambéry, 03/24. Image Anthony Nelzin-Santos."
 from:

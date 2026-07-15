@@ -2,6 +2,8 @@
 title: "The deliciously sleepy Aurora Ipsilon"
 date: "2025-10-08T15:00:00.000Z"
 slug: "the-deliciously-sleepy-aurora-ipsilon"
+aliases:
+  - "/d/the-deliciously-sleepy-aurora-ipsilon/"
 feature_image_alt: "An ink swatch of Colorverse Delicious Sleep with the Aurore Ipsilon fountain pen."
 feature_image_caption: "Lyon (France), 2025/10. Image Anthony Nelzin-Santos."
 from:

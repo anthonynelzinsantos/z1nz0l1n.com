@@ -2,6 +2,8 @@
 title: "Jony Ive wants my money"
 date: "2025-09-28T08:29:13.000Z"
 slug: "jony-ive-wants-my-money"
+aliases:
+  - "/d/jony-ive-wants-my-money/"
 from:
   - "lyon-fr"
 ---

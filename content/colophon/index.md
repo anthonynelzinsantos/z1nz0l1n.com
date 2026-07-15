@@ -17,7 +17,7 @@ Hi! My name is Anthony Nelzin-Santos. I’m a tech journalist turned instruction
 
 “Zinzolin” is a shade of purple that’s not quite as blue as lavender fields but not quite as red as crushed blackberries. If you believe the medieval Italians, it comes from jujube fruits (*giuggiolino*), but if they still existed, the Mozarabs would tell you that it comes from sesame seeds (*djoudjolân*). Whatever the case, it’s my favourite colour, in part because it sounds like my name.
 
-I let my love of printing and telecommunication technologies run wild while i was designing *Z1NZ0L1N*. With their pasted-on pictures, [telex](https://en.wikipedia.org/wiki/Telex)-inspired formatting, and typewritten texture set in [IBM Plex Mono](https://www.ibm.com/plex/), [dispatches](/d/) are meant to evoke mid-century press reports sent via teleprinter. With their tractor-feed perforated paper, [NAVTEX](https://en.wikipedia.org/wiki/NAVTEX)-inspired formatting, and dot-matrix texture set in [Departure Mono](https://departuremono.com/), [wires](/w/) are meant to evoke shipping forecasts and other messages sent by radio. All the other pages are set in [Forma](https://djr.com/forma) and emulate the ring-bound documentation binders of yore.
+I let my love of printing and telecommunication technologies run wild while i was designing *Z1NZ0L1N*. With their pasted-on pictures, [telex](https://en.wikipedia.org/wiki/Telex)-inspired formatting, and typewritten texture set in [IBM Plex Mono](https://www.ibm.com/plex/), [dispatches](/archive/) are meant to evoke mid-century press reports sent via teleprinter. All the other pages are set in [Forma](https://djr.com/forma) and emulate the ring-bound documentation binders of yore.
 
 ## When?
 

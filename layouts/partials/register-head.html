@@ -1,7 +1,0 @@
-{{ $ref := upper (strings.Trim .RelPermalink "/") }}
-{{ if not $ref }}{{ $ref = "INDEX" }}{{ end }}
-<div class="docctrl">
-	<span class="ref">DOC. Z1S/{{ $ref }}</span>
-	<span class="rev">REV. {{ (cond .Lastmod.IsZero now .Lastmod).Format "2006.01" }}</span>
-	<span class="sheet">SHEET 1 OF 1</span>
-</div>

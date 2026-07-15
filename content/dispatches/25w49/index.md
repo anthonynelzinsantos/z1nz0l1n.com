@@ -2,13 +2,15 @@
 title: "Well that was fun"
 date: "2025-12-07T11:00:00.000Z"
 slug: "25w49"
+aliases:
+  - "/d/25w49/"
 feature_image_alt: "A weird graffiti of two yellow lamas (?)."
 feature_image_caption: "Lyon (France), 2021/09. Image Anthony Nelzin-Santos."
 from:
   - "lyon-fr"
 ---
 
-[My entry for this month’s IndieWeb carnival](/d/they-said-the-web-was-dead/) was the most fun i’ve had writing in a while. It isn’t a genre-defining piece of work, but it conveys what i wanted to convey, which is more than a lot of my journalistic work can say. I should write fiction more often.
+[My entry for this month’s IndieWeb carnival](/they-said-the-web-was-dead/) was the most fun i’ve had writing in a while. It isn’t a genre-defining piece of work, but it conveys what i wanted to convey, which is more than a lot of my journalistic work can say. I should write fiction more often.
 
 ## Links
 

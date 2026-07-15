@@ -2,6 +2,8 @@
 title: "Safe travels"
 date: "2026-02-22T11:00:00.000Z"
 slug: "26w08"
+aliases:
+  - "/d/26w08/"
 feature_image_alt: "A view of the cathedral of Marseille. Image Anthony Nelzin-Santos."
 feature_image_caption: "Marseille (France), 2025-02."
 from:
@@ -47,7 +49,7 @@ Most of them will stroll around the (admittedly charming) Panier neighbourhood, 
 
 ## Apps
 
-[**Current**](https://www.terrygodier.com/current)**.** Built by Terry Godier, [of “phantom obligation” fame](/d/26w05/), Current is an RSS reader that wants to break free of the e-mail mould. It uses a lot of highfalutin words to describe familiar concepts: the *“river”* is a feed, *“currents”* are folders and *“releasing”* is marking as read. Worse: although Terry says that *“Current has no unread count“*, it has *multiple* counts, and even reading stats.
+[**Current**](https://www.terrygodier.com/current)**.** Built by Terry Godier, [of “phantom obligation” fame](/26w05/), Current is an RSS reader that wants to break free of the e-mail mould. It uses a lot of highfalutin words to describe familiar concepts: the *“river”* is a feed, *“currents”* are folders and *“releasing”* is marking as read. Worse: although Terry says that *“Current has no unread count“*, it has *multiple* counts, and even reading stats.
 
 The mere presence of a list of items with different states implies that you should *“process”* your feed. Case in point: when you’ve read everything, Current tells you that you’re *“all caught up”*. And Sift, *“a mode designed for the way people actually triage on a desktop”*, falls back to the classic e-mail layout.
 
@@ -59,6 +61,6 @@ In a way, Current reminds me of the late [Fever](https://github.com/mcaskill/fev
 
 [**“How I’m dealing with the pressure to adopt AI as a designer”**](https://www.mynameismartin.co.uk/blog/how-im-dealing-with-the-pressure-to-adopt-ai-as-a-designer) **by Martin Wright.** *″You should be playing with AI″*, Martin writes, *“experimenting builds vocabulary, shapes instinct, and helps form the opinions you’ll need when clients ask the big questions about where AI fits.”* But *“put the work at the centre of all your thinking, and opt out of the hype cycle.”* Easier said than done, because the bubble’s pressure keeps on growing.
 
-[**“We mourn our craft”**](https://nolanlawson.com/2026/02/07/we-mourn-our-craft/) **by Nolan Lawson.** *“I didn’t ask for the role of a programmer to be reduced to that of a glorified TSA agent”*, Nolan laments, *“reviewing code to make sure the AI didn’t smuggle something dangerous into production”*. I find it fascinating – but utterly logical – that software developers are the main victims of software development. But i’ve used Claude Code, and i don’t think that [true craftspeople](/d/26w04/) have anything to worry about, on the contrary. People who think that software development is nothing more than writing code, on the other hand, have it coming.
+[**“We mourn our craft”**](https://nolanlawson.com/2026/02/07/we-mourn-our-craft/) **by Nolan Lawson.** *“I didn’t ask for the role of a programmer to be reduced to that of a glorified TSA agent”*, Nolan laments, *“reviewing code to make sure the AI didn’t smuggle something dangerous into production”*. I find it fascinating – but utterly logical – that software developers are the main victims of software development. But i’ve used Claude Code, and i don’t think that [true craftspeople](/26w04/) have anything to worry about, on the contrary. People who think that software development is nothing more than writing code, on the other hand, have it coming.
 
 [**“Thousands of CEOs just admitted AI had no impact on employment or productivity”**](https://fortune.com/2026/02/17/ai-productivity-paradox-ceo-study-robert-solow-information-technology-age/) **by Sasha Rogelberg.** On a completely unrelated note…

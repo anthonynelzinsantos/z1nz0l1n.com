@@ -2,6 +2,8 @@
 title: "Rook ’n’ roll"
 date: "2025-09-14T08:00:00.000Z"
 slug: "rook-n-roll"
+aliases:
+  - "/d/rook-n-roll/"
 feature_image_alt: "A detail of a statue of a crane from François Pompon."
 feature_image_caption: "Dijon (France), 2024/02. Image Anthony Nelzin-Santos."
 from:

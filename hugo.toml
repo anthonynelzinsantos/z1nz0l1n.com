@@ -3,21 +3,17 @@ defaultContentLanguage = "en"
 title = "Z1NZ0L1N"
 enableEmoji = true
 enableInlineShortcodes = true
-disableKinds = ["taxonomy"]
+disableKinds = ["taxonomy", "section"]
 summaryLength = 40
 timeZone = "Europe/Paris"
 
 [permalinks]
-  dispatches = "/d/:slug/"
-  wires      = "/w/:slug/"
+  dispatches = "/:slug/"
 
 [taxonomies]
   location = "from"
-  medium   = "about"
-  creator  = "by"
 
 [params]
-  mainSections = ["dispatches", "wires"]
   description = "Reading, writing, walking. Not (always) at the same time."
   subtitle = "by Anthony Nelzin-Santos"
   est = "est. 2025"
@@ -25,6 +21,7 @@ timeZone = "Europe/Paris"
   authorShort = "Anthony"
   email = "anthony@nelzin.fr"
   banner = "Z1NZ0L1N information system documentation"
+  dispatchBanner = "A dispatch from the Z1NZ0L1N field office"
   baseHue = 298 
   dynamicColour = true
   hueAmplitude = 40
@@ -63,7 +60,6 @@ timeZone = "Europe/Paris"
 
 [outputs]
   home = ["HTML", "RSS"]
-  section = ["HTML"]
 
 [services.rss]
   limit = 10

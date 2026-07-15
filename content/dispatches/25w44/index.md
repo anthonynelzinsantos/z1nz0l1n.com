@@ -2,6 +2,8 @@
 title: "Missing the train"
 date: "2025-11-02T12:00:22.000Z"
 slug: "25w44"
+aliases:
+  - "/d/25w44/"
 feature_image_alt: "An old-timey stereoscope."
 feature_image_caption: "Liège (Belgium), 2025/10. Image Anthony Nelzin-Santos."
 from:

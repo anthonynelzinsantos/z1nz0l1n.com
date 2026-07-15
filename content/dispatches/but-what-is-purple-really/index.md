@@ -2,6 +2,8 @@
 title: "But what is purple, really?"
 date: "2025-08-20T17:30:00.000Z"
 slug: "but-what-is-purple-really"
+aliases:
+  - "/d/but-what-is-purple-really/"
 feature_image_alt: "Hundreds of colourful threads in an art installation."
 feature_image_caption: "Saint-Étienne (France), 2021/08. Image Anthony Nelzin-Santos."
 from:

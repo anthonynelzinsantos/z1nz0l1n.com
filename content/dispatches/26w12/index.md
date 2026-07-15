@@ -2,6 +2,8 @@
 title: "The Kobo Remote is the worst gadget i’ve ever loved"
 date: "2026-03-22T11:00:37.000Z"
 slug: "26w12"
+aliases:
+  - "/d/26w12/"
 feature_image_alt: "Colourful bookshelves in an outdoor library. Image Anthony Nelzin-Santos."
 feature_image_caption: "Marseille (France), 2026-02."
 from:
@@ -26,6 +28,6 @@ It’s made me acutely aware of the way that my hands influence my reading —
 
 ## Things
 
-<a href="https://www.lenovo.com/gb/en/p/laptops/thinkpad/thinkpadp/lenovo-thinkpad-p16-gen-3-16-inch-intel-mobile-workstation/" rel="noreferrer"><strong>Lenovo ThinkPad P16s Gen 3</strong></a>**.** Speaking of [my work-provided *“beast of a laptop”*](/d/26w10/)… David Hill has been a faithful steward of Richard Sapper’s original design, and in the ten years since he left Lenovo, not much has changed. Nothing looks like a ThinkPad except for another ThinkPad, and if i have to work on a PC, i’m not mad that it’s a ThinkPad. The build quality is excellent, the screen is fine for the price, the trackpad is more than decent, and most of all, the keyboard is outstanding.
+<a href="https://www.lenovo.com/gb/en/p/laptops/thinkpad/thinkpadp/lenovo-thinkpad-p16-gen-3-16-inch-intel-mobile-workstation/" rel="noreferrer"><strong>Lenovo ThinkPad P16s Gen 3</strong></a>**.** Speaking of [my work-provided *“beast of a laptop”*](/26w10/)… David Hill has been a faithful steward of Richard Sapper’s original design, and in the ten years since he left Lenovo, not much has changed. Nothing looks like a ThinkPad except for another ThinkPad, and if i have to work on a PC, i’m not mad that it’s a ThinkPad. The build quality is excellent, the screen is fine for the price, the trackpad is more than decent, and most of all, the keyboard is outstanding.
 
 It would be a perfectly good laptop… if Intel and Microsoft hadn’t fallen so far behind in energy management. Windows keeps such a tight leash on the Intel Ultra 7 155H chip that, most of the time, this *“beast of a laptop”* feels slower than the slowest of smartphones. Even after tweaking every energy setting i could find, i have to use a 4K monitor to make sure the Nvidia RTX 500 graphics card kicks in and more power flows through the system. What a shame.

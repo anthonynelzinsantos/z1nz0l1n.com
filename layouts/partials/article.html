@@ -1,46 +1,34 @@
 {{ $p := .page }}
-{{ $register := .register }}
 {{ $res := $p.Resources.GetMatch "feature.*" }}
 <article class="article {{ if $res }}post{{ else }}post no-image{{ end }}">
 {{ with $res }}
 	{{ $alt := $p.Title }}{{ with $p.Params.feature_image_alt }}{{ $alt = . }}{{ end }}
 	{{ $srcset := slice }}
 	{{ range (slice 600 900 1200 1800) }}{{ if le . $res.Width }}{{ $srcset = $srcset | append (printf "%s %dw" ($res.Resize (printf "%dx" .)).RelPermalink .) }}{{ end }}{{ end }}
-	{{ $default := $res }}{{ if ge $res.Width 900 }}{{ $default = $res.Resize "900x" }}{{ end }}
-	{{ if $register }}
-	<figure class="hero plain">
-		<picture>
-			<img src="{{ $default.RelPermalink }}" {{ with $srcset }}srcset="{{ delimit . ", " }}" {{ end }}sizes="(max-width: 900px) 100vw, 900px" width="{{ $default.Width }}" height="{{ $default.Height }}" alt="{{ $alt }}">
-		</picture>
-		{{ with $p.Params.feature_image_caption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
-	</figure>
-	{{ else }}
+	{{ $default := $res }}{{ if ge $res.Width 1200 }}{{ $default = $res.Resize "1200x" }}{{ end }}
 	<figure class="photo hero">
 		{{ partial "marks.html" }}
 		<div class="photo-print">
 			<picture>
-				<img src="{{ $default.RelPermalink }}" {{ with $srcset }}srcset="{{ delimit . ", " }}" {{ end }}sizes="(max-width: 900px) 100vw, 900px" width="{{ $default.Width }}" height="{{ $default.Height }}" alt="{{ $alt }}">
+				<img src="{{ $default.RelPermalink }}" {{ with $srcset }}srcset="{{ delimit . ", " }}" {{ end }}sizes="(max-width: 1332px) 100vw, 1332px" width="{{ $default.Width }}" height="{{ $default.Height }}" alt="{{ $alt }}">
 			</picture>
 			{{ with $p.Params.feature_image_caption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
 		</div>
 	</figure>
-	{{ end }}
+{{ end }}
+{{ if .telex }}
+	<header class="header">
+		<p class="zczc">{{ $p.Params.Slug | upper }} ✠</p>
+		<div class="routing">
+			<div class="dtg">{{ printf "%sZ%s" ($p.Date.Format "02-01-06") ($p.Date.Format "15:04") }}</div>
+			{{ with index ($p.GetTerms "from") 0 }}<div class="org">FROM <a href="{{ .RelPermalink }}">{{ .Title }}</a></div>{{ end }}
+		</div>
+	</header>
 {{ end }}
 
-	<section class="content">
-		<header class="header">
-			{{ if $register }}{{ partial "register-head.html" $p }}{{ end }}
-			{{ if .telex }}
-			<p class="zczc">{{ $p.Params.Slug | upper }} ✠</p>
-			<div class="routing">
-				<div class="dtg">{{ printf "%sZ%s" ($p.Date.Format "02-01-06") ($p.Date.Format "15:04") }}</div>
-				{{ with index ($p.GetTerms "from") 0 }}<div class="org">FROM <a href="{{ .RelPermalink }}">{{ .Title }}</a></div>{{ end }}
-			</div>
-			{{ end }}
-			<h1 class="title">{{ $p.Title }}</h1>
-		</header>
+	<h1 class="title">{{ $p.Title }}</h1>
 
+	<section class="content">
 		{{ $p.Content }}
-		{{ if .telex }}<p class="nnnn">BK</p>{{ end }}
 	</section>
 </article>

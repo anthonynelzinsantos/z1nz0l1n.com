@@ -2,6 +2,8 @@
 title: "Anti-antilibrary"
 date: "2025-10-26T15:00:00.000Z"
 slug: "25w43"
+aliases:
+  - "/d/25w43/"
 feature_image_alt: "A view of the basilica of the Sacred Heart of Paray-le-Monial."
 feature_image_caption: "Paray-le-Monial (France), 2025/10. Image Anthony Nelzin-Santos."
 from:
@@ -9,7 +11,7 @@ from:
   - "paray-le-monial-fr"
 ---
 
-I might have spent more time [reorganizing my library](/d/the-trap-of-the-tbr-pile/) than actually reading this week. I’ve never been a fan of the concept of an [“antilibrary”](https://en.wikipedia.org/wiki/Antilibrary): i can’t afford to keep more unread than read books, i don’t need to be reminded of the limited time i have left to read so many books, and i certainly don’t think the number of books i haven’t read yet is a good measure of my humility and curiosity. It’s a *bourgeois* idea if ever there was one.
+I might have spent more time [reorganizing my library](/the-trap-of-the-tbr-pile/) than actually reading this week. I’ve never been a fan of the concept of an [“antilibrary”](https://en.wikipedia.org/wiki/Antilibrary): i can’t afford to keep more unread than read books, i don’t need to be reminded of the limited time i have left to read so many books, and i certainly don’t think the number of books i haven’t read yet is a good measure of my humility and curiosity. It’s a *bourgeois* idea if ever there was one.
 
 This is why i weed out books, read or not, with merciless ferocity. I want my library to be as small as possible precisely because it’s a tool for research, even if it’s the simple quest for pleasure, and i don’t want to mistake the hammer for the nails. As long as i live and breathe, my library will be a living and breathing thing. The last thing i want is a cemetery for my past or imagined selves.
 

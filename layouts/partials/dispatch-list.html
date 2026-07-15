@@ -1,25 +1,19 @@
 {{ $posts := .posts }}
-{{ $nd := len (where $posts "Section" "dispatches") }}
-{{ $nw := len (where $posts "Section" "wires") }}
-{{ $both := and (gt $nd 0) (gt $nw 0) }}
-{{ $parts := slice }}
-{{ if gt $nd 0 }}{{ $t := printf "%d dispatch%s" $nd (cond (eq $nd 1) "" "es") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` (site.GetPage "/dispatches").RelPermalink $t) $t) }}{{ end }}
-{{ if gt $nw 0 }}{{ $t := printf "%d wire%s" $nw (cond (eq $nw 1) "" "s") }}{{ $parts = $parts | append (cond $both (printf `<a href="%s">%s</a>` (site.GetPage "/wires").RelPermalink $t) $t) }}{{ end }}
-<article class="article post no-image">
+{{ $n := len $posts }}
+<article class="article index">
 	<section class="content">
 		<header class="header">
-			{{ partial "register-head.html" .page }}
 			<h1 class="title">{{ .title }}</h1>
-			<div class="deck">{{ if $parts }}{{ delimit $parts " · " | safeHTML }}{{ else }}Nothing yet{{ end }}</div>
+			<div class="deck">{{ if $n }}{{ printf "%d dispatch%s" $n (cond (eq $n 1) "" "es") }}{{ else }}Nothing yet{{ end }}</div>
 		</header>
 		{{ range $posts.GroupByDate "2006" }}
 		<section class="group">
 			<h2 class="year">{{ .Key }}</h2>
 			{{ range .Pages }}
-				<article class="archive post{{ if eq .Section "wires" }} wire{{ end }}">
-					<h2 style="--hue: {{ partial "hue.html" .Date }}"><a class="boxed" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+				<article class="archive post">
+					<h2 style="--hue: {{ partial "hue.html" .Date }}"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
 					<span class="leader" aria-hidden="true"></span>
-					<time class="date" datetime="{{ .Date.Format "2006-01-02" }}"><span class="kind">{{ if eq .Section "wires" }}W{{ else }}D{{ end }}/</span>{{ .Date.Format "01-02" }}</time>
+					<time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "0102" }}</time>
 				</article>
 			{{ end }}
 		</section>

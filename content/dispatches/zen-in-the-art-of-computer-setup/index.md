@@ -2,6 +2,8 @@
 title: "Zen in the art of computer setup"
 date: "2025-08-15T06:00:00.000Z"
 slug: "zen-in-the-art-of-computer-setup"
+aliases:
+  - "/d/zen-in-the-art-of-computer-setup/"
 feature_image_alt: "The Pierre-Baudis Japanese garden in Toulouse."
 feature_image_caption: "Toulouse (France), 2024/08. Image Anthony Nelzin-Santos."
 from:

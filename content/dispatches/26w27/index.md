@@ -2,6 +2,8 @@
 title: "Disc rot, brain rot"
 date: "2026-07-05T16:30:00.000Z"
 slug: "26w27"
+aliases:
+  - "/d/26w27/"
 feature_image_alt: "Someone taking a picture of a concert with a smartphone. Image Anthony Nelzin-Santos."
 feature_image_caption: "Vienne (France), 2026-07."
 from:

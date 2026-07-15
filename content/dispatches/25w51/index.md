@@ -2,6 +2,8 @@
 title: "A digital typewriter isn’t a smart typewriter"
 date: "2025-12-21T10:00:00.000Z"
 slug: "25w51"
+aliases:
+  - "/d/25w51/"
 feature_image_alt: "The famed typewriter from the Shakespeare and Company bookshop in Paris."
 feature_image_caption: "Paris (France), 2010/04. Image Anthony Nelzin-Santos."
 from:

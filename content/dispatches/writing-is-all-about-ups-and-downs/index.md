@@ -2,6 +2,8 @@
 title: "Writing is all about ups and downs"
 date: "2025-09-29T16:00:00.000Z"
 slug: "writing-is-all-about-ups-and-downs"
+aliases:
+  - "/d/writing-is-all-about-ups-and-downs/"
 from:
   - "lyon-fr"
 ---

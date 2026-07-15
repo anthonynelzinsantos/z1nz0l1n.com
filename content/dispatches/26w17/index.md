@@ -2,6 +2,8 @@
 title: "Knackered by 3 PM"
 date: "2026-04-26T13:00:00.000Z"
 slug: "26w17"
+aliases:
+  - "/d/26w17/"
 feature_image_alt: "A statue of a man sitting on top of a sphere holding a clock. Image Anthony Nelzin-Santos."
 feature_image_caption: "Dijon (France), 2024-02."
 from:
@@ -10,7 +12,7 @@ from:
 
 This week came and went in a blur. I hadn’t realized how much i’d missed being on the creative side of things. Don’t get me wrong — i love managing my team of designers and planning our overall strategy. But i missed being in the thick of it, thinking deep and hard about the tiniest technicality, and being absolutely knackered by 3 PM. I’m thrilled that i still get to do it… and that i still got it!
 
-Speaking of the creative side of things: in [my *People and Blogs* interview](/d/26w14/), i mentioned [*Architypes*](https://archityp.es), my little side project documenting old-school French storefronts. In the few weeks since, it’s garnered more interest than in the 10+ years i’ve been talking about it here in France. Huge thanks to [Cassidy](https://buttondown.com/cassidoo/archive/9-ufe0f-u20e3-there-are-no-mistakes-only/), [Matt](https://webcurios.co.uk/webcurios-10-04-26/), [Marilyn](https://nagonthelake.blogspot.com/2026/04/sunday-links_02085253613.html), [Nicolas](https://thejollyteapot.com/april-2026-blend/), [Chad](https://mister-chad.com/neat+stuff/neat+things+2026/week+15+of+2026) and the others for shining a light on this tiny project of mine.
+Speaking of the creative side of things: in [my *People and Blogs* interview](/26w14/), i mentioned [*Architypes*](https://archityp.es), my little side project documenting old-school French storefronts. In the few weeks since, it’s garnered more interest than in the 10+ years i’ve been talking about it here in France. Huge thanks to [Cassidy](https://buttondown.com/cassidoo/archive/9-ufe0f-u20e3-there-are-no-mistakes-only/), [Matt](https://webcurios.co.uk/webcurios-10-04-26/), [Marilyn](https://nagonthelake.blogspot.com/2026/04/sunday-links_02085253613.html), [Nicolas](https://thejollyteapot.com/april-2026-blend/), [Chad](https://mister-chad.com/neat+stuff/neat+things+2026/week+15+of+2026) and the others for shining a light on this tiny project of mine.
 
 ------------------------------------------------------------------------
 

@@ -2,6 +2,8 @@
 title: "My slightly deranged Moccamaster technique"
 date: "2026-05-17T14:00:46.000Z"
 slug: "26w20"
+aliases:
+  - "/d/26w20/"
 feature_image_alt: "A coffee bean dispenser at a small-scale roaster. Image Anthony Nelzin-Santos"
 feature_image_caption: "Thonon-les-Bains (France), 2023-10."
 from:

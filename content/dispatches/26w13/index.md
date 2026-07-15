@@ -2,6 +2,8 @@
 title: "Letting go"
 date: "2026-03-29T11:00:39.000Z"
 slug: "26w13"
+aliases:
+  - "/d/26w13/"
 feature_image_alt: "A metal chest of drawers. Image Anthony Nelzin-Santos."
 feature_image_caption: "Marseille (France), 2026-02."
 from:

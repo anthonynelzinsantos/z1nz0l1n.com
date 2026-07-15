@@ -2,6 +2,8 @@
 title: "Wibble wobble"
 date: "2025-10-10T07:50:57.000Z"
 slug: "wibble-wobble"
+aliases:
+  - "/d/wibble-wobble/"
 from:
   - "lyon-fr"
 ---

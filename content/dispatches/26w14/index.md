@@ -2,6 +2,8 @@
 title: "Milestones"
 date: "2026-04-05T10:45:00.000Z"
 slug: "26w14"
+aliases:
+  - "/d/26w14/"
 feature_image_alt: "A drawing of an Apple-hearted person. Image Anthony Nelzin-Santos."
 feature_image_caption: "Puteaux (France), 2009-05."
 from:
@@ -28,7 +30,7 @@ I’ve been thoroughly unimpressed by the media coverage of Apple’s fiftieth b
 
 ## Links
 
-I don’t regret [switching careers](/d/tech-journalism-is-dead/) one bit, but i’m sure i’d have enjoyed working on Apple’s fiftieth. Here are a few good articles on the topic:
+I don’t regret [switching careers](/tech-journalism-is-dead/) one bit, but i’m sure i’d have enjoyed working on Apple’s fiftieth. Here are a few good articles on the topic:
 
 - [“How Apple became Apple: The definitive oral history of the company’s earliest days”](https://www.fastcompany.com/91514404/apple-founding-50th-anniversary-apple-1-apple-ii-jobs-wozniak) by Harry McCracken;
 - [“Between Jobs”](https://www.theverge.com/tech/897520/apple-without-steve-jobs-90s) by Jason Snell;

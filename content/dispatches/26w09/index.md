@@ -2,6 +2,8 @@
 title: "Pair programming"
 date: "2026-03-01T11:30:00.000Z"
 slug: "26w09"
+aliases:
+  - "/d/26w09/"
 feature_image_alt: "An electrical shutoff switch and two fire extinguisher handles on the side of an old truck. Image Anthony Nelzin-Santos."
 feature_image_caption: "Chassieu (France), 2011-10."
 from:
@@ -20,7 +22,7 @@ In the end, it took less than six hours to go from idea [to website](https://arc
 
 ## Apps
 
-[**Current**](https://www.terrygodier.com/current)**.** Following up [on last week](/d/26w08/): Terry has been working ’round the clock to squash most bugs. There are still some conceptual oddities and [functional failures](https://forum.terrygodier.com/t/preserving-your-reading-position/121), particularly on the Mac, but it’s getting there.
+[**Current**](https://www.terrygodier.com/current)**.** Following up [on last week](/26w08/): Terry has been working ’round the clock to squash most bugs. There are still some conceptual oddities and [functional failures](https://forum.terrygodier.com/t/preserving-your-reading-position/121), particularly on the Mac, but it’s getting there.
 
 ## Links
 
