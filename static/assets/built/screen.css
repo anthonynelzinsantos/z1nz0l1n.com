@@ -601,7 +601,11 @@ body {
 			}
 
 			sub { font-feature-settings: "sinf"; }
-			sup { font-feature-settings: "sups"; }
+			
+			sup {
+				font-feature-settings: "sups";
+				font-size: 1em;
+			}
 
 			ul,
 			ol {
