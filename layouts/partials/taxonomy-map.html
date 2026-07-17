@@ -1,0 +1,23 @@
+{{ $terms := .Pages.ByTitle }}
+{{ $points := slice }}
+{{ range $terms }}
+	{{ if and .Params.lat .Params.lng }}
+		{{ $points = $points | append (dict "lat" .Params.lat "lng" .Params.lng "title" .Title "url" .RelPermalink "count" (len .Pages)) }}
+	{{ end }}
+{{ end }}
+<article class="article index">
+	<section class="content">
+		{{ if $points }}
+			<div id="map" class="map" role="img" aria-label="Map of every field office {{ site.Title }} has sent dispatches from"></div>
+			<script type="application/json" id="map-data">{{ jsonify $points | safeJS }}</script>
+		{{ end }}
+		{{ range $terms }}
+			{{ $count := len .Pages }}
+			<article class="archive post">
+				<h2><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+				<span class="leader" aria-hidden="true"></span>
+				<span class="count">{{ printf "%d dispatch%s" $count (cond (eq $count 1) "" "es") }}</span>
+			</article>
+		{{ end }}
+	</section>
+</article>

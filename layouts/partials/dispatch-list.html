@@ -1,22 +1,12 @@
-{{ $posts := .posts }}
-{{ $n := len $posts }}
+{{ $posts := . }}
 <article class="article index">
 	<section class="content">
-		<header class="header">
-			<h1 class="title">{{ .title }}</h1>
-			<div class="deck">{{ if $n }}{{ printf "%d dispatch%s" $n (cond (eq $n 1) "" "es") }}{{ else }}Nothing yet{{ end }}</div>
-		</header>
-		{{ range $posts.GroupByDate "2006" }}
-		<section class="group">
-			<h2 class="year">{{ .Key }}</h2>
-			{{ range .Pages }}
-				<article class="archive post">
-					<h2 style="--hue: {{ partial "hue.html" .Date }}"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
-					<span class="leader" aria-hidden="true"></span>
-					<time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "0102" }}</time>
-				</article>
-			{{ end }}
-		</section>
+		{{ range $posts }}
+			<article class="archive post">
+				<h2 style="--hue: {{ partial "hue.html" .Date }}"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+				<span class="leader" aria-hidden="true"></span>
+				<time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+			</article>
 		{{ end }}
 	</section>
 </article>

@@ -121,7 +121,10 @@
 	color:      var(--color-bg);
 }
 
-a {
+/* :not(.leaflet-container *) — Leaflet ships its own chrome (zoom buttons,
+ * attribution, popup close button) styled as plain UI, not prose links; this
+ * stroke-and-flood treatment is for content links and would fight it. */
+a:not(.leaflet-container *) {
 	/* A fineliner stroke rather than an underline: a band of the seasonal hue
 	 * laid under the words, faint enough to read as ink soaking into the page.
 	 * It has to be a gradient and not a background-color, because only an image
@@ -566,7 +569,10 @@ body {
 				margin: var(--space-s) 0;
 			}
 
-			h2 {
+			/* Direct child only: a term listing nests its own h2 inside each
+			 * .archive.post row, and that one takes the nav's row styling
+			 * instead — see .archive below. */
+			> h2 {
 				background:          var(--typewriter-rule);
 				background-position: 0 100%;
 				background-repeat:   no-repeat;
@@ -746,28 +752,12 @@ body {
 
 	}
 
-	/* The index — the archive and the term listings. One full-width column, and
-	 * a table of contents in place of running text. */
+	/* The index — a term listing. One full-width column, and a table of
+	 * contents in place of running text. */
 
 	.article.index {
 		grid-template-areas:   "content";
 		grid-template-columns: 1fr;
-
-		.deck::before { content: "Contents — "; }
-
-		.content .year {
-			background:    none;
-			border-bottom: 1px solid var(--color-muted);
-			color:         var(--color-markup);
-			display:       block;
-			font-weight:   700;
-			margin:        var(--space-xl) 0 var(--space-2xs) 0;
-			padding:       0 0 var(--space-3xs) 0;
-		}
-
-		.content .group:first-of-type .year {
-			margin-top: var(--space-l);
-		}
 	}
 }
 
@@ -826,9 +816,47 @@ body {
 		transform:     translateY(calc(-0.5ch + 1px));
 	}
 
-	.date {
+	.date,
+	.count {
 		color: var(--color-muted);
 		flex:  0 0 auto;
+	}
+}
+
+/* The field-office map: Leaflet needs an explicit height on its container,
+ * and the seasonal ink color doubles as the marker/link tint so it still
+ * reads as part of the same system. */
+.map {
+	background: var(--color-muted);
+	height:     min(60vh, 50ch);
+	margin:     0 0 var(--space-m) 0;
+	width:      100%;
+}
+
+/* The pin ships blue; hue-rotate walks it round to the same seasonal ink as
+ * everything else, off the one custom property that already drives it. */
+.leaflet-marker-icon {
+	filter: hue-rotate(calc((var(--hue) - 208) * 1deg)) saturate(1.5) brightness(0.95);
+}
+
+/* The popup's own dispatch link is content, not chrome, so it gets the
+ * site's ordinary link treatment back — see the a:not(.leaflet-container *)
+ * exclusion above. */
+/* Two classes deep on purpose: Leaflet's own .leaflet-container a { color:
+ * #0078A8 } is just as specific and loads after screen.css, so it would win
+ * any tie. */
+.map .leaflet-popup-content a {
+	background-image:    linear-gradient(var(--color-fineliner) 0 0);
+	background-position: 0 100%;
+	background-repeat:   no-repeat;
+	background-size:     100% 0.45em;
+	color:               var(--color-markup);
+	text-decoration:      none;
+
+	&:hover,
+	&:focus {
+		background: var(--color-hover);
+		color:      var(--color-bg);
 	}
 }
 

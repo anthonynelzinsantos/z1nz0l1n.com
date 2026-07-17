@@ -21,17 +21,23 @@
 {{ $mark := site.Title -}}
 {{ if not .IsHome }}{{ $mark = printf `<a href="%s" title="%s">%s</a>` $home $homeTitle site.Title }}{{ end -}}
 
-{{- /* The banner does double duty: on a dispatch sheet it is that dispatch's
-     own dateline, its location leading back to the term listing; everywhere
-     else it just names the site. The date and the origin carry .typed — the
-     banner is set in the sans face, as a printed form would be, and only the
-     two filled-in values are struck in the typewriter. Built as a string, so
-     escape once on output. */ -}}
+{{- /* The banner does triple duty: on a dispatch sheet it is that dispatch's
+     own dateline, its location leading back to the term listing; on a term
+     listing it counts every dispatch sent from that field office; everywhere
+     else it just names the site. The date, the origin and the count carry
+     .typed — the banner is set in the sans face, as a printed form would be,
+     and only the filled-in values are struck in the typewriter. Built as a
+     string, so escape once on output. */ -}}
 {{ $banner := printf "%s system documentation" $mark -}}
-{{ with $dispatch -}}
-	{{ $from := "" -}}
-	{{ with index (.GetTerms "from") 0 }}{{ $from = printf ` in <a class="typed" href="%s" title="Every dispatch from %s">%s</a>` .RelPermalink .Title .Title }}{{ end -}}
-	{{ $banner = printf `A dispatch sent on <time class="typed" datetime="%s">%s</time> from the %s field office%s` (.Date.Format "2006-01-02") (.Date.Format "2006.01.02") $mark $from -}}
+{{ if eq .Kind "term" -}}
+	{{ $n := len .Pages -}}
+	{{ $banner = printf `<span class="typed">%d</span> dispatch%s sent from the %s field office in <span class="typed">%s</span>` $n (cond (eq $n 1) "" "es") $mark .Title -}}
+{{ else -}}
+	{{ with $dispatch -}}
+		{{ $from := "" -}}
+		{{ with index (.GetTerms "from") 0 }}{{ $from = printf ` in <a class="typed" href="%s" title="Every dispatch from %s">%s</a>` .RelPermalink .Title .Title }}{{ end -}}
+		{{ $banner = printf `A dispatch sent on <time class="typed" datetime="%s">%s</time> from the %s field office%s` (.Date.Format "2006-01-02") (.Date.Format "2006.01.02") $mark $from -}}
+	{{ end -}}
 {{ end -}}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">
@@ -44,6 +50,7 @@
     <link rel="icon" href="/content/images/2026/02/logo.png" type="image/png">
     <link rel="stylesheet" href="/assets/built/screen.css?{{ now.Unix }}">
     <link rel="stylesheet" href="/assets/built/glightbox.min.css">
+    {{ if eq .Kind "taxonomy" }}<link rel="stylesheet" href="/assets/built/leaflet.css">{{ end }}
     <link rel="alternate" type="application/rss+xml" href="{{ "/index.xml" | absURL }}" title="{{ site.Title }}">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -149,5 +156,9 @@
         const hero = GLightbox({ selector: '.hero picture img' });
         const gallery = GLightbox({ loop: true, selector: '.gallery-image img' });
     </script>
+    {{ if eq .Kind "taxonomy" }}
+    <script src="/assets/js/leaflet.js"></script>
+    <script src="/assets/js/map.js?{{ now.Unix }}"></script>
+    {{ end }}
 </body>
 </html>

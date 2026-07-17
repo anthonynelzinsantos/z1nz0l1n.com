@@ -3,7 +3,7 @@ defaultContentLanguage = "en"
 title = "Z1NZ0L1N"
 enableEmoji = true
 enableInlineShortcodes = true
-disableKinds = ["taxonomy", "section"]
+disableKinds = ["section"]
 summaryLength = 40
 timeZone = "Europe/Paris"
 
