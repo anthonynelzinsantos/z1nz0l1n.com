@@ -25,8 +25,7 @@ Options +SymLinksIfOwnerMatch
     Require all denied
 </FilesMatch>
 
-# Block access to common build/config/backup files, including the Ghost
-# export JSON that lives in the project root.
+# Block access to common build/config/backup files.
 <FilesMatch "(?i)\.(bak|backup|swp|swo|tmp|orig|save|old|log|sql|sql\.gz|tar|tar\.gz|zip|rar|7z|toml|yaml|yml|ini|conf|config|json|lock)$">
     Require all denied
 </FilesMatch>
@@ -64,26 +63,7 @@ Options +SymLinksIfOwnerMatch
     Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()"
 
     # ── Content-Security-Policy ───────────────────────────────────────
-    # Tuned for the Lexicon theme. Everything is first-party:
-    #   - All CSS, JS, images, and fonts are same-origin ('self').
-    #   - 'unsafe-inline' IS given for script-src: the theme emits one
-    #     small inline <script> (the GLightbox init). The site is fully
-    #     static with no user-generated content path, so there's no way
-    #     to inject a hostile <script>.
-    #   - 'unsafe-inline' IS given for style-src: the theme leans on
-    #     inline styles — the per-page `--hue` custom property on <html>
-    #     and archive <h2>, the JS-injected typewriter-misprint
-    #     `vertical-align` spans and washi-tape SVG, and Ghost's
-    #     `white-space:pre-wrap` figcaptions. tinylytics.app is also
-    #     allowed in style-src because its embed script loads an EXTERNAL
-    #     stylesheet for its widgets — 'unsafe-inline' does not cover an
-    #     origin-loaded stylesheet, so the origin must be listed too
-    #     (the same reason it appears in script-src/img-src/connect-src).
-    #   - img-src allows data: for the SVG paper/photo grain textures
-    #     embedded in screen.css as data URIs.
-    #   - frame-ancestors 'none' is the modern replacement for
-    #     X-Frame-Options: DENY.
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://tinylytics.app; style-src 'self' 'unsafe-inline' https://tinylytics.app; img-src 'self' data: https://tinylytics.app; font-src 'self'; connect-src 'self' https://tinylytics.app; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://tinylytics.app; style-src 'self' 'unsafe-inline' https://tinylytics.app; img-src 'self' data: https://tinylytics.app https://data.geopf.fr; font-src 'self'; connect-src 'self' https://tinylytics.app; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
 
     # ── Legacy clickjacking header (still useful for old browsers) ────
     Header always set X-Frame-Options "DENY"
@@ -139,14 +119,13 @@ Options +SymLinksIfOwnerMatch
 <IfModule mod_expires.c>
     ExpiresActive On
 
-    # Default: 1 hour. Better than no header for anything we forget.
+    # Default: 1 hour.
     ExpiresDefault                          "access plus 1 hour"
 
-    # HTML pages: short cache + revalidate. You want post edits to
-    # surface quickly.
+    # HTML pages: short cache + revalidate.
     ExpiresByType text/html                 "access plus 5 minutes"
 
-    # Feeds: very short. Subscribers should see new posts promptly.
+    # Feeds: very short.
     ExpiresByType application/rss+xml       "access plus 30 minutes"
     ExpiresByType application/atom+xml      "access plus 30 minutes"
     ExpiresByType application/xml           "access plus 30 minutes"
@@ -154,7 +133,7 @@ Options +SymLinksIfOwnerMatch
     # Sitemap: 1 day is plenty.
     ExpiresByType text/xml                  "access plus 1 day"
 
-    # Images: long. Filenames typically don't change.
+    # Images: long.
     ExpiresByType image/jpeg                "access plus 1 year"
     ExpiresByType image/png                 "access plus 1 year"
     ExpiresByType image/webp                "access plus 1 year"
@@ -162,7 +141,7 @@ Options +SymLinksIfOwnerMatch
     ExpiresByType image/svg+xml             "access plus 1 month"
     ExpiresByType image/x-icon              "access plus 1 year"
 
-    # Fonts: long. Forma / Forma Mono / Rocksalt won't change between deploys.
+    # Fonts: long.
     ExpiresByType font/woff2                "access plus 1 year"
     ExpiresByType font/woff                 "access plus 1 year"
     ExpiresByType font/ttf                  "access plus 1 year"
@@ -192,7 +171,7 @@ Options +SymLinksIfOwnerMatch
 # ═════════════════════════════════════════════════════════════════════
 
 # When you set explicit Cache-Control + Last-Modified, ETag adds noise
-# and behaves badly across multi-server farms. Drop it.
+# and behaves badly across multi-server farms.
 <IfModule mod_headers.c>
     Header unset ETag
 </IfModule>
