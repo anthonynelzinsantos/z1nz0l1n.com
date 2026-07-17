@@ -236,45 +236,6 @@ p {
 	}
 }
 			
-[data-tooltip] {
-	display:     inline-block;
-	position:    relative;
-
-	&::before {
-		border-color: lch(from var(--color-txt) l 10 h / 75%) transparent transparent transparent;
-		border-style: solid;
-		border-width: 5px 5px 0 5px;
-		content:      "";
-		left:         50%;
-		opacity:      0;
-		position:     absolute;
-		top:          -5px;
-		transform:    translateX(-50%);
-	}
-
-	&::after {
-		background:     lch(from var(--color-txt) l 10 h / 75%);
-		border-radius:  1px;
-		color:          var(--color-bg);
-		content:        attr(data-tooltip);
-		left:           50%;
-		opacity:        0;
-		padding:        var(--space-3xs) var(--space-2xs);
-		pointer-events: none;
-		position:       absolute;
-		top:            -5px;
-		transform:      translateX(-50%) translateY(-100%);
-		width:          max-content;
-		z-index:        99;
-	}
-
-	&:hover::before,
-	&:hover::after {
-		opacity:    1;
-		transition: opacity 0.5s ease;
-	}
-}
-
 /* Photographic print — hero, content images and gallery cells */
 
 .photo {
@@ -481,6 +442,17 @@ body {
 	/* The dateline and the origin are the two things typed onto the form. */
 	.typed {
 		font-family: var(--font-typewriter);
+	}
+
+	a {
+		background-image: none;
+		color:             var(--color-markup);
+
+		&:hover,
+		&:focus {
+			background: var(--color-hover);
+			color:      var(--color-bg);
+		}
 	}
 }
 
@@ -918,6 +890,19 @@ body {
 		font-family: var(--font-sans);
 	}
 
+	/* Just the nav menu: .logo and .channels are icon links, and .icon
+	 * already gets its own hover treatment further up. */
+	.navigation a {
+		background-image: none;
+		color:             var(--color-markup);
+
+		&:hover,
+		&:focus {
+			background: var(--color-hover);
+			color:      var(--color-bg);
+		}
+	}
+
 	.logo {
 		align-items:     center;
 		color:           var(--color-markup);
@@ -932,6 +917,11 @@ body {
 			fill:   var(--color-markup);
 			height: var(--space-2xl);
 			width:  var(--space-2xl);
+		}
+
+		.title,
+		.est {
+			color: var(--color-txt);
 		}
 	}
 
