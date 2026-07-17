@@ -771,12 +771,39 @@ body {
 	}
 }
 
+#about,
+#contents,
+#colophon,
+#footer {
+	background-image:    repeating-linear-gradient(to right, transparent 0 0.05ch, currentColor 0.05ch 0.95ch, transparent 0.95ch 1ch);
+	background-position: 0 0;
+	background-repeat:   no-repeat;
+	background-size:     100% 0.15ch;
+	padding:             var(--space-xl) 0 0 0;
+	
+	h1 {
+		column-span: all;
+		font-family: var(--font-sans);
+		font-weight: 800;
+	}
+}
+
+#about .content,
+#colophon .content {
+	columns: 33ch;
+	column-fill: balance;
+	column-gap: var(--space-l);
+	font-family: var(--font-sans);
+	text-align: justify;
+}
+
 .archive {
 	align-items:     baseline;
 	display:         flex;
-	gap:             var(--space-s);
+	gap:             var(--space-xs);
 	justify-content: space-between;
-	padding:         var(--space-2xs) 0;
+	font-family: var(--font-sans);
+	padding:         var(--space-3xs) 0;
 
 	h2 {
 		background:    none;
@@ -788,8 +815,6 @@ body {
 		text-overflow: ellipsis;
 		white-space:   nowrap;
 
-		/* No fineliner in the list: a band under every title in the register
-		 * would read as a solid block of colour. */
 		a {
 			background-image: none;
 		}
@@ -804,33 +829,6 @@ body {
 	.date {
 		color: var(--color-muted);
 		flex:  0 0 auto;
-	}
-}
-
-#about,
-#contents,
-#colophon,
-#footer {
-	color:           var(--color-markup);
-	background-image:    repeating-linear-gradient(to right, transparent 0 0.05ch, currentColor 0.05ch 0.95ch, transparent 0.95ch 1ch);
-	background-position: 0 0;
-	background-repeat:   no-repeat;
-	background-size:     100% 0.15ch;
-	padding:             var(--space-m) 0 0 0;
-}
-
-#about .content,
-#colophon .content {
-	columns: 33ch;
-	column-fill: balance;
-	column-gap: var(--space-l);
-	font-family: var(--font-sans);
-	text-align: justify;
-	
-	& h1 {
-		column-span: all;
-		font-family: var(--font-sans);
-		font-weight: 800;
 	}
 }
 
