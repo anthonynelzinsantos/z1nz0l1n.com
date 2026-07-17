@@ -19,7 +19,7 @@ The operator was born before the *world wide web* was invented, but grew up surr
 
 ## Field office
 
-*Z1NZ0L1N* is hosted by [Infomaniak](https://www.infomaniak.com/goto/fr/home?utm_term=5fd3bff1d1501) near Geneva (CH). The operator is based in [Lyon (FR)](/from/lyon-fr/) but has also sent dispatches from {{< from >}}. He’s made it a goal to visit and write in every country in the European Union (7 down, 20 to go!).
+*Z1NZ0L1N* is hosted by [Infomaniak](https://www.infomaniak.com/goto/fr/home?utm_term=5fd3bff1d1501) near Geneva (CH). The operator is based in [Lyon (FR)](/from/lyon-fr/) but has also sent dispatches [from](/from/) {{< from >}}. He’s made it a goal to visit and write in every country in the European Union (7 down, 20 to go!).
 
 ## Tools
 
