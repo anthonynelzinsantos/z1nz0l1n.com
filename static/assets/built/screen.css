@@ -70,16 +70,6 @@
 	--border-photo:       lch(80% 5 90 / 50%);
 	--color-paper:        lch(96% 5 90);
 
-	/* The paper takes a little of the season. --wash is the whole dial: at 8% the
-	 * year moves the page by ~4/255 and it stays unmistakably cream throughout;
-	 * past ~25% the cream dies in winter, because the seasonal hues (258–338) sit
-	 * almost opposite cream's own (90) and cancel its warmth rather than tint it.
-	 *
-	 * The space must be rectangular. Mixing `in oklch` silently fails here: the
-	 * cream converts to OKLCH with a *missing* hue, and CSS Color 4 fills a
-	 * missing component from the other colour — so the paper would hand its hue
-	 * to the season wholesale at any --wash, 0% included. oklab has no hue
-	 * channel to lose. */
 	--wash:               8%;
 	--color-bg:           color-mix(in oklab, var(--color-paper) calc(100% - var(--wash)), lch(96% 14 var(--hue)) var(--wash));
 	--color-txt:          lch(10% 100 90);
@@ -121,16 +111,7 @@
 	color:      var(--color-bg);
 }
 
-/* :not(.leaflet-container *) — Leaflet ships its own chrome (zoom buttons,
- * attribution, popup close button) styled as plain UI, not prose links; this
- * stroke-and-flood treatment is for content links and would fight it. */
 a:not(.leaflet-container *) {
-	/* A fineliner stroke rather than an underline: a band of the seasonal hue
-	 * laid under the words, faint enough to read as ink soaking into the page.
-	 * It has to be a gradient and not a background-color, because only an image
-	 * can be sized to a fraction of the line box. Hovering still floods the
-	 * whole word with --color-hover, which is why the shorthand is used there:
-	 * it drops this image on its way past. */
 	background-image:    linear-gradient(var(--color-fineliner) 0 0);
 	background-position: 0 100%;
 	background-repeat:   no-repeat;
@@ -158,8 +139,6 @@ a:not(.leaflet-container *) {
 	}
 
 	&.icon {
-		/* An icon is a picture, not a word: the fineliner would stroke the box
-		 * under the glyph. */
 		background-image: none;
 
 		svg {
@@ -207,12 +186,15 @@ figure {
 	border-radius: 1px;
 	margin:        0;
 	padding:       0;
-}
-
-figure img {
-	border-radius: 1px;
-	height:        auto;
-	width:         100%;
+	
+	img {
+		height:        auto;
+		width:         100%;
+	}
+	
+	figcaption {
+		font-size: 0.8em;
+	}
 }
 
 .sans {
@@ -235,9 +217,6 @@ p {
 		margin: 0 0 0 0;
 	}
 }
-			
-/* Photographic print — hero, content images and gallery cells */
-
 .photo {
 	overflow:   visible;
 	position:   relative;
@@ -370,18 +349,12 @@ p {
 
 /* ============================================================== html */
 
-/* The cream surface, grain and all, runs edge to edge across the viewport. */
-
 html {
 	background-color: var(--color-bg);
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
 }
 
 /* ============================================================== body */
-
-/* The banner, the main column and the footer stack down the middle of the page,
- * each 100ch wide, with the gutters as padding. Every bit of text on the site is
- * set at 1em, so a ch is the same width everywhere and the three line up. */
 
 body {
 	align-items:           center;
@@ -424,11 +397,6 @@ body {
 
 /* ============================================================ Header */
 
-/* The face and the size live on .banner, never on #header itself. `ch` is
- * font-relative, so a font-family or a font-size here would re-resolve the
- * max-width: 100ch above against the sans face at 0.8em, and the header would
- * stop hanging with the article. #header stays the body's typewriter at 1em
- * and does nothing but measure; .banner does the talking. Same in #footer. */
 #header {
 	text-align:     center;
 	text-transform: uppercase;
@@ -439,7 +407,6 @@ body {
 		margin:      0;
 	}
 
-	/* The dateline and the origin are the two things typed onto the form. */
 	.typed {
 		font-family: var(--font-typewriter);
 	}
@@ -463,9 +430,6 @@ body {
 		display:               grid;
 		grid-template-columns: 1fr;
 
-		/* The second column carries the footnotes, and nothing else — it stays
-		 * empty on an article that has none, which is what keeps the running
-		 * text off the full 100ch measure that the hero and title still span. */
 		@media screen and (min-width: 768px) {
 			column-gap:            var(--space-l);
 			grid-template-areas:   "hero    hero"
@@ -486,10 +450,6 @@ body {
 
 		.hero {
 			margin: var(--space-m) 0 var(--space-xl) 0;
-
-			figcaption {
-				font-size: 0.8em;
-			}
 		}
 
 		h1 {
@@ -541,9 +501,6 @@ body {
 				margin: var(--space-s) 0;
 			}
 
-			/* Direct child only: a term listing nests its own h2 inside each
-			 * .archive.post row, and that one takes the nav's row styling
-			 * instead — see .archive below. */
 			> h2 {
 				background:          var(--typewriter-rule);
 				background-position: 0 100%;
@@ -670,15 +627,7 @@ body {
 			}
 		}
 
-		/* The notes. article.html splits Hugo's footnote block out of .content so
-		 * it can be a grid item: below 768px it just falls to the foot of the
-		 * article, and above it takes the second column. theme.js then lifts each
-		 * note up level with the reference that calls it — until it does, they
-		 * simply stack at the top of the column, which is why nothing here
-		 * depends on the script having run. */
 		.notes {
-			/* Safe here, unlike on #header or #footer: .notes carries no
-			 * max-width: 100ch for the smaller ch to re-resolve against. */
 			font-size: 0.8em;
 			margin:    var(--space-xl) 0 0 35%;
 			position:  relative;
@@ -687,8 +636,6 @@ body {
 				margin: 0;
 			}
 
-			/* The rule standing in for the <hr> only makes sense where the notes
-			 * follow the text; in the margin, the column already separates them. */
 			.footnotes::before {
 				color:   var(--color-markup);
 				content: "–––––";
@@ -713,8 +660,6 @@ body {
 				p { display: inline; }
 			}
 
-			/* Set only once theme.js has measured the anchors, so a note is never
-			 * torn out of the flow unless something is about to place it. */
 			&.aligned li {
 				left:     0;
 				position: absolute;
@@ -723,9 +668,6 @@ body {
 		}
 
 	}
-
-	/* The index — a term listing. One full-width column, and a table of
-	 * contents in place of running text. */
 
 	.article.index {
 		grid-template-areas:   "content";
@@ -795,28 +737,17 @@ body {
 	}
 }
 
-/* The field-office map: Leaflet needs an explicit height on its container,
- * and the seasonal ink color doubles as the marker/link tint so it still
- * reads as part of the same system. */
 .map {
 	background: var(--color-muted);
-	height:     min(60vh, 50ch);
+	height:     75vh;
 	margin:     0 0 var(--space-m) 0;
 	width:      100%;
 }
 
-/* The pin ships blue; hue-rotate walks it round to the same seasonal ink as
- * everything else, off the one custom property that already drives it. */
 .leaflet-marker-icon {
 	filter: hue-rotate(calc((var(--hue) - 208) * 1deg)) saturate(1.5) brightness(0.95);
 }
 
-/* The popup's own dispatch link is content, not chrome, so it gets the
- * site's ordinary link treatment back — see the a:not(.leaflet-container *)
- * exclusion above. */
-/* Two classes deep on purpose: Leaflet's own .leaflet-container a { color:
- * #0078A8 } is just as specific and loads after screen.css, so it would win
- * any tie. */
 .map .leaflet-popup-content a {
 	background-image:    linear-gradient(var(--color-fineliner) 0 0);
 	background-position: 0 100%;
@@ -883,15 +814,12 @@ body {
 #footer {
 	text-align:          center;
 
-	/* The sans face goes on the children, not on #footer — see #header. */
 	.navigation,
 	.logo,
 	.channels {
 		font-family: var(--font-sans);
 	}
 
-	/* Just the nav menu: .logo and .channels are icon links, and .icon
-	 * already gets its own hover treatment further up. */
 	.navigation a {
 		background-image: none;
 		color:             var(--color-markup);

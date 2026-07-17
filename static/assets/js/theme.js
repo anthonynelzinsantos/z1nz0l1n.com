@@ -1,35 +1,24 @@
 (function () {
   'use strict';
 
-  // Photographic effects: a random twist and the grain/glare sheen on every
-  // print, washi tape on the hero. Every page is set the same way, so this runs
-  // wherever it finds a .photo-print and does nothing where there is none.
-
-  /* ─── Tuning ─────────────────────────────────────────────────────────── */
-
   const WRAPPER_SELECTOR = '.hero';
 
-  // Photo twist
-  const TWIST           = 2;     // max ± degrees
+  const TWIST           = 2;
 
-  // Photo texture (grain + glare streak over the image area)
-  const GRAIN_FREQ_IMG  = 0.65;  // lower = coarser grain on the photo surface
-  const GRAIN_OPACITY   = 0.1;   // how visible the grain is
-  const GLARE_OPACITY   = 0.5;   // peak opacity of the glare streak
+  const GRAIN_FREQ_IMG  = 0.65;
+  const GRAIN_OPACITY   = 0.1;
+  const GLARE_OPACITY   = 0.5;
 
-  // Washi tape
-  const W_RATIO         = 0.25;  // strip length as fraction of print width
-  const H_RATIO         = 0.06;  // strip height as fraction of print width
-  const TOOTH_COUNT     = 12;    // teeth per short end
-  const TOOTH_D_R       = 0.3;   // tooth depth as multiple of tooth height
-  const WOBBLE          = 2;     // max ± rotation wobble per piece (degrees)
-  const LENGTH_VAR      = 0.10;  // ± length variation
-  const W_MIN           = 125;   // minimum strip length in px (keeps tape chunky on small screens)
-  const H_MIN           = 36;    // minimum strip height in px
-  const GRAIN_FREQ_TAPE = 1.8;   // fine grain on the tape itself
-  const GRAIN_SLOPE     = 0.10;  // tape grain opacity
-
-  /* ─── Helpers ────────────────────────────────────────────────────────── */
+  const W_RATIO         = 0.25;
+  const H_RATIO         = 0.06;
+  const TOOTH_COUNT     = 12;
+  const TOOTH_D_R       = 0.3;
+  const WOBBLE          = 2;
+  const LENGTH_VAR      = 0.10;
+  const W_MIN           = 125;
+  const H_MIN           = 36;
+  const GRAIN_FREQ_TAPE = 1.8;
+  const GRAIN_SLOPE     = 0.10;
 
   const ns   = 'http://www.w3.org/2000/svg';
   const rand = (min, max) => min + Math.random() * (max - min);
@@ -40,32 +29,20 @@
     return el;
   }
 
-  /* ─── 1. Random twist ────────────────────────────────────────────────── */
-
   function applyTwist(print) {
     const twist = rand(-TWIST, TWIST);
     print.style.setProperty('--photo-twist', `${twist}deg`);
   }
 
-  /* ─── 2. Photo texture (grain + glare streak) ────────────────────────── */
-  //
-  // A single SVG overlay covering the image area only (.photo-sheen div,
-  // positioned by CSS). Two layers:
-  //   - feTurbulence fractal noise at low opacity → photo paper/film grain
-  //   - diagonal linear gradient → soft glare streak from top-left
-  //
   function addTexture(print) {
     const wrap = document.createElement('div');
     wrap.className = 'photo-sheen';
 
-    // Unique IDs so multiple prints on one page don't clash
     const uid       = Math.random().toString(36).slice(2, 7);
     const glare1Id  = `pg-glare1-${uid}`;
     const glare2Id  = `pg-glare2-${uid}`;
     const filterId  = `pg-filt-${uid}`;
 
-    // Main streak: tight diagonal from top-left, fades to transparent by ~40%
-    // Counter-highlight: very faint glow from bottom-right corner, opposite side
     wrap.innerHTML = `<svg xmlns="${ns}" width="100%" height="100%"
         preserveAspectRatio="none"
         style="position:absolute;top:0;left:0;width:100%;height:100%">
@@ -99,12 +76,9 @@
       <rect width="100%" height="100%" fill="url(#${glare2Id})"/>
     </svg>`;
 
-    // Append to <picture> so the overlay covers only the image, not the figcaption
     const picture = print.querySelector('picture');
     (picture || print).appendChild(wrap);
   }
-
-  /* ─── 3. Washi tape ──────────────────────────────────────────────────── */
 
   function buildStripPath(hw, hh, toothH, toothD) {
     const toothCount = Math.floor((hh * 2) / toothH);
@@ -134,8 +108,6 @@
 
   let _uid = 0;
 
-  // Shared fine-grain filter (greyscale fractal-noise, multiplied) — every
-  // tape, washi or paper, gets the same surface texture.
   function appendGrainFilter(defs, id) {
     const filt = svgEl('filter', {
       id, x: '0%', y: '0%', width: '100%', height: '100%',
@@ -152,9 +124,6 @@
     defs.appendChild(filt);
   }
 
-  // Draw ONE tape piece, W×H, centred at (cx,cy) and rotated `angle`: serrated
-  // short ends (clipPath), grain fill and a hairline border. Shared by the
-  // hero washi tape and the gallery caption paper tape.
   function drawTapePiece(defs, { cx, cy, W, H, angle, color, grainId, opacityJitter }) {
     const toothH = H / TOOTH_COUNT;
     const toothD = toothH * TOOTH_D_R;
@@ -178,7 +147,6 @@
       opacity: opacityJitter ? rand(0.94, 0.99).toFixed(2) : '0.98',
     }));
 
-    // Hairline border to delineate the tape edge
     inner.appendChild(svgEl('rect', {
       x:              -hw,
       y:              -hh,
@@ -216,12 +184,6 @@
 
       if (svg) svg.remove();
 
-      // Tape pieces straddle the top and bottom edges of the print, so each
-      // overhangs the photo box by up to half a strip height. Safari — unlike
-      // Chrome and Firefox — clips content that overflows an outer <svg> once
-      // the element carries a CSS transform (which reposition() applies), so we
-      // grow the SVG box by a strip-height of headroom on each side and draw the
-      // strips inside it rather than relying on `overflow: visible`.
       const pad = Math.max(H_MIN, pw * H_RATIO);
       const vh  = ph + pad * 2;
 
@@ -262,8 +224,6 @@
       const scaleX = pw / svg._buildPW;
       const scaleY = ph / svg._buildPH;
 
-      // The SVG box extends `pad` above the print's top edge; pull it back up so
-      // the strip that straddles the top edge lands in the right place.
       svg.style.width           = `${svg._buildPW}px`;
       svg.style.height          = `${svg._buildPH + pad * 2}px`;
       svg.style.left            = '0';
@@ -295,13 +255,6 @@
     ro.observe(print);
   }
 
-  /* ─── 4. Caption paper tape ──────────────────────────────────────────── */
-  //
-  // Lay the gallery <figcaption> on a torn piece of cream paper tape: the same
-  // serrated/grained SVG as the washi tape, sized to the caption box, drawn
-  // behind the (handwritten) text. Rebuilds on resize / web-font swap, since
-  // either reflows the caption and changes its measured box.
-  //
   function attachCaptionTape(fig, color) {
     fig.style.setProperty('--tape-twist', `${rand(-WOBBLE, WOBBLE)}deg`);
     let svg = null;
@@ -338,16 +291,12 @@
     const tapeColor = getComputedStyle(document.documentElement)
       .getPropertyValue('--color-tape').trim() || 'lch(92% 8 90)';
 
-    // Every photographic print gets a random twist and the grain/glare sheen.
-    // Washi tape is reserved for the hero (WRAPPER_SELECTOR) — putting it on
-    // every content image would be too much.
     document.querySelectorAll('.photo-print').forEach(print => {
       applyTwist(print);
       addTexture(print);
       if (print.closest(WRAPPER_SELECTOR)) attachTape(print, tapeColor);
     });
 
-    // Gallery captions ride on cream paper tape.
     const paperColor = getComputedStyle(document.documentElement)
       .getPropertyValue('--color-tape-paper').trim() || 'lch(93% 10 92)';
     document.querySelectorAll('.gallery.has-caption > figcaption')
@@ -361,10 +310,6 @@
   }
 })();
 
-// Sidenotes: hang each footnote in the margin level with the reference that
-// calls it. article.html has already put the notes in their own column and CSS
-// stacks them at its top; all this adds is the vertical alignment, so if it
-// never runs the notes are still perfectly readable.
 (function () {
   const WIDE = window.matchMedia('(min-width: 768px)');
   const notes = document.querySelector('#main .article .notes');
@@ -373,8 +318,6 @@
   const items = Array.from(notes.querySelectorAll('li'));
   if (!items.length) return;
 
-  // The ids Hugo mints ("fn:1") contain a colon, which querySelector would read
-  // as a pseudo-class — getElementById is the only way in.
   const refFor = li => {
     const back = li.querySelector('.footnote-backref');
     const href = back && back.getAttribute('href');
@@ -390,8 +333,6 @@
 
     notes.classList.add('aligned');
 
-    // Measure with the notes already absolute, so a tall one reports the height
-    // it will actually occupy in the column rather than in the text.
     const box = notes.getBoundingClientRect();
     const gap = parseFloat(getComputedStyle(notes).lineHeight) || 24;
     const placed = items.map(li => {
@@ -403,15 +344,12 @@
       };
     });
 
-    // Down the column: a note may never ride up into the one above it.
     let floor = 0;
     placed.forEach(p => {
       p.top = Math.max(p.want, floor);
       floor = p.top + p.h + gap;
     });
 
-    // Back up it: if that pushed the last note past the foot of the column,
-    // pull the whole stack up so nothing spills into the footer.
     let ceiling = box.height;
     for (let i = placed.length - 1; i >= 0; i--) {
       placed[i].top = Math.min(placed[i].top, ceiling - placed[i].h);
@@ -421,12 +359,6 @@
     placed.forEach(p => { p.li.style.top = Math.max(0, Math.round(p.top)) + 'px'; });
   }
 
-  // The column has to be re-measured whenever the text reflows under it: an
-  // image landing, the webfonts swapping in, the window resizing, the breakpoint
-  // being crossed. These overlap on purpose — align() is idempotent and costs a
-  // handful of rect reads, so it is cheaper to run it twice than to lose a case.
-  // Observing .content can't feed back on itself: the notes sit in the other
-  // column and never contribute to its height.
   const content = document.querySelector('#main .article .content');
   if (content && window.ResizeObserver) new ResizeObserver(align).observe(content);
   WIDE.addEventListener('change', align);

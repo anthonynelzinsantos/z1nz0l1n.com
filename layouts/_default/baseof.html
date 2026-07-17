@@ -1,44 +1,29 @@
-{{- /* $latest — the newest dispatch. Only the home page needs it: it stands on
-     that post for its date and banner. */ -}}
-{{ $latest := false -}}
-{{ if .IsHome }}{{ $latest = partial "latest.html" . }}{{ end -}}
+{{ $latest := false }}
+{{ if .IsHome }}{{ $latest = partial "latest.html" . }}{{ end }}
 
-{{- /* Date driving the seasonal hue: the latest post on the home page, this
-     page's own date elsewhere, or today as a fallback. */ -}}
-{{ $d := now -}}
-{{ if .IsHome }}{{ with $latest }}{{ $d = .Date }}{{ end }}{{ else if not .Date.IsZero }}{{ $d = .Date }}{{ end -}}
-{{ $hue := partial "hue.html" $d -}}
+{{ $d := now }}
+{{ if .IsHome }}{{ with $latest }}{{ $d = .Date }}{{ end }}{{ else if not .Date.IsZero }}{{ $d = .Date }}{{ end }}
+{{ $hue := partial "hue.html" $d }}
 
-{{- /* The dispatch this page shows: itself on a single dispatch, the latest one
-     on the home page, nothing elsewhere. It writes the header banner. */ -}}
-{{ $dispatch := $latest -}}
-{{ if and (eq .Kind "page") (eq .Section "dispatches") }}{{ $dispatch = . }}{{ end -}}
+{{ $dispatch := $latest }}
+{{ if and (eq .Kind "page") (eq .Section "dispatches") }}{{ $dispatch = . }}{{ end }}
 
-{{- /* Z1NZ0L1N opens the home page wherever it stands — in the banner, on the
-     footer logo — except at home, where it is plain text. */ -}}
-{{ $home := "/" | relURL -}}
-{{ $homeTitle := printf "Open %s’s homepage" site.Title -}}
-{{ $mark := site.Title -}}
-{{ if not .IsHome }}{{ $mark = printf `<a href="%s" title="%s">%s</a>` $home $homeTitle site.Title }}{{ end -}}
+{{ $home := "/" | relURL }}
+{{ $homeTitle := printf "Open %s’s homepage" site.Title }}
+{{ $mark := site.Title }}
+{{ if not .IsHome }}{{ $mark = printf `<a href="%s" title="%s">%s</a>` $home $homeTitle site.Title }}{{ end }}
 
-{{- /* The banner does triple duty: on a dispatch sheet it is that dispatch's
-     own dateline, its location leading back to the term listing; on a term
-     listing it counts every dispatch sent from that field office; everywhere
-     else it just names the site. The date, the origin and the count carry
-     .typed — the banner is set in the sans face, as a printed form would be,
-     and only the filled-in values are struck in the typewriter. Built as a
-     string, so escape once on output. */ -}}
-{{ $banner := printf "%s system documentation" $mark -}}
-{{ if eq .Kind "term" -}}
-	{{ $n := len .Pages -}}
-	{{ $banner = printf `<span class="typed">%d</span> dispatch%s sent from the %s field office in <span class="typed">%s</span>` $n (cond (eq $n 1) "" "es") $mark .Title -}}
-{{ else -}}
-	{{ with $dispatch -}}
-		{{ $from := "" -}}
-		{{ with index (.GetTerms "from") 0 }}{{ $from = printf ` in <a class="typed" href="%s" title="Every dispatch from %s">%s</a>` .RelPermalink .Title .Title }}{{ end -}}
-		{{ $banner = printf `A dispatch sent on <time class="typed" datetime="%s">%s</time> from the %s field office%s` (.Date.Format "2006-01-02") (.Date.Format "2006.01.02") $mark $from -}}
-	{{ end -}}
-{{ end -}}
+{{ $banner := printf "%s system documentation" $mark }}
+{{ if eq .Kind "term" }}
+	{{ $n := len .Pages }}
+	{{ $banner = printf `<span class="typed">%d</span> dispatch%s sent from the %s field office in <span class="typed">%s</span>` $n (cond (eq $n 1) "" "es") $mark .Title }}
+{{ else }}
+	{{ with $dispatch }}
+		{{ $from := "" }}
+		{{ with index (.GetTerms "from") 0 }}{{ $from = printf ` in <a class="typed" href="%s" title="Every dispatch from %s">%s</a>` .RelPermalink .Title .Title }}{{ end }}
+		{{ $banner = printf `A dispatch sent on <time class="typed" datetime="%s">%s</time> from the %s field office%s` (.Date.Format "2006-01-02") (.Date.Format "2006.01.02") $mark $from }}
+	{{ end }}
+{{ end }}
 <!DOCTYPE html>
 <html lang="en" style="--hue: {{ $hue }}">
 <head>

@@ -1,5 +1,3 @@
-// The field-office map: only present on the /from/ taxonomy page, so this
-// does nothing wherever it finds no #map.
 (function () {
   'use strict';
 
@@ -12,20 +10,15 @@
 
   const map = L.map(el, { scrollWheelZoom: false });
 
-  // Stadia authenticates production requests by domain (see stadiamaps.com
-  // account dashboard) rather than an API key, so the tile URL needs nothing
-  // beyond the domain itself; localhost works unauthenticated too.
-  L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', {
-    attribution:
-      '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
-      '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
-      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
-    maxZoom: 20,
-    detectRetina: true,
-  }).addTo(map);
+  L.tileLayer(
+    'https://data.geopf.fr/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE=normal&TILEMATRIXSET=PM&FORMAT=image/png&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}',
+    {
+      attribution: '<a href="https://www.geoportail.gouv.fr/" target="_blank">Geoportail France</a>',
+      minZoom: 2,
+      maxZoom: 18,
+    }
+  ).addTo(map);
 
-  // The wheel keeps scrolling the page until the pointer actually rests on
-  // the map, so it doesn't trap the scroll of anyone just passing through.
   el.addEventListener('mouseenter', function () { map.scrollWheelZoom.enable(); });
   el.addEventListener('mouseleave', function () { map.scrollWheelZoom.disable(); });
 

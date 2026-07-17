@@ -1,12 +1,6 @@
 {{ $p := . }}
 {{ $res := $p.Resources.GetMatch "feature.*" }}
 
-{{- /* Hugo hangs the footnotes off the end of .Content. Splitting them out here
-     rather than moving them with JS makes them a real sibling of .content: the
-     grid hands them the empty column on wide screens, and below 768px they fall
-     to the foot of the article by source order alone, with no script involved.
-     If goldmark ever changes this markup the split simply won't fire, and the
-     notes stay where they are — which is the old behaviour, not a break. */ -}}
 {{ $marker := `<div class="footnotes" role="doc-endnotes">` }}
 {{ $body := $p.Content }}
 {{ $notes := "" }}
