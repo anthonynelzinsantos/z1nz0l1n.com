@@ -832,6 +832,52 @@ body {
 	}
 }
 
+.load-more-toggle {
+	position: absolute;
+	width:    1px;
+	height:   1px;
+	overflow: hidden;
+	clip:     rect(0 0 0 0);
+}
+
+.load-more-toggle:checked ~ .archive.post.more { display: flex; }
+.load-more-toggle ~ .archive.post.more         { display: none; }
+
+.load-more,
+.end-of-transmission {
+	color:          var(--color-markup);
+	font-family:    var(--font-sans);
+	margin:         var(--space-m) 0 0 0;
+	text-align:     center;
+}
+
+.load-more {
+	cursor:       pointer;
+	display:      block;
+	margin-left:  auto;
+	margin-right: auto;
+	width:        fit-content;
+
+	&:hover {
+		background: var(--color-hover);
+		color:      var(--color-bg);
+	}
+}
+
+.load-more-toggle:focus-visible ~ .load-more { outline: 2px solid var(--color-muted); }
+
+.load-more-toggle:checked ~ .load-more { display: none; }
+
+.end-of-transmission {
+	color:   var(--color-txt);
+	display: none;
+	margin: var(--space-m) 0 0 0 !important;
+}
+
+.load-more-toggle:checked ~ .end-of-transmission {
+	display: block;	
+}
+
 /* ============================================================ Footer */
 
 #footer {

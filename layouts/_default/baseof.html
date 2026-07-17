@@ -75,15 +75,21 @@
     </aside>
     
     <nav id="contents">
-    	<h1>More dispatches</h1>
+    	<h1>Previous dispatches</h1>
     	{{ $posts := (where site.RegularPages "Section" "dispatches").ByDate.Reverse }}
+		{{ $visible := 25 }}
 		{{ $n := len $posts }}
-		{{ range $posts }}
-			<article class="archive post">
-				<h2 style="--hue: {{ partial "hue.html" .Date }}"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+		{{ range $i, $p := $posts }}
+			{{ if and (gt $n $visible) (eq $i $visible) }}<input type="checkbox" id="load-more" class="load-more-toggle">{{ end }}
+			<article class="archive post{{ if ge $i $visible }} more{{ end }}">
+				<h2 style="--hue: {{ partial "hue.html" $p.Date }}"><a href="{{ $p.RelPermalink }}" title="{{ $p.Title }}">{{ $p.Title }}</a></h2>
 				<span class="leader" aria-hidden="true"></span>
-				<time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+				<time class="date" datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2006.01.02" }}</time>
 			</article>
+		{{ end }}
+		{{ if gt $n $visible }}
+			<label for="load-more" class="load-more">[MORE]</label>
+			<p class="end-of-transmission">[ENDS]</p>
 		{{ end }}
     </nav>
     
