@@ -200,19 +200,6 @@ h1, h2 {
 	text-transform: uppercase;
 }
 
-h1 {
-	background:          var(--typewriter-rule), var(--typewriter-rule);
-	background-position: 0 100%, 0 calc(100% - 0.25ch);
-	background-repeat:   no-repeat;
-	background-size:     100% 0.15ch;
-	color:               var(--color-markup);
-	display:             table;
-	justify-self:        start;
-	padding-bottom:      0.25ch;
-	margin: 0 0 var(--space-s) 0;
-	font-weight: 800;
-}
-
 figure {
 	border-radius: 1px;
 	margin:        0;
@@ -238,6 +225,14 @@ figure img {
 	}
 }
 
+p {
+	margin: 0 0 var(--space-m) 0;
+	
+	&:last-of-type {
+		margin: 0 0 0 0;
+	}
+}
+			
 [data-tooltip] {
 	display:     inline-block;
 	position:    relative;
@@ -522,10 +517,17 @@ body {
 			}
 		}
 
-		.deck {
-			color:          var(--color-muted);
-			margin:         var(--space-2xs) 0 0 0;
-			text-transform: uppercase;
+		h1 {
+			background:          var(--typewriter-rule), var(--typewriter-rule);
+			background-position: 0 100%, 0 calc(100% - 0.25ch);
+			background-repeat:   no-repeat;
+			background-size:     100% 0.15ch;
+			color:               var(--color-markup);
+			display:             table;
+			justify-self:        start;
+			padding-bottom:      0.25ch;
+			margin: 0 0 var(--space-s) 0;
+			font-weight: 800;
 		}
 
 		.content {
@@ -627,14 +629,6 @@ body {
 					color:   var(--color-markup);
 					content: "✲";
 					margin:  0 1ch 0 0;
-				}
-			}
-
-			p {
-				margin: 0 0 var(--space-m) 0;
-				
-				&:last-of-type {
-					margin: 0 0 0 0;
 				}
 			}
 
@@ -823,6 +817,21 @@ body {
 	background-repeat:   no-repeat;
 	background-size:     100% 0.15ch;
 	padding:             var(--space-m) 0 0 0;
+}
+
+#about .content,
+#colophon .content {
+	columns: 33ch;
+	column-fill: balance;
+	column-gap: var(--space-l);
+	font-family: var(--font-sans);
+	text-align: justify;
+	
+	& h1 {
+		column-span: all;
+		font-family: var(--font-sans);
+		font-weight: 800;
+	}
 }
 
 /* ============================================================ Footer */

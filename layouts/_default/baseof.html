@@ -65,9 +65,14 @@
         {{ block "main" . }}{{ end }}
     </main>
     
-    <!--<aside id="about">
-    	
-    </aside>-->
+    <aside id="about">
+    	{{ with site.Home }}
+    		<div class="content">
+    			<h1>{{ .Title }}</h1>
+    			{{ .Content }}
+    		</div>
+		{{ end }}
+    </aside>
     
     <nav id="contents">
     	<h1>More dispatches</h1>

@@ -1,0 +1,12 @@
+{{ $terms := slice }}
+{{ range $term, $_ := .Site.Taxonomies.from }}
+	{{ if ne $term "lyon-fr" }}
+		{{ with $.Site.GetPage (printf "/from/%s" $term) }}
+			{{ $terms = $terms | append . }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+	
+{{ $terms = sort $terms "Title" }}
+{{ $count := len $terms }}
+{{ range $i, $page := $terms }}{{ if gt $i 0 }}{{ if eq $i (sub $count 1) }}{{ if gt $count 2 }}, and {{ else }} and {{ end }}{{ else }}, {{ end }}{{ end }}<a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>{{ end }}
