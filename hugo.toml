@@ -20,9 +20,9 @@ timeZone = "Europe/Paris"
   author = "Anthony Nelzin-Santos"
   authorShort = "Anthony"
   email = "anthony@nelzin.fr"
-  baseHue = 298
+  baseHue = 320
   dynamicColour = true
-  hueAmplitude = 40
+  hueAmplitude = 25
   huePeakDay = 172
 
 [[menu.main]]
