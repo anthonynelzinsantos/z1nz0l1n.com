@@ -25,19 +25,6 @@ timeZone = "Europe/Paris"
   hueAmplitude = 25
   huePeakDay = 172
 
-[[menu.main]]
-  name = "Blogroll"
-  url = "/blogroll/"
-  weight = 1
-[[menu.main]]
-  name = "Contact"
-  url = "mailto:anthony@nelzin.fr?subject=Contact%20from%20Z1NZ0L1N"
-  weight = 2
-[[menu.main]]
-  name = "Styleguide"
-  url = "/styleguide/"
-  weight = 3
-
 [imaging]
   quality = 82
   resampleFilter = "Lanczos"

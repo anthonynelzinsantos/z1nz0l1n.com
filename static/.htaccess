@@ -204,6 +204,7 @@ FileETag None
 
     RewriteRule ^about/?$ / [R=301,L]
     RewriteRule ^archive/?$ / [R=301,L]
+    RewriteRule ^blogroll/?$ / [R=301,L]
     RewriteRule ^colophon/?$ / [R=301,L]
     RewriteRule ^legal/?$ / [R=301,L]
 </IfModule>

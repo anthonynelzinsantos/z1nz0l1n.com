@@ -20,7 +20,7 @@ Anthony Nelzin-Santos is a writer at heart, teacher by instinct, flâneur by hab
 <div>
 <h2>Transmission history</h2>
 
-The operator was born before the *world wide web* was invented, but grew up surrounded by computers. He launched his first website in 2000, started his first blog in 2004, recorded his first podcast in 2005, and uploaded his first video in 2006. He went pro in 2008. In 2025, after years spent transmitting [in French](https://4rch1v3.z1nz0l1n.com/), the frequency switched to English.
+The operator was born before the *world wide web* was invented, but grew up surrounded by computers. He launched his first website in 2000, started his first blog in 2004, recorded his first podcast in 2005, and uploaded his first video in 2006. He went pro in 2008. In 2025, after years spent transmitting [in French](https://4rch1v3.z1nz0l1n.com/), the frequency switched [to English](/styleguide/).
 </div>
 
 <div>

@@ -7,11 +7,13 @@ build:
   list: never
 ---
 
-<div>
 <h2>Tools</h2>
 
 Notebooks: handmade. Ink: purple, one of many. Pen: a fountain pen, often a [Lamy Safari](https://www.lamy.com/en-gb/p/lamy-safari-fountain-pen/), also one of many. Backup: a [Leuchtturm1917 Drehgriffel Nr. 1](https://www.leuchtturm1917.co.uk/pens-and-storage/writing-instruments/drehgriffel-nr-1/) ballpoint, a [Uniball Zento Signature](/26w23/) rollerball, or a [Caran d’Ache 849](https://www.carandache.com/gb/en/849-mechanical-pencil-s-1119.htm) mechanical pencil. Notes when the notebook’s out of reach: [Bloom](https://apps.apple.com/app/bloom-quick-notes/id6443783029). Computer: MacBook Air. Mechanical keyboard: [more](https://www.keychron.com/collections/ergonomic-keyboards/products/keychron-v10-max-qmk-via-wireless-custom-mechanical-keyboard) [than](https://kinesis-ergo.com/keyboards/advantage2-keyboard/) [one](https://www.zsa.io/moonlander). Writing: [Lettera](https://lettera.md/), formerly [Ulysses](https://ulysses.app/). Coding: [BBEdit](https://www.barebones.com/). Proofing: [Antidote](https://www.antidote.info/en/). Publication: [Hugo](https://gohugo.io/).
-</div>
+
+<h2>Blogroll</h2>
+
+Inspirations: [Aegir](https://aegir.org/), [V.H. Belvadi](https://vhbelvadi.com/), [Ian Betteridge](https://www.ianbetteridge.com/), [Mandy Brown](https://aworkinglibrary.com/), [*But she’s a girl…*](https://www.rousette.org.uk/), [Frank Chimero](https://frankchimero.com/), [Simon Collison](https://colly.com/), [Zinzy Waleson Geene](https://www.zinzy.website/), [Josh Ginter](https://thenewsprint.co/), [Chris Glass](https://chrisglass.com/), [Piper Haywood](https://piperhaywood.com/), [Nick Heer](https://pxlnv.com/), [Jon Hicks](https://hicks.design/), [Alan Jacobs](https://blog.ayjay.org/), [Keenan](https://gkeenan.co), [Winnie Lim](https://winnielim.org/), [Tom MacWright](https://macwright.com/), [Louie Mantia](https://lmnt.me/), [Craig Mod](https://craigmod.com/), [Manuel Moreale](https://manuelmoreale.com), [Riccardo Mori](https://morrick.me/), [Anders Norén](https://andersnoren.se/blog/), [*The Pen Addict*](https://www.penaddict.com/), [Kev Quirk](https://kevquirk.com/), [Robin Rendle](https://robinrendle.com/), [Melanie Richards](https://melanie-richards.com/), and [Mateusz Urbanowicz](https://mateuszurbanowicz.com/). Suggestions: [please](mailto:hello@z1nz0l1n.com).
 
 <div>
 <h2>Typography</h2>
