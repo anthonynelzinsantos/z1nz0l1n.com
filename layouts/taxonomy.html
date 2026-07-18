@@ -1,3 +1,4 @@
+{{ define "main" }}
 {{ $terms := .Pages.ByTitle }}
 {{ $points := slice }}
 {{ range $terms }}
@@ -21,3 +22,5 @@
 		{{ end }}
 	</section>
 </article>
+
+{{ end }}

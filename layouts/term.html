@@ -1,7 +1,7 @@
-{{ $posts := . }}
+{{ define "main" }}
 <article class="article index">
 	<section class="content">
-		{{ range $posts }}
+		{{ range .Pages }}
 			<article class="archive post">
 				<h2 style="--hue: {{ partial "hue.html" .Date }}"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
 				<span class="leader" aria-hidden="true"></span>
@@ -10,3 +10,4 @@
 		{{ end }}
 	</section>
 </article>
+{{ end }}
