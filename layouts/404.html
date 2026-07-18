@@ -4,16 +4,24 @@
 		{{ partial "marks.html" }}
 		<div class="photo-print">
 			<picture>
-				<img src="/assets/images/peugeot-404.jpg" alt="The bonnet of a Peugeot 404.">
+				<img src="/assets/images/404.jpg" alt="A partial view of the Chaîne des Puys from Puy de Dôme in Auvergne (France). Image Anthony Nelzin-Santos.">
 			</picture>
-			<figcaption>Image <a href="https://unsplash.com/fr/@hanneskrupinski">Johannes Krupinski</a> (Unsplash).</figcaption>
+			<figcaption>Puy de Dôme (France), 2023-08.</figcaption>
 		</div>
 	</figure>
 
-	<h1 class="title">Error 404 – This page couldn’t be found</h1>
+	<h1 class="title">Error 404 – You’re lost</h1>
 
 	<section class="content">
-		<p>This is most unfortunate. This page might have been removed… or never existed in the first place. You should <a href="{{ "/" | relURL }}">go back to the homepage</a>.</p>
+		<p>This is most unfortunate. Follow these tips:</p>
+		
+		<ul>
+			<li><b>Stay calm.</b> Take a breath, regroup, and assess your situation. Use your head before your legs.</li>
+			<li><b>Retrace your steps.</b> If you’re still on a path, walk back to the last known location. If you’re not or if it’s getting dark, it’s best to seek shelter.</li>
+			<li><b>Signal for help.</b> Outside of cellular or satellite coverage, use a whistle, a mirror, or a powerful flashlight to attract attention.</li>
+		</ul>
+
+		<p>If all hope is lost, you should <a href="{{ "/" | relURL }}">go back to the homepage</a>.</p>
 	</section>
 </article>
 {{ end }}
