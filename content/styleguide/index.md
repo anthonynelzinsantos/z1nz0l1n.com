@@ -24,13 +24,13 @@ I don’t feel the need to capitalize the first-person pronoun.
 
 ## Dashes
 
-I use an en dash:
+I use an en rule:
 
 - to join compound words;
 - to indicate a range between two values;
 - to indicate an association or an opposition between two parties.
 
-I use an em dash:
+I use an em rule:
 
 - to mark a break in a sentence;
 - (sparingly) as an alternative to commas or parentheses.
