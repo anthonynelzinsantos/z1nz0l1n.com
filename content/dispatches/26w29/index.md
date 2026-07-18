@@ -1,6 +1,6 @@
 ---
 title: "The oldest thing i own"
-date: "2026-07-18T12:00:00.000Z"
+date: "2026-07-19T12:00:00.000Z"
 slug: "26w29"
 feature_image_alt: "Paint cracking on a wall. Image Anthony Nelzin-Santos."
 feature_image_caption: "Toulon (France), 2019-02."
