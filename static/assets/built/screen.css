@@ -842,7 +842,6 @@ body {
 		display:         flex;
 		gap:             var(--space-l);
 		justify-content: center;
-		margin:          var(--space-m) 0 0 0;
 		text-transform:  uppercase;
 
 		svg {
