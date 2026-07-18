@@ -699,6 +699,11 @@ body {
 	column-gap: var(--space-l);
 	font-family: var(--font-sans);
 	text-align: justify;
+	
+	div {
+		break-inside: avoid;
+		margin: var(--space-m) 0 0 0;
+	}
 }
 
 .archive {
