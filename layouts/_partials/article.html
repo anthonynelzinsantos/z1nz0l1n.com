@@ -12,18 +12,7 @@
 <article class="article {{ if $res }}post{{ else }}post no-image{{ end }}">
 {{ with $res }}
 	{{ $alt := $p.Title }}{{ with $p.Params.feature_image_alt }}{{ $alt = . }}{{ end }}
-	{{ $srcset := slice }}
-	{{ range (slice 600 900 1200 1800) }}{{ if le . $res.Width }}{{ $srcset = $srcset | append (printf "%s %dw" ($res.Resize (printf "%dx" .)).RelPermalink .) }}{{ end }}{{ end }}
-	{{ $default := $res }}{{ if ge $res.Width 1200 }}{{ $default = $res.Resize "1200x" }}{{ end }}
-	<figure class="photo hero">
-		{{ partial "marks.html" }}
-		<div class="photo-print">
-			<picture>
-				<img src="{{ $default.RelPermalink }}" {{ with $srcset }}srcset="{{ delimit . ", " }}" {{ end }}sizes="(max-width: 1332px) 100vw, 1332px" width="{{ $default.Width }}" height="{{ $default.Height }}" alt="{{ $alt }}">
-			</picture>
-			{{ with $p.Params.feature_image_caption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
-		</div>
-	</figure>
+	{{ partial "hero.html" (dict "res" $res "alt" $alt "caption" $p.Params.feature_image_caption) }}
 {{ end }}
 	<h1 class="title">{{ $p.Title }}</h1>
 

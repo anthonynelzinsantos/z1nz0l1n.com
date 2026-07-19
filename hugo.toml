@@ -29,6 +29,12 @@ timeZone = "Europe/Paris"
   quality = 82
   resampleFilter = "Lanczos"
 
+  [imaging.avif]
+    compression = "lossy"
+    encoderSpeed = 10
+    hint = "photo"
+    quality = 75
+
 [markup.goldmark.renderer]
   unsafe = true
 

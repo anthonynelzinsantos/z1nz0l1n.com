@@ -1,14 +1,8 @@
 {{ define "main" }}
 <article class="article post">
-	<figure class="photo hero">
-		{{ partial "marks.html" }}
-		<div class="photo-print">
-			<picture>
-				<img src="/assets/images/404.jpg" alt="A partial view of the Chaîne des Puys from Puy de Dôme in Auvergne (France). Image Anthony Nelzin-Santos.">
-			</picture>
-			<figcaption>Puy de Dôme (France), 2023-08.</figcaption>
-		</div>
-	</figure>
+	{{ with resources.Get "images/404.jpg" }}
+	{{ partial "hero.html" (dict "res" . "alt" "A partial view of the Chaîne des Puys from Puy de Dôme in Auvergne (France). Image Anthony Nelzin-Santos." "caption" "Puy de Dôme (France), 2023-08.") }}
+	{{ end }}
 
 	<h1 class="title">Error 404 – You’re lost</h1>
 

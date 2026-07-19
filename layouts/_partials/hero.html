@@ -1,0 +1,22 @@
+{{- $res := .res -}}
+{{- $alt := .alt -}}
+{{- $caption := .caption -}}
+{{- $srcset := slice -}}
+{{- $avif := slice -}}
+{{- range (slice 600 900 1200 1800) -}}
+	{{- if le . $res.Width -}}
+		{{- $srcset = $srcset | append (printf "%s %dw" ($res.Resize (printf "%dx" .)).RelPermalink .) -}}
+		{{- $avif = $avif | append (printf "%s %dw" ($res.Resize (printf "%dx avif" .)).RelPermalink .) -}}
+	{{- end -}}
+{{- end -}}
+{{- $default := $res -}}{{- if ge $res.Width 1200 -}}{{- $default = $res.Resize "1200x" -}}{{- end -}}
+<figure class="photo hero">
+	{{ partial "marks.html" }}
+	<div class="photo-print">
+		<picture>
+			{{ with $avif }}<source type="image/avif" srcset="{{ delimit . ", " }}" sizes="(max-width: 1332px) 100vw, 1332px">
+			{{ end }}<img src="{{ $default.RelPermalink }}" {{ with $srcset }}srcset="{{ delimit . ", " }}" {{ end }}sizes="(max-width: 1332px) 100vw, 1332px" width="{{ $default.Width }}" height="{{ $default.Height }}" fetchpriority="high" alt="{{ $alt }}">
+		</picture>
+		{{ with $caption }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
+	</div>
+</figure>

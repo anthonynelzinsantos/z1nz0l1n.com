@@ -4,7 +4,7 @@
 <figure class="photo{{ if .Title }} has-caption{{ end }}">
 	{{ partial "marks.html" }}
 	<div class="photo-print">
-		<picture><img src="{{ $img.RelPermalink }}"{{ with $img.Width }} width="{{ . }}"{{ end }}{{ with $img.Height }} height="{{ . }}"{{ end }} loading="lazy" alt="{{ $alt }}"></picture>
+		<picture><source type="image/avif" srcset="{{ ($img.Resize (printf "%dx avif" $img.Width)).RelPermalink }}"><img src="{{ $img.RelPermalink }}"{{ with $img.Width }} width="{{ . }}"{{ end }}{{ with $img.Height }} height="{{ . }}"{{ end }} loading="lazy" alt="{{ $alt }}"></picture>
 		{{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
 	</div>
 </figure>

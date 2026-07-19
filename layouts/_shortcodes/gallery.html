@@ -6,7 +6,7 @@
 		{{ with $imgs }}
 		{{ $cols := slice }}{{ range . }}{{ $ar := 1.0 }}{{ if and .Width .Height (gt .Height 0) }}{{ $ar = div (float .Width) (float .Height) }}{{ end }}{{ $cols = $cols | append (printf "%.4ffr" $ar) }}{{ end }}
 		<div class="gallery-row{{ if eq (len .) 1 }} gallery-row--single{{ end }}" style="grid-template-columns: {{ delimit $cols " " }}">
-		{{ range . }}<div class="gallery-image photo">{{ partial "marks.html" }}<div class="photo-print"><picture><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt=""></picture></div></div>{{ end }}
+		{{ range . }}<div class="gallery-image photo">{{ partial "marks.html" }}<div class="photo-print"><picture><source type="image/avif" srcset="{{ (.Resize (printf "%dx avif" .Width)).RelPermalink }}"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt=""></picture></div></div>{{ end }}
 		</div>
 		{{ end }}
 	{{ end }}
