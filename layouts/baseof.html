@@ -20,8 +20,21 @@
 {{ else }}
 	{{ with $dispatch }}
 		{{ $from := "" }}
-		{{ with index (.GetTerms "from") 0 }}{{ $from = printf ` in <a class="typed" href="%s" title="Every dispatch from %s">%s</a>` .RelPermalink .Title .Title }}{{ end }}
-		{{ $banner = printf `A dispatch sent on <time class="typed" datetime="%s">%s</time> from the %s field office%s` (.Date.Format "2006-01-02") (.Date.Format "2006.01.02") $mark $from }}
+		{{ $terms := .GetTerms "from" }}
+		{{ $n := len $terms }}
+		{{ if gt $n 0 }}
+			{{ $links := slice }}
+			{{ range $terms }}
+				{{ $links = $links | append (printf `<a href="%s" title="Every dispatch from %s">%s</a>` .RelPermalink .Title .Title) }}
+			{{ end }}
+			{{ $joined := index $links 0 }}
+			{{ if gt $n 1 }}
+				{{ $joined = printf "%s&nbsp;&&nbsp;%s" (delimit (first (sub $n 1) $links) ", ") (index $links (sub $n 1)) }}
+			{{ end }}
+			{{ $from = printf ` in <span class="typed">%s</span>` $joined }}
+		{{ end }}
+		{{ $office := cond (gt $n 1) "offices" "office" }}
+		{{ $banner = printf `A dispatch sent on <time class="typed" datetime="%s">%s</time> from the %s field %s%s` (.Date.Format "2006-01-02") (.Date.Format "2006.01.02") $mark $office $from }}
 	{{ end }}
 {{ end }}
 <!DOCTYPE html>
