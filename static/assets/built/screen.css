@@ -785,10 +785,14 @@ body {
 
 .map {
 	background: var(--color-muted);
-	height:     75vh;
+	height:     50vh;
 	position:   relative;
 	width:      100%;
 	z-index:    0;
+
+	@media screen and (min-width: 768px) {
+		height: 75vh;
+	}
 }
 
 .leaflet-marker-icon {
