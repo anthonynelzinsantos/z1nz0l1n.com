@@ -34,4 +34,4 @@ A few years later, the Italian manufacturer had already begun outsourcing produc
 
 ## Words
 
-**Mendacity.** It’s been a long time since i’ve learned a new word. “Mendacity” is *“the quality of being untruthful”,* which, unfortunately, is very much in the air these days.
+**Mendacity.** It’s been a long time since i’ve learned a new word. *Mendacity* is *“the quality of being untruthful”,* which, unfortunately, is very much in the air these days.

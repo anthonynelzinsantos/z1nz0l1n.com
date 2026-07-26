@@ -24,7 +24,7 @@ how-i-restored-a-sewing-machine-by-accident-2.jpg
 how-i-restored-a-sewing-machine-by-accident-3.jpg
 {{< /gallery >}}
 
-In between coats, i polished all the chrome parts. First i used sandpaper with progressively finer grit, then ro*uge* on a buffing wheel, and finally automotive polish on a cloth. It was hard work, but it paid off, particularly on the front plate’s beautiful scrollwork. I even managed to remove the chatter marks on the screw heads! A 102-year-old machine will never look brand new, but i don’t think it’s been that clean in decades.
+In between coats, i polished all the chrome parts. First i used sandpaper with progressively finer grit, then [*rouge*](https://en.wikipedia.org/wiki/Iron(III)_oxide#Polishing) on a buffing wheel, and finally automotive polish on a cloth. It was hard work, but it paid off, particularly on the front plate’s beautiful scrollwork. I even managed to remove the chatter marks on the screw heads! A 102-year-old machine will never look brand new, but i don’t think it’s been that clean in decades.
 
 I lightly oiled the screw threads and the oiling points — and i mean *lightly*. You should never use more than a drop of oil, and even that might be too much. [To paraphrase Noël Coward](https://www.theguardian.com/lifeandstyle/2015/jun/05/martini-shaken-not-stirred-empire-of-drinks), it should be enough to wave your oilcan in the general direction of the machine. It’s because people drench their machines in oil (or worse, grease) that they end up seizing them up with a gunky mess of slimy dust.
 

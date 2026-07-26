@@ -47,11 +47,11 @@ The [MAS](https://github.com/mas-cli/mas#known-issues) command-line interface wi
 
 It will also install a few Safari extensions:
 
-- [Antidote](https://www.antidote.info/en/)’s connector, for your favourite proofreading tool (that you’ll have to install manually)
+- [Antidote](https://www.antidote.info/en/)’s connector, for your favourite proofreading tool (that you’ll have to install manually);
 - [1Blocker](https://apps.apple.com/fr/app/1blocker-ad-blocker/id1365531024?l=en-GB), the web is better without ads and trackers;
 - [Kagi](https://apps.apple.com/fr/app/kagi-for-safari/id1622835804?l=en-GB), search is better without ads and trackers;
 - [StopTheMadness Pro](https://apps.apple.com/fr/app/stopthemadness-pro/id6471380298?l=en-GB), the web *really* is better without ads and trackers.
 
 If you want to type in multiple languages with a single keyboard, you’ll want to install [my QWeuRTY keyboard layout](https://github.com/anthonynelzinsantos/QWeuRTY). If you’re feeling nostalgic, you’ll want to download [the Aqueux wallpapers](https://hector.me/aqueux). With that, you’re all set!
 
-*This is the second revision of this post, which was originally published on 08/02/25.*
+*This is the second revision of this post, which was originally published on 2025.02.08.*

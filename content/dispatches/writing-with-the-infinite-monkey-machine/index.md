@@ -28,20 +28,17 @@ Writing using a machine is not the same as letting the machine write in your pla
 
 The fact is that LLMs separate the material from the materials, the production from the practice, the creation from the creator. They squash the wonderful duality of the [*technè*](https://en.wikipedia.org/wiki/Techne), the practical application of knowledge and knowledge of practical application that artists and artisans share. Almost nobody knows *how* LLMs work and nobody knows *why* they work. This is unprecedented.
 
-The separation — i hesitate to use the word ‘severance’ — is what it’s all about or, more precisely, what it’s not about. The post isn’t bad, but it’s anodyne, which is way worse. So, yeah, without even having to talk about their social and ecological costs, it’s clear that LLMs aren’t for me. I’m still intrigued by Ive and Altman’s super-secret not-an-iPhone-killer device, though.
+The separation — i hesitate to use the word *severance* — is what it’s all about or, more precisely, what it’s not about. The post isn’t bad, but it’s anodyne, which is way worse. So, yeah, without even having to talk about their social and ecological costs, it’s clear that LLMs aren’t for me. I’m still intrigued by Ive and Altman’s super-secret not-an-iPhone-killer device, though.
 
-------------------------------------------------------------------------
+---
 
 > Humans have no universal faculty to judge aesthetics: Our appreciation of beauty is highly-contextual and depends on factors other than the raw visual stimulus. Most tech-workers are unaware of this fact, and for them, the fact that AI-art resembles human-art means it must be pretty damn good. But AI art is already in very poor taste: not just because it recycles existing conventions in a way that looks outmoded, but because it’s already overly associated with less-than-prestigious institutions. GenAI art has already reached polyester status, and this is just the beginning. Despite all the techno-utopian promises, our brains see it as ersatz.  
 >   
 > Of course, GenAI is much worse for society than polyester. Synthetic fibers were bad for the environment, but so was the famously diabolical cotton industry. GenAI will first wreck the labor market for design professionals. But moreover, the tools are already being used to undermine the entire information structure of society in assisting the creation of disinformation that looks identical to reality. This, too, will damage its status value. Who wants to wear a T-shirt designed by the same software that powers the fake imagery used in authoritarian propaganda?  
 >   
-> — W. David Marx, [“GenAI is Our Polyester”](https://culture.ghost.io/genai-is-our-polyester/), *CULTURE: An Owner’s Manual*, 03/06/25.  
->   
->   
->   
+> — W. David Marx, [“GenAI is Our Polyester”](https://culture.ghost.io/genai-is-our-polyester/), *CULTURE: An Owner’s Manual*, 03/06/25.
 
-------------------------------------------------------------------------
+---
 
 That being said, i still long for a better use of applied stats. LLMs are to the future of computing what CLIs are to the present of computing. They won’t disappear anytime soon as an underlying technology, but they need to disappear from the public consciousness. I don’t want to keep on rambling about the [Knowledge Navigator](https://en.wikipedia.org/wiki/Knowledge_Navigator), but we need graphical interfaces for artificial intelligence. Better yet, we need artificial intelligence for graphical interfaces, because i really shouldn’t be sorting my files in 2025 the same way i did in 1995.
 

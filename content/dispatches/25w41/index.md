@@ -14,7 +14,7 @@ Much to my surprise, it took only [a week and a bit](/25w40/) for the fog of des
 
 ## Apps
 
-[**How We Feel**](https://howwefeel.org)**.** I’m better at “feeling my feelings” and managing my anxiety, but i still need a check-in system to keep me grounded. Instead of relying on cursors or icons, How We Feel allows to drill down from four broad quadrants (high/low energy and pleasant/unpleasant feeling) to 36 specific emotions. It might seem like a lot, but each emotion is carefully described, which makes it easier to pinpoint. I’ve set up random notifications throughout the day as a throwback to Nicholas Felton’s lamented [Reporter](http://feltron.com/Reporter.html).
+[**How We Feel**](https://howwefeel.org)**.** I’m better at “feeling my feelings” and managing my anxiety, but i still need a check-in system to keep me grounded. Instead of relying on cursors or icons, How We Feel allows to drill down from four broad quadrants (high/low energy and pleasant/unpleasant feeling) to thirty-six specific emotions. It might seem like a lot, but each emotion is carefully described, which makes it easier to pinpoint. I’ve set up random notifications throughout the day as a throwback to Nicholas Felton’s lamented [Reporter](http://feltron.com/Reporter.html).
 
 ## Books
 

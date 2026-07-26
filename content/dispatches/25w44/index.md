@@ -46,14 +46,14 @@ The [Grand Curtius](https://en.wikipedia.org/wiki/Curtius_Museum) museum is almo
 
 You’ll be able to order the famous [*boulet à la liégeoise*](https://en.wikipedia.org/wiki/Boulets_à_la_Liégeoise) at [the museum restaurant](https://www.provincedeliege.be/fr/node/90), a quirky space built with materials from old furniture and run as a social economy project. [Saperlipopette](https://une-gaufrette-saperlipopette.be/) has the best waffles in town, but even the worst ones are miles better than the industrial travesties you’ll find elsewhere. [Messieurs](https://www.messieurs.eu) only serves croque-monsieurs, <a href="https://www.galler.com/en/stores/galler-liege/" rel="noreferrer">Galler</a> sells delicious chocolates, and [Le Mog](https://mog-coffee.be) makes a damn good coffee.
 
-**Aachen (Germany).** Aachen is famous for its cathedral, built as the royal chapel of Charlemagne’s palace, and its [*Printen*](https://en.wikipedia.org/wiki/Aachener_Printen), little gingerbread biscuits that i eat by the dozen. It might be “the cradle of Europe”, but it’s a German city above all. Karolus is as much Karl der Große as it is Charlemagne, but there are no francophone guides at the cathedral nor information in French at the Centre Charlemagne. It’s not like the border of the French-speaking part of Belgium was only five kilometres away…
+**Aachen (Germany).** Aachen is famous for its cathedral, built as the royal chapel of Charlemagne’s palace, and its [*Printen*](https://en.wikipedia.org/wiki/Aachener_Printen), little gingerbread biscuits that i eat by the dozen. It might be “the cradle of Europe”, but it’s a German city above all. Karolus is as much *Karl der Große* as he is *Charlemagne*, but there are no francophone guides at the cathedral nor information in French at the Centre Charlemagne. It’s not like the border of the French-speaking part of Belgium was only five kilometres away…
 
 ![](25W44-4.jpg "Aachen (Germany), 2025/11. Images Anthony Nelzin-Santos.")
 
 ## TV shows
 
-***The Diplomat* S3 by Debora Cahn.** *The Office* meets *The West Wing,* without the humour of the former and the brilliance of the latter.
+***The Diplomat* S3 by Debora Cahn.** *The Office* meets *The West Wing*, without the humour of the former and the brilliance of the latter.
 
 ***Slow Horses* S5 by Will Smith.** Gary Oldman carried this fairly predictable season on the back of his immense acting skills, but what made *Slow Horses* great was the strength of its ensemble cast. Let’s hope the sixth season will be a return to form.
 
-[^1]: For a total of 109 kg of CO₂eq emissions, roughly the same as 1 000 km in an average car. Electrification can’t go fast enough.
+[^1]: For a total of 109 kg of CO₂eq emissions, roughly the same as 1,000 km in an average car. Electrification can’t go fast enough.

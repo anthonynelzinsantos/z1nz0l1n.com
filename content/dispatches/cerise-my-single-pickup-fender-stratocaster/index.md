@@ -19,8 +19,8 @@ But first, i had to remember what i actually wanted to do. I’d bought two [CTS
 The TBX tone control is essentially two potentiometers stacked on top of each other, creating a unique tonal palette:
 
 - from position 0 to 5, it cuts the treble using the 250 kΩ pot and a 2200 pF capacitor;
-- on the center detent, it’s (almost) out of the circuit and lets the pickup’s natural voicing come through;
-- from position 5 to 10, it cuts the bass using the 500 kΩ pot and a 82 kΩ resistor.
+- on the centre detent, it’s (almost) out of the circuit and lets the pickup’s natural voicing come through;
+- from position 5 to 10, it cuts the bass using the 500 kΩ pot and an 82 kΩ resistor.
 
 In other words: it allows you to go from jazz comping tones to blues soloing sounds in one fell swoop.
 

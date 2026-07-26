@@ -18,7 +18,7 @@ I know this is par for the course, but i can’t bring myself to consider people
 
 Here are some links for your consideration:
 
-- [“Input diet”](https://manuelmoreale.com/thoughts/input-diet) and [“Following up on input diet](https://manuelmoreale.com/thoughts/following-up-on-input-diet)” by Manuel Moreale
+- [“Input diet”](https://manuelmoreale.com/thoughts/input-diet) and [“Following up on input diet”](https://manuelmoreale.com/thoughts/following-up-on-input-diet) by Manuel Moreale
 - [“A case for tolerating the uninteresting”](https://vhbelvadi.com/attention-economics) by V.H. Belvaldi
 
 ## Movies

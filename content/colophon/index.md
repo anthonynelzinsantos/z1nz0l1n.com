@@ -24,11 +24,11 @@ Printed template: [OH no Vulf Sans](https://ohnotype.co/fonts/vulf). Typewritten
 <div>
 <h2>Energy</h2>
 
-Hosting: [entirely powered by renewable energy](https://www.infomaniak.com/goto/fr/home). Page weight: less than 350 KB on average, nine times less than [the median webpage](https://httparchive.org/reports/page-weight). Emissions: less than 2 kg of C0<sub>2</sub>eq per year.
+Hosting: [entirely powered by renewable energy](https://www.infomaniak.com/goto/fr/home). Page weight: less than 350 KB on average, nine times less than [the median webpage](https://httparchive.org/reports/page-weight). Emissions: less than 2 kg of CO<sub>2</sub>eq per year.
 </div>
 
 <div>
 <h2>Legal</h2>
 
-License: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en). GDPR-compliant and cookie-free analytics: collected by [Tinylytics](https://tinylytics.app/). ISSN: [2970-135X](https://portal.issn.org/resource/ISSN/2970-135X).
+Licence: [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en). GDPR-compliant and cookie-free analytics: collected by [Tinylytics](https://tinylytics.app/). ISSN: [2970-135X](https://portal.issn.org/resource/ISSN/2970-135X).
 </div>

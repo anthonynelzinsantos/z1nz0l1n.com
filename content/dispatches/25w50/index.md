@@ -18,7 +18,7 @@ Nothing else to say than: “wish me good luck for next week”. See you on the 
 
 I was disappointed by *Terra Alta*, Cercas’s foray into crime fiction, because its characters were somewhat cartoonish. The Spanish writer is a master at exploring kaleidoscopic characters, such as Enric Marco (a Civil War hero who turned out to be a fabulist) and Manuel Mena (a martyr who died for the wrong cause). Pope Francis, a cassocked contradiction on legs, is the perfect subject for him.
 
-You need people to build a church and people are at the core of the book — a hippie priest sent to China, a “pornocardinal” who likes erotic poems, a temperamental Pope, recent converts who believe in their fellow believers more than they believe in God… The answer to the afterlife question might well be the least interesting thing in *God’s madman at the end of the world*. That said, the end might make you teary-eyed…
+You need people to build a church and people are at the core of the book — a hippie priest sent to China, a “pornocardinal” who likes erotic poems, a temperamental Pope, recent converts who believe in their fellow believers more than they believe in God… The answer to the afterlife question might well be the least interesting thing in *God’s Madman at the End of the World*. That said, the end might make you teary-eyed…
 
 ## Movies
 

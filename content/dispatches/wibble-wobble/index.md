@@ -18,6 +18,5 @@ You need a frame of reference to appreciate art, you need to know where you stan
 
 (By the way, *“no one definitive version”* is pretty much the same thing as *“you’ll own nothing”*. You can’t buy a copy of [the *Eno* generative documentary](https://www.hustwit.com/eno), for example, you can only rent a screening. Brian Eno might think of himself as one of the most progressive people ever to grace our pale blue dot, but this is the most late-stage capitalism bullshit ever.)
 
-[^1]: The use of the term ‘AI art’ might be my only gripe with Mathew Inman’s [superb piece](https://theoatmeal.com/comics/ai_art) on the subject.
-
+[^1]: The use of the term *AI art* might be my only gripe with Mathew Inman’s [superb piece](https://theoatmeal.com/comics/ai_art) on the subject.
 [^2]: Ask any politician. Or Anish Kapoor.

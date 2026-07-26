@@ -4,7 +4,7 @@ date: "2026-02-15T11:00:06.000Z"
 slug: "26w07"
 aliases:
   - "/d/26w07/"
-feature_image_alt: "A mural of an office worker juggling a compter, a briefcase, and a stack of papers. Image Anthony Nelzin-Santos."
+feature_image_alt: "A mural of an office worker juggling a computer, a briefcase, and a stack of papers. Image Anthony Nelzin-Santos."
 feature_image_caption: "Reims (France), 2025-08."
 from:
   - "marseille-fr"
@@ -22,11 +22,11 @@ It didn’t take that many interviews before i realized that people who are cont
 
 *This is my entry for this month’s* [*IndieWeb Carnival*](https://indieweb.org/IndieWeb_Carnival)*, hosted by* [*Zachary Kai*](https://zacharykai.net/)*, on the topic of* [*“Intersecting Interests”*](https://zacharykai.net/notes/icfeb26)*.*
 
-------------------------------------------------------------------------
+---
 
 ## Links
 
-<a href="https://www.prndlcars.com/p/what-they-copied-ferrari-luce-jony-ive" rel="noreferrer"><strong><em>“What They Copied”</em></strong></a> **by Jordan Golson.** I don’t miss the mythos of Jony Ive, but i dearly miss experiencing the outcome of his thought process. Apple’s success has less to do with aesthetics than it has to do with processes, even — and maybe more so —  when it comes to design. *“What would be lovely would be for the thinking to be talked about”*, Ive said during the introduction of the Ferrari Luce’s interior, *“not the shapes.”* The shapes matter insofar as they embody the thinking:
+**[“What They Copied”](https://www.prndlcars.com/p/what-they-copied-ferrari-luce-jony-ive) by Jordan Golson.** I don’t miss the mythos of Jony Ive, but i dearly miss experiencing the outcome of his thought process. Apple’s success has less to do with aesthetics than it has to do with processes, even — and maybe more so —  when it comes to design. *“What would be lovely would be for the thinking to be talked about”*, Ive said during the introduction of the Ferrari Luce’s interior, *“not the shapes.”* The shapes matter insofar as they embody the thinking:
 
 > He made the iPhone, and an entire industry looked at it and learned the wrong thing. Not the wrong lesson — the wrong thing. The lesson was: ask what problem you’re solving, then build the solution that solves it. What they took was: put a touchscreen in the dashboard. And people are dying for it. Now he’s trying again, putting the thinking directly into a car, in a context where you can’t miss it — physical controls, dedicated buttons, a palm rest so your hand knows where it is while your eyes stay on the road. He’d make this car whether anyone in the industry learned from it or not. That’s the job: to make the beautiful thing. And to Ive, beauty and function are the same word. But, in both his words and his design, you can hear him pleading — wistfully, almost to himself — for someone, anyone, to look past the aluminum and the glass and see why.
 
