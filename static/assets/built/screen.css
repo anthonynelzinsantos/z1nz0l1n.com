@@ -514,7 +514,7 @@ body {
 
 			hr {
 				border:     none;
-				padding:    var(--space-l) 0 0 0;
+				padding:    var(--space-m) 0 var(--space-l) 0;
 				text-align: center;
 
 				&::after {

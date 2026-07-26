@@ -10,7 +10,7 @@ from:
   - "lyon-fr"
 ---
 
-A few snowflakes are enough to transform not only the city, but also its inhabitants. People have to look up from their damn screens, walk a bit slower, and awkwardly smile at each other while they navigate the slippery pavement. Drivers remain as much a menace as ever, but at least their ugly hunks of rolling metal are suddenly useful as snow-collecting devices for kids of all ages. (Nothing brings me more joy than watching arthritic grannies trounce raucous teens in a snow fight.) In the evening, even the most brutalist buildings look like glowing Advent calendars – what mysteries lurk behind their doors? Unfortunately, this wonderful interlude only lasts a few hours nowadays. That’s all the more reason to enjoy it while it lasts.
+A few snowflakes are enough to transform not only the city, but also its inhabitants. People have to look up from their damn screens, walk a bit slower, and awkwardly smile at each other while they navigate the slippery pavement. Drivers remain as much a menace as ever, but at least their ugly hunks of rolling metal are suddenly useful as snow-collecting devices for kids of all ages. (Nothing brings me more joy than watching arthritic grannies trounce raucous teens in a snow fight.) In the evening, even the most brutalist buildings look like glowing Advent calendars — what mysteries lurk behind their doors? Unfortunately, this wonderful interlude only lasts a few hours nowadays. That’s all the more reason to enjoy it while it lasts.
 
 ------------------------------------------------------------------------
 

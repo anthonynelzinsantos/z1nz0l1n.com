@@ -32,5 +32,5 @@ The operator was born before the *world wide web* was invented, but grew up surr
 <div>
 <h2>Funding</h2>
 
-*Z1NZ0L1N* is proudly ad-free. The operator covers hosting and the domain name – roughly €120 a year – out of pocket. The best way to support his efforts is to [subscribe to the RSS feed](/feed) and share your favourite dispatches with your friends. That being said, if you ever feel like sending one, [a cup of coffee](https://ko-fi.com/z1nz0l1n/) is always welcome.
+*Z1NZ0L1N* is proudly ad-free. The operator covers hosting and the domain name — roughly €120 a year — out of pocket. The best way to support his efforts is to [subscribe to the RSS feed](/feed) and share your favourite dispatches with your friends. That being said, if you ever feel like sending one, [a cup of coffee](https://ko-fi.com/z1nz0l1n/) is always welcome.
 </div>

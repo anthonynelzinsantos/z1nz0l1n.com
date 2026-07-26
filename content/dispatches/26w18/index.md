@@ -10,7 +10,7 @@ from:
   - "lyon-fr"
 ---
 
-A few months into my new role, the biggest change has nothing to do with the job itself. It’s that i can’t listen to music while working. Even though most of my team works remotely, i work a few days a week with some of my colleagues – and, most importantly, my boss – in a semi-open-plan office space. I can’t disappear into my lovely [Beyerdynamic DT 770 Pro](https://global.beyerdynamic.com/p/dt-770-pro) without coming off as a bit antisocial.
+A few months into my new role, the biggest change has nothing to do with the job itself. It’s that i can’t listen to music while working. Even though most of my team works remotely, i work a few days a week with some of my colleagues — and, most importantly, my boss — in a semi-open-plan office space. I can’t disappear into my lovely [Beyerdynamic DT 770 Pro](https://global.beyerdynamic.com/p/dt-770-pro) without coming off as a bit antisocial.
 
 Most people around the office use [Shokz OpenRun](https://shokz.com/pages/openrunpro2) headsets, but i’ve never liked bone-conduction headphones. It so happens that open-ear earbuds are now a thing. After trying a few models, i’ve settled on the [Shokz OpenDots One](https://shokz.com/pages/opendots-one), which offer the best compromise between sound quality, comfort, style, battery life, and price.
 

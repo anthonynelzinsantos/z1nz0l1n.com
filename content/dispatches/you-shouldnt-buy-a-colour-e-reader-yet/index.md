@@ -24,7 +24,7 @@ Gallery fixes that issue by using cyan, magenta and yellow pigments in combinati
 
 [ReMarkable](https://remarkable.com) is the only company that has managed to make Gallery work in a consumer product. To make it appear faster than it really is, though, they use a two-step display process. Everything appears first in black, or the dark blue that passes as black on Gallery displays, before being slowly rendered in colour. It’s as clever as it is infuriating.
 
-That’s why pretty much everyone else still uses one flavour of Kaleido or the other. Amazon uses a lot of tricks to make their implementation slightly better than the competition, but in the end, the main problem isn’t display technology – it’s the whole concept of a colour e-reader. If you mostly read fiction, and we know it’s the main use of an e-reader, colour is next to useless.
+That’s why pretty much everyone else still uses one flavour of Kaleido or the other. Amazon uses a lot of tricks to make their implementation slightly better than the competition, but in the end, the main problem isn’t display technology — it’s the whole concept of a colour e-reader. If you mostly read fiction, and we know it’s the main use of an e-reader, colour is next to useless.
 
 Devices in the 6 to 8″ range are perfect for reading mangas… but they’re mainly black-and-white. Comics are more colourful, but you’ll want a 10 to 12″ device for those. The new Kindle Scribe Colorsoft might be a great device with its 11″ enhanced Kaleido display, but at \$629.99, it’s squarely in iPad territory. And an iPad won’t suffer from poor colour reproduction, subpar resolution and overall sluggishness.
 

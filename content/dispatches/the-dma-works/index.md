@@ -10,9 +10,9 @@ from:
 
 [Apple](https://www.apple.com/newsroom/2025/09/the-digital-markets-acts-impacts-on-eu-users/):
 
-> For Apple, the DMA is impacting many parts of our EU users’ experience on our products — from how they download apps and make app payments, to how their Apple products work together.  
+> For Apple, the DMA is impacting many parts of our EU users’ experience on our products — from how they download apps and make app payments, to how their Apple products work together.  
 >   
-> Over the past few months, the European Commission — which is responsible for the DMA — has asked for more feedback from companies and EU citizens about the law’s effects. So we wanted to update Apple users in the EU on the changes they’ve started to see, and what they can expect in the future.  
+> Over the past few months, the European Commission — which is responsible for the DMA — has asked for more feedback from companies and EU citizens about the law’s effects. So we wanted to update Apple users in the EU on the changes they’ve started to see, and what they can expect in the future.  
 >   
 
 [Google](https://blog.google/around-the-globe/google-europe/the-digital-markets-act-time-for-a-reset/):

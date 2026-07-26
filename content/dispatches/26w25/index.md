@@ -30,7 +30,7 @@ Like every other international layout, QWeuRTY leans heavily on dead keys for th
 * `§` for the cedilla and the ogonek;
 * and `±` for the dot.
 
-That’s nine dead keys in all – a lot, and still not enough, because a handful of characters from French and the Iberian and Nordic languages don’t fit neatly into any of the accent layers. You’ll find those in the `Opt/AltGr` layer, alongside the most useful currency, mathematical, and typographical symbols. That means QWeuRTY works best on a 105-key ISO keyboard, though it’ll do in a pinch on a 104-key ANSI one, albeit with reduced functionality.
+That’s nine dead keys in all — a lot, and still not enough, because a handful of characters from French and the Iberian and Nordic languages don’t fit neatly into any of the accent layers. You’ll find those in the `Opt/AltGr` layer, alongside the most useful currency, mathematical, and typographical symbols. That means QWeuRTY works best on a 105-key ISO keyboard, though it’ll do in a pinch on a 104-key ANSI one, albeit with reduced functionality.
 
 I’ve not felt the need to tweak QWeuRTY for a year now, so it’s time to set it loose on the linguists, diplomats, and curious polyglots of the world. I also have provisional Colemak and Workman versions working, though i’d like to be sure they’re logical and ergonomic before i hand them over. Either way, i’d love to hear what you think!
 

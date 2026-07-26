@@ -28,7 +28,7 @@ Writing using a machine is not the same as letting the machine write in your pla
 
 The fact is that LLMs separate the material from the materials, the production from the practice, the creation from the creator. They squash the wonderful duality of the [*technè*](https://en.wikipedia.org/wiki/Techne), the practical application of knowledge and knowledge of practical application that artists and artisans share. Almost nobody knows *how* LLMs work and nobody knows *why* they work. This is unprecedented.
 
-The separation — i hesitate to use the word ‘severance’ — is what it’s all about or, more precisely, what it’s not about. The post isn’t bad, but it’s anodyne, which is way worse. So, yeah, without even having to talk about their social and ecological costs, it’s clear that LLMs aren’t for me. I’m still intrigued by Ive and Altman’s super-secret not-an-iPhone-killer device, though.
+The separation — i hesitate to use the word ‘severance’ — is what it’s all about or, more precisely, what it’s not about. The post isn’t bad, but it’s anodyne, which is way worse. So, yeah, without even having to talk about their social and ecological costs, it’s clear that LLMs aren’t for me. I’m still intrigued by Ive and Altman’s super-secret not-an-iPhone-killer device, though.
 
 ------------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ The separation — i hesitate to use the word ‘severance’ — is what it’s
 >   
 > Of course, GenAI is much worse for society than polyester. Synthetic fibers were bad for the environment, but so was the famously diabolical cotton industry. GenAI will first wreck the labor market for design professionals. But moreover, the tools are already being used to undermine the entire information structure of society in assisting the creation of disinformation that looks identical to reality. This, too, will damage its status value. Who wants to wear a T-shirt designed by the same software that powers the fake imagery used in authoritarian propaganda?  
 >   
-> — W. David Marx, [‘GenAI is Our Polyester’](https://culture.ghost.io/genai-is-our-polyester/), *CULTURE: An Owner’s Manual*, 03/06/25.  
+> — W. David Marx, [“GenAI is Our Polyester”](https://culture.ghost.io/genai-is-our-polyester/), *CULTURE: An Owner’s Manual*, 03/06/25.  
 >   
 >   
 >   

@@ -33,4 +33,4 @@ Which leaves me with a few intractable issues:
 - i really don’t want to switch from Duolingo to [Babbel](https://uk.babbel.com/);
 - there don’t seem to be any European podcast players left.
 
-It could be worse – I could be living in the United States.
+It could be worse — I could be living in the United States.

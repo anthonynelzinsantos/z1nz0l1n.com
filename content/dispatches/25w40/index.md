@@ -24,7 +24,7 @@ After much hemming and hawing over the last six months, i finally quit my job of
 
 ## Movies
 
-[***KPop Demon Hunters***](https://letterboxd.com/film/kpop-demon-hunters/) **by Chris Appelhans and Maggie Kang.** A little bit too white-washed[^1] and auto-tuned for my taste, but even i can’t deny it’s catchy as – well, i can’t say ‘hell’, but you get the idea. Sony Animations is on a roll.
+[***KPop Demon Hunters***](https://letterboxd.com/film/kpop-demon-hunters/) **by Chris Appelhans and Maggie Kang.** A little bit too white-washed[^1] and auto-tuned for my taste, but even i can’t deny it’s catchy as — well, i can’t say ‘hell’, but you get the idea. Sony Animations is on a roll.
 
 [***Black Bag***](https://letterboxd.com/film/black-bag-2025/) **by Steven Soderbergh.** Ninety minutes, a self-contained storyline, a very accomplished (if a bit distracting at times) cinematic style, a perfectly immersive soundtrack, a sane yet sexy portrayal of marriage, an outstanding cast… now that’s a movie!
 

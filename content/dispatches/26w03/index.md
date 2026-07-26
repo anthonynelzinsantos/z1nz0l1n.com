@@ -10,13 +10,13 @@ from:
   - "lyon-fr"
 ---
 
-Some people hate “would you make your mind up?” February, some people can’t stand “hurry up Christmas is coming” November, but i despise this sorry excuse of a month that is January. I particularly loathe the third week of January – the high of Christmas is gone, new year greetings become grating, people are pissed they already failed at their resolutions, book and music releases still haven’t picked up, and the weather is dreadful. The properly dystopian news of late doesn’t help one bit. The only good news? This week *will* end eventually.
+Some people hate “would you make your mind up?” February, some people can’t stand “hurry up Christmas is coming” November, but i despise this sorry excuse of a month that is January. I particularly loathe the third week of January — the high of Christmas is gone, new year greetings become grating, people are pissed they already failed at their resolutions, book and music releases still haven’t picked up, and the weather is dreadful. The properly dystopian news of late doesn’t help one bit. The only good news? This week *will* end eventually.
 
 ------------------------------------------------------------------------
 
 ## Books
 
-[***Show Your Work!***](https://bookshop.org/a/110644/9780761178972) **by Austin Kleon.** *Show Your Work!* is less a book than a pep talk (delivered to your introverted friends for free in 24 hours with Amazon Prime[^1]). Most of it is blindingly, glaringly, blatantly, painfully obvious – but you know what? Sometimes, what goes without saying should be said. Repeatedly.
+[***Show Your Work!***](https://bookshop.org/a/110644/9780761178972) **by Austin Kleon.** *Show Your Work!* is less a book than a pep talk (delivered to your introverted friends for free in 24 hours with Amazon Prime[^1]). Most of it is blindingly, glaringly, blatantly, painfully obvious — but you know what? Sometimes, what goes without saying should be said. Repeatedly.
 
 [***Could Should Might Don’t***](https://bookshop.org/a/110644/9780374619350) **by Nick Foster.** According to the synopsis, *“Foster has identified Could, Should, Might, and Don’t as the four primary mindsets we all adopt when thinking about what’s over the horizon, but he doesn’t advocate for any one of them.”* I’m sure this was the idea, but in practice, *Could Should Might Don’t* is a textbook example of prescriptive descriptivism. The increasingly uneven balance of positives and negatives betrays Foster’s preferences (which closely align with mine). Futurism is no science, Foster is no scientist, *Could Should Might Don’t* is no scientific study… and that’s fine! It’s still a compelling read if you’re interested in technology, design, and future thinking.
 

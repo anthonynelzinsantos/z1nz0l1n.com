@@ -10,9 +10,9 @@ from:
   - "paris-fr"
 ---
 
-And that’s it for 2025. It was the year i finally quit my job of sixteen years. I’m grateful to have worked in an environment where i was able to (re)invent my job to tackle the biggest issues facing journalism at the moment – distribution and funding – all the while writing about the people shaping our future. I’m proud to have built a digital publishing house from the ground up, writing 25 reference books and publishing 25 more, and to have worked with some of the best journalists in Europe.
+And that’s it for 2025. It was the year i finally quit my job of sixteen years. I’m grateful to have worked in an environment where i was able to (re)invent my job to tackle the biggest issues facing journalism at the moment — distribution and funding — all the while writing about the people shaping our future. I’m proud to have built a digital publishing house from the ground up, writing 25 reference books and publishing 25 more, and to have worked with some of the best journalists in Europe.
 
-It’s been a blast, but it’s been harder and harder to ignore the overall direction of the industry – [my brand of tech journalism is dying a painful death](/tech-journalism-is-dead/). Even if i tried to delay the inevitable by taking on “just one last project” *twice*, it was time for me to leave. I don’t regret my decision one bit, but i long for a job where i can once again make an impact. Let’s hope 2026 delivers on that front.
+It’s been a blast, but it’s been harder and harder to ignore the overall direction of the industry — [my brand of tech journalism is dying a painful death](/tech-journalism-is-dead/). Even if i tried to delay the inevitable by taking on “just one last project” *twice*, it was time for me to leave. I don’t regret my decision one bit, but i long for a job where i can once again make an impact. Let’s hope 2026 delivers on that front.
 
 ## Reading
 

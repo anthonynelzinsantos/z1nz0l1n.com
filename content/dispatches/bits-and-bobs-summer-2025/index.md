@@ -18,7 +18,7 @@ It’s hard not to feel more than a little bit frightened — and that’s e
 
 ## Albums
 
-***Fiend* by Enemy.** Recorded over a two-day residency at Bird’s Eye in Basel, *Fiend* is Enemy’s tightest release yet. I have no idea how Kit Downes can play the piano with such lightness while Petter Eldh weaves intricate bass lines and James Maddren layers more rhythms than he has limbs. It sounds like a long – but never tiring – jam session. Highly recommended.
+***Fiend* by Enemy.** Recorded over a two-day residency at Bird’s Eye in Basel, *Fiend* is Enemy’s tightest release yet. I have no idea how Kit Downes can play the piano with such lightness while Petter Eldh weaves intricate bass lines and James Maddren layers more rhythms than he has limbs. It sounds like a long — but never tiring — jam session. Highly recommended.
 
 ***Sonor* by Enji.** Where has Mongolian jazz been all my life? You might understand her when she sings in English and German, but Enji is most captivating when she channels the traditional art of the Mongolian long song, which extends each syllable to evoke the vastness of the country’s plains. Her music is as forward-looking as her singing is deeply rooted, and they blend together in a way that’s deeply hypnotic. Let’s hope this is not the last time i listen to Mongolian jazz.
 
@@ -84,7 +84,7 @@ Here are some articles for your consideration:
 
 ## Travel
 
-**Moulins-sur-Allier.** Moulins isn’t the most walkable city in the world, despite the scenic walkways along the Allier River. [The National Centre for Theatrical Costume and Design](https://cncs.fr/en/homepage/) displays costumes just as the Louvre displays paintings, without explaining why – and most importantly how – they were made. It’s beautiful, but in a superficial and meaningless way. The adjacent [“La Scène”](https://cncs.fr/en/a-visiter/opening-of-la-scene-april-8/) building is much more interesting: it explains how theatre is made by dropping you right in the middle of one. How fun!
+**Moulins-sur-Allier.** Moulins isn’t the most walkable city in the world, despite the scenic walkways along the Allier River. [The National Centre for Theatrical Costume and Design](https://cncs.fr/en/homepage/) displays costumes just as the Louvre displays paintings, without explaining why — and most importantly how — they were made. It’s beautiful, but in a superficial and meaningless way. The adjacent [“La Scène”](https://cncs.fr/en/a-visiter/opening-of-la-scene-april-8/) building is much more interesting: it explains how theatre is made by dropping you right in the middle of one. How fun!
 
 ![](bits-and-bobs-summer-2025-3.jpg "The National Centre for Theatrical Costume and Design and La Scène, Moulins-sur-Alliers, 2025/05. Image Anthony Nelzin-Santos.")
 

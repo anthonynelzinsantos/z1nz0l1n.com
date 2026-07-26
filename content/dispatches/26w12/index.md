@@ -24,7 +24,7 @@ It’s made me acutely aware of the way that my hands influence my reading —
 
 ## Movies
 
-***Superman* by James Gunn.** Superman has always been a superficial hero. He’s too *alien* to pass as an undocumented immigrant; too messianic to function as an exemplar; too red, white, and blue to have a consistent set of ethics; and even his biggest weakness is too neat (and too external) to have any moral significance. But at least he was *something*. James Gunn has robbed him of everything – backstory, personality, motivation, the tiniest shred of common sense – and made him a mere casualty in the launch of the umpteenth reboot of the comically bad DC cinematic universe. *Woof.*
+***Superman* by James Gunn.** Superman has always been a superficial hero. He’s too *alien* to pass as an undocumented immigrant; too messianic to function as an exemplar; too red, white, and blue to have a consistent set of ethics; and even his biggest weakness is too neat (and too external) to have any moral significance. But at least he was *something*. James Gunn has robbed him of everything — backstory, personality, motivation, the tiniest shred of common sense — and made him a mere casualty in the launch of the umpteenth reboot of the comically bad DC cinematic universe. *Woof.*
 
 ## Things
 

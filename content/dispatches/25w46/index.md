@@ -12,7 +12,7 @@ from:
 
 I’m looking for a new job, which is to say, i’m spending an awful lot of time [on LinkedIn](https://www.linkedin.com/in/anthonynelzinsantos/). A lot of friends suggested i cold connect with total strangers. *“You should expand your network”*, they say, *“everybody should know you’re available”,* they say, *“they might be your future colleagues”,* they say. *“You should be an imposition on people that don’t know and don’t care about you”*, i hear.
 
-I know this is par for the course, but i can’t bring myself to consider people as mere resources. I have written far too much about our (in)attention economy to steal someone’s attention for my own selfish interests. This is a game – and i loathe that people consider it a game – that i refuse to play. Anyway, i spent the better part of the week rejigging [my personal website](https://anthonynelzinsantos.com/) and i’m having a lot of fun writing up [case studies](https://anthonynelzinsantos.com/realisations/) for some of my past projects.
+I know this is par for the course, but i can’t bring myself to consider people as mere resources. I have written far too much about our (in)attention economy to steal someone’s attention for my own selfish interests. This is a game — and i loathe that people consider it a game — that i refuse to play. Anyway, i spent the better part of the week rejigging [my personal website](https://anthonynelzinsantos.com/) and i’m having a lot of fun writing up [case studies](https://anthonynelzinsantos.com/realisations/) for some of my past projects.
 
 ## Links
 

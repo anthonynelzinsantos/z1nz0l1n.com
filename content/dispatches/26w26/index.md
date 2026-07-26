@@ -24,7 +24,7 @@ This is a surprisingly potent device. Let’s say that:
 
 In other words: the good old principle of subsidiarity still holds, and *“higher-level institutions must recognize, protect and promote the freedom and creativity of lower-level entities, coordinating their contributions so that they can cooperate effectively for the common good”*, lest they lose their moral value. That’s crucial, because *“to speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than confining their role to mere oversight after the standards have been set elsewhere.”*
 
-This is a subtle – too subtle for most mainstream commentators it seems – but powerful argument. *Magnifica Humanitas* isn’t a knee-jerk reaction against AI, but a profound rebuttal of its governance. *Rerum novarum* was clearer in its support for trade unions, but this is a big step toward a more open promotion of open-source software and federated services.
+This is a subtle — too subtle for most mainstream commentators it seems — but powerful argument. *Magnifica Humanitas* isn’t a knee-jerk reaction against AI, but a profound rebuttal of its governance. *Rerum novarum* was clearer in its support for trade unions, but this is a big step toward a more open promotion of open-source software and federated services.
 
 In another previous life, i was a tech journalist who wrote endlessly about the meaninglessness of legislation reacting to particular technologies and the need for proactive laws rooted in fundamental beliefs. Leo XIV’s argumentation might appear wishy-washy at times, but it focuses on overarching principles rather than specific implementation details. This is the head of a 2000-year-old institution speaking, after all.
 

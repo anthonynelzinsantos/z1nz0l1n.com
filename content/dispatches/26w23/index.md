@@ -12,7 +12,7 @@ from:
 
 They say *″the hype is real″*, but more often than not, the hype is entirely fabricated. The more a product is hyped on Reddit and other places, the greater the chance it’s a marketing psyop. Unless that product happens to be the Uniball Zento Signature rollerball, in which case the hype is absolutely real.
 
-The original Zento is a basic retractable plastic pen that you’ll find at your local stationery store for around €2. It’s so generic that if you’re not careful, you might pick a [One F](https://uniball.co.uk/brands/one/uni-ball-one/) instead. Its only distinguishing feature is its refill — Uniball describes it as a *"next-generation water-based"* formulation, but thanks to the use of non-ionic surfactants, it’s almost as smooth as gel ink.
+The original Zento is a basic retractable plastic pen that you’ll find at your local stationery store for around €2. It’s so generic that if you’re not careful, you might pick a [One F](https://uniball.co.uk/brands/one/uni-ball-one/) instead. Its only distinguishing feature is its refill — Uniball describes it as a *"next-generation water-based"* formulation, but thanks to the use of non-ionic surfactants, it’s almost as smooth as gel ink.
 
 The Zento Signature uses the exact same refill, so why the hype? Well, because it looks nothing like a basic retractable plastic pen. Its metal construction gives it a premium look and pleasant heft. The grip section is coated in soft-touch plastic, a material that extends to the part of the barrel that’s in contact with the web of your thumb[^1]. This makes it a delight to hold.
 

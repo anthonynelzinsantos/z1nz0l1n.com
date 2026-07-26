@@ -14,7 +14,7 @@ Ian Penman [in the *London Review of Books*](https://www.lrb.co.uk/the-paper/v47
 
 It’s the crux of the matter with large language models and generative technologies. Not only do they parrot us, but they parrot themselves. They’ll never be able to produce something akin to art[^1], because art is anything but parroting. They’re nothing more but simulacra, and you can go far in life with simulacra[^2], but simulacra nonetheless.
 
-You need a frame of reference to appreciate art, you need to know where you stand to be swept off your feet. More often than not, this frame of reference is an actual frame – the covers of a book, the canvas of a painting, the beginning and end of a song, the setting of a sculpture, the opening and closing credits of a movie… “Generative art” negates space and time, which means it negates what makes human experiences human. And experiences.
+You need a frame of reference to appreciate art, you need to know where you stand to be swept off your feet. More often than not, this frame of reference is an actual frame — the covers of a book, the canvas of a painting, the beginning and end of a song, the setting of a sculpture, the opening and closing credits of a movie… “Generative art” negates space and time, which means it negates what makes human experiences human. And experiences.
 
 (By the way, *“no one definitive version”* is pretty much the same thing as *“you’ll own nothing”*. You can’t buy a copy of [the *Eno* generative documentary](https://www.hustwit.com/eno), for example, you can only rent a screening. Brian Eno might think of himself as one of the most progressive people ever to grace our pale blue dot, but this is the most late-stage capitalism bullshit ever.)
 
