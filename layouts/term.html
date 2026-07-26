@@ -1,6 +1,12 @@
 {{ define "main" }}
 <article class="article index">
 	<section class="content">
+		{{ if and .Params.lat .Params.lng }}
+			<div class="map-sheet">
+				<div id="map" class="map" role="img" aria-label="Map of {{ .Title }}"></div>
+			</div>
+			<script type="application/json" id="map-data">{{ jsonify (slice (dict "lat" .Params.lat "lng" .Params.lng)) | safeJS }}</script>
+		{{ end }}
 		{{ range .Pages }}
 			<article class="archive post">
 				<h2 style="--hue: {{ partial "hue.html" .Date }}"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>

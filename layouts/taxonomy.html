@@ -9,7 +9,9 @@
 <article class="article index">
 	<section class="content">
 		{{ if $points }}
-			<div id="map" class="map" role="img" aria-label="Map of every field office {{ site.Title }} has sent dispatches from"></div>
+			<div class="map-sheet">
+				<div id="map" class="map" role="img" aria-label="Map of every field office {{ site.Title }} has sent dispatches from"></div>
+			</div>
 			<script type="application/json" id="map-data">{{ jsonify $points | safeJS }}</script>
 		{{ end }}
 		{{ range $terms }}

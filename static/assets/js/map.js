@@ -24,12 +24,20 @@
 
   const markers = points.map(function (p) {
     const marker = L.marker([p.lat, p.lng]).addTo(map);
-    marker.bindPopup(
-      '<a href="' + p.url + '">' + p.title + '</a> — ' +
-      p.count + ' dispatch' + (p.count === 1 ? '' : 'es')
-    );
+    if (p.url) {
+      marker.bindPopup(
+        '<a href="' + p.url + '">' + p.title + '</a> — ' +
+        p.count + ' dispatch' + (p.count === 1 ? '' : 'es')
+      );
+    }
     return marker;
   });
 
-  map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
+  if (points.length === 1) {
+    map.setView([points[0].lat, points[0].lng], 9);
+  } else {
+    map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
+  }
+
+  new ResizeObserver(function () { map.invalidateSize(); }).observe(el);
 })();
