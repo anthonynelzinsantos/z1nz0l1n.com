@@ -19,6 +19,8 @@
   const H_MIN           = 36;
   const GRAIN_FREQ_TAPE = 1.8;
   const GRAIN_SLOPE     = 0.10;
+  const EDGE_STROKE     = 'rgba(0,0,0,0.12)';
+  const EDGE_W          = 0.5;
 
   const ns   = 'http://www.w3.org/2000/svg';
   const rand = (min, max) => min + Math.random() * (max - min);
@@ -130,9 +132,11 @@
     const hw     = W / 2;
     const hh     = H / 2;
 
+    const d      = buildStripPath(hw, hh, toothH, toothD);
+
     const clipId = `wt-clip-${++_uid}`;
     const cp     = svgEl('clipPath', { id: clipId });
-    cp.appendChild(svgEl('path', { d: buildStripPath(hw, hh, toothH, toothD) }));
+    cp.appendChild(svgEl('path', { d }));
     defs.appendChild(cp);
 
     const outer = svgEl('g', { transform: `translate(${cx},${cy}) rotate(${angle})` });
@@ -147,17 +151,16 @@
       opacity: opacityJitter ? rand(0.94, 0.99).toFixed(2) : '0.98',
     }));
 
-    inner.appendChild(svgEl('rect', {
-      x:              -hw,
-      y:              -hh,
-      width:          W,
-      height:         H,
-      fill:           'none',
-      stroke:         'rgba(0,0,0,0.12)',
-      'stroke-width': '0.5',
+    outer.appendChild(inner);
+
+    outer.appendChild(svgEl('path', {
+      d,
+      fill:            'none',
+      stroke:          EDGE_STROKE,
+      'stroke-width':  EDGE_W,
+      'vector-effect': 'non-scaling-stroke',
     }));
 
-    outer.appendChild(inner);
     return outer;
   }
 
@@ -255,8 +258,8 @@
     ro.observe(print);
   }
 
-  function attachCaptionTape(fig, color) {
-    fig.style.setProperty('--tape-twist', `${rand(-WOBBLE, WOBBLE)}deg`);
+  function attachCaptionTape(fig, color, setTwist = true) {
+    if (setTwist) fig.style.setProperty('--tape-twist', `${rand(-WOBBLE, WOBBLE)}deg`);
     let svg = null;
 
     function build() {
@@ -301,6 +304,12 @@
       .getPropertyValue('--color-tape-paper').trim() || 'lch(93% 10 92)';
     document.querySelectorAll('.gallery.has-caption > figcaption')
       .forEach(fig => attachCaptionTape(fig, paperColor));
+
+    document.querySelectorAll('#main .article .content > .slug').forEach(el => {
+      const tint = getComputedStyle(el).backgroundColor;
+      el.style.setProperty('background-color', 'transparent');
+      attachCaptionTape(el, tint, false);
+    });
   }
 
   if (document.readyState === 'loading') {

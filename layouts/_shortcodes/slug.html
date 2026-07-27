@@ -1,0 +1,3 @@
+{{ $kind := .Get "kind" | default "note" }}
+{{ $label := .Get "label" | default $kind }}
+<header class="slug" data-kind="{{ $kind | urlize }}"><span class="label">{{ $label }}</span><span class="leader" aria-hidden="true"></span><span class="index" aria-hidden="true"></span></header>

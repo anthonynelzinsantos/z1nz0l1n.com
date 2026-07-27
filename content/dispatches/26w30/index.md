@@ -8,9 +8,11 @@ from:
   - "seyssins-fr"
 ---
 
+{{< slug kind="Film" >}}
+
 ***The Phoenician Scheme* by Wes Anderson.** [Another excellent Montblanc ad](https://www.youtube.com/watch?v=nn59j75Q1Mc) from Wes Anderson. (I’m kidding, of course. *The Phoenician Scheme* is less refined, less substantial, less amusing, and generally less memorable than the Montblanc ad.)
 
----
+{{< slug kind="Article" >}}
 
 John Lanchester at the [*London Review of Books*](https://www.lrb.co.uk/the-paper/v48/n09/john-lanchester/squillions):
 
@@ -18,7 +20,7 @@ John Lanchester at the [*London Review of Books*](https://www.lrb.co.uk/the-pape
 
 The answer is blindingly obvious: *“it’s being used in criminal transactions.”* Fascinating piece.
 
----
+{{< slug kind="Album" >}}
 
 ***The Boys of Dungeon Lane* by Paul McCartney.** The first minute of the opening track, “As You Lie There”, sounds like a false start. Once the electric guitar and the drums kick in, *The Boys of Dungeon Lane* is tightly wound and supremely well produced. The lyrics are as naive as ever, but that doesn’t mean they’re not effective.
 
@@ -26,13 +28,13 @@ The answer is blindingly obvious: *“it’s being used in criminal transactions
 
 Paul McCartney might not have the voice of his 20s any more, but after 38 albums, not counting the 12 he recorded with the Beatles, he still has something interesting to say.
 
----
+{{< slug kind="Concert" >}}
 
 **Zarathoustra at Maurice Ravel Auditorium.** I’m not the biggest fan of [Richard Strauss](https://en.wikipedia.org/wiki/Richard_Strauss), whose later years [were murky](https://en.wikipedia.org/wiki/Richard_Strauss#Nazi_Germany_(1933–1945)) to say the least, but i have to admit that *Till Eulenspiegel’s Merry Pranks* and *Also sprach Zarathustra* are two of the most awe-inspiring pieces of music ever committed to staff paper. The former reminded me why i don’t listen to that much orchestral music at home — it can’t be properly reproduced without missing the quietest phrases… or blowing up your speakers. The latter is more than the *cliché* it’s become since Kubrick and Deodato — played on the magnificent 82-stop and 6,500-pipe organ of the Maurice Ravel Auditorium, the introductory double low C is properly gut-churning.
 
 The inclusion of Beethoven’s third piano concerto in between the two was a bit of a surprise. Leif Ove Andsnes had to cancel his performance due to illness, so Javier Perianes replaced him at the last minute. I’ll never fault a sub, but even if i wanted to, i couldn’t. Perianes is the perfect blend of sweetness and rawness. He spent the first two minutes of the concerto facing the orchestra, like a kid watching candy being made, and displayed incredible expressivity when he finally turned to the piano. Half an hour later, he sprang back to play Manuel de Falla’s *Ritual Fire Dance* as an encore, with such speed and force that, for a moment, i forgot the auditorium’s perennial sonic limitations.
 
----
+{{< slug kind="App" >}}
 
 [Christian Tietze](https://christiantietze.de/posts/2026/06/lettera-bear-editor-for-any-file/):
 
@@ -42,7 +44,7 @@ I’ve always liked [Bear](https://bear.app/)’s look and feel, but i’ve neve
 
 [The current beta](https://testflight.apple.com/join/E338vEDz) is still rough around the edges, but it’s promising. You can enable the file browser, the table of contents, the style bar and document statistics to work on big projects, but you can also hide all the complexity away to work on single files. It’s difficult to explain why, but it *feels* right, neither too simple nor too complex. As a typewriter collector, i find the name is [the cherry on the cake](/26w16/).
 
----
+{{< slug kind="Thing" >}}
 
 [Franz Schneider Brakel GmbH + Co KG](https://www.fsb.de/en/press/relaunch-fsb-1138-dieter-rams):
 
@@ -52,7 +54,7 @@ I’m writing this from the comfort of [my 620 sofa](https://www.vitsoe.com/eu/6
 
 Back in 1986, deep into the postmodern era, its design was plainly reactionary. Forty years later, it’s fashionably boring, in an “Apple globalized a bastardized version of Rams’s design ethos” kind of way. And even though it’s now *“fully manufactured from aluminum in Brakel”*, €535 for a door handle is a bit rich for my blood. (Then again, [send me the money](https://ko-fi.com/z1nz0l1n) and i might just change my mind.)
 
----
+{{< slug kind="Article" >}}
 
 Francisco Trujillo at *[The Conversation](https://theconversation.com/i-used-sound-waves-to-make-espresso-it-could-cut-coffee-brewing-energy-use-by-75-284929)*:
 
@@ -60,7 +62,7 @@ Francisco Trujillo at *[The Conversation](https://theconversation.com/i-used-sou
 
 I can’t wait for [James Hoffmann](https://www.youtube.com/@jameshoffmann/videos)’s take on this.
 
----
+{{< slug kind="Article" >}}
 
 Rebecca Solnit at [*The Guardian*](https://www.theguardian.com/commentisfree/2026/jul/01/what-is-the-united-states-of-america-now):
 
@@ -68,7 +70,7 @@ Rebecca Solnit at [*The Guardian*](https://www.theguardian.com/commentisfree/202
 
 I love the USA so much that i majored in North American studies. (Granted, i crossed over to Canada midway and never looked back.) It’s given me two careers, my second language, my favourite genre of music, *so* many books, and the pair of blue jeans i wear each and every day. It’s also given me regular bouts of existential anxiety. Happy 250th birthday, i guess?
 
----
+{{< slug kind="Concert" >}}
 
 I guess i have a new hobby: going to a concert not to see the headliner. As [Big Freedia](https://en.wikipedia.org/wiki/Big_Freedia) cancelled her whole European tour, the [Jazz à Vienne](https://www.jazzavienne.com/en) festival’s organizers scrambled to find a suitable replacement. Fortunately, the [New Orleans Jazz Museum](https://nolajazzmuseum.org/) sponsored the creation of a new group comprising trumpeter [James Andrews](https://en.wikipedia.org/wiki/James_Andrews_%28musician%29) (Trombone Shorty’s older brother), trombonist Greg Hicks, pianist Victor Campbell, guitarist Sam Dickey, double bassist Sélène Saint-Aimé, drummer Tiss Rodriguez… and drummer Anne Paceo. Yep, that’s right, two drummers.
 
@@ -81,12 +83,12 @@ I guess i have a new hobby: going to a concert not to see the headliner. As [Big
 
 For his only concert in France this year, Jon Batiste came with the incredibly soulful Desz, guitarist/producer extraordinaire Nick Waterhouse, and Stay Human’s rhythm section. I’ve yet to meet someone whom Batiste can’t win over, but this could have been the night, because [Nêgah Santos](https://www.negahsantos.com/) stole the show. I’ve always liked the way she adds a subtle texture under Joe Saylor’s drums, but she revealed herself as a frontwoman in her own right with a fun rendition of *Mas que nada* that transported us right into the heart of São Paulo. (The sweltering heat helped.) All in all, it was a good night for percussion.
 
----
+{{< slug kind="Album" >}}
 
 ***Veld* by Sick Gazelle.** Put Eric Block (Veloce), Bruce Lamont (Yakuza), Steve Shelley (Sonic Youth) and Douglas McCombs (Tortoise, BASIC) in the same room, and you get Sick Gazelle. The name is weirder than the music — a thoroughly engrossing blend of post-rock, shoegaze, ambient and jazz. The seemingly endless intro to “I’ll Come Running” evoked my long walks in the countryside, right up to the thunder-like drum roll.
 
----
+{{< slug kind="Film" >}}
 
-***The Odyssey* by Christopher Nolan.** A movie — even a three-hour one — could never translate the complexity of a tale as rich as the *Odyssey*, but it could convey depth and meaning by displaying Homeric qualities. Unfortunately, the acting is anodyne at best, the pacing is atrociously stop-and-go, the soundtrack is caricatural, the colour grading is distractingly juvenile, the gorgeous on-location establishing shots are ruined by the overuse of poorly lit studio shots and stiff 3D animations, the costumes are ridiculous, and worst of all, the dialogue is so dull that it’s hard to believe they were inspired by the most influential epic in the Western canon.
+***The Odyssey* by Christopher Nolan.** A film — even a three-hour one — could never translate the complexity of a tale as rich as the *Odyssey*, but it could convey depth and meaning by displaying Homeric qualities. Unfortunately, the acting is anodyne at best, the pacing is atrociously stop-and-go, the soundtrack is caricatural, the colour grading is distractingly juvenile, the gorgeous on-location establishing shots are ruined by the overuse of poorly lit studio shots and stiff 3D animations, the costumes are ridiculous, and worst of all, the dialogue is so dull that it’s hard to believe they were inspired by the most influential epic in the Western canon.
 
 [As Stephanie Zacharek says](https://time.com/article/2026/07/15/the-odyssey-review-christopher-nolan/), this is an *“eye-glazing dud of a movie”* that *“churns […] dutifully toward its predictable conclusions”*. Like in *‌Dunkirk*, Nolan has flattened the immense contradictions powering the human mind down to a *New York Times*-style “war is bad” op-ed. Like in *Oppenheimer*, he has carefully stayed away from anything that could be construed as a commentary on the consequences of one’s actions. But this time, he did it [while filming on occupied land](https://www.theguardian.com/film/2026/jul/16/the-odyssey-sahrawi-people-christopher-nolan-western-sahara). Imagine if Odysseus had sold out like this.
