@@ -5,7 +5,7 @@ slug: "25w52"
 aliases:
   - "/d/25w52/"
 feature_image_alt: "A small coffee cup stamped with a red heart. Image Anthony Nelzin-Santos."
-feature_image_caption: "Liège (Belgium), 2025-10."
+feature_image_caption: "Liège (BE), 2025.10."
 from:
   - "paris-fr"
 ---

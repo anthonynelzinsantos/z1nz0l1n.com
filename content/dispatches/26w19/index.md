@@ -4,8 +4,8 @@ date: "2026-05-10T13:00:00.000Z"
 slug: "26w19"
 aliases:
   - "/d/26w19/"
-feature_image_alt: "A mural of a smiling child. Image Anthony Nelzin-Santos"
-feature_image_caption: "Marseille (France), 2026-02."
+feature_image_alt: "A mural of a smiling child. Image Anthony Nelzin-Santos."
+feature_image_caption: "Marseille (FR), 2026.02."
 from:
   - "lyon-fr"
 ---

@@ -5,7 +5,7 @@ slug: "26w07"
 aliases:
   - "/d/26w07/"
 feature_image_alt: "A mural of an office worker juggling a computer, a briefcase, and a stack of papers. Image Anthony Nelzin-Santos."
-feature_image_caption: "Reims (France), 2025-08."
+feature_image_caption: "Reims (FR), 2025.08."
 from:
   - "marseille-fr"
 ---

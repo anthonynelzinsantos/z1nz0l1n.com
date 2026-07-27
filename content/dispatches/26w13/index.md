@@ -5,7 +5,7 @@ slug: "26w13"
 aliases:
   - "/d/26w13/"
 feature_image_alt: "A metal chest of drawers. Image Anthony Nelzin-Santos."
-feature_image_caption: "Marseille (France), 2026-02."
+feature_image_caption: "Marseille (FR), 2026.02."
 from:
   - "lyon-fr"
 ---

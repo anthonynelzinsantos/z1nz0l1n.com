@@ -4,8 +4,8 @@ date: "2025-10-12T15:00:00.000Z"
 slug: "25w41"
 aliases:
   - "/d/25w41/"
-feature_image_alt: "The sun reflected through glass cubes."
-feature_image_caption: "Nancy (France), 2025/08. Image Anthony Nelzin-Santos."
+feature_image_alt: "The sun reflected through glass cubes. Image Anthony Nelzin-Santos."
+feature_image_caption: "Nancy (FR), 2025.08."
 from:
   - "lyon-fr"
 ---

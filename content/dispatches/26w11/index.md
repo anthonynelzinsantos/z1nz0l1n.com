@@ -5,7 +5,7 @@ slug: "26w11"
 aliases:
   - "/d/26w11/"
 feature_image_alt: "An exhibition about typography at Lyon’s museum of printing and graphic communication.  Image Anthony Nelzin-Santos."
-feature_image_caption: "Lyon (France), 2017-02."
+feature_image_caption: "Lyon (FR), 2017.02."
 from:
   - "lyon-fr"
 ---

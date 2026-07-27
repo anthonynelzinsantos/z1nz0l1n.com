@@ -5,7 +5,7 @@ slug: "26w10"
 aliases:
   - "/d/26w10/"
 feature_image_alt: "A muscular statue in a museum. Image Anthony Nelzin-Santos."
-feature_image_caption: "Strasbourg (France), 2022-11."
+feature_image_caption: "Strasbourg (FR), 2022.11."
 from:
   - "lyon-fr"
 ---

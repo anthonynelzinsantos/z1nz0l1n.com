@@ -5,7 +5,7 @@ slug: "26w25"
 aliases:
   - "/d/26w25/"
 feature_image_alt: "The roof of the Cité internationale de la langue française’s courtyard. Image Anthony Nelzin-Santos."
-feature_image_caption: "Villers-Cotterêts (France), 2025-08."
+feature_image_caption: "Villers-Cotterêts (FR), 2025.08."
 from:
   - "lyon-fr"
 ---

@@ -4,8 +4,8 @@ date: "2025-11-30T11:00:00.000Z"
 slug: "25w48"
 aliases:
   - "/d/25w48/"
-feature_image_alt: "An exit sign juxtaposed with pieces of art in a museum."
-feature_image_caption: "Liège (Belgium), 2025/10. Image Anthony Nelzin-Santos."
+feature_image_alt: "An exit sign juxtaposed with pieces of art in a museum. Image Anthony Nelzin-Santos."
+feature_image_caption: "Liège (BE), 2025.10."
 from:
   - "lyon-fr"
 ---

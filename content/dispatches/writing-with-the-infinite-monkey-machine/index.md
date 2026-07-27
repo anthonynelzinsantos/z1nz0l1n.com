@@ -4,8 +4,8 @@ date: "2025-06-08T13:00:00.000Z"
 slug: "writing-with-the-infinite-monkey-machine"
 aliases:
   - "/d/writing-with-the-infinite-monkey-machine/"
-feature_image_alt: "A multi-coloured bike hoisted on top of a bike shop’s entrance grid."
-feature_image_caption: "Paris (France), 2023/12. Image Anthony Nelzin-Santos."
+feature_image_alt: "A multi-coloured bike hoisted on top of a bike shop’s entrance grid. Image Anthony Nelzin-Santos."
+feature_image_caption: "Paris (FR), 2023.12."
 from:
   - "lyon-fr"
 ---
@@ -36,7 +36,7 @@ The separation — i hesitate to use the word *severance* — is what it
 >   
 > Of course, GenAI is much worse for society than polyester. Synthetic fibers were bad for the environment, but so was the famously diabolical cotton industry. GenAI will first wreck the labor market for design professionals. But moreover, the tools are already being used to undermine the entire information structure of society in assisting the creation of disinformation that looks identical to reality. This, too, will damage its status value. Who wants to wear a T-shirt designed by the same software that powers the fake imagery used in authoritarian propaganda?  
 >   
-> — W. David Marx, [“GenAI is Our Polyester”](https://culture.ghost.io/genai-is-our-polyester/), *CULTURE: An Owner’s Manual*, 03/06/25.
+> — W. David Marx, [“GenAI is Our Polyester”](https://culture.ghost.io/genai-is-our-polyester/), *CULTURE: An Owner’s Manual*, 2025.06.03.
 
 ---
 

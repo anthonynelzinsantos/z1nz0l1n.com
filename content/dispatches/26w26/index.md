@@ -5,7 +5,7 @@ slug: "26w26"
 aliases:
   - "/d/26w26/"
 feature_image_alt: "A statue at St. James’s Church in Liège. Image Anthony Nelzin-Santos."
-feature_image_caption: "Liège (Belgium), 2025-10."
+feature_image_caption: "Liège (BE), 2025.10."
 from:
   - "lyon-fr"
 ---

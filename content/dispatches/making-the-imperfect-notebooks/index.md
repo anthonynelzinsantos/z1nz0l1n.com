@@ -4,8 +4,8 @@ date: "2025-05-25T09:00:00.000Z"
 slug: "making-the-imperfect-notebooks"
 aliases:
   - "/d/making-the-imperfect-notebooks/"
-feature_image_alt: "Various collages on a wall."
-feature_image_caption: "Le Mans (France), 2020/07. Image Anthony Nelzin-Santos."
+feature_image_alt: "Various collages on a wall. Image Anthony Nelzin-Santos."
+feature_image_caption: "Le Mans (FR), 2020.07."
 from:
   - "lyon-fr"
 ---

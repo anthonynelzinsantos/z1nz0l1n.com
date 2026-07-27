@@ -4,8 +4,8 @@ date: "2025-04-30T15:00:00.000Z"
 slug: "bits-and-bobs-spring-2025"
 aliases:
   - "/d/bits-and-bobs-spring-2025/"
-feature_image_alt: "A painting of Pacman on the pavement."
-feature_image_caption: "Moulins-sur-Allier (France), 2025/05. Image Anthony Nelzin-Santos."
+feature_image_alt: "A painting of Pacman on the pavement. Image Anthony Nelzin-Santos."
+feature_image_caption: "Moulins-sur-Allier (FR), 2025.05."
 from:
   - "besancon-fr"
   - "lyon-fr"

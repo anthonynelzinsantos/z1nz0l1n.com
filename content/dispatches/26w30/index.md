@@ -3,7 +3,7 @@ title: "Bits and bobs (2026.07)"
 date: "2026-07-26T12:00:00.000Z"
 slug: "26w30"
 feature_image_alt: "The Moucherotte viewed from this week’s office. Image Anthony Nelzin-Santos."
-feature_image_caption: "Seyssins (France), 2026-07."
+feature_image_caption: "Seyssins (FR), 2026.07."
 from:
   - "seyssins-fr"
 ---
@@ -74,7 +74,7 @@ I guess i have a new hobby: going to a concert not to see the headliner. As [Big
 
 [Anne Paceo](https://annepaceo.com/en/)’s talent is undeniable, but sometimes, i find her playing *too* perfect. It’s like listening to a math problem. Last night, though, she let loose just enough to soften her metronomic pulse. She was the deep and sharp yang to Tiss Rodriguez’s lax and floppy yin. I wrote *“she’s squaring his circle”* while they were engaging in their second battle of the night, a masterclass in the art of call-and-response that lasted a long time, and yet seemed far too short. When they were over, she just sat there with the widest grin i’ve ever seen. Exactly, Anne, exactly.
 
-{{< gallery caption="Vienne (France), 2026/07." >}}
+{{< gallery caption="Vienne (FR), 2026.07." >}}
 26w30-1.jpg
 26w30-2.jpg
 {{< /gallery >}}

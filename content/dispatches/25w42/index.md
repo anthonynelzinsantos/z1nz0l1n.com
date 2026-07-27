@@ -4,8 +4,8 @@ date: "2025-10-19T14:00:00.000Z"
 slug: "25w42"
 aliases:
   - "/d/25w42/"
-feature_image_alt: "A hand holding the film version of the Coronet typeface from a Compugraphic EditWriter 7500 phototypesetter."
-feature_image_caption: "The film version of the Coronet typeface from a Compugraphic EditWriter 7500 phototypesetter. Ghent (Belgium), 2023/07. Image Anthony Nelzin-Santos."
+feature_image_alt: "A hand holding the film version of the Coronet typeface from a Compugraphic EditWriter 7500 phototypesetter. Image Anthony Nelzin-Santos."
+feature_image_caption: "The film version of the Coronet typeface from a Compugraphic EditWriter 7500 phototypesetter. Ghent (BE), 2023.07."
 from:
   - "paray-le-monial-fr"
 ---

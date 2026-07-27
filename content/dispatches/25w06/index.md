@@ -5,7 +5,7 @@ slug: "25w06"
 aliases:
   - "/d/25w06/"
 feature_image_alt: "A row of flags at the European Parliament in Strasbourg. Image Anthony Nelzin-Santos."
-feature_image_caption: "Strasbourg (France), 2022-11."
+feature_image_caption: "Strasbourg (FR), 2022.11."
 from:
   - "lyon-fr"
 ---

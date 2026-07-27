@@ -4,8 +4,8 @@ date: "2025-09-28T11:00:00.000Z"
 slug: "25w39"
 aliases:
   - "/d/25w39/"
-feature_image_alt: "A statue of a sitting man."
-feature_image_caption: "Lyon (France), 2025/09. Image Anthony Nelzin-Santos."
+feature_image_alt: "A statue of a sitting man. Image Anthony Nelzin-Santos."
+feature_image_caption: "Lyon (FR), 2025.09."
 from:
   - "lyon-fr"
 ---

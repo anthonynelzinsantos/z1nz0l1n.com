@@ -4,8 +4,8 @@ date: "2025-10-15T11:00:00.000Z"
 slug: "why-cant-i-throw-away-my-old-notebooks"
 aliases:
   - "/d/why-cant-i-throw-away-my-old-notebooks/"
-feature_image_alt: "A batch of notebooks on a table."
-feature_image_caption: "Making a batch of notebooks. Lyon (France), 2025/04. Image Anthony Nelzin-Santos."
+feature_image_alt: "A batch of notebooks on a table. Image Anthony Nelzin-Santos."
+feature_image_caption: "Making a batch of notebooks. Lyon (FR), 2025.04."
 from:
   - "lyon-fr"
 ---

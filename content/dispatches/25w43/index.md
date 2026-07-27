@@ -4,8 +4,8 @@ date: "2025-10-26T15:00:00.000Z"
 slug: "25w43"
 aliases:
   - "/d/25w43/"
-feature_image_alt: "A view of the basilica of the Sacred Heart of Paray-le-Monial."
-feature_image_caption: "Paray-le-Monial (France), 2025/10. Image Anthony Nelzin-Santos."
+feature_image_alt: "A view of the basilica of the Sacred Heart of Paray-le-Monial. Image Anthony Nelzin-Santos."
+feature_image_caption: "Paray-le-Monial (FR), 2025.10."
 from:
   - "liege-be"
   - "paray-le-monial-fr"
@@ -42,6 +42,6 @@ Here are some links for your consideration:
 
 [**Paray-le-Monial**](https://en.wikipedia.org/wiki/Paray-le-Monial) **(France).** Located in the heart of the Charolais countryside, Paray-le-Monial would be one of the 36,000 indistinguishable French towns if not for [its Romanesque basilica](https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart_of_Paray-le-Monial). Dedicated to the [Sacred Heart](https://en.wikipedia.org/wiki/Sacred_Heart) of Jesus, it’s a jewel of Clunisian architecture flanked by a lovely cloister, one of the few places where you can imagine what the [Cluny Abbey](https://en.wikipedia.org/wiki/Saint_Peter) looked like before it became a quarry.
 
-![](25W43-1.jpg "Paray-le-Monial (France), 2025/10. Image Anthony Nelzin-Santos.")
+![](25W43-1.jpg "Paray-le-Monial (FR), 2025.10. Image Anthony Nelzin-Santos.")
 
 The chapel of the Visitation, where Christ is said to have appeared to [Marguerite-Marie Alacoque](https://en.wikipedia.org/wiki/Margaret_Mary_Alacoque), is rather pedestrian in comparison. The whole complex was overshadowed by a breathtaking [*Pistacia chinensis*](https://en.wikipedia.org/wiki/Pistacia_chinensis) that seemed to have set the central square on fire.

@@ -5,7 +5,7 @@ slug: "26w17"
 aliases:
   - "/d/26w17/"
 feature_image_alt: "A statue of a man sitting on top of a sphere holding a clock. Image Anthony Nelzin-Santos."
-feature_image_caption: "Dijon (France), 2024-02."
+feature_image_caption: "Dijon (FR), 2024.02."
 from:
   - "lyon-fr"
 ---

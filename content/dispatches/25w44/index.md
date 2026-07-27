@@ -4,8 +4,8 @@ date: "2025-11-02T12:00:22.000Z"
 slug: "25w44"
 aliases:
   - "/d/25w44/"
-feature_image_alt: "An old-timey stereoscope."
-feature_image_caption: "Liège (Belgium), 2025/10. Image Anthony Nelzin-Santos."
+feature_image_alt: "An old-timey stereoscope. Image Anthony Nelzin-Santos."
+feature_image_caption: "Liège (BE), 2025.10."
 from:
   - "liege-be"
   - "aachen-de"
@@ -34,21 +34,21 @@ For the first time since 2018, i’ve travelled more than 5,000 km by train in a
 
 Which is a shame, because Liège is anything but. The seat of the bishopric where Charlemagne was born, the capital of a prince-bishopric that was a major intellectual centre, and a hub of coal and steel production for centuries, Liège is now a quaint city of 200,000 inhabitants. Disfigured by urban sprawl and the vagaries of the 1970s, it’s been transformed by its much-delayed [tram](https://en.wikipedia.org/wiki/Trams_in_Liège) and an aggressive pedestrianization plan.
 
-![](25W44-1.jpg "Liège (Belgium), 2025/11. Images Anthony Nelzin-Santos.")
+![](25W44-1.jpg "Liège (BE), 2025.11. Images Anthony Nelzin-Santos.")
 
 Notwithstanding [its gigantic cathedral](https://en.wikipedia.org/wiki/Saint_Lambert%27s_Cathedral,_Li%C3%A8ge), which has left a huge gap in the cityscape since its destruction in 1794, the old town has been preserved. Everybody will tell you to visit Saint Paul’s Cathedral and the Collegiate Church of Saint Bartholomew, and you absolutely should if you like stained glass and historical artefacts as much as i do, but you shouldn’t miss Saint Jacob’s Church. It features an incredible collection of Del Cour statues and you can go up to the matroneum (for free! on your own!) to admire its polychrome decor up close.
 
-![](25W44-3.jpg "Saint Jacob’s Church. Liège (Belgium), 2025/11. Images Anthony Nelzin-Santos.")
+![](25W44-3.jpg "Saint Jacob’s Church. Liège (BE), 2025.11. Images Anthony Nelzin-Santos.")
 
 The [Grand Curtius](https://en.wikipedia.org/wiki/Curtius_Museum) museum is almost too *grand*: we were four hours into our labyrinthine visit when we decided to race through the weaponry department, a repetitive and morbid collection of arms. [La Boverie](https://en.wikipedia.org/wiki/La_Boverie) is the polar opposite: even though we took our time admiring some of the most beautiful paintings we’ve ever seen, we were done in just over an hour. In the end, i recommend you go to the Museum of Walloon Life. It hosts a fascinating collection of local paraphernalia in a compact space that centres around a beautiful cloister.
 
-![](25W44-2.jpg "Liège (Belgium), 2025/11. Images Anthony Nelzin-Santos.")
+![](25W44-2.jpg "Liège (BE), 2025.11. Images Anthony Nelzin-Santos.")
 
 You’ll be able to order the famous [*boulet à la liégeoise*](https://en.wikipedia.org/wiki/Boulets_à_la_Liégeoise) at [the museum restaurant](https://www.provincedeliege.be/fr/node/90), a quirky space built with materials from old furniture and run as a social economy project. [Saperlipopette](https://une-gaufrette-saperlipopette.be/) has the best waffles in town, but even the worst ones are miles better than the industrial travesties you’ll find elsewhere. [Messieurs](https://www.messieurs.eu) only serves croque-monsieurs, <a href="https://www.galler.com/en/stores/galler-liege/" rel="noreferrer">Galler</a> sells delicious chocolates, and [Le Mog](https://mog-coffee.be) makes a damn good coffee.
 
 **Aachen (Germany).** Aachen is famous for its cathedral, built as the royal chapel of Charlemagne’s palace, and its [*Printen*](https://en.wikipedia.org/wiki/Aachener_Printen), little gingerbread biscuits that i eat by the dozen. It might be “the cradle of Europe”, but it’s a German city above all. Karolus is as much *Karl der Große* as he is *Charlemagne*, but there are no francophone guides at the cathedral nor information in French at the Centre Charlemagne. It’s not like the border of the French-speaking part of Belgium was only five kilometres away…
 
-![](25W44-4.jpg "Aachen (Germany), 2025/11. Images Anthony Nelzin-Santos.")
+![](25W44-4.jpg "Aachen (DE), 2025.11. Images Anthony Nelzin-Santos.")
 
 ## TV shows
 

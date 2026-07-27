@@ -5,7 +5,7 @@ slug: "26w15"
 aliases:
   - "/d/26w15/"
 feature_image_alt: "A person walking down a side street. Image Anthony Nelzin-Santos."
-feature_image_caption: "Barcelona (Spain), 2021-11."
+feature_image_caption: "Barcelona (ES), 2021.11."
 from:
   - "lyon-fr"
 ---

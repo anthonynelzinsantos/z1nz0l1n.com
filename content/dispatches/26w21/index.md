@@ -5,7 +5,7 @@ slug: "26w21"
 aliases:
   - "/d/26w21/"
 feature_image_alt: "One of Calder’s mobiles. Image Anthony Nelzin-Santos."
-feature_image_caption: "Paris (France), 2026-05."
+feature_image_caption: "Paris (FR), 2026.05."
 from:
   - "paris-fr"
 ---
@@ -24,7 +24,7 @@ Much to the chagrin of our public museums, which can’t afford to overbid mere 
 26W21-5.jpg
 {{< /gallery >}}
 
-{{< gallery caption="Paris (France), 2025/05. Images Anthony Nelzin-Santos." >}}
+{{< gallery caption="Paris (FR), 2025.05. Images Anthony Nelzin-Santos." >}}
 26W21-7.jpg
 26W21-8.jpg
 26W21-9.jpg

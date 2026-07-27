@@ -5,7 +5,7 @@ slug: "26w23"
 aliases:
   - "/d/26w23/"
 feature_image_alt: "The Uniball Zento Signature on a stack of notebooks. Image Anthony Nelzin-Santos."
-feature_image_caption: "Lyon (France), 2026-06."
+feature_image_caption: "Lyon (FR), 2026.06."
 from:
   - "lyon-fr"
 ---

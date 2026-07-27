@@ -4,8 +4,8 @@ date: "2025-08-03T08:00:00.000Z"
 slug: "sewing-a-friday-patterns-company-ilford-jacket"
 aliases:
   - "/d/sewing-a-friday-patterns-company-ilford-jacket/"
-feature_image_alt: "My (almost) finished jacket."
-feature_image_caption: "Lyon (France), 2025/07. Image Anthony Nelzin-Santos."
+feature_image_alt: "My (almost) finished jacket. Image Anthony Nelzin-Santos."
+feature_image_caption: "Lyon (FR), 2025.07."
 from:
   - "lyon-fr"
 ---

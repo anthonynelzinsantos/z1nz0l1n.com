@@ -4,8 +4,8 @@ date: "2025-08-12T19:30:00.000Z"
 slug: "anti-crapification"
 aliases:
   - "/d/anti-crapification/"
-feature_image_alt: "An old card catalogue."
-feature_image_caption: "Reims (France), 2025/08. Image Anthony Nelzin-Santos."
+feature_image_alt: "An old card catalogue. Image Anthony Nelzin-Santos."
+feature_image_caption: "Reims (FR), 2025.08."
 from:
   - "lyon-fr"
 ---

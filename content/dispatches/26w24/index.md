@@ -5,7 +5,7 @@ slug: "26w24"
 aliases:
   - "/d/26w24/"
 feature_image_alt: "A ghost from Pacman made out of keycaps. Image Anthony Nelzin-Santos."
-feature_image_caption: "Karlsruhe (Germany), 2022-11."
+feature_image_caption: "Karlsruhe (DE), 2022.11."
 from:
   - "lyon-fr"
 ---

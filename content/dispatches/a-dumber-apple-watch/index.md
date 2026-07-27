@@ -4,8 +4,8 @@ date: "2025-07-02T15:00:00.000Z"
 slug: "a-dumber-apple-watch"
 aliases:
   - "/d/a-dumber-apple-watch/"
-feature_image_alt: "The clock a Portbou’s train station."
-feature_image_caption: "Portbou (Spain), 2021/11. Image Anthony Nelzin-Santos."
+feature_image_alt: "The clock a Portbou’s train station. Image Anthony Nelzin-Santos."
+feature_image_caption: "Portbou (ES), 2021.11."
 from:
   - "vienne-fr"
 ---

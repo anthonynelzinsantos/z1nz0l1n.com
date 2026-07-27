@@ -4,8 +4,8 @@ date: "2025-11-07T11:00:00.000Z"
 slug: "tis-the-small-season"
 aliases:
   - "/d/tis-the-small-season/"
-feature_image_alt: "A lone seat, in the middle of an alley covered with dead leaves, in a public park."
-feature_image_caption: "Paris (France), 2011/11. Images Anthony Nelzin-Santos."
+feature_image_alt: "A lone seat, in the middle of an alley covered with dead leaves, in a public park. Image Anthony Nelzin-Santos."
+feature_image_caption: "Paris (FR), 2011.11."
 from:
   - "lyon-fr"
 ---

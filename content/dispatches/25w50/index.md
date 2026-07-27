@@ -4,8 +4,8 @@ date: "2025-12-14T12:00:00.000Z"
 slug: "25w50"
 aliases:
   - "/d/25w50/"
-feature_image_alt: "A stained glass window depicting Saint François of Sales."
-feature_image_caption: "Thonon-les-Bains (France), 2023/10. Image Anthony Nelzin-Santos."
+feature_image_alt: "A stained glass window depicting Saint François of Sales. Image Anthony Nelzin-Santos."
+feature_image_caption: "Thonon-les-Bains (FR), 2023.10."
 from:
   - "lyon-fr"
 ---

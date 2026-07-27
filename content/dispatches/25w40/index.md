@@ -4,8 +4,8 @@ date: "2025-10-05T11:00:00.000Z"
 slug: "25w40"
 aliases:
   - "/d/25w40/"
-feature_image_alt: "A giant plushie of Totoro in a Japanese bookshop."
-feature_image_caption: "Paris (France), 2024/12. Image Anthony Nelzin-Santos."
+feature_image_alt: "A giant plushie of Totoro in a Japanese bookshop. Image Anthony Nelzin-Santos."
+feature_image_caption: "Paris (FR), 2024.12."
 from:
   - "lyon-fr"
 ---

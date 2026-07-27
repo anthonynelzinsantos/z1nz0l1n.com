@@ -5,7 +5,7 @@ slug: "26w09"
 aliases:
   - "/d/26w09/"
 feature_image_alt: "An electrical shutoff switch and two fire extinguisher handles on the side of an old truck. Image Anthony Nelzin-Santos."
-feature_image_caption: "Chassieu (France), 2011-10."
+feature_image_caption: "Chassieu (FR), 2011.10."
 from:
   - "lyon-fr"
 ---

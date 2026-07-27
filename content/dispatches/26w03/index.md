@@ -5,7 +5,7 @@ slug: "26w03"
 aliases:
   - "/d/26w03/"
 feature_image_alt: "A “don’t walk” sign peaking out of the shadows. Image Anthony Nelzin-Santos."
-feature_image_caption: "Lyon (France), 2022-12."
+feature_image_caption: "Lyon (FR), 2022.12."
 from:
   - "lyon-fr"
 ---

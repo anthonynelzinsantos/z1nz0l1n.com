@@ -4,8 +4,8 @@ date: "2025-12-07T11:00:00.000Z"
 slug: "25w49"
 aliases:
   - "/d/25w49/"
-feature_image_alt: "A weird graffiti of two yellow lamas (?)."
-feature_image_caption: "Lyon (France), 2021/09. Image Anthony Nelzin-Santos."
+feature_image_alt: "A weird graffiti of two yellow lamas (?). Image Anthony Nelzin-Santos."
+feature_image_caption: "Lyon (FR), 2021.09."
 from:
   - "lyon-fr"
 ---

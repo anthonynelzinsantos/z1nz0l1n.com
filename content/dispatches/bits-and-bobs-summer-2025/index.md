@@ -4,8 +4,8 @@ date: "2025-07-31T08:00:00.000Z"
 slug: "bits-and-bobs-summer-2025"
 aliases:
   - "/d/bits-and-bobs-summer-2025/"
-feature_image_alt: "A distant view of Moulins’s churches from between the horns of a statue of a cow."
-feature_image_caption: "Moulins-sur-Allier (France), 2025/05. Image Anthony Nelzin-Santos."
+feature_image_alt: "A distant view of Moulins’s churches from between the horns of a statue of a cow. Image Anthony Nelzin-Santos."
+feature_image_caption: "Moulins-sur-Allier (FR), 2025.05."
 from:
   - "lyon-fr"
   - "moulins-sur-allier-fr"
@@ -54,11 +54,11 @@ It’s hard not to feel more than a little bit frightened — and that’s e
 
 **Arooj Aftab, Rabih Abou-Khalil and Dhafer Youssef at** [**Jazz à Vienne**](https://www.jazzavienne.com/en)**.** I’ll never understand why some older North Africans feel the need to joke at their own expense. Dhafer Youssef’s behaviour was particularly egregious, as he perpetuated overtly racist stereotypes between songs, rendering his pro-Gaza interventions meaningless. Rabih Abou-Khalil was funnier in a “sorry about my weird uncle” kind of way — it doesn’t hurt that his music was less repetitive and more melodically accomplished than Youssef’s. In the end, Arooj Aftab was the highlight of the evening, blending jazzy rock and Hindustani electronica in a mesmerizing performance.
 
-![](bits-and-bobs-summer-2025-1.jpg "Arooj Aftab, Rabih Abou-Khalil and Dhafer Youssef at Jazz à Vienne, 2025/07. Image Anthony Nelzin-Santos.")
+![](bits-and-bobs-summer-2025-1.jpg "Arooj Aftab, Rabih Abou-Khalil and Dhafer Youssef at Jazz à Vienne, 2025.07. Image Anthony Nelzin-Santos.")
 
 **Donny McCaslin & Ishkero, Meshell Ndegeocello and Kamasi Washington at Jazz à Vienne.** No offence to Donny McCaslin, who might be my favourite saxophonist alive, but i was there for Ishkero. Boy did they deliver! Their (far too short) set was a headbanger. I’m incredibly happy to have seen them become a confident band with incredible musical chops. I might have a crush on their keyboardist Arnaud Forestier — i don’t often get starry-eyed at a signing, let me tell you that my wife was jealous, but this guy is just as sweet as he’s groovy. *‌No More Water* was one of my favourites from 2024 and there was more than a little water in my eyes when Meshell Ndegeocello recited James Baldwin’s most powerful verses. This night was already unforgettable, but then Kamasi Washington took the stage and showed us the true power of music. What a properly awe-inspiring player! I was emotionally wrecked in the end. It was heartwarming to see his father supporting him on the saxophone while his daughter danced backstage and his wife sang a new song.
 
-![](bits-and-bobs-summer-2025-2.jpg "Donny McCaslin & Ishkero, Meshell Ndegeocello and Kamasi Washington at Jazz à Vienne, 2025/07. Image Anthony Nelzin-Santos.")
+![](bits-and-bobs-summer-2025-2.jpg "Donny McCaslin & Ishkero, Meshell Ndegeocello and Kamasi Washington at Jazz à Vienne, 2025.07. Image Anthony Nelzin-Santos.")
 
 ## Links
 
@@ -86,7 +86,7 @@ Here are some articles for your consideration:
 
 **Moulins-sur-Allier.** Moulins isn’t the most walkable city in the world, despite the scenic walkways along the Allier River. [The National Centre for Theatrical Costume and Design](https://cncs.fr/en/homepage/) displays costumes just as the Louvre displays paintings, without explaining why — and most importantly how — they were made. It’s beautiful, but in a superficial and meaningless way. The adjacent [“La Scène”](https://cncs.fr/en/a-visiter/opening-of-la-scene-april-8/) building is much more interesting: it explains how theatre is made by dropping you right in the middle of one. How fun!
 
-![](bits-and-bobs-summer-2025-3.jpg "The National Centre for Theatrical Costume and Design and La Scène, Moulins-sur-Alliers, 2025/05. Image Anthony Nelzin-Santos.")
+![](bits-and-bobs-summer-2025-3.jpg "The National Centre for Theatrical Costume and Design and La Scène, Moulins-sur-Allier (FR), 2025.05. Image Anthony Nelzin-Santos.")
 
 ## TV shows
 

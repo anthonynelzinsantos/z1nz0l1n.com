@@ -4,8 +4,8 @@ date: "2025-10-01T15:00:00.000Z"
 slug: "tech-journalism-is-dead"
 aliases:
   - "/d/tech-journalism-is-dead/"
-feature_image_alt: "A lone battery that’s fallen down from a row of batteries in some sort of art installation in an IKEA store."
-feature_image_caption: "Vénissieux (France), 2024/04. Image Anthony Nelzin-Santos."
+feature_image_alt: "A lone battery that’s fallen down from a row of batteries in some sort of art installation in an IKEA store. Image Anthony Nelzin-Santos."
+feature_image_caption: "Vénissieux (FR), 2024.04."
 from:
   - "lyon-fr"
 ---

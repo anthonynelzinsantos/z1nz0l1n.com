@@ -5,7 +5,7 @@ slug: "26w14"
 aliases:
   - "/d/26w14/"
 feature_image_alt: "A drawing of an Apple-hearted person. Image Anthony Nelzin-Santos."
-feature_image_caption: "Puteaux (France), 2009-05."
+feature_image_caption: "Puteaux (FR), 2009.05."
 from:
   - "lyon-fr"
 ---

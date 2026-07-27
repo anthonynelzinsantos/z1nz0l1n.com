@@ -4,8 +4,8 @@ date: "2025-09-03T18:00:00.000Z"
 slug: "liquid-glass-isnt-a-design-failure"
 aliases:
   - "/d/liquid-glass-isnt-a-design-failure/"
-feature_image_alt: "A stained glass window in the cathedral of Reims."
-feature_image_caption: "Glass at the end of the tunnel? Reims (France), 2025/08. Image Anthony Nelzin-Santos."
+feature_image_alt: "A stained glass window in the cathedral of Reims. Image Anthony Nelzin-Santos."
+feature_image_caption: "Glass at the end of the tunnel? Reims (FR), 2025.08."
 from:
   - "lyon-fr"
 ---

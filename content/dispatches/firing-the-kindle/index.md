@@ -4,15 +4,15 @@ date: "2025-02-18T17:00:00.000Z"
 slug: "firing-the-kindle"
 aliases:
   - "/d/firing-the-kindle/"
-feature_image_alt: "A view of the famous Livraria Lello in Porto."
-feature_image_caption: "Porto (Portugal), 2024/10. Image Anthony Nelzin-Santos."
+feature_image_alt: "A view of the famous Livraria Lello in Porto. Image Anthony Nelzin-Santos."
+feature_image_caption: "Porto (PT), 2024.10."
 from:
   - "besancon-fr"
 ---
 
 > Starting on February 26th, 2025, Amazon is removing a feature from its website allowing you to download purchased books to a computer and then copy them manually to a Kindle over USB. It’s a feature that a lot of Kindle users are probably not aware of, given books can be more easily sent to devices over Wi-Fi, but it’s especially useful for backing up purchases or converting them to other formats compatible with non-Kindle e-readers.  
 >   
-> — Andrew Liszewski, [“Amazon’s killing a feature that let you download and backup Kindle books”](https://www.theverge.com/news/612898/amazon-removing-kindle-book-download-transfer-usb), *The Verge*, 25/02/14.  
+> — Andrew Liszewski, [“Amazon’s killing a feature that let you download and backup Kindle books”](https://www.theverge.com/news/612898/amazon-removing-kindle-book-download-transfer-usb), *The Verge*, 2025.02.14.  
 >   
 
 Fuckers. (It might be illegal in most European countries, where the ability to make a private copy of copyrighted works is a right. We even pay a tax to make up for lost revenue.)

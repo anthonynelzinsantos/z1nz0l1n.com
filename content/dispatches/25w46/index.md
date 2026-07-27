@@ -4,8 +4,8 @@ date: "2025-11-16T11:00:00.000Z"
 slug: "25w46"
 aliases:
   - "/d/25w46/"
-feature_image_alt: "A bunch of old bikes on the street."
-feature_image_caption: "Lyon (France), 2025/11. Image Anthony Nelzin-Santos."
+feature_image_alt: "A bunch of old bikes on the street. Image Anthony Nelzin-Santos."
+feature_image_caption: "Lyon (FR), 2025.11."
 from:
   - "lyon-fr"
 ---

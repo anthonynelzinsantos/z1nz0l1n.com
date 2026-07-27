@@ -4,8 +4,8 @@ date: "2025-05-11T08:00:00.000Z"
 slug: "a-thousand-and-twenty-four-days"
 aliases:
   - "/d/a-thousand-and-twenty-four-days/"
-feature_image_alt: "A red Citroën 2CV."
-feature_image_caption: "Moulins-sur-Allier (France), 2025/05. Image Anthony Nelzin-Santos."
+feature_image_alt: "A red Citroën 2CV. Image Anthony Nelzin-Santos."
+feature_image_caption: "Moulins-sur-Allier (FR), 2025.05."
 from:
   - "lyon-fr"
 ---

@@ -4,8 +4,8 @@ date: "2025-06-15T17:00:00.000Z"
 slug: "why-do-people-look-at-their-smartphones-while-walking"
 aliases:
   - "/d/why-do-people-look-at-their-smartphones-while-walking/"
-feature_image_alt: "A mural of people bumping into each other because they were looking at their smartphone."
-feature_image_caption: "Besançon (France), 2025/02. Image Anthony Nelzin-Santos."
+feature_image_alt: "A mural of people bumping into each other because they were looking at their smartphone. Image Anthony Nelzin-Santos."
+feature_image_caption: "Besançon (FR), 2025.02."
 from:
   - "lyon-fr"
 ---

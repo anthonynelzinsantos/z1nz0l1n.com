@@ -4,8 +4,8 @@ date: "2025-12-21T10:00:00.000Z"
 slug: "25w51"
 aliases:
   - "/d/25w51/"
-feature_image_alt: "The famed typewriter from the Shakespeare and Company bookshop in Paris."
-feature_image_caption: "Paris (France), 2010/04. Image Anthony Nelzin-Santos."
+feature_image_alt: "The famed typewriter from the Shakespeare and Company bookshop in Paris. Image Anthony Nelzin-Santos."
+feature_image_caption: "Paris (FR), 2010.04."
 from:
   - "lyon-fr"
 ---

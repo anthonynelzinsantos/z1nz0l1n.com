@@ -4,8 +4,8 @@ date: "2025-12-18T13:00:00.000Z"
 slug: "you-shouldnt-buy-a-colour-e-reader-yet"
 aliases:
   - "/d/you-shouldnt-buy-a-colour-e-reader-yet/"
-feature_image_alt: "An assortment of colour swatches and paints on shelves."
-feature_image_caption: "Moulins-sur-Allier (France), 2025/05. Image Anthony Nelzin-Santos."
+feature_image_alt: "An assortment of colour swatches and paints on shelves. Image Anthony Nelzin-Santos."
+feature_image_caption: "Moulins-sur-Allier (FR), 2025.05."
 from:
   - "lyon-fr"
 ---

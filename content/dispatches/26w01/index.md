@@ -5,7 +5,7 @@ slug: "26w01"
 aliases:
   - "/d/26w01/"
 feature_image_alt: "The Géode dome reflecting the winter sky. Image Anthony Nelzin-Santos."
-feature_image_caption: "Paris (France), 2025-12."
+feature_image_caption: "Paris (FR), 2025.12."
 from:
   - "lyon-fr"
 ---

@@ -4,8 +4,8 @@ date: "2025-11-09T12:00:00.000Z"
 slug: "25w45"
 aliases:
   - "/d/25w45/"
-feature_image_alt: "Eugène Ysaye’s studio at the Grand Curtius museum in Liège."
-feature_image_caption: "Liège (Belgium), 2025/10. Image Anthony Nelzin-Santos."
+feature_image_alt: "Eugène Ysaye’s studio at the Grand Curtius museum in Liège. Image Anthony Nelzin-Santos."
+feature_image_caption: "Liège (BE), 2025.10."
 from:
   - "lyon-fr"
 ---

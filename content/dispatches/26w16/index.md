@@ -5,7 +5,7 @@ slug: "26w16"
 aliases:
   - "/d/26w16/"
 feature_image_alt: "A detail of the Olivetti Lettera 36. Image Anthony Nelzin-Santos."
-feature_image_caption: "Lyon (France), 2026-04."
+feature_image_caption: "Lyon (FR), 2026.04."
 from:
   - "lyon-fr"
 ---

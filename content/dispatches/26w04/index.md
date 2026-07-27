@@ -5,7 +5,7 @@ slug: "26w04"
 aliases:
   - "/d/26w04/"
 feature_image_alt: "A craftsman from Hermès, surrounded by people, working on a leather bag. Image Anthony Nelzin-Santos."
-feature_image_caption: "Lyon (France), 2018-06."
+feature_image_caption: "Lyon (FR), 2018.06."
 from:
   - "lyon-fr"
 ---

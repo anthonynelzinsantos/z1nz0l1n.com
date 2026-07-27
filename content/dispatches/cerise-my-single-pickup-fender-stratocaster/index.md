@@ -4,8 +4,8 @@ date: "2025-08-31T14:00:00.000Z"
 slug: "cerise-my-single-pickup-fender-stratocaster"
 aliases:
   - "/d/cerise-my-single-pickup-fender-stratocaster/"
-feature_image_alt: "The single pickup of my Fender Stratocaster."
-feature_image_caption: "Lyon (France), 2025/08. Image Anthony Nelzin-Santos."
+feature_image_alt: "The single pickup of my Fender Stratocaster. Image Anthony Nelzin-Santos."
+feature_image_caption: "Lyon (FR), 2025.08."
 from:
   - "lyon-fr"
 ---

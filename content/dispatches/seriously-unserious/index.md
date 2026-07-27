@@ -4,8 +4,8 @@ date: "2025-02-25T05:00:00.000Z"
 slug: "seriously-unserious"
 aliases:
   - "/d/seriously-unserious/"
-feature_image_alt: "The bottom part of a statue."
-feature_image_caption: "Barcelona (Spain), 2013/02. Image Anthony Nelzin-Santos."
+feature_image_alt: "The bottom part of a statue. Image Anthony Nelzin-Santos."
+feature_image_caption: "Barcelona (ES), 2013.02."
 from:
   - "lyon-fr"
 ---
@@ -14,7 +14,7 @@ from:
 >   
 > The new camera bucks multiple trends that have guided camera design since the days of film photography. The compact 24.6-megapixel full-frame interchangeable lens camera is controlled by a wholly re-imagined user interface and just three buttons, a dial, and a shutter release. The company says it is the first in the world to make a camera with a true unibody design that is carved from a single block of aluminum — a process that takes seven hours.  
 >   
-> — Jaron Schneider, [“The Sigma BF Stands for ‘Beautiful Foolishness’”](https://petapixel.com/2025/02/23/the-sigma-bf-stands-for-beautiful-foolishness/), *PetaPixel*, 25/02/23.  
+> — Jaron Schneider, [“The Sigma BF Stands for ‘Beautiful Foolishness’”](https://petapixel.com/2025/02/23/the-sigma-bf-stands-for-beautiful-foolishness/), *PetaPixel*, 2025.02.23.  
 >   
 >   
 >   
@@ -31,7 +31,7 @@ In this age of conspicuous consumption and algorithmic sameness, [weird](https:/
 >   
 > There is hype, and then there is *hype*. This is the latter. Even if it is backed by facts — I have no reason to suspect Microsoft is lying in large part because, to reiterate, I do not know anything about this — and even if Microsoft deserves this much attention, it is a lot. Maybe I have become jaded by one too many ostensibly world-changing product launches.  
 >   
-> — Nick Heer, [“I Do Not Understand Quantum Computers or the Apparent Breakthroughs From Google and Microsoft”](https://pxlnv.com/blog/i-do-not-understand-quantum-computers/), *Pixel Envy*, 25/02/21.  
+> — Nick Heer, [“I Do Not Understand Quantum Computers or the Apparent Breakthroughs From Google and Microsoft”](https://pxlnv.com/blog/i-do-not-understand-quantum-computers/), *Pixel Envy*, 2025.02.21.  
 >   
 >   
 >   

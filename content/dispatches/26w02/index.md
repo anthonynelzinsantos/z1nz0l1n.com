@@ -5,7 +5,7 @@ slug: "26w02"
 aliases:
   - "/d/26w02/"
 feature_image_alt: "Steps in the fresh snow. Image Anthony Nelzin-Santos."
-feature_image_caption: "Lyon (France), 2017-12."
+feature_image_caption: "Lyon (FR), 2017.12."
 from:
   - "lyon-fr"
 ---

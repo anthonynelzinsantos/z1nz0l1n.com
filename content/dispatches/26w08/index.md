@@ -5,7 +5,7 @@ slug: "26w08"
 aliases:
   - "/d/26w08/"
 feature_image_alt: "A view of the cathedral of Marseille. Image Anthony Nelzin-Santos."
-feature_image_caption: "Marseille (France), 2025-02."
+feature_image_caption: "Marseille (FR), 2025.02."
 from:
   - "marseille-fr"
 ---
@@ -33,7 +33,7 @@ Most of them will stroll around the (admittedly charming) Panier neighbourhood, 
 26W08-8.jpg
 {{< /gallery >}}
 
-{{< gallery caption="Marseille (France), 2025/02. Images Anthony Nelzin-Santos." >}}
+{{< gallery caption="Marseille (FR), 2025.02. Images Anthony Nelzin-Santos." >}}
 26W08-9.jpg
 26W08-10.jpg
 26W08-11.jpg

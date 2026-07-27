@@ -4,8 +4,8 @@ date: "2025-11-23T11:00:00.000Z"
 slug: "25w47"
 aliases:
   - "/d/25w47/"
-feature_image_alt: "An old man plugging his ears with his fingers at a concert, seen from the back."
-feature_image_caption: "Vienne (France), 2025/07. Image Anthony Nelzin-Santos."
+feature_image_alt: "An old man plugging his ears with his fingers at a concert, seen from the back. Image Anthony Nelzin-Santos."
+feature_image_caption: "Vienne (FR), 2025.07."
 from:
   - "lyon-fr"
 ---

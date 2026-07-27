@@ -5,7 +5,7 @@ slug: "26w12"
 aliases:
   - "/d/26w12/"
 feature_image_alt: "Colourful bookshelves in an outdoor library. Image Anthony Nelzin-Santos."
-feature_image_caption: "Marseille (France), 2026-02."
+feature_image_caption: "Marseille (FR), 2026.02."
 from:
   - "lyon-fr"
 ---
