@@ -8,19 +8,24 @@
   const points = dataEl ? JSON.parse(dataEl.textContent) : [];
   if (!points.length) return;
 
-  const map = L.map(el, { scrollWheelZoom: false });
+  const map = L.map(el, {
+    boxZoom: false,
+    doubleClickZoom: false,
+    dragging: false,
+    keyboard: false,
+    scrollWheelZoom: false,
+    touchZoom: false,
+    zoomControl: false,
+  });
 
   L.tileLayer(
-    'https://data.geopf.fr/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE=normal&TILEMATRIXSET=PM&FORMAT=image/png&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}',
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
-      attribution: '<a href="https://www.geoportail.gouv.fr/" target="_blank">Geoportail France</a>',
+      attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
       minZoom: 2,
-      maxZoom: 18,
+      maxZoom: 19,
     }
   ).addTo(map);
-
-  el.addEventListener('mouseenter', function () { map.scrollWheelZoom.enable(); });
-  el.addEventListener('mouseleave', function () { map.scrollWheelZoom.disable(); });
 
   const markers = points.map(function (p) {
     const marker = L.marker([p.lat, p.lng]).addTo(map);
@@ -34,7 +39,7 @@
   });
 
   if (points.length === 1) {
-    map.setView([points[0].lat, points[0].lng], 9);
+    map.setView([points[0].lat, points[0].lng], 12);
   } else {
     map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
   }

@@ -807,10 +807,9 @@ body {
 				lch(100% 0 0 / 16%) 33.333% 66.667%,
 				lch(0% 0 0 / 5%) 66.667% 100%),
 			repeating-linear-gradient(to right,
-				transparent 0 calc(33.333% - 0.06em),
-				lch(0% 0 0 / 12%) calc(33.333% - 0.06em) 33.333%,
-				lch(100% 0 0 / 35%) 33.333% calc(33.333% + 0.06em),
-				transparent calc(33.333% + 0.06em) calc(33.333% + 0.12em));
+				lch(100% 0 0 / 35%) 0 0.06em,
+				transparent 0.06em calc(33.333% - 0.06em),
+				lch(0% 0 0 / 12%) calc(33.333% - 0.06em) 33.333%);
 		content:        "";
 		inset:          0;
 		pointer-events: none;
@@ -823,10 +822,9 @@ body {
 					lch(0% 0 0 / 5%) 0 25%,
 					lch(100% 0 0 / 16%) 25% 50%),
 				repeating-linear-gradient(to right,
-					transparent 0 calc(25% - 0.06em),
-					lch(0% 0 0 / 12%) calc(25% - 0.06em) 25%,
-					lch(100% 0 0 / 35%) 25% calc(25% + 0.06em),
-					transparent calc(25% + 0.06em) calc(25% + 0.12em));
+					lch(100% 0 0 / 35%) 0 0.06em,
+					transparent 0.06em calc(25% - 0.06em),
+					lch(0% 0 0 / 12%) calc(25% - 0.06em) 25%);
 		}
 	}
 }
@@ -841,6 +839,10 @@ body {
 	@media screen and (min-width: 768px) {
 		height: 75vh;
 	}
+}
+
+.leaflet-tile-pane {
+	filter: grayscale(0.55) sepia(0.12) contrast(0.92) brightness(1.04);
 }
 
 .leaflet-marker-icon {
