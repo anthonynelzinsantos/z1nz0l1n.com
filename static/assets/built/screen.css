@@ -429,7 +429,7 @@ body {
 #main {
 	.article {
 		display:               grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 
 		@media screen and (min-width: 768px) {
 			column-gap:            var(--space-l);
@@ -467,7 +467,14 @@ body {
 		}
 
 		.content {
-			counter-reset: slug;
+			counter-reset:         slug;
+			hyphenate-limit-chars: 5 2 2;
+			text-align:            justify;
+
+			@media screen and (min-width: 768px) {
+				hyphenate-limit-chars: 7 3 4;
+				text-align:            left;
+			}
 
 			b,
 			strong {
@@ -719,7 +726,7 @@ body {
 
 	.article.index {
 		grid-template-areas:   "content";
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 	}
 }
 
@@ -768,6 +775,7 @@ body {
 		display:       block;
 		flex:          0 1 auto;
 		margin:        0;
+		min-width:     0;
 		overflow:      hidden;
 		text-overflow: ellipsis;
 		white-space:   nowrap;
@@ -803,9 +811,9 @@ body {
 	&::after {
 		background-image:
 			linear-gradient(to right,
-				lch(0% 0 0 / 5%) 0 33.333%,
-				lch(100% 0 0 / 16%) 33.333% 66.667%,
-				lch(0% 0 0 / 5%) 66.667% 100%),
+				lch(20% 15 65 / 5%) 0 33.333%,
+				lch(97% 8 90 / 12%) 33.333% 66.667%,
+				lch(20% 15 65 / 5%) 66.667% 100%),
 			repeating-linear-gradient(to right,
 				lch(100% 0 0 / 35%) 0 0.06em,
 				transparent 0.06em calc(33.333% - 0.06em),
@@ -815,34 +823,19 @@ body {
 		pointer-events: none;
 		position:       absolute;
 		z-index:        1;
-
-		@media screen and (min-width: 768px) {
-			background-image:
-				repeating-linear-gradient(to right,
-					lch(0% 0 0 / 5%) 0 25%,
-					lch(100% 0 0 / 16%) 25% 50%),
-				repeating-linear-gradient(to right,
-					lch(100% 0 0 / 35%) 0 0.06em,
-					transparent 0.06em calc(25% - 0.06em),
-					lch(0% 0 0 / 12%) calc(25% - 0.06em) 25%);
-		}
 	}
 }
 
 .map {
-	background: var(--color-muted);
-	height:     50vh;
-	position:   relative;
-	width:      100%;
-	z-index:    0;
-
-	@media screen and (min-width: 768px) {
-		height: 75vh;
-	}
+	aspect-ratio: 2 / 1;
+	background:   var(--color-muted);
+	position:     relative;
+	width:        100%;
+	z-index:      0;
 }
 
 .leaflet-tile-pane {
-	filter: grayscale(0.55) sepia(0.12) contrast(0.92) brightness(1.04);
+	filter: saturate(0.75) sepia(0.12) contrast(0.92);
 }
 
 .leaflet-marker-icon {

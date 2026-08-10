@@ -19,11 +19,11 @@
   });
 
   L.tileLayer(
-    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {
-      attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
+      attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>, <a href="https://carto.com/attributions" target="_blank">CARTO</a>',
       minZoom: 2,
-      maxZoom: 19,
+      maxZoom: 20,
     }
   ).addTo(map);
 
@@ -41,7 +41,7 @@
   if (points.length === 1) {
     map.setView([points[0].lat, points[0].lng], 12);
   } else {
-    map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
+    map.fitBounds(L.featureGroup(markers).getBounds().pad(0.05));
   }
 
   new ResizeObserver(function () { map.invalidateSize(); }).observe(el);
