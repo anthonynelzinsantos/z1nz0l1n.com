@@ -43,6 +43,3 @@ timeZone = "Europe/Paris"
 
 [outputs]
   home = ["HTML", "RSS"]
-
-[services.rss]
-  limit = 10
