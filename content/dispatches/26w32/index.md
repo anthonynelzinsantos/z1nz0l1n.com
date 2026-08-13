@@ -2,11 +2,10 @@
 title: "The Apple Museum is an ode to a company that doesn’t exist any more"
 date: "2026-08-09T18:00:00.000Z"
 slug: "26w32"
-feature_image_alt: "A wall of iMac G3 in the Apple Museum. Image Anthony Nelzin-Santos."
+feature_image_alt: "A wall of iMac G3s in the Apple Museum. Image Anthony Nelzin-Santos."
 feature_image_caption: "Utrecht (NL), 2026.08."
 from:
   - "antwerpen-be"
-  - "bruxelles-be"
   - "utrecht-nl"
 ---
 

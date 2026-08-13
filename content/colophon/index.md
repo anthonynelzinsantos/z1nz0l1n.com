@@ -18,7 +18,7 @@ Inspirations: [Aegir](https://aegir.org/), [V.H. Belvadi](https://vhbelvadi.com/
 <div>
 <h2>Typography</h2>
 
-Printed template: [OH no Vulf Sans](https://ohnotype.co/fonts/vulf). Typewritten dispatches: <span style="font-family: var(--font-typewriter)">[OH no Vulf Mono](https://ohnotype.co/fonts/vulf)</span>. Handwritten captions: <span style="font-family: var(--font-handwritten); font-size: .8em;">[Sideshow Rock Salt](https://www.sideshowfonts.com/font/rock-salt-pro)</span>.
+Printed template: [OH no Vulf Sans](https://ohnotype.co/fonts/vulf). Typewritten dispatches: <span style="font-family: var(--font-typewriter)">[OH no Vulf Mono](https://ohnotype.co/fonts/vulf)</span>. Handwritten captions: <span style="font-family: var(--font-handwritten); font-size: .8em;">[Sideshow Rock Salt](https://www.sideshowfonts.com/font/rock-salt-pro)</span>. Icons: [Phosphor](https://phosphoricons.com).
 </div>
 
 <div>
