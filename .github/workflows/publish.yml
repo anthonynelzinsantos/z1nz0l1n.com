@@ -18,7 +18,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Resolve Hugo version
+        id: hugo
+        run: echo "version=$(hugo version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
 
       - name: Cache resources
         uses: actions/cache@v4
@@ -26,16 +35,10 @@ jobs:
           path: |
             ${{ env.HUGO_CACHEDIR }}
             resources/_gen
-          key: ${{ runner.os }}-hugo-${{ hashFiles('assets/**', 'content/**/*.jpg', 'hugo.toml') }}
+          key: ${{ runner.os }}-hugo-${{ steps.hugo.outputs.version }}-${{ hashFiles('assets/**', 'content/**/*.jpg', 'hugo.toml') }}
           restore-keys: |
-            ${{ runner.os }}-hugo-
-          
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: latest
-          extended: true
-          
+            ${{ runner.os }}-hugo-${{ steps.hugo.outputs.version }}-
+
       - name: Build site
         run: hugo --minify
         
