@@ -1,9 +1,9 @@
 ---
 title: "Jazz impressions of Antwerpen (and other places)"
 date: "2026-08-16T12:00:00.000Z"
-slug: "26w34"
+slug: "26w33"
 feature_image_alt: "A vintage departure board featuring a train to Antwerpen at Train World. Image Anthony Nelzin-Santos."
-feature_image_caption: "Brussels (BE), 2026.08."
+feature_image_caption: "Schaerbeek (BE), 2026.08."
 from:
   - "antwerpen-be"
   - "bruxelles-be"
