@@ -1,13 +1,28 @@
 {{ $caption := .Get "caption" }}
 {{ $aside := in (slice "true" "1" "right" "yes") (.Get "aside" | default "") }}
+{{ $widths := slice 300 450 600 900 1200 }}
+{{ $squares := slice 200 300 450 600 }}
 <figure class="gallery{{ if $caption }} has-caption{{ end }}{{ if $aside }} gallery--aside{{ end }}">
 	<div class="gallery-container">
 	{{ range $row := split (trim .Inner "\n ") "\n\n" }}
 		{{ $imgs := slice }}{{ range (split $row "\n") }}{{ $name := trim . " \t" }}{{ with and $name ($.Page.Resources.GetMatch $name) }}{{ $imgs = $imgs | append . }}{{ end }}{{ end }}
 		{{ with $imgs }}
-		{{ $cols := slice }}{{ range . }}{{ $ar := 1.0 }}{{ if and .Width .Height (gt .Height 0) }}{{ $ar = div (float .Width) (float .Height) }}{{ end }}{{ $cols = $cols | append (printf "%.4ffr" $ar) }}{{ end }}
-		<div class="gallery-row{{ if eq (len .) 1 }} gallery-row--single{{ end }}" style="grid-template-columns: {{ delimit $cols " " }}">
-		{{ range . }}<div class="gallery-image photo">{{ partial "marks.html" }}<div class="photo-print"><picture><source type="image/avif" srcset="{{ (.Resize (printf "%dx avif" .Width)).RelPermalink }}"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt=""></picture></div></div>{{ end }}
+		{{ $ars := slice }}{{ range . }}{{ $ar := 1.0 }}{{ if and .Width .Height (gt .Height 0) }}{{ $ar = div (float .Width) (float .Height) }}{{ end }}{{ $ars = $ars | append $ar }}{{ end }}
+		{{ $total := 0.0 }}{{ range $ars }}{{ $total = add $total . }}{{ end }}
+		{{ $single := eq (len .) 1 }}
+		{{ $cols := slice }}{{ range $ars }}{{ $cols = $cols | append (printf "%.4ffr" .) }}{{ end }}
+		<div class="gallery-row{{ if $single }} gallery-row--single{{ end }}" style="grid-template-columns: {{ delimit $cols " " }}">
+		{{ range $i, $res := . }}
+		{{ $wide := cond $single 1.0 (div (index $ars $i) $total) }}
+		{{ $sizes := printf "(min-width: 1332px) %.0fpx, (min-width: 768px) %.0fvw, %.0fvw" (mul (cond $single 0.5 $wide) 907.0) (mul (cond $single 0.5 $wide) 64.0) (mul $wide 92.0) }}
+		{{ if $aside }}{{ $sizes = printf "%.0fvw" (mul $wide 92.0) }}{{ end }}
+		{{ $jpg := slice }}{{ $avif := slice }}
+		{{ range $widths }}{{ if le . $res.Width }}{{ $jpg = $jpg | append (printf "%s %dw" ($res.Resize (printf "%dx" .)).RelPermalink .) }}{{ $avif = $avif | append (printf "%s %dw" ($res.Resize (printf "%dx avif" .)).RelPermalink .) }}{{ end }}{{ end }}
+		{{ $sqJpg := slice }}{{ $sqAvif := slice }}
+		{{ if $aside }}{{ range $squares }}{{ if le . (math.Min $res.Width $res.Height) }}{{ $sqJpg = $sqJpg | append (printf "%s %dw" ($res.Fill (printf "%dx%d" . .)).RelPermalink .) }}{{ $sqAvif = $sqAvif | append (printf "%s %dw" ($res.Fill (printf "%dx%d avif" . .)).RelPermalink .) }}{{ end }}{{ end }}{{ end }}
+		{{ $default := $res }}{{ if ge $res.Width 900 }}{{ $default = $res.Resize "900x" }}{{ end }}
+		<div class="gallery-image photo">{{ partial "marks.html" }}<div class="photo-print"><picture>{{ with $sqAvif }}<source media="(min-width: 768px)" type="image/avif" srcset="{{ delimit . ", " }}" sizes="(min-width: 1332px) 185px, 15vw">{{ end }}{{ with $sqJpg }}<source media="(min-width: 768px)" srcset="{{ delimit . ", " }}" sizes="(min-width: 1332px) 185px, 15vw">{{ end }}{{ with $avif }}<source type="image/avif" srcset="{{ delimit . ", " }}" sizes="{{ $sizes }}">{{ end }}<img src="{{ $default.RelPermalink }}"{{ with $jpg }} srcset="{{ delimit . ", " }}"{{ end }} sizes="{{ $sizes }}" width="{{ $default.Width }}" height="{{ $default.Height }}" loading="lazy" alt="" data-href="{{ $res.RelPermalink }}"></picture></div></div>
+		{{ end }}
 		</div>
 		{{ end }}
 	{{ end }}

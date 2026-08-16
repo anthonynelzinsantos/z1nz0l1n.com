@@ -23,10 +23,12 @@ jobs:
       - name: Cache resources
         uses: actions/cache@v4
         with:
-          path: ${{ env.HUGO_CACHEDIR }}
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          path: |
+            ${{ env.HUGO_CACHEDIR }}
+            resources/_gen
+          key: ${{ runner.os }}-hugo-${{ hashFiles('assets/**', 'content/**/*.jpg', 'hugo.toml') }}
           restore-keys: |
-            ${{ runner.os }}-hugomod-
+            ${{ runner.os }}-hugo-
           
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3

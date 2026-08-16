@@ -655,7 +655,11 @@ body {
 			}
 
 			.gallery-row--single {
-				grid-template-columns: minmax(0, 0.5fr) !important;
+				grid-template-columns: minmax(0, 1fr) !important;
+
+				@media screen and (min-width: 768px) {
+					grid-template-columns: minmax(0, 0.5fr) !important;
+				}
 			}
 
 			.gallery-image {
@@ -663,7 +667,10 @@ body {
 				--mark-size: var(--space-2xs);
 				margin:      0;
 
-				.photo-print { width: 100%; }
+				.photo-print {
+					display: block;
+					width:   100%;
+				}
 			}
 
 			.gallery > figcaption {
@@ -689,9 +696,15 @@ body {
 					position: relative;
 					top:      calc(-1 * var(--lift, 0px));
 					width:    var(--aside-width);
+					z-index:  1;
 
-					.gallery-row--single {
-						grid-template-columns: minmax(0, 1fr) !important;
+					.gallery-row {
+						grid-template-columns: 1fr 1fr !important;
+					}
+
+					.photo-print img {
+						aspect-ratio: 1;
+						object-fit:   cover;
 					}
 
 					> figcaption {
