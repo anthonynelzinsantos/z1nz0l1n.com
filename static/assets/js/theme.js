@@ -320,12 +320,14 @@
 })();
 
 (function () {
-  const WIDE = window.matchMedia('(min-width: 768px)');
-  const notes = document.querySelector('#main .article .notes');
-  if (!notes) return;
+  const WIDE    = window.matchMedia('(min-width: 768px)');
+  const content = document.querySelector('#main .article .content');
+  const notes   = document.querySelector('#main .article .notes');
+  if (!content) return;
 
-  const items = Array.from(notes.querySelectorAll('li'));
-  if (!items.length) return;
+  const asides = Array.from(content.querySelectorAll('.gallery--aside'));
+  const items  = notes ? Array.from(notes.querySelectorAll('li')) : [];
+  if (!asides.length && !items.length) return;
 
   const refFor = li => {
     const back = li.querySelector('.footnote-backref');
@@ -333,7 +335,29 @@
     return href ? document.getElementById(href.slice(1)) : null;
   };
 
+  function clamp() {
+    asides.forEach(el => { el.style.removeProperty('--lift'); });
+
+    if (!WIDE.matches) return;
+
+    const flow  = Array.from(content.children).filter(el => !asides.includes(el));
+    const box   = content.getBoundingClientRect();
+    const floor = flow.length
+      ? flow[flow.length - 1].getBoundingClientRect().bottom
+      : box.bottom;
+
+    asides.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const lift = Math.round(Math.min(rect.bottom - floor, rect.top - box.top));
+      if (lift > 0) el.style.setProperty('--lift', `${lift}px`);
+    });
+  }
+
   function align() {
+    clamp();
+
+    if (!items.length) return;
+
     if (!WIDE.matches) {
       notes.classList.remove('aligned');
       items.forEach(li => { li.style.top = ''; });
@@ -344,6 +368,26 @@
 
     const box = notes.getBoundingClientRect();
     const gap = parseFloat(getComputedStyle(notes).lineHeight) || 24;
+
+    const blocks = asides
+      .map(el => el.getBoundingClientRect())
+      .map(r => ({ top: r.top - box.top, bottom: r.bottom - box.top }))
+      .sort((a, b) => a.top - b.top);
+
+    const hits = (top, h, b) => top < b.bottom + gap && top + h > b.top - gap;
+
+    const clearDown = (top, h) => {
+      blocks.forEach(b => { if (hits(top, h, b)) top = b.bottom + gap; });
+      return top;
+    };
+
+    const clearUp = (top, h) => {
+      for (let i = blocks.length - 1; i >= 0; i--) {
+        if (hits(top, h, blocks[i])) top = blocks[i].top - gap - h;
+      }
+      return top;
+    };
+
     const placed = items.map(li => {
       const ref = refFor(li);
       return {
@@ -355,21 +399,20 @@
 
     let floor = 0;
     placed.forEach(p => {
-      p.top = Math.max(p.want, floor);
+      p.top = clearDown(Math.max(p.want, floor), p.h);
       floor = p.top + p.h + gap;
     });
 
     let ceiling = box.height;
     for (let i = placed.length - 1; i >= 0; i--) {
-      placed[i].top = Math.min(placed[i].top, ceiling - placed[i].h);
+      placed[i].top = clearUp(Math.min(placed[i].top, ceiling - placed[i].h), placed[i].h);
       ceiling = placed[i].top - gap;
     }
 
     placed.forEach(p => { p.li.style.top = Math.max(0, Math.round(p.top)) + 'px'; });
   }
 
-  const content = document.querySelector('#main .article .content');
-  if (content && window.ResizeObserver) new ResizeObserver(align).observe(content);
+  if (window.ResizeObserver) new ResizeObserver(align).observe(content);
   WIDE.addEventListener('change', align);
   window.addEventListener('resize', align);
   window.addEventListener('load', align);

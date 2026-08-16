@@ -1,5 +1,6 @@
 {{ $caption := .Get "caption" }}
-<figure class="gallery{{ if $caption }} has-caption{{ end }}">
+{{ $aside := in (slice "true" "1" "right" "yes") (.Get "aside" | default "") }}
+<figure class="gallery{{ if $caption }} has-caption{{ end }}{{ if $aside }} gallery--aside{{ end }}">
 	<div class="gallery-container">
 	{{ range $row := split (trim .Inner "\n ") "\n\n" }}
 		{{ $imgs := slice }}{{ range (split $row "\n") }}{{ $name := trim . " \t" }}{{ with and $name ($.Page.Resources.GetMatch $name) }}{{ $imgs = $imgs | append . }}{{ end }}{{ end }}
