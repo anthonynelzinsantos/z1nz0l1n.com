@@ -147,7 +147,7 @@ For the first time, i’ve had to endure an AI-generated audioguide. It was horr
 26w33-16.jpg
 {{< /gallery >}}
 
-I visited [not one](https://z1nz0l1n.com/26w32/), but two geeky museums in a single trip. [Train World](https://trainworld.be/en/) is more outwardly made for kids, but you don’t need to be a kid to enjoy climbing aboard a 19th-century locomotive, playing in a train simulator and being suddenly dwarfed by the nose of a [Eurostar e320](https://en.wikipedia.org/wiki/British_Rail_Class_374).
+I visited [not one](https://z1nz0l1n.com/26w32/), but two geeky museums in a single trip. [Train World](https://trainworld.be/en/) is more outwardly made for children, but you don’t need to be a kid to enjoy climbing aboard a 19th-century locomotive, playing in a train simulator and being suddenly dwarfed by the nose of a [Eurostar e320](https://en.wikipedia.org/wiki/British_Rail_Class_374).
 
 ***
 
