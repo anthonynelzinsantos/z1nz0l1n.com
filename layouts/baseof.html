@@ -48,7 +48,7 @@
     <link rel="icon" href="/logo.png" type="image/png">
     <link rel="stylesheet" href="/assets/built/screen.css?{{ now.Unix }}">
     <link rel="stylesheet" href="/assets/built/glightbox.min.css">
-    {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}<link rel="stylesheet" href="/assets/built/leaflet.css">{{ end }}
+    {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}<link rel="stylesheet" href="/assets/built/maplibre-gl.css">{{ end }}
     <link rel="alternate" type="application/rss+xml" href="{{ "/index.xml" | absURL }}" title="{{ site.Title }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="shortcut icon" href="/favicon.ico" />
@@ -155,7 +155,7 @@
         const gallery = GLightbox({ loop: true, selector: '.gallery-image img' });
     </script>
     {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
-    <script src="/assets/js/leaflet.js"></script>
+    <script src="/assets/js/maplibre-gl.js"></script>
     <script src="/assets/js/map.js?{{ now.Unix }}"></script>
     {{ end }}
 </body>

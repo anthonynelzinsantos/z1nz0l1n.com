@@ -24,6 +24,7 @@ timeZone = "Europe/Paris"
   dynamicColour = true
   hueAmplitude = 25
   huePeakDay = 172
+  mapStyle = "https://tiles.openfreemap.org/styles/liberty"
 
 [imaging]
   quality = 82

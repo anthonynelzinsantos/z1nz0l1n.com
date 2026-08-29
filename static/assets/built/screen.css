@@ -112,7 +112,7 @@
 	color:      var(--color-bg);
 }
 
-a:not(.leaflet-container *) {
+a:not(.maplibregl-map *) {
 	background-image:    linear-gradient(var(--color-fineliner) 0 0);
 	background-position: 0 100%;
 	background-repeat:   no-repeat;
@@ -867,15 +867,15 @@ body {
 	z-index:      0;
 }
 
-.leaflet-tile-pane {
+.maplibregl-canvas {
 	filter: saturate(0.75) sepia(0.12) contrast(0.92);
 }
 
-.leaflet-marker-icon {
-	filter: hue-rotate(calc((var(--hue) - 208) * 1deg)) saturate(1.5) brightness(0.95);
+.maplibregl-marker {
+	filter: hue-rotate(calc((var(--hue) + 90) * 1deg)) saturate(1.5);
 }
 
-.map .leaflet-popup-content a {
+.map .maplibregl-popup-content a {
 	background-image:    linear-gradient(var(--color-fineliner) 0 0);
 	background-position: 0 100%;
 	background-repeat:   no-repeat;
