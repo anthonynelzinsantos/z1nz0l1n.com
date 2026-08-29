@@ -3,7 +3,7 @@
 	<section class="content">
 		{{ if and .Params.lat .Params.lng }}
 			<div class="map-sheet">
-				<div id="map" class="map" role="img" aria-label="Map of {{ .Title }}"></div>
+				<div id="map" class="map" data-basemap="{{ site.Params.mapStyle }}" role="img" aria-label="Map of {{ .Title }}"></div>
 			</div>
 			<script type="application/json" id="map-data">{{ jsonify (slice (dict "lat" .Params.lat "lng" .Params.lng)) | safeJS }}</script>
 		{{ end }}
