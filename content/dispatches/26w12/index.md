@@ -7,6 +7,7 @@ aliases:
 feature_image_alt: "Colourful bookshelves in an outdoor library. Image Anthony Nelzin-Santos."
 feature_image_caption: "Marseille (FR), 2026.02."
 from:
+  - "artigues-fr"
   - "lyon-fr"
 ---
 
