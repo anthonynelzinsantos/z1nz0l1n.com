@@ -699,12 +699,7 @@ body {
 					z-index:  1;
 
 					.gallery-row {
-						grid-template-columns: 1fr 1fr !important;
-					}
-
-					.photo-print img {
-						aspect-ratio: 1;
-						object-fit:   cover;
+						grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)) !important;
 					}
 
 					> figcaption {
