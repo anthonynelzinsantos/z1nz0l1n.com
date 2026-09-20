@@ -1,6 +1,6 @@
 ---
 title: "I don’t get two-handed foldables"
-date: "2026-09-20T12:00:00.000Z"
+date: "2026-09-20T16:00:00.000Z"
 slug: "26w38"
 feature_image_alt: "The original foldable. Image Anthony Nelzin-Santos."
 feature_image_caption: "Chantilly (FR), 2025.08."
