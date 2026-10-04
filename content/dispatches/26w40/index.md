@@ -1,0 +1,25 @@
+---
+title: "Allowing myself some grace"
+date: "2026-10-04T16:00:00.000Z"
+slug: "26w40"
+feature_image_alt: "A work of contemporary art composed of pages from a dictionary. Image Anthony Nelzin-Santos."
+feature_image_caption: "Saint-Priest-en-Jarez (FR), 2021.08."
+from:
+  - "lyon-fr"
+---
+
+For as long as i can remember, i’ve always wanted to be a writer. I became a journalist instead — it wasn’t that much less glamorous, the pay was decent, and i still managed to write a few dozen books on the side. Trouble is, tying your whole identity to your job is a fantastically bad idea. I ended up despising the job, and worse, writing itself. [Since quitting last year](/tech-journalism-is-dead/), i’ve become a product design manager at a training firm, a position that’s stimulating enough, but definitely isn’t my only reason to get up in the morning. Finding my way back to writing has been tougher.
+
+I’ve been publishing these dispatches each and every week to prevent atrophy, but after a year, it still doesn’t come easy. For the first few months, i could barely write two paragraphs without running out of steam. I had to tack on links, book reviews and assorted bits and bobs to make do. Since June, i’ve been able to write longer pieces. It’s still a bit of a slog, but it’s been getting better and better each week. I love spending my Sunday mornings trying to put my thoughts in order while sipping coffee and listening to a record.
+
+The weekly cadence has forced me to consider topics i wouldn’t have deemed worthy before, like [my slightly deranged way of making coffee](/26w20/), [ear protection](/26w28/) or [existential marketing](/26w37/). My dispatch on [the *Magnifica Humanitas* encyclical](/26w26/) or [my comparative reading of J. R. R. Tolkien and Wendell Berry](/26w36/) would have languished half-finished if this self-imposed deadline hadn’t forced me to hit *Publish* before twisting myself in a tangled mess of broken ideas. I’ve also loved tackling a few [IndieWeb Carnival](https://indieweb.org/IndieWeb_Carnival) prompts, and i finally found [a pleasing way to document my travels](/26w33/).
+
+That being said, i’ll allow myself to skip weeks here and there. I’ve felt the pull of LLMs to help me sort drafts out and it’s been quite frightening to stare into [the void](/writing-with-the-infinite-monkey-machine/). As i type these words, the French literary scene is embroiled in a controversy over [Thélyson Orélien](https://en.wikipedia.org/wiki/Th%C3%A9lyson_Or%C3%A9lien)’s alleged use of generative AI in his latest novel, which was in the running for the prestigious [Prix Goncourt](https://en.wikipedia.org/wiki/Prix_Goncourt). Everybody and their mother turned to [Pangram](https://www.pangram.com/) as the ultimate litmus test before even knowing what the ‘whistleblower’ stands for[^1].
+
+I wouldn’t judge a book on its Pangram assessment even if it were reliable[^2]. We should never delegate our ability to understand art, which is ultimately our ability to understand our emotions and our world, to mere machines. I’m not thrilled that a promising author may have relied on the machine instead of his own gut to write about the harrowing journey of a Haitian migrant across twelve countries, or that he might think he’s the creator of something that’s the product of systematic theft[^3], but it’s not the core issue.
+
+What’s in play is our ability to keep having conversations between humans. What’s the difference between a pen, a typewriter, a computer and an LLM? Are autocorrect and spelling tools acceptable uses of AI? Should we change the way we write to avoid the tropes and patterns of LLMs? How should OpenAI, Anthropic and others repay what they’ve taken from us? Shouldn’t we be worried about the weaponization of AI tools and anti-AI tools by right-wingers? These are questions we should ask ourselves, instead of deferring to another machine. And because i still love writing, i’ll allow myself some grace… instead of turning to the machines.
+
+[^1]: Samuel Fitoussi presents himself as a columnist and author who “fears that AI will provoke the disappearance of reading and writing”, but he’s first and foremost an associate at Frst, a VC firm that invests in AI startups, [spun out](https://www.ladn.eu/nouveaux-usages/frst-le-fonds-dinvestissement-francais-qui-reve-dun-elon-musk-a-lelysee/) of reactionary and libertarian billionaire Pierre-Édouard Stérin’s family office in 2019. At 29, he’s amassed quite the collection of anti-progressive and [anti-feminist](https://www.europe1.fr/emissions/samuel-fitoussi-les-signatures-deurope-1/le-mythe-des-inegalites-salariales-870990) quotes.
+[^2]: A system that’s used as the arbiter of truth can’t be wrong *at all*, but studies have found it [far from perfect](https://link.springer.com/article/10.1007/s40979-026-00226-w). It flags articles i wrote 12 years ago as “AI-generated” and i’ve had no trouble crafting prompts that make generated text pass for “human written”.
+[^3]: He’s also been accused of plagiarizing earlier work, which he denies. If both accusations hold, it would be a pattern.
