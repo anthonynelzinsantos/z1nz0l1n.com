@@ -1,6 +1,6 @@
 ---
 title: "Where you at?"
-date: "2026-11-01T12:00:00.000Z"
+date: "2026-11-01T00:00:00.000Z"
 slug: "26w44"
 feature_image_alt: "A trail signpost in the French countryside. Image Anthony Nelzin-Santos."
 feature_image_caption: "Pérouges (FR), 2022.09."
