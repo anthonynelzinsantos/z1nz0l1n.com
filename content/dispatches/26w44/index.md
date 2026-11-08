@@ -47,4 +47,8 @@ That’s precisely why i think “city dwellers” should pick a question and tr
 
 Answer one question or all twenty, tweak them [like Kevin Kelly did](https://kk.org/helpwanted/archives/001084.php), or ditch them and write your own take on “Where you at?”. Go wild! To participate, simply publish a blog post on the topic before the end of November. Please share its link by [e-mail](mailto:hello@z1nz0l1n.com?subject=%E2%80%9CWhere%20you%20at%3F%E2%80%9D%20IndieWeb%20Carnival%20submission), on [Mastodon](https://mastodon.social/@z1nz0l1n), on [Bluesky](https://bsky.app/profile/z1nz0l1n.com) or on [Signal](https://signal.me/#eu/_RVphZFl6lRyNYtDEn5Uc93wBymcmgw8e3DRc3ujsfFWBh97zb5K9bbN2QuSNfRC). I’ll list the submissions on this page as i receive them.
 
+## Submissions
+
+- [Sara Jakša](https://sarajaksa.eu/2026/11/indieweb-carnival-november-2026-name-five-native-wild-edible-plants-in-your-region-and-their-seasons-of-availability/)
+
 [^1]: Prevailing westerlies carried the smoke of 19th-century factories east, which partly explains why the east side of so many European industrial cities is poorer. In Lyon, though, the Rhône valley channels winds north-south. When the *bise* isn’t carrying cold air from the north, like a polite cousin of the famous [mistral](https://en.wikipedia.org/wiki/Mistral_%28wind%29), strong southerlies bring the worst storms.
