@@ -51,5 +51,6 @@ Answer one question or all twenty, tweak them [like Kevin Kelly did](https://kk.
 
 - [Sara Jakša](https://sarajaksa.eu/2026/11/indieweb-carnival-november-2026-name-five-native-wild-edible-plants-in-your-region-and-their-seasons-of-availability/)
 - [*Pixel & Pillow Thoughts*](https://pixelandpillowthoughts.com/everywhere-is-a-port-call/)
+- [Jon White](https://jonwhite.me/posts/2026-11-12-indie-web-carnival-november-2026.html)
 
 [^1]: Prevailing westerlies carried the smoke of 19th-century factories east, which partly explains why the east side of so many European industrial cities is poorer. In Lyon, though, the Rhône valley channels winds north-south. When the *bise* isn’t carrying cold air from the north, like a polite cousin of the famous [mistral](https://en.wikipedia.org/wiki/Mistral_%28wind%29), strong southerlies bring the worst storms.
