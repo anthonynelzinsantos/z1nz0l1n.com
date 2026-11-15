@@ -1,6 +1,6 @@
 ---
 title: "Where you at? The IndieWeb edition"
-date: "2026-11-15T17:00:00.000Z"
+date: "2026-11-15T16:00:00.000Z"
 slug: "26w46"
 feature_image_alt: "The exact location of the blog you’re currently reading. Image Anthony Nelzin-Santos."
 feature_image_caption: "Somewhere around Geneva (CH), 2022.03."
