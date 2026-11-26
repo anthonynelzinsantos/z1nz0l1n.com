@@ -60,5 +60,6 @@ Answer one question or all twenty, tweak them [like Kevin Kelly did](https://kk.
 - [*Autumn Stuff*](https://autumnstuff.wordpress.com/2026/11/17/where-are-you-now/)
 - [Tanvi Bhakta](https://tanvibhakta.in/blog/where-you-at/)
 - [*Seb’s Web*](https://seb.page/2026/11/23/where-you-at-indieweb-carnival-nov-26/)
+- [Tracy Durnell](https://tracydurnell.com/2026/11/24/re-where-you-at/)
 
 [^1]: Prevailing westerlies carried the smoke of 19th-century factories east, which partly explains why the east side of so many European industrial cities is poorer. In Lyon, though, the Rhône valley channels winds north-south. When the *bise* isn’t carrying cold air from the north, like a polite cousin of the famous [mistral](https://en.wikipedia.org/wiki/Mistral_%28wind%29), strong southerlies bring the worst storms.
